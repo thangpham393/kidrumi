@@ -86,7 +86,10 @@ export default function MathPage() {
     while (list.length < count && guard < count * 40) {
       guard++;
       const q = makeQ(activeOps, range);
-      const key = `${q.a}${q.op}${q.b}`;
+      // + and × are commutative, so treat 5+0 and 0+5 as the same problem.
+      const [x, y] =
+        q.op === "+" || q.op === "×" ? [q.a, q.b].sort((m, n) => m - n) : [q.a, q.b];
+      const key = `${x}${q.op}${y}`;
       if (seen.has(key)) continue;
       seen.add(key);
       list.push(q);
