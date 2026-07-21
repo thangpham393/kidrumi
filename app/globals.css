@@ -214,8 +214,8 @@ button { font-family: inherit; }
 .q-card.correct .q-ans { background: var(--green-soft); border-color: var(--green); color: #3f8a5a; border-style: solid; }
 .q-card.wrong  .q-ans { background: var(--red-soft); border-color: var(--red); color: #cf5a42; border-style: solid; }
 
-.pad { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: #fff; border-radius: 24px; box-shadow: var(--shadow); padding: 16px; display: grid; grid-template-columns: repeat(3, 82px); gap: 12px; z-index: 20; }
-.pad button { height: 72px; border: none; border-radius: 16px; background: #f4f3ff; font-family: var(--font-head); font-weight: 800; font-size: 28px; color: var(--ink); cursor: pointer; transition: .1s; }
+.pad { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: #fff; border-radius: 24px; box-shadow: var(--shadow); padding: 14px; display: grid; grid-template-columns: repeat(3, 104px); gap: 10px; z-index: 20; }
+.pad button { height: 52px; border: none; border-radius: 14px; background: #f4f3ff; font-family: var(--font-head); font-weight: 800; font-size: 26px; color: var(--ink); cursor: pointer; transition: .1s; }
 .pad button:hover { background: var(--brand-soft); }
 .pad button:active { transform: scale(.95); }
 .pad .del { background: var(--red-soft); color: var(--red); }
@@ -404,7 +404,7 @@ button { font-family: inherit; }
     transform: translateY(115%);
     transition: transform 0.28s ease;
   }
-  .pad button { height: 78px; font-size: 30px; }
+  .pad button { height: 58px; font-size: 26px; }
   .pad.open { transform: translateY(0); }
   .pad-close {
     display: grid;
@@ -440,6 +440,6 @@ button { font-family: inherit; }
   .grid-2 { gap: 10px; }
   .act-body h3 { font-size: 16px; }
   .nav-user-name { max-width: 82px; }
-  .pad { gap: 10px; padding: 8px 12px calc(12px + env(safe-area-inset-bottom)); }
-  .pad button { height: 68px; font-size: 26px; }
+  .pad { gap: 8px; padding: 8px 12px calc(12px + env(safe-area-inset-bottom)); }
+  .pad button { height: 54px; font-size: 24px; }
 }
