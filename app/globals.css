@@ -247,6 +247,7 @@ button { font-family: inherit; }
 .vid .lvl { position: absolute; top: 8px; left: 8px; background: #6bbf8a; color: #fff; font-weight: 800; font-size: 12px; padding: 3px 9px; border-radius: 8px; }
 .vid .lvl.mid { background: var(--amber); }
 .vid .lvl.hard { background: var(--red); }
+.vid .lvl.l1 { background: var(--blue); }
 .vid .dur { position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,.6); color: #fff; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 8px; }
 .vid .meta { padding: 12px 14px 16px; }
 .vid .meta h4 { font-size: 15px; margin: 0 0 8px; line-height: 1.35; color: var(--ink); font-weight: 800; }

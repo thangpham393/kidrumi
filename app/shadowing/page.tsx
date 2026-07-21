@@ -9,8 +9,10 @@ import {
   langLabel,
   levelLabel,
   levelCls,
+  levelsByLang,
   sourcesByLang,
   videosByLang,
+  defaultLang,
 } from "./data";
 
 // Thumbnail: ưu tiên ảnh video thật từ YouTube. Thử hqdefault → mqdefault
@@ -49,12 +51,13 @@ function VidThumb({ v }: { v: Video }) {
 }
 
 export default function ShadowingPage() {
-  const [lang, setLang] = useState<Lang>("en");
+  const [lang, setLang] = useState<Lang>(defaultLang);
   const [tab, setTab] = useState<"library" | "learning">("library");
   const [source, setSource] = useState("Tất cả");
   const [level, setLevel] = useState<"all" | Level>("all");
 
   const sources = sourcesByLang[lang];
+  const levels = levelsByLang[lang];
 
   const list = useMemo(() => {
     return videosByLang(lang).filter(
@@ -128,7 +131,7 @@ export default function ShadowingPage() {
             >
               Tất cả
             </button>
-            {(["de", "mid", "hard"] as Level[]).map((lv) => (
+            {levels.map((lv) => (
               <button
                 key={lv}
                 className={`pill ${level === lv ? "on" : ""}`}
