@@ -65,19 +65,19 @@ export default function TopNav() {
         </div>
 
         <div className="nav-user">
-          <span className="avatar">
-            {user?.avatar ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={user.avatar} alt="" className="avatar-img" />
-            ) : (
-              "🧒"
-            )}
-          </span>
-          <span className="nav-user-name">{displayName}</span>
           {user ? (
-            <button className="logout inline-only" onClick={handleLogout}>
-              Đăng xuất
-            </button>
+            <>
+              {user.avatar && (
+                <span className="avatar">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={user.avatar} alt="" className="avatar-img" />
+                </span>
+              )}
+              <span className="nav-user-name">{displayName}</span>
+              <button className="logout inline-only" onClick={handleLogout}>
+                Đăng xuất
+              </button>
+            </>
           ) : (
             <Link href="/login" className="nav-login">
               Đăng nhập
