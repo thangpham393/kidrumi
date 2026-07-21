@@ -66,6 +66,9 @@ export default function MathPage() {
   const [questions, setQuestions] = useState<Q[]>([]);
   const [sel, setSel] = useState(0);
   const [padOpen, setPadOpen] = useState(false);
+  const [result, setResult] = useState<{ correct: number; total: number } | null>(
+    null
+  );
 
   const correct = useMemo(
     () => questions.filter((q) => q.state === "correct").length,
@@ -98,7 +101,17 @@ export default function MathPage() {
     while (list.length < count) list.push(makeQ(activeOps, range));
     setQuestions(list);
     setSel(0);
+    setResult(null);
+    setPadOpen(false);
   }, [ops, range, count]);
+
+  // Redo the current problems: clear answers and marks, keep the questions.
+  const retry = useCallback(() => {
+    setQuestions((prev) => prev.map((q) => ({ ...q, val: "", state: "" })));
+    setSel(0);
+    setResult(null);
+    setPadOpen(false);
+  }, []);
 
   const start = () => {
     generate();
@@ -128,6 +141,13 @@ export default function MathPage() {
               rect ? rect.left + rect.width / 2 : undefined,
               rect ? rect.top + rect.height / 2 : undefined
             );
+            // Round finished once this one and all others are correct.
+            const done = questions.every((q, i) => i === sel || q.state === "correct");
+            if (done) {
+              setPadOpen(false);
+              setResult({ correct: questions.length, total: questions.length });
+              return;
+            }
           } else {
             playWrong();
           }
@@ -188,13 +208,14 @@ export default function MathPage() {
       )
     );
     const c = questions.filter((q) => Number(q.val) === q.ans).length;
-    showToast(`Bé làm đúng ${c}/${questions.length} câu! 🌟`);
     if (c > 0) {
       playSuccess();
       confettiBurst();
     } else {
       playWrong();
     }
+    setPadOpen(false);
+    setResult({ correct: c, total: questions.length });
   };
 
   // ---------- SETUP ----------
@@ -343,6 +364,53 @@ export default function MathPage() {
           ✓
         </button>
       </div>
+
+      {result && (
+        <div className="modal-back">
+          <div className="modal result-modal">
+            <div className="result-bot">🤖</div>
+            {(() => {
+              const { correct, total } = result;
+              const perfect = correct === total;
+              const good = correct / total >= 0.7;
+              return (
+                <>
+                  <h3 className="result-title">
+                    {perfect ? "Tuyệt vời! 🎉" : good ? "Giỏi lắm! 🌟" : "Cố lên nhé! 💪"}
+                  </h3>
+                  <div className="result-score">
+                    {correct}/{total}
+                  </div>
+                  <p className="result-sub">
+                    {perfect
+                      ? "Bé làm đúng hết luôn, siêu quá!"
+                      : good
+                      ? "Bé làm tốt lắm, cố thêm chút nữa nhé!"
+                      : "Cùng luyện thêm cho giỏi hơn nhé!"}
+                  </p>
+                </>
+              );
+            })()}
+
+            <button className="btn btn-block" onClick={generate}>
+              Đề mới 🎲
+            </button>
+            <button className="btn btn-ghost btn-block" onClick={retry}>
+              Làm lại đề này 🔁
+            </button>
+            <button
+              className="result-link"
+              onClick={() => {
+                setResult(null);
+                setPadOpen(false);
+                setPhase("setup");
+              }}
+            >
+              Đổi cài đặt ⚙️
+            </button>
+          </div>
+        </div>
+      )}
       {toastEl}
     </>
   );
