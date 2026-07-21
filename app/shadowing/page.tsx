@@ -34,7 +34,11 @@ function VidThumb({ v }: { v: Video }) {
           src={`https://i.ytimg.com/vi/${v.youtubeId}/${YT_QUALITIES[qi]}.jpg`}
           alt=""
           className="thumb-photo"
+          // lazy: chỉ tải thumbnail lọt vào khung nhìn — tránh nạp 60+ ảnh cùng
+          // lúc khiến YouTube chặn tạm (429) làm cả lưới rớt về emoji khi tải lại.
+          loading="lazy"
           decoding="async"
+          referrerPolicy="no-referrer"
           style={{ opacity: imgOk ? 1 : 0 }}
           onLoad={(e) => {
             // Ảnh "không có" của YouTube rộng đúng 120px → thử mức kế tiếp.
@@ -55,23 +59,27 @@ export default function ShadowingPage() {
   const [tab, setTab] = useState<"library" | "learning">("library");
   const [source, setSource] = useState("Tất cả");
   const [level, setLevel] = useState<"all" | Level>("all");
+  const [query, setQuery] = useState("");
 
   const sources = sourcesByLang[lang];
   const levels = levelsByLang[lang];
 
   const list = useMemo(() => {
+    const q = query.trim().toLowerCase();
     return videosByLang(lang).filter(
       (v) =>
         (source === "Tất cả" || v.source === source) &&
-        (level === "all" || v.level === level)
+        (level === "all" || v.level === level) &&
+        (q === "" || v.title.toLowerCase().includes(q))
     );
-  }, [lang, source, level]);
+  }, [lang, source, level, query]);
 
   // Đổi ngôn ngữ thì reset bộ lọc nguồn (nguồn khác nhau giữa EN/ZH).
   const pickLang = (l: Lang) => {
     setLang(l);
     setSource("Tất cả");
     setLevel("all");
+    setQuery("");
   };
 
   return (
@@ -112,6 +120,27 @@ export default function ShadowingPage() {
 
       {tab === "library" ? (
         <>
+          <div className="vid-search">
+            <span className="vid-search-ico" aria-hidden>🔍</span>
+            <input
+              type="search"
+              className="vid-search-input"
+              placeholder="Tìm video theo tên..."
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              aria-label="Tìm video theo tên"
+            />
+            {query && (
+              <button
+                type="button"
+                className="vid-search-clear"
+                onClick={() => setQuery("")}
+                aria-label="Xoá tìm kiếm"
+              >
+                ✕
+              </button>
+            )}
+          </div>
           <div className="filter-row">
             {sources.map((s) => (
               <button
