@@ -4,6 +4,18 @@ Nguồn chuẩn phong cách để **mọi tính năng mới đồng bộ**. Khi 
 mới: tái sử dụng token + class có sẵn trong [app/globals.css](app/globals.css) trước,
 chỉ viết CSS mới khi thật sự cần, và giữ đúng "vibe" bên dưới.
 
+> ## ⚠️ QUY TẮC BẮT BUỘC — Responsive cho MỌI phần mới
+> Mỗi màn hình / thành phần / tính năng làm sau này **phải được tối ưu responsive cho
+> mobile và tablet ngay khi làm**, không để "làm sau". Cụ thể:
+> - Thiết kế **mobile-first**, kiểm đủ 4 mốc: **≥1024 (desktop) · 768 (tablet) · 390
+>   (mobile) · 360 (máy nhỏ)**.
+> - Tuyệt đối **không tràn ngang**; lưới/nav/bảng phải co gọn (xem breakpoint mục 9).
+> - Vùng chạm ≥ 44px; chữ đọc được; keypad/thanh dính đáy chừa `env(safe-area-inset-bottom)`.
+> - Chụp kiểm bằng **device emulation** (không tin `--window-size` của headless — xem mục 9).
+>
+> Xem chưa tối ưu responsive = **chưa xong**. Không merge/commit một phần UI mới nếu chưa
+> đạt các mốc trên.
+
 ## 1. Tinh thần thiết kế
 Vui tươi, mềm mại, tròn trịa, kiểu **đất nặn (clay/plasticine) pastel** cho bé tuổi tiền
 tiểu học. Nhiều bo góc lớn, bóng đổ mềm, gradient nhẹ, emoji thân thiện, chuyển động nảy
@@ -117,6 +129,7 @@ khoản phải (avatar + tên + Đăng nhập/Đăng xuất). Trang active tô n
 2. Dùng token màu + class thành phần có sẵn (mục 2 & 6) trước khi viết CSS mới.
 3. Nút chính `.btn`, phụ `.btn-ghost`; trạng thái đúng/sai dùng green/red + bản `-soft`.
 4. Minh hoạ mới theo phong cách clay (mục 7), qua `next/image`.
-5. Kiểm 4 breakpoint (≥1024 / 768 / 390 / 360); nav & lưới không tràn ngang.
+5. **(BẮT BUỘC)** Tối ưu responsive ngay: kiểm 4 breakpoint (≥1024 / 768 / 390 / 360);
+   nav & lưới không tràn ngang; vùng chạm ≥44px. Chưa responsive = chưa xong.
 6. Animation không thiết yếu bọc `prefers-reduced-motion`.
 7. Văn bản tiếng Việt, giọng khích lệ; có phản hồi khi bé làm đúng.
