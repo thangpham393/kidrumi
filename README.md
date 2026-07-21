@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧸 Kidrumi
 
-## Getting Started
+**Không gian học vui của bé** — webapp học tập cho các bé tuổi tiền tiểu học.
 
-First, run the development server:
+Tên **Kidrumi** ghép từ *kid* + *amigurumi* (thú bông đáng yêu). Linh vật: chú gấu bông 🧸.
+
+## Tính năng
+
+| Trang | Mô tả |
+|---|---|
+| 🏠 Trang chủ | 4 góc học, chọn hoạt động |
+| 🐙 Nhiệm vụ | Tạo hồ sơ bé (chọn "thế giới"), danh sách việc tốt mỗi ngày, tích sao, thanh tiến trình + bạn đồng hành |
+| 🎧 Shadowing | Thư viện video tiếng Anh có bộ lọc theo nguồn & độ khó |
+| 🧮 Học toán | Phiếu bài tập cộng/trừ/nhân/chia — chọn phạm vi, số lượng, chấm ngay/chấm cuối, có bàn phím số |
+| ⌨️ Tập gõ phím | Luyện gõ 10 ngón (Tiếng Việt Telex / English), đo tốc độ & độ chính xác |
+
+Hồ sơ bé và số sao được lưu ở `localStorage` (chưa có backend).
+
+## Công nghệ
+
+- **Next.js 16** (App Router) + **TypeScript**
+- CSS thuần (design system pastel trong `app/globals.css`)
+- Font `Baloo 2` + `Nunito` qua `next/font`
+
+## Chạy dự án
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # build production
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Cấu trúc
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+app/
+  layout.tsx        # font + nav + provider
+  globals.css       # design system
+  page.tsx          # trang chủ
+  tasks/            # nhiệm vụ
+  shadowing/        # shadowing
+  math/             # học toán
+  typing/           # tập gõ phím
+components/
+  TopNav.tsx        # thanh điều hướng
+  ChildContext.tsx  # hồ sơ bé + sao (localStorage)
+  useToast.tsx      # thông báo nhỏ
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Hướng phát triển tiếp
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [ ] Backend + đăng nhập nhiều bé, đồng bộ nhiều thiết bị
+- [ ] Trình phát video shadowing thật (ghi âm, so khớp phát âm)
+- [ ] Ba mẹ tự thêm/sửa danh sách nhiệm vụ
+- [ ] Rương quà, huy hiệu, lịch sử tiến bộ

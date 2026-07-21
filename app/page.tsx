@@ -1,66 +1,72 @@
+import Link from "next/link";
 import Image from "next/image";
-import styles from "./page.module.css";
+
+const cards = [
+  {
+    href: "/tasks",
+    cls: "c-task",
+    img: "/illustrations/tasks.png",
+    title: "Nhiệm vụ",
+    tag: "Việc tốt mỗi ngày",
+    desc: "Danh sách việc hằng ngày của bé. Làm xong mỗi việc được một ngôi sao, đủ sao thì mở quà.",
+  },
+  {
+    href: "/shadowing",
+    cls: "c-shad",
+    img: "/illustrations/shadowing.png",
+    title: "Shadowing",
+    tag: "Luyện nói tiếng Anh",
+    desc: "Bé xem video tiếng Anh rồi nghe và nói lại theo từng câu để luyện phát âm.",
+  },
+  {
+    href: "/math",
+    cls: "c-math",
+    img: "/illustrations/math.png",
+    title: "Học toán",
+    tag: "Phiếu bài tập cộng trừ nhân chia",
+    desc: "Ba mẹ chọn phép tính và độ khó, bé điền kết quả rồi được chấm điểm ngay.",
+  },
+  {
+    href: "/typing",
+    cls: "c-type",
+    img: "/illustrations/typing.png",
+    title: "Tập gõ phím",
+    tag: "Luyện gõ 10 ngón",
+    desc: "Bé tập gõ bàn phím bằng mười ngón, có cả tiếng Việt (Telex) và tiếng Anh.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="wrap">
+      <p className="page-eyebrow">KIDRUMI</p>
+      <h1 className="page-title">Hôm nay con muốn học gì?</h1>
+      <p className="page-sub">
+        Chọn một góc học nhé — mỗi ngày một chút, vui là chính!
+      </p>
+
+      <section className="grid-2">
+        {cards.map((c) => (
+          <Link key={c.href} href={c.href} className={`act-card ${c.cls}`}>
+            <span className="tape" />
+            <div className="act-thumb">
+              <Image
+                src={c.img}
+                alt={c.title}
+                fill
+                sizes="(max-width: 900px) 140px, 190px"
+                className="thumb-img"
+              />
+            </div>
+            <div className="act-body">
+              <h3>{c.title}</h3>
+              <div className="tag">{c.tag}</div>
+              <p>{c.desc}</p>
+              <span className="act-cta">Vào chơi →</span>
+            </div>
+          </Link>
+        ))}
+      </section>
+    </main>
   );
 }

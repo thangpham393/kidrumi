@@ -1,0 +1,291 @@
+"use client";
+
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { useToast } from "@/components/useToast";
+import { useChild } from "@/components/ChildContext";
+
+type Op = "+" | "-" | "×" | "÷";
+type Mark = "instant" | "end";
+type Q = {
+  a: number;
+  b: number;
+  op: Op;
+  ans: number;
+  val: string;
+  state: "" | "correct" | "wrong";
+};
+
+const opClass: Record<Op, string> = {
+  "+": "op-add",
+  "-": "op-sub",
+  "×": "op-mul",
+  "÷": "op-div",
+};
+
+function rnd(n: number) {
+  return Math.floor(Math.random() * n);
+}
+
+function makeQ(ops: Op[], range: number): Q {
+  const op = ops[rnd(ops.length)] ?? "+";
+  const R = range;
+  let a: number, b: number, ans: number;
+  if (op === "+") {
+    a = rnd(R) + 1;
+    b = rnd(R - a + 1);
+    ans = a + b;
+  } else if (op === "-") {
+    a = rnd(R) + 1;
+    b = rnd(a) + 1;
+    if (b > a) [a, b] = [b, a];
+    ans = a - b;
+  } else if (op === "×") {
+    const m = Math.max(2, Math.min(12, Math.floor(Math.sqrt(R))));
+    a = rnd(m) + 1;
+    b = rnd(m) + 1;
+    ans = a * b;
+  } else {
+    b = rnd(9) + 2;
+    ans = rnd(Math.max(2, Math.floor(R / b))) + 1;
+    a = b * ans;
+  }
+  return { a, b, op, ans, val: "", state: "" };
+}
+
+export default function MathPage() {
+  const { showToast, toastEl } = useToast();
+  const { addStars } = useChild();
+
+  const [phase, setPhase] = useState<"setup" | "play">("setup");
+  const [ops, setOps] = useState<Op[]>(["+", "-"]);
+  const [range, setRange] = useState(100);
+  const [count, setCount] = useState(20);
+  const [mark, setMark] = useState<Mark>("instant");
+
+  const [questions, setQuestions] = useState<Q[]>([]);
+  const [sel, setSel] = useState(0);
+
+  const correct = useMemo(
+    () => questions.filter((q) => q.state === "correct").length,
+    [questions]
+  );
+
+  const toggleOp = (op: Op) =>
+    setOps((prev) =>
+      prev.includes(op) ? prev.filter((o) => o !== op) : [...prev, op]
+    );
+
+  const generate = useCallback(() => {
+    const list = Array.from({ length: count }, () =>
+      makeQ(ops.length ? ops : ["+"], range)
+    );
+    setQuestions(list);
+    setSel(0);
+  }, [ops, range, count]);
+
+  const start = () => {
+    generate();
+    setPhase("play");
+  };
+
+  const press = useCallback(
+    (k: string) => {
+      setQuestions((prev) => {
+        const next = [...prev];
+        const q = { ...next[sel] };
+        if (!q) return prev;
+        if (k === "del") {
+          q.val = q.val.slice(0, -1);
+          q.state = "";
+        } else if (k === "ok") {
+          if (q.val === "") return prev;
+          if (mark === "instant") {
+            q.state = Number(q.val) === q.ans ? "correct" : "wrong";
+            if (q.state === "correct") {
+              showToast("Giỏi quá! 🎉");
+              addStars(1);
+            }
+          }
+        } else {
+          if (q.val.length < 4) q.val += k;
+          q.state = "";
+        }
+        next[sel] = q;
+        return next;
+      });
+
+      if (k === "ok") {
+        setSel((s) => {
+          const idx = questions.findIndex(
+            (x, i) => i > s && x.state !== "correct"
+          );
+          return idx >= 0 ? idx : s;
+        });
+      }
+    },
+    [sel, mark, questions, showToast, addStars]
+  );
+
+  useEffect(() => {
+    if (phase !== "play") return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key >= "0" && e.key <= "9") press(e.key);
+      else if (e.key === "Backspace") press("del");
+      else if (e.key === "Enter") press("ok");
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [phase, press]);
+
+  const checkAll = () => {
+    setQuestions((prev) =>
+      prev.map((q) =>
+        q.val !== ""
+          ? { ...q, state: Number(q.val) === q.ans ? "correct" : "wrong" }
+          : q
+      )
+    );
+    const c = questions.filter((q) => Number(q.val) === q.ans).length;
+    showToast(`Bé làm đúng ${c}/${questions.length} câu! 🌟`);
+  };
+
+  // ---------- SETUP ----------
+  if (phase === "setup") {
+    return (
+      <main className="wrap">
+        <h1 className="page-title">🧮 Học Toán Cùng Bé</h1>
+        <p className="page-sub">Chọn phép tính rồi bấm Bắt đầu nhé!</p>
+
+        <div className="panel" style={{ maxWidth: 680, margin: "0 auto" }}>
+          <p className="section-label">PHÉP TÍNH</p>
+          <div className="opt-row">
+            {(
+              [
+                ["+", "Cộng", "op-plus"],
+                ["-", "Trừ", "op-minus"],
+                ["×", "Nhân", ""],
+                ["÷", "Chia", ""],
+              ] as [Op, string, string][]
+            ).map(([op, label, extra]) => (
+              <button
+                key={op}
+                className={`opt-tile ${extra} ${ops.includes(op) ? "on" : ""}`}
+                onClick={() => toggleOp(op)}
+              >
+                <div className="big">{op === "-" ? "−" : op}</div>
+                <div className="t">{label}</div>
+              </button>
+            ))}
+          </div>
+
+          <p className="section-label">PHẠM VI (SỐ LỚN NHẤT TRONG BÀI)</p>
+          <div className="opt-row">
+            {[10, 20, 50, 100].map((r) => (
+              <button
+                key={r}
+                className={`chip ${range === r ? "on" : ""}`}
+                onClick={() => setRange(r)}
+              >
+                {r}
+              </button>
+            ))}
+          </div>
+
+          <p className="section-label">SỐ LƯỢNG BÀI</p>
+          <div className="opt-row">
+            {[10, 20, 30].map((c) => (
+              <button
+                key={c}
+                className={`chip ${count === c ? "on" : ""}`}
+                onClick={() => setCount(c)}
+              >
+                {c}
+              </button>
+            ))}
+          </div>
+
+          <p className="section-label">CÁCH CHẤM ĐIỂM</p>
+          <div className="opt-row">
+            <button
+              className={`opt-tile ${mark === "instant" ? "on" : ""}`}
+              onClick={() => setMark("instant")}
+            >
+              <div className="t">⚡ Chấm ngay</div>
+              <div className="d">Bấm ✓ là biết đúng sai liền</div>
+            </button>
+            <button
+              className={`opt-tile ${mark === "end" ? "on" : ""}`}
+              onClick={() => setMark("end")}
+            >
+              <div className="t">🏁 Chấm cuối</div>
+              <div className="d">Làm hết rồi bấm Kiểm tra</div>
+            </button>
+          </div>
+
+          <button className="btn btn-block" onClick={start}>
+            Bắt đầu! 🚀
+          </button>
+        </div>
+        {toastEl}
+      </main>
+    );
+  }
+
+  // ---------- PLAY ----------
+  return (
+    <>
+      <main className="wrap">
+        <div className="play-bar">
+          <button className="pill" onClick={() => setPhase("setup")}>
+            ← Cài đặt
+          </button>
+          <button className="pill on">
+            ⭐ Đúng {correct}/{questions.length}
+          </button>
+          <button className="pill" onClick={generate}>
+            🔀
+          </button>
+          {mark === "end" && (
+            <button className="pill" onClick={checkAll}>
+              Kiểm tra
+            </button>
+          )}
+        </div>
+
+        <div className="q-grid">
+          {questions.map((q, i) => (
+            <div
+              key={i}
+              className={`q-card ${i === sel ? "sel" : ""} ${q.state}`}
+              onClick={() => setSel(i)}
+            >
+              <span className={`q-badge ${q.state === "correct" ? "done" : ""}`}>
+                {i + 1}
+              </span>
+              <span className="q-expr">
+                {q.a} <span className={opClass[q.op]}>{q.op}</span> {q.b} =
+              </span>
+              <span className="q-ans">{q.val}</span>
+            </div>
+          ))}
+        </div>
+      </main>
+
+      <div className="pad">
+        {["1", "2", "3", "4", "5", "6", "7", "8", "9"].map((k) => (
+          <button key={k} onClick={() => press(k)}>
+            {k}
+          </button>
+        ))}
+        <button className="del" onClick={() => press("del")}>
+          ⌫
+        </button>
+        <button onClick={() => press("0")}>0</button>
+        <button className="ok" onClick={() => press("ok")}>
+          ✓
+        </button>
+      </div>
+      {toastEl}
+    </>
+  );
+}
