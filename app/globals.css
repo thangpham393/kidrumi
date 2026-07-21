@@ -115,7 +115,7 @@ button { font-family: inherit; }
 .nav-home-label { display: none; }
 
 /* ---------------- Layout ---------------- */
-.wrap { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: 40px 22px 120px; }
+.wrap { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: 40px 22px 340px; }
 .page-eyebrow { text-align: center; letter-spacing: 3px; font-weight: 800; font-size: 13px; color: var(--muted); }
 .page-title { text-align: center; font-size: clamp(30px, 5vw, 52px); color: var(--ink); margin: 6px 0 8px; font-weight: 800; }
 .page-sub { text-align: center; color: var(--ink-soft); font-size: 18px; margin: 0 0 34px; }
@@ -220,6 +220,8 @@ button { font-family: inherit; }
 .pad button:active { transform: scale(.95); }
 .pad .del { background: var(--red-soft); color: var(--red); }
 .pad .ok  { background: linear-gradient(180deg,#8a7bf5,var(--brand)); color: #fff; }
+/* Close handle: hidden on desktop/tablet where the keypad is always visible */
+.pad-close { display: none; }
 
 /* ---------------- Shadowing library ---------------- */
 .lib-tabs { display: flex; gap: 20px; align-items: baseline; margin-bottom: 4px; }
@@ -296,9 +298,9 @@ button { font-family: inherit; }
 @media (max-width: 900px) {
   .grid-2, .task-cols { grid-template-columns: 1fr; }
   .vid-grid { grid-template-columns: repeat(2, 1fr); }
-  .q-grid { grid-template-columns: 1fr; }
+  /* iPad keeps two columns of problems — single column starts at phones (720px) */
   .act-thumb { flex-basis: 150px; height: 150px; }
-  .wrap { padding: 32px 18px 110px; }
+  .wrap { padding: 32px 18px 320px; }
 }
 
 /* Hamburger navigation (phones & small tablets) */
@@ -384,6 +386,42 @@ button { font-family: inherit; }
   .act-card:active { transform: translateY(-2px) scale(0.99); }
 
   .wrap { padding: 24px 16px 96px; }
+
+  /* Single column of problems on phones */
+  .q-grid { grid-template-columns: 1fr; }
+
+  /* Keypad becomes a bottom sheet that only slides up when a problem is tapped */
+  .pad {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 8px 16px calc(16px + env(safe-area-inset-bottom));
+    border-radius: 26px 26px 0 0;
+    transform: translateY(115%);
+    transition: transform 0.28s ease;
+  }
+  .pad.open { transform: translateY(0); }
+  .pad-close {
+    display: grid;
+    place-items: center;
+    grid-column: 1 / -1;
+    height: 26px;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  .pad-close:hover { background: transparent; }
+  .pad-handle {
+    display: block;
+    width: 44px;
+    height: 5px;
+    border-radius: 3px;
+    background: #d8d4f2;
+  }
+
   .page-title { font-size: 27px; }
   .page-sub { font-size: 15px; margin-bottom: 22px; }
   .page-eyebrow { font-size: 12px; }

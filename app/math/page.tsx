@@ -64,6 +64,7 @@ export default function MathPage() {
 
   const [questions, setQuestions] = useState<Q[]>([]);
   const [sel, setSel] = useState(0);
+  const [padOpen, setPadOpen] = useState(false);
 
   const correct = useMemo(
     () => questions.filter((q) => q.state === "correct").length,
@@ -136,6 +137,15 @@ export default function MathPage() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [phase, press]);
+
+  // On phones the keypad is a bottom sheet that covers part of the list —
+  // keep the active question visible above it whenever selection changes.
+  useEffect(() => {
+    if (!padOpen) return;
+    if (!window.matchMedia("(max-width: 720px)").matches) return;
+    const el = document.querySelector(".q-card.sel");
+    el?.scrollIntoView({ block: "center", behavior: "smooth" });
+  }, [sel, padOpen]);
 
   const checkAll = () => {
     setQuestions((prev) =>
@@ -257,7 +267,10 @@ export default function MathPage() {
             <div
               key={i}
               className={`q-card ${i === sel ? "sel" : ""} ${q.state}`}
-              onClick={() => setSel(i)}
+              onClick={() => {
+                setSel(i);
+                setPadOpen(true);
+              }}
             >
               <span className={`q-badge ${q.state === "correct" ? "done" : ""}`}>
                 {i + 1}
@@ -271,7 +284,14 @@ export default function MathPage() {
         </div>
       </main>
 
-      <div className="pad">
+      <div className={`pad ${padOpen ? "open" : ""}`}>
+        <button
+          className="pad-close"
+          onClick={() => setPadOpen(false)}
+          aria-label="Đóng bàn phím"
+        >
+          <span className="pad-handle" />
+        </button>
         {["1", "2", "3", "4", "5", "6", "7", "8", "9"].map((k) => (
           <button key={k} onClick={() => press(k)}>
             {k}
