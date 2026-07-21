@@ -69,8 +69,12 @@ export default function TasksPage() {
   const [editMode, setEditMode] = useState(false);
   const [showGate, setShowGate] = useState(false);
   const [taskModal, setTaskModal] = useState(false);
+  const [editingTask, setEditingTask] = useState<Task | null>(null);
 
   const worldMeta = worlds.find((w) => w.key === child?.world) ?? worlds[7];
+  // Chỉ theo dõi id của bé đang chọn — tránh reload khi số sao đổi (child là
+  // object mới mỗi lần cộng sao, sẽ làm reset ô tick đang chờ ghi vào CSDL).
+  const childId = child?.id ?? null;
 
   // ---- Nạp nhiệm vụ + tiến độ hôm nay của bé đang chọn ----
   const loadTasks = useCallback(
@@ -97,20 +101,16 @@ export default function TasksPage() {
   );
 
   useEffect(() => {
-    let active = true;
     void (async () => {
-      if (child && child.id !== "local" && active) {
+      if (childId && childId !== "local") {
         setEditMode(false);
-        await loadTasks(child.id);
-      } else if (active) {
+        await loadTasks(childId);
+      } else {
         setTasks([]);
         setDone(new Set());
       }
     })();
-    return () => {
-      active = false;
-    };
-  }, [child, loadTasks]);
+  }, [childId, loadTasks]);
 
   const totalTasks = tasks.length;
   const doneCount = done.size;
@@ -161,29 +161,57 @@ export default function TasksPage() {
     await supabase.from("tasks").delete().eq("id", t.id);
   };
 
-  // ---- Thêm nhiệm vụ mới ----
-  const addTask = async (draft: { name: string; icon: string; category: string; stars: number }) => {
+  // ---- Thêm mới hoặc sửa nhiệm vụ ----
+  const saveTask = async (draft: { name: string; icon: string; category: string; stars: number }) => {
     if (!child || !user) return;
-    const { data, error } = await supabase
-      .from("tasks")
-      .insert({
-        child_id: child.id,
-        user_id: user.id,
-        name: draft.name.trim(),
-        icon: draft.icon,
-        category: draft.category || null,
-        stars: draft.stars,
-        sort: tasks.length,
-      })
-      .select("id, name, icon, category, stars, sort")
-      .single();
-    if (error || !data) {
-      showToast("Chưa lưu được, thử lại nhé!");
-      return;
+    const fields = {
+      name: draft.name.trim(),
+      icon: draft.icon,
+      category: draft.category || null,
+      stars: draft.stars,
+    };
+
+    if (editingTask) {
+      const { data, error } = await supabase
+        .from("tasks")
+        .update(fields)
+        .eq("id", editingTask.id)
+        .select("id, name, icon, category, stars, sort")
+        .single();
+      if (error || !data) {
+        showToast("Chưa lưu được, thử lại nhé!");
+        return;
+      }
+      setTasks((prev) => prev.map((x) => (x.id === editingTask.id ? (data as Task) : x)));
+      showToast("Đã cập nhật nhiệm vụ ✏️");
+    } else {
+      const { data, error } = await supabase
+        .from("tasks")
+        .insert({ child_id: child.id, user_id: user.id, sort: tasks.length, ...fields })
+        .select("id, name, icon, category, stars, sort")
+        .single();
+      if (error || !data) {
+        showToast("Chưa lưu được, thử lại nhé!");
+        return;
+      }
+      setTasks((prev) => [...prev, data as Task]);
+      showToast("Đã gieo nhiệm vụ mới 🌱");
     }
-    setTasks((prev) => [...prev, data as Task]);
     setTaskModal(false);
-    showToast("Đã gieo nhiệm vụ mới 🌱");
+    setEditingTask(null);
+  };
+
+  const openAddTask = () => {
+    setEditingTask(null);
+    setTaskModal(true);
+  };
+  const openEditTask = (t: Task) => {
+    setEditingTask(t);
+    setTaskModal(true);
+  };
+  const closeTaskModal = () => {
+    setTaskModal(false);
+    setEditingTask(null);
   };
 
   const enterEdit = () => {
@@ -298,7 +326,7 @@ export default function TasksPage() {
               </h3>
             </div>
             {editMode && (
-              <button className="btn" onClick={() => setTaskModal(true)}>
+              <button className="btn" onClick={openAddTask}>
                 + Thêm nhiệm vụ
               </button>
             )}
@@ -322,13 +350,22 @@ export default function TasksPage() {
                   </div>
                 </div>
                 {editMode && (
-                  <button
-                    className="task-del"
-                    onClick={() => removeTask(t)}
-                    title="Xoá nhiệm vụ"
-                  >
-                    🗑️
-                  </button>
+                  <>
+                    <button
+                      className="task-edit"
+                      onClick={() => openEditTask(t)}
+                      title="Sửa nhiệm vụ"
+                    >
+                      ✏️
+                    </button>
+                    <button
+                      className="task-del"
+                      onClick={() => removeTask(t)}
+                      title="Xoá nhiệm vụ"
+                    >
+                      🗑️
+                    </button>
+                  </>
                 )}
                 <button className="check" onClick={(e) => toggle(t, e)}>
                   {done.has(t.id) ? "✓" : ""}
@@ -420,7 +457,11 @@ export default function TasksPage() {
       )}
 
       {taskModal && (
-        <TaskModal onClose={() => setTaskModal(false)} onSubmit={addTask} />
+        <TaskModal
+          initial={editingTask ?? undefined}
+          onClose={closeTaskModal}
+          onSubmit={saveTask}
+        />
       )}
       {toastEl}
     </main>
@@ -529,18 +570,21 @@ function GateModal({ onClose, onPass }: { onClose: () => void; onPass: () => voi
   );
 }
 
-/* ---------- Modal thêm nhiệm vụ ---------- */
+/* ---------- Modal thêm / sửa nhiệm vụ ---------- */
 function TaskModal({
+  initial,
   onClose,
   onSubmit,
 }: {
+  initial?: { name: string; icon: string; category: string | null; stars: number };
   onClose: () => void;
   onSubmit: (draft: { name: string; icon: string; category: string; stars: number }) => void;
 }) {
-  const [name, setName] = useState("");
-  const [icon, setIcon] = useState("🌟");
-  const [stars, setStars] = useState(1);
-  const [category, setCategory] = useState("");
+  const isEdit = !!initial;
+  const [name, setName] = useState(initial?.name ?? "");
+  const [icon, setIcon] = useState(initial?.icon ?? "🌟");
+  const [stars, setStars] = useState(initial?.stars ?? 1);
+  const [category, setCategory] = useState(initial?.category ?? "");
 
   const applySuggestion = (s: (typeof SUGGESTIONS)[number]) => {
     setName(s.name);
@@ -558,8 +602,8 @@ function TaskModal({
     <div className="modal-back" onClick={onClose}>
       <div className="modal modal-wide" onClick={(e) => e.stopPropagation()}>
         <button className="x" onClick={onClose}>✕</button>
-        <p className="section-label">NHIỆM VỤ MỚI</p>
-        <h3>Hôm nay mình sẽ…</h3>
+        <p className="section-label">{isEdit ? "SỬA NHIỆM VỤ" : "NHIỆM VỤ MỚI"}</p>
+        <h3>{isEdit ? "Chỉnh lại việc này nhé" : "Hôm nay mình sẽ…"}</h3>
 
         <div className="suggest-row">
           {SUGGESTIONS.map((s) => (
@@ -628,7 +672,7 @@ function TaskModal({
         </div>
 
         <button className="btn btn-block" style={{ marginTop: 18 }} onClick={submit}>
-          Gieo nhiệm vụ 🌱
+          {isEdit ? "Lưu thay đổi 💾" : "Gieo nhiệm vụ 🌱"}
         </button>
       </div>
     </div>
