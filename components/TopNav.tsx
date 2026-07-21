@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { useChild } from "./ChildContext";
+import { useAuth } from "./AuthContext";
 import Logo from "./Logo";
 
 const links = [
@@ -16,9 +17,19 @@ const links = [
 export default function TopNav() {
   const pathname = usePathname();
   const { child, reset } = useChild();
+  const { user, signOut } = useAuth();
   const [open, setOpen] = useState(false);
 
   const close = () => setOpen(false);
+
+  // Tên hiển thị: ưu tiên tài khoản Google, sau đó tới hồ sơ bé, cuối cùng mặc định.
+  const displayName = user?.name ?? child?.name ?? "Bé Yêu";
+
+  const handleLogout = async () => {
+    if (user) await signOut();
+    reset();
+    close();
+  };
 
   return (
     <nav className="nav">
@@ -46,23 +57,36 @@ export default function TopNav() {
               {l.label}
             </Link>
           ))}
-          <button
-            className="logout menu-only"
-            onClick={() => {
-              reset();
-              close();
-            }}
-          >
-            Thoát
-          </button>
+          {user ? (
+            <button className="logout menu-only" onClick={handleLogout}>
+              Đăng xuất
+            </button>
+          ) : (
+            <Link href="/login" className="nav-login menu-only" onClick={close}>
+              Đăng nhập
+            </Link>
+          )}
         </div>
 
         <div className="nav-user">
-          <span className="avatar">🧒</span>
-          <span className="nav-user-name">{child?.name ?? "Bé Yêu"}</span>
-          <button className="logout inline-only" onClick={reset}>
-            Thoát
-          </button>
+          <span className="avatar">
+            {user?.avatar ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={user.avatar} alt="" className="avatar-img" />
+            ) : (
+              "🧒"
+            )}
+          </span>
+          <span className="nav-user-name">{displayName}</span>
+          {user ? (
+            <button className="logout inline-only" onClick={handleLogout}>
+              Đăng xuất
+            </button>
+          ) : (
+            <Link href="/login" className="nav-login inline-only">
+              Đăng nhập
+            </Link>
+          )}
         </div>
 
         <button

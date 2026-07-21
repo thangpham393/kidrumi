@@ -470,3 +470,44 @@ button { font-family: inherit; }
   .pad { gap: 8px; padding: 8px 12px calc(12px + env(safe-area-inset-bottom)); }
   .pad button { height: 54px; font-size: 24px; }
 }
+
+/* ---------------- Auth: avatar + login button ---------------- */
+.avatar-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+.nav-login {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 16px; border-radius: 999px; font-weight: 800; font-size: 14px;
+  color: #fff; background: linear-gradient(100deg, var(--brand) 0%, #a06ff0 100%);
+  box-shadow: var(--shadow-sm); transition: transform .15s ease, filter .15s ease;
+}
+.nav-login:hover { transform: translateY(-1px); filter: brightness(1.04); }
+.nav-login.menu-only { color: #fff; }
+
+/* ---------------- Login page ---------------- */
+.login-wrap { display: grid; place-items: center; min-height: 70vh; padding-bottom: 120px; }
+.login-card {
+  position: relative; z-index: 1; width: 100%; max-width: 420px;
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow); padding: 40px 32px 32px; text-align: center;
+}
+.login-emoji {
+  width: 76px; height: 76px; margin: 0 auto 14px; display: grid; place-items: center;
+  font-size: 40px; border-radius: 50%;
+  background: linear-gradient(135deg, #ffd3e0, #c7d0ff); box-shadow: var(--shadow-sm);
+}
+.login-title { font-size: 28px; font-weight: 800; color: var(--ink); margin: 0 0 8px; }
+.login-sub { color: var(--ink-soft); font-size: 15px; line-height: 1.5; margin: 0 0 24px; }
+.login-error {
+  background: var(--red-soft); color: var(--red); font-weight: 700; font-size: 14px;
+  padding: 10px 14px; border-radius: 14px; margin: 0 0 16px;
+}
+.google-btn {
+  width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  padding: 14px 20px; border-radius: 16px; cursor: pointer;
+  font-size: 16px; font-weight: 800; color: var(--ink);
+  background: #fff; border: 2px solid var(--line);
+  box-shadow: var(--shadow-sm); transition: transform .15s ease, border-color .15s ease;
+}
+.google-btn:hover { transform: translateY(-1px); border-color: #d9d7ee; }
+.google-btn:active { transform: translateY(0); }
+.login-skip { margin: 20px 0 0; font-size: 14px; color: var(--muted); }
+.login-skip-link { color: var(--brand); font-weight: 700; text-decoration: underline; }

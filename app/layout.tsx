@@ -4,6 +4,7 @@ import "./globals.css";
 import TopNav from "@/components/TopNav";
 import SceneBackground from "@/components/SceneBackground";
 import { ChildProvider } from "@/components/ChildContext";
+import { AuthProvider } from "@/components/AuthContext";
 
 const baloo = Baloo_2({
   subsets: ["latin", "vietnamese"],
@@ -30,10 +31,12 @@ export default function RootLayout({
     <html lang="vi" className={`${baloo.variable} ${nunito.variable}`}>
       <body>
         <SceneBackground />
-        <ChildProvider>
-          <TopNav />
-          {children}
-        </ChildProvider>
+        <AuthProvider>
+          <ChildProvider>
+            <TopNav />
+            {children}
+          </ChildProvider>
+        </AuthProvider>
       </body>
     </html>
   );
