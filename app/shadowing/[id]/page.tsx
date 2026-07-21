@@ -75,7 +75,7 @@ export default function ShadowingDetailPage() {
     );
   }
 
-  return <ShadowingPlayer video={video} />;
+  return <ShadowingPlayer key={video.youtubeId} video={video} />;
 }
 
 function ShadowingPlayer({ video }: { video: Video }) {
@@ -86,28 +86,55 @@ function ShadowingPlayer({ video }: { video: Video }) {
 
   const [active, setActive] = useState(-1);
   const [ready, setReady] = useState(false);
+  const [activated, setActivated] = useState(false); // đã bấm phát → mới nạp iframe
   const [speed, setSpeed] = useState(1);
   const [size, setSize] = useState<SizeKey>("md");
   const [showExpl, setShowExpl] = useState(true);
   const [autoScroll, setAutoScroll] = useState(true);
+  const pendingSeek = useRef<number | null>(null); // mốc tua chờ khi player sẵn sàng
 
-  // Khởi tạo trình phát YouTube.
+  // Chỉ khởi tạo trình phát YouTube SAU khi bé bấm phát (facade → tiết kiệm & chắc chắn).
+  // YT.Player *thay thế* phần tử được truyền vào bằng <iframe>, nên ta tạo một host div
+  // con bên trong mountRef rồi tự dọn — React StrictMode (dev chạy effect 2 lần) không
+  // để lại player mount vào node đã chết.
   useEffect(() => {
+    if (!activated) return;
     let cancelled = false;
+    let player: YTPlayer | null = null;
+    setReady(false);
     loadYT().then((YT) => {
       if (cancelled || !mountRef.current) return;
-      playerRef.current = new YT.Player(mountRef.current, {
+      const host = document.createElement("div");
+      mountRef.current.appendChild(host);
+      player = new YT.Player(host, {
         videoId: video.youtubeId,
-        playerVars: { rel: 0, modestbranding: 1, playsinline: 1 },
-        events: { onReady: () => setReady(true) },
+        playerVars: { rel: 0, modestbranding: 1, playsinline: 1, autoplay: 1 },
+        events: {
+          onReady: (e) => {
+            if (cancelled) return;
+            setReady(true);
+            const t = pendingSeek.current;
+            if (t != null) {
+              e.target.seekTo(t, true);
+              pendingSeek.current = null;
+            }
+            e.target.playVideo();
+          },
+        },
       });
+      playerRef.current = player;
     });
     return () => {
       cancelled = true;
-      playerRef.current?.destroy();
+      try {
+        player?.destroy();
+      } catch {
+        /* iframe đã bị gỡ */
+      }
       playerRef.current = null;
+      if (mountRef.current) mountRef.current.innerHTML = "";
     };
-  }, [video.youtubeId]);
+  }, [activated, video.youtubeId]);
 
   // Bám thời gian phát → tìm câu đang chạy.
   useEffect(() => {
@@ -145,6 +172,12 @@ function ShadowingPlayer({ video }: { video: Video }) {
   };
 
   const seek = (t: number) => {
+    // Chưa phát: ghi nhớ mốc rồi kích hoạt — player sẽ tua tới đây khi sẵn sàng.
+    if (!activated) {
+      pendingSeek.current = t;
+      setActivated(true);
+      return;
+    }
     playerRef.current?.seekTo(t, true);
     playerRef.current?.playVideo();
   };
@@ -153,7 +186,7 @@ function ShadowingPlayer({ video }: { video: Video }) {
     <main className="wrap sh-page">
       <div className="sh-top">
         <Link href="/shadowing" className="btn-ghost sh-back">
-          ← Thư viện
+          <span className="arw" aria-hidden>←</span> Thư viện
         </Link>
         <h1 className="sh-title">{video.title}</h1>
       </div>
@@ -191,7 +224,27 @@ function ShadowingPlayer({ video }: { video: Video }) {
         {/* Cột video */}
         <div className="sh-video-col">
           <div className="sh-video">
-            <div ref={mountRef} />
+            <div ref={mountRef} className="sh-video-mount" />
+            {!activated && (
+              <button
+                className="sh-poster"
+                onClick={() => setActivated(true)}
+                aria-label="Phát video"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`https://i.ytimg.com/vi/${video.youtubeId}/hqdefault.jpg`}
+                  alt=""
+                  className="sh-poster-img"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                  }}
+                />
+                <span className="sh-play">
+                  <span className="sh-play-tri" />
+                </span>
+              </button>
+            )}
           </div>
           <p className="sh-hint">💡 Bấm vào một câu để tua video đến đúng chỗ và xem nghĩa/giải thích.</p>
         </div>

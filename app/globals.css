@@ -263,9 +263,12 @@ button { font-family: inherit; }
 
 /* ---------------- Shadowing detail (player + transcript) ---------------- */
 .sh-top { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 12px; }
-.sh-back { flex: 0 0 auto; padding: 8px 16px; }
+.sh-back { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; border-radius: 999px; font-size: 15px; background: var(--brand-soft); color: var(--brand-dark); box-shadow: none; transition: background .15s, transform .15s, box-shadow .15s; }
+.sh-back:hover { background: #e3ddff; transform: translateX(-3px); box-shadow: var(--shadow-sm); }
+.sh-back .arw { font-size: 18px; line-height: 1; transition: transform .15s; }
+.sh-back:hover .arw { transform: translateX(-2px); }
 .sh-title { font-size: clamp(20px, 2.4vw, 28px); margin: 0; line-height: 1.25; }
-.sh-controls { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin-bottom: 16px; }
+.sh-controls { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: flex-end; margin-bottom: 16px; }
 .sh-ctl { display: flex; align-items: center; gap: 8px; }
 .sh-ctl .lbl { font-weight: 800; color: var(--ink-soft); font-size: 14px; }
 .sh-select { font-family: var(--font-head); font-weight: 800; color: var(--ink); border: 2px solid var(--line); background: #fff; border-radius: 12px; padding: 8px 12px; cursor: pointer; min-height: 40px; }
@@ -277,6 +280,15 @@ button { font-family: inherit; }
 .sh-video-col { position: sticky; top: 90px; }
 .sh-video { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); background: #1a1830; }
 .sh-video > div, .sh-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* Facade: ảnh bìa + nút play (chỉ nạp iframe khi bấm) */
+.sh-poster { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; cursor: pointer; display: grid; place-items: center; background: #1a1830; overflow: hidden; }
+.sh-poster-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.sh-poster::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(0,0,0,.12), rgba(0,0,0,.42)); }
+.sh-play { position: relative; z-index: 1; width: 76px; height: 76px; border-radius: 50%; background: rgba(124,108,240,.94); display: grid; place-items: center; box-shadow: 0 10px 26px rgba(0,0,0,.35); transition: transform .15s cubic-bezier(.34,1.56,.64,1), background .15s; }
+.sh-poster:hover .sh-play, .sh-poster:focus-visible .sh-play { transform: scale(1.1); background: var(--brand); }
+.sh-play-tri { width: 0; height: 0; margin-left: 6px; border-style: solid; border-width: 15px 0 15px 25px; border-color: transparent transparent transparent #fff; }
+@media (prefers-reduced-motion: reduce) { .sh-play { transition: background .15s; } .sh-poster:hover .sh-play { transform: none; } }
 .sh-hint { color: var(--ink-soft); font-size: 13px; margin: 12px 4px 0; }
 
 .sh-scriptbox { background: var(--card); border: 2px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; max-height: calc(100vh - 150px); }
