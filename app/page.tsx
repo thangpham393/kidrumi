@@ -54,7 +54,7 @@ export default function Home() {
                 src={c.img}
                 alt={c.title}
                 fill
-                sizes="(max-width: 900px) 140px, 190px"
+                sizes="(max-width: 720px) 45vw, (max-width: 900px) 150px, 190px"
                 className="thumb-img"
               />
             </div>

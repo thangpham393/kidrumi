@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { useChild } from "./ChildContext";
 import Logo from "./Logo";
 
@@ -15,38 +16,65 @@ const links = [
 export default function TopNav() {
   const pathname = usePathname();
   const { child, reset } = useChild();
+  const [open, setOpen] = useState(false);
+
+  const close = () => setOpen(false);
 
   return (
     <nav className="nav">
       <div className="nav-inner">
-        <Link href="/" className="logo" aria-label="Kidrumi — trang chủ">
+        <Link href="/" className="logo" aria-label="Kidrumi — trang chủ" onClick={close}>
           <Logo />
         </Link>
-        <div className="nav-links">
+
+        <div className={`nav-links ${open ? "open" : ""}`}>
           <Link
             href="/"
             className={`nav-home ${pathname === "/" ? "active" : ""}`}
             title="Trang chủ"
+            onClick={close}
           >
-            🏠
+            🏠 <span className="nav-home-label">Trang chủ</span>
           </Link>
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               className={pathname.startsWith(l.href) ? "active" : ""}
+              onClick={close}
             >
               {l.label}
             </Link>
           ))}
-        </div>
-        <div className="nav-user">
-          <span className="avatar">🧒</span>
-          <span>{child?.name ?? "Bé Yêu"}</span>
-          <button className="logout" onClick={reset}>
+          <button
+            className="logout menu-only"
+            onClick={() => {
+              reset();
+              close();
+            }}
+          >
             Thoát
           </button>
         </div>
+
+        <div className="nav-user">
+          <span className="avatar">🧒</span>
+          <span className="nav-user-name">{child?.name ?? "Bé Yêu"}</span>
+          <button className="logout inline-only" onClick={reset}>
+            Thoát
+          </button>
+        </div>
+
+        <button
+          className={`nav-burger ${open ? "open" : ""}`}
+          aria-label="Mở menu"
+          aria-expanded={open}
+          onClick={() => setOpen((o) => !o)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </div>
     </nav>
   );

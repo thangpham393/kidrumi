@@ -36,6 +36,9 @@
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+/* never scroll sideways; clip (not hidden) keeps sticky nav working */
+html, body { overflow-x: clip; }
+img, svg, video, canvas { max-width: 100%; }
 
 body {
   font-family: var(--font-body);
@@ -78,7 +81,7 @@ button { font-family: inherit; }
 
 /* ---------------- Top navigation ---------------- */
 .nav { position: sticky; top: 0; z-index: 30; background: rgba(255,255,255,.82); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-.nav-inner { max-width: 1200px; margin: 0 auto; height: 66px; padding: 0 22px; display: flex; align-items: center; gap: 18px; }
+.nav-inner { position: relative; max-width: 1200px; margin: 0 auto; height: 66px; padding: 0 22px; display: flex; align-items: center; gap: 18px; }
 
 /* ---------------- Logo ---------------- */
 .logo { display: flex; align-items: center; }
@@ -105,6 +108,11 @@ button { font-family: inherit; }
 .nav-user { display: flex; align-items: center; gap: 10px; font-weight: 700; }
 .avatar { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, #ffd3e0, #c7d0ff); display: grid; place-items: center; font-size: 17px; box-shadow: var(--shadow-sm); }
 .nav-user .logout { color: var(--muted); font-weight: 600; cursor: pointer; background: none; border: none; }
+.nav-user-name { max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* mobile-only nav pieces — hidden on desktop */
+.nav-burger { display: none; }
+.menu-only { display: none; }
+.nav-home-label { display: none; }
 
 /* ---------------- Layout ---------------- */
 .wrap { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: 40px 22px 120px; }
@@ -280,11 +288,118 @@ button { font-family: inherit; }
 .toast { position: fixed; bottom: 110px; left: 50%; transform: translateX(-50%); background: var(--ink); color: #fff; font-weight: 800; padding: 12px 22px; border-radius: 999px; z-index: 50; box-shadow: var(--shadow); opacity: 0; transition: .25s; pointer-events: none; }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(-6px); }
 
-/* ---------------- Responsive ---------------- */
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+/* Tablet & below: single-column layouts, tighter grids */
 @media (max-width: 900px) {
   .grid-2, .task-cols { grid-template-columns: 1fr; }
   .vid-grid { grid-template-columns: repeat(2, 1fr); }
   .q-grid { grid-template-columns: 1fr; }
-  .nav-links { display: none; }
-  .act-thumb { flex-basis: 130px; height: 130px; font-size: 54px; }
+  .act-thumb { flex-basis: 150px; height: 150px; }
+  .wrap { padding: 32px 18px 110px; }
+}
+
+/* Hamburger navigation (phones & small tablets) */
+@media (max-width: 820px) {
+  .nav-inner { gap: 10px; padding: 0 14px; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 12px;
+    left: auto;
+    margin: 0;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 210px;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    padding: 8px;
+    gap: 4px;
+    z-index: 40;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a,
+  .nav-links .logout {
+    width: 100%;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-size: 16px;
+  }
+  .menu-only { display: block; color: var(--red); }
+  .nav-home-label { display: inline; }
+  .nav-user { margin-left: auto; gap: 8px; }
+  .nav-user .inline-only { display: none; }
+  .nav-burger {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 12px;
+    background: var(--brand-soft);
+    cursor: pointer;
+  }
+  .nav-burger span {
+    display: block;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--brand);
+    transition: transform 0.22s ease, opacity 0.22s ease;
+  }
+  .nav-burger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .nav-burger.open span:nth-child(2) { opacity: 0; }
+  .nav-burger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
+/* Phones: 2-column vertical activity cards (image on top, text below) */
+@media (max-width: 720px) {
+  .grid-2 { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .act-card {
+    --tilt: 0deg;
+    flex-direction: column;
+    gap: 0;
+    padding: 10px;
+    text-align: center;
+    border-radius: 22px;
+  }
+  .act-thumb { flex: none; width: 100%; height: auto; aspect-ratio: 1 / 1; border-radius: 16px; }
+  .act-body { align-items: center; }
+  .act-body h3 { font-size: 18px; margin: 10px 0 2px; }
+  .act-body .tag { font-size: 12.5px; margin-bottom: 0; line-height: 1.35; }
+  .act-body p,
+  .act-cta { display: none; }
+  .act-card .tape { left: 50%; transform: translateX(-50%) rotate(-4deg); }
+  /* hover bob is a desktop nicety — quiet, tappable feedback on touch */
+  .act-card:hover { animation: none; transform: rotate(0deg); }
+  .act-card:active { transform: translateY(-2px) scale(0.99); }
+
+  .wrap { padding: 24px 16px 96px; }
+  .page-title { font-size: 27px; }
+  .page-sub { font-size: 15px; margin-bottom: 22px; }
+  .page-eyebrow { font-size: 12px; }
+
+  .vid-grid { gap: 14px; }
+  .type-stats { gap: 18px; }
+  .type-stats .s .n { font-size: 24px; }
+  .lib-tabs .t { font-size: 24px; }
+  .modal { padding: 22px; }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+  .grid-2 { gap: 10px; }
+  .act-body h3 { font-size: 16px; }
+  .nav-user-name { max-width: 82px; }
+  .pad { grid-template-columns: repeat(3, 56px); gap: 8px; padding: 10px; }
+  .pad button { height: 50px; font-size: 20px; }
 }
