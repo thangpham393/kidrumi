@@ -81,7 +81,7 @@ button { font-family: inherit; }
 
 /* ---------------- Top navigation ---------------- */
 .nav { position: sticky; top: 0; z-index: 30; background: rgba(255,255,255,.82); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-.nav-inner { position: relative; max-width: 1200px; margin: 0 auto; height: 66px; padding: 0 22px; display: flex; align-items: center; gap: 18px; }
+.nav-inner { position: relative; max-width: 1440px; margin: 0 auto; height: 66px; padding: 0 22px; display: flex; align-items: center; gap: 18px; }
 
 /* ---------------- Logo ---------------- */
 .logo { display: flex; align-items: center; }
@@ -115,7 +115,7 @@ button { font-family: inherit; }
 .nav-home-label { display: none; }
 
 /* ---------------- Layout ---------------- */
-.wrap { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: 40px 22px 340px; }
+.wrap { position: relative; z-index: 1; max-width: 1360px; margin: 0 auto; padding: 40px 22px 340px; }
 .page-eyebrow { text-align: center; letter-spacing: 3px; font-weight: 800; font-size: 13px; color: var(--muted); }
 .page-title { text-align: center; font-size: clamp(30px, 5vw, 52px); color: var(--ink); margin: 6px 0 8px; font-weight: 800; }
 .page-sub { text-align: center; color: var(--ink-soft); font-size: 18px; margin: 0 0 34px; }
@@ -241,7 +241,9 @@ button { font-family: inherit; }
 .vid-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .vid { background: #fff; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-sm); cursor: pointer; transition: .15s; }
 .vid:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-.vid .thumb { aspect-ratio: 16/10; display: grid; place-items: center; font-size: 46px; position: relative; background: linear-gradient(135deg,#ffe08a,#ffd15c); }
+.vid .thumb { aspect-ratio: 16/9; display: grid; place-items: center; position: relative; background: linear-gradient(135deg,#ffe08a,#ffd15c); overflow: hidden; }
+.vid .thumb-emoji { font-size: 60px; line-height: 1; }
+.vid .thumb-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .2s; }
 .vid .lvl { position: absolute; top: 8px; left: 8px; background: #6bbf8a; color: #fff; font-weight: 800; font-size: 12px; padding: 3px 9px; border-radius: 8px; }
 .vid .lvl.mid { background: var(--amber); }
 .vid .lvl.hard { background: var(--red); }
@@ -250,6 +252,55 @@ button { font-family: inherit; }
 .vid .meta h4 { font-size: 15px; margin: 0 0 8px; line-height: 1.35; color: var(--ink); font-weight: 800; }
 .vid .badges { display: flex; gap: 6px; flex-wrap: wrap; }
 .vid .badges span { background: var(--brand-soft); color: var(--brand); font-weight: 700; font-size: 12px; padding: 3px 9px; border-radius: 8px; }
+.vid .badges .cnt { background: var(--green-soft); color: var(--green); }
+.vid { text-decoration: none; display: block; }
+
+/* Tab ngôn ngữ (English / Chinese) — cấp cao nhất của trang Shadowing */
+.lang-tabs { display: inline-flex; gap: 6px; background: #fff; border: 2px solid var(--line); border-radius: 999px; padding: 5px; box-shadow: var(--shadow-sm); margin-bottom: 16px; }
+.lang-tab { display: inline-flex; align-items: center; gap: 7px; border: none; background: none; cursor: pointer; font-family: var(--font-head); font-weight: 800; font-size: 15px; color: var(--muted); padding: 9px 20px; border-radius: 999px; transition: .15s; min-height: 44px; }
+.lang-tab .flag { font-size: 18px; }
+.lang-tab.on { background: linear-gradient(100deg, var(--brand) 0%, #a06ff0 100%); color: #fff; box-shadow: var(--shadow-sm); }
+
+/* ---------------- Shadowing detail (player + transcript) ---------------- */
+.sh-top { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 12px; }
+.sh-back { flex: 0 0 auto; padding: 8px 16px; }
+.sh-title { font-size: clamp(20px, 2.4vw, 28px); margin: 0; line-height: 1.25; }
+.sh-controls { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin-bottom: 16px; }
+.sh-ctl { display: flex; align-items: center; gap: 8px; }
+.sh-ctl .lbl { font-weight: 800; color: var(--ink-soft); font-size: 14px; }
+.sh-select { font-family: var(--font-head); font-weight: 800; color: var(--ink); border: 2px solid var(--line); background: #fff; border-radius: 12px; padding: 8px 12px; cursor: pointer; min-height: 40px; }
+.pill.sm { padding: 7px 14px; font-size: 13px; min-height: 40px; }
+
+.sh-detail { display: grid; grid-template-columns: 1.1fr 1fr; gap: 22px; align-items: start; }
+.sh-detail.size-sm { grid-template-columns: 0.85fr 1.15fr; }
+.sh-detail.size-lg { grid-template-columns: 1.5fr 1fr; }
+.sh-video-col { position: sticky; top: 90px; }
+.sh-video { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); background: #1a1830; }
+.sh-video > div, .sh-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.sh-hint { color: var(--ink-soft); font-size: 13px; margin: 12px 4px 0; }
+
+.sh-scriptbox { background: var(--card); border: 2px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; max-height: calc(100vh - 150px); }
+.sh-script-head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 16px 20px; border-bottom: 2px solid var(--line); }
+.sh-script-head strong { font-family: var(--font-head); color: var(--ink); }
+.sh-toggles { display: flex; gap: 16px; flex-wrap: wrap; }
+.sh-check { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: var(--ink-soft); cursor: pointer; }
+.sh-check input { width: 16px; height: 16px; accent-color: var(--green); }
+
+.sh-list { position: relative; overflow-y: auto; padding: 8px; flex: 1; }
+.sh-seg { padding: 12px 14px; border-radius: 16px; border: 2px solid transparent; cursor: pointer; transition: background .15s, border-color .15s; }
+.sh-seg + .sh-seg { margin-top: 2px; }
+.sh-seg:hover { background: #f6f5fc; }
+.sh-seg.on { background: var(--green-soft); border-color: var(--green); }
+.sh-seg-main { display: flex; gap: 12px; align-items: baseline; }
+.sh-time { flex: 0 0 auto; font-family: var(--font-head); font-weight: 800; font-size: 13px; color: var(--muted); min-width: 38px; }
+.sh-text { font-weight: 700; color: var(--ink); line-height: 1.4; }
+.sh-seg.on .sh-text { color: var(--brand-dark); }
+.sh-expl { margin: 8px 0 0 50px; }
+.sh-tr { margin: 0; font-size: 14px; color: var(--ink-soft); }
+.sh-tr b { color: var(--green); }
+.sh-words { margin-top: 4px; font-size: 13px; color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+.sh-words b { color: var(--ink); }
+.sh-word i { color: var(--muted); font-style: italic; }
 
 /* ---------------- Tasks ---------------- */
 .task-hero { background: linear-gradient(120deg,#f7b0cf,#e97fb0); color: #fff; border-radius: 20px; padding: 20px 24px; margin-bottom: 22px; box-shadow: var(--shadow); }
@@ -324,6 +375,12 @@ button { font-family: inherit; }
   /* iPad keeps two columns of problems — single column starts at phones (720px) */
   .act-thumb { flex-basis: 150px; height: 150px; }
   .wrap { padding: 32px 18px 320px; }
+
+  /* Shadowing detail: video on top, transcript below (mọi size về 1 cột) */
+  .sh-detail, .sh-detail.size-sm, .sh-detail.size-lg { grid-template-columns: 1fr; }
+  .sh-video-col { position: static; top: auto; }
+  .sh-scriptbox { max-height: none; }
+  .sh-list { max-height: 62vh; }
 }
 
 /* Hamburger navigation (phones & small tablets) */
@@ -460,6 +517,13 @@ button { font-family: inherit; }
   .type-stats .s .n { font-size: 24px; }
   .lib-tabs .t { font-size: 24px; }
   .modal { padding: 22px; }
+
+  /* Shadowing detail trên điện thoại */
+  .sh-controls { gap: 12px 20px; }
+  .sh-expl { margin-left: 0; }
+  .sh-script-head { padding: 14px 16px; }
+  .sh-list { max-height: 58vh; }
+  .lang-tab { padding: 9px 16px; font-size: 14px; }
 }
 
 /* Small phones */

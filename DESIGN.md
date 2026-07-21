@@ -58,7 +58,9 @@ nổi khối. **Không** đặt nền riêng cho từng trang — mọi nội du
 (`z-index:1`) trên nền chung này. Nền tối màu chữ dùng `--ink`.
 
 ## 5. Bố cục & khung
-- `.wrap`: khung nội dung, `max-width:1120px`, canh giữa, `z-index:1`.
+- `.wrap`: khung nội dung, `max-width:1360px`, canh giữa, `z-index:1`. Thanh nav
+  (`.nav-inner`) rộng hơn một nhịp (`max-width:1440px`) để logo/menu thẳng lề với nội dung.
+  Khung rộng này để lưới nhiều cột (vd `.vid-grid` 4 cột) không bị bóp trên màn hình lớn.
 - `.panel`: thẻ trắng bo `--radius-lg` + `--shadow`, padding 30px — khối nội dung chính.
 - `.grid-2`: lưới 2 cột (desktop), tự về 1 cột ≤900px.
 - `.section-label`: nhãn nhóm chữ hoa nhỏ, màu `--muted`.
@@ -72,6 +74,13 @@ nổi khối. **Không** đặt nền riêng cho từng trang — mọi nội du
 - **Thẻ hoạt động (home):** `.act-card` (+ biến thể `.c-task/.c-shad/.c-math/.c-type`),
   gồm `.act-thumb` (ảnh clay), `.act-body` (h3 + `.tag` + p + `.act-cta`), `.tape` (băng keo
   màu). Nghiêng nhẹ + hover nhún (mục 8).
+- **Thẻ video (Shadowing):** `.vid` trong lưới `.vid-grid` (4 cột, tự về 2 cột ≤900px),
+  gồm `.thumb` (tỉ lệ **16/9**) + `.meta` (h4 + `.badges`). Thumbnail lấy **ảnh video thật
+  từ YouTube** (`i.ytimg.com/vi/<id>/hqdefault.jpg`, lỗi thì thử `mqdefault`) qua component
+  `VidThumb` ([app/shadowing/page.tsx](app/shadowing/page.tsx)); nếu `youtubeId` không có ảnh
+  hợp lệ (YouTube trả ảnh xám 120px) thì **rớt về `.thumb-emoji`** trên nền vàng — luôn có
+  fallback, không để vỡ layout. Overlay: `.lvl` (độ khó, dùng lớp `.mid/.hard` đổi màu),
+  `.dur` (thời lượng góc phải).
 - **Modal:** `.modal-back` (nền mờ) + `.modal` (+ `.x` nút đóng). Biến thể `.result-modal`.
 - **Toast:** hook [components/useToast.tsx](components/useToast.tsx) → `.toast` (khen ngợi ngắn).
 - **Hộp nhắc:** `.hintbox` (nền amber, hướng dẫn/cảnh báo).

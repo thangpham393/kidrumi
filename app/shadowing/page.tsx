@@ -1,66 +1,94 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { useToast } from "@/components/useToast";
+import Link from "next/link";
+import {
+  type Lang,
+  type Level,
+  type Video,
+  langLabel,
+  levelLabel,
+  levelCls,
+  sourcesByLang,
+  videosByLang,
+} from "./data";
 
-type Level = "de" | "mid" | "hard";
-type Video = {
-  id: number;
-  title: string;
-  source: string;
-  level: Level;
-  dur: string;
-  emoji: string;
-};
+// Thumbnail: ưu tiên ảnh video thật từ YouTube. Thử hqdefault → mqdefault
+// (phòng khi i.ytimg chặn tạm 1 vài request); nếu ID không có ảnh hợp lệ
+// (YouTube trả ảnh xám 120px) thì rớt hẳn về emoji trên nền vàng.
+const YT_QUALITIES = ["hqdefault", "mqdefault"] as const;
 
-const levelLabel: Record<Level, string> = {
-  de: "Dễ",
-  mid: "Trung bình",
-  hard: "Khó",
-};
-const levelCls: Record<Level, string> = { de: "", mid: "mid", hard: "hard" };
-
-const sources = ["Tất cả", "Bluey", "Early Learning", "Little Fox", "The Fable Cottage", "Vooks"];
-
-const videos: Video[] = [
-  { id: 1, title: "Feelings and Emotions | Stories for Kindergarten", source: "Little Fox", level: "de", dur: "7:17", emoji: "😴" },
-  { id: 2, title: "Learn Shapes and Colors | Basic Concepts", source: "Little Fox", level: "de", dur: "12:00", emoji: "🚗" },
-  { id: 3, title: "Four Seasons of the Year | Stories for Kids", source: "Little Fox", level: "mid", dur: "10:19", emoji: "🏖️" },
-  { id: 4, title: "Share with Friends | Early Learning", source: "Little Fox", level: "de", dur: "1:51", emoji: "🎮" },
-  { id: 5, title: "I Can Do It! | Stories for Kindergarten", source: "Little Fox", level: "de", dur: "16:44", emoji: "🏊" },
-  { id: 6, title: "Buses, Bumper Cars, Fast Cars + More", source: "Little Fox", level: "mid", dur: "7:51", emoji: "🚌" },
-  { id: 7, title: "First Day of School | Back to School", source: "Little Fox", level: "mid", dur: "1:59", emoji: "🎒" },
-  { id: 8, title: '"What is your name?" and "What Is This?"', source: "Little Fox", level: "de", dur: "8:16", emoji: "🐱" },
-  { id: 9, title: "I See | Phonics | Bedtime Stories", source: "Little Fox", level: "de", dur: "1:22", emoji: "👀" },
-  { id: 10, title: "Teddy's Day | Phonics | Bedtime Stories", source: "Little Fox", level: "de", dur: "1:07", emoji: "🧸" },
-  { id: 11, title: "Dinosaurs | Phonics | Bedtime Stories", source: "Little Fox", level: "de", dur: "1:20", emoji: "🦕" },
-  { id: 12, title: "Things That Fly | Phonics | Bedtime Stories", source: "Little Fox", level: "de", dur: "2:07", emoji: "🎈" },
-  { id: 13, title: "Tickling the giant mountain! | Blue Mountains", source: "Bluey", level: "mid", dur: "1:42", emoji: "⛰️" },
-  { id: 14, title: "Sharing is Caring | Magic Xylophone", source: "Bluey", level: "hard", dur: "2:14", emoji: "🎹" },
-  { id: 15, title: "Watch out for the Magic Asparagus", source: "Bluey", level: "mid", dur: "2:00", emoji: "🥦" },
-  { id: 16, title: "Doctor Bluey and Nurse Bingo | Hospital", source: "Bluey", level: "hard", dur: "2:13", emoji: "🏥" },
-  { id: 17, title: "The Gingerbread Man | Fairy Tales", source: "The Fable Cottage", level: "mid", dur: "5:40", emoji: "🍪" },
-  { id: 18, title: "The Three Little Pigs | Fairy Tales", source: "The Fable Cottage", level: "mid", dur: "6:12", emoji: "🐷" },
-  { id: 19, title: "Goodnight Moon | Read Aloud", source: "Vooks", level: "de", dur: "3:30", emoji: "🌙" },
-  { id: 20, title: "Pete the Cat | I Love My White Shoes", source: "Vooks", level: "de", dur: "4:05", emoji: "👟" },
-];
+function VidThumb({ v }: { v: Video }) {
+  const [imgOk, setImgOk] = useState(false);
+  const [qi, setQi] = useState(0); // chỉ số chất lượng đang thử
+  const failed = qi >= YT_QUALITIES.length;
+  return (
+    <div className="thumb">
+      {!imgOk && <span className="thumb-emoji">{v.emoji}</span>}
+      {!failed && (
+        /* eslint-disable-next-line @next/next/no-img-element */
+        <img
+          key={qi}
+          src={`https://i.ytimg.com/vi/${v.youtubeId}/${YT_QUALITIES[qi]}.jpg`}
+          alt=""
+          className="thumb-photo"
+          decoding="async"
+          style={{ opacity: imgOk ? 1 : 0 }}
+          onLoad={(e) => {
+            // Ảnh "không có" của YouTube rộng đúng 120px → thử mức kế tiếp.
+            if (e.currentTarget.naturalWidth > 120) setImgOk(true);
+            else setQi((i) => i + 1);
+          }}
+          onError={() => setQi((i) => i + 1)}
+        />
+      )}
+      <span className={`lvl ${levelCls[v.level]}`}>{levelLabel[v.level]}</span>
+      <span className="dur">{v.dur}</span>
+    </div>
+  );
+}
 
 export default function ShadowingPage() {
-  const { showToast, toastEl } = useToast();
+  const [lang, setLang] = useState<Lang>("en");
   const [tab, setTab] = useState<"library" | "learning">("library");
   const [source, setSource] = useState("Tất cả");
   const [level, setLevel] = useState<"all" | Level>("all");
 
+  const sources = sourcesByLang[lang];
+
   const list = useMemo(() => {
-    return videos.filter(
+    return videosByLang(lang).filter(
       (v) =>
         (source === "Tất cả" || v.source === source) &&
         (level === "all" || v.level === level)
     );
-  }, [source, level]);
+  }, [lang, source, level]);
+
+  // Đổi ngôn ngữ thì reset bộ lọc nguồn (nguồn khác nhau giữa EN/ZH).
+  const pickLang = (l: Lang) => {
+    setLang(l);
+    setSource("Tất cả");
+    setLevel("all");
+  };
 
   return (
     <main className="wrap">
+      {/* Tab ngôn ngữ — cấp cao nhất */}
+      <div className="lang-tabs" role="tablist" aria-label="Ngôn ngữ">
+        {(["en", "zh"] as Lang[]).map((l) => (
+          <button
+            key={l}
+            role="tab"
+            aria-selected={lang === l}
+            className={`lang-tab ${lang === l ? "on" : ""}`}
+            onClick={() => pickLang(l)}
+          >
+            <span className="flag">{l === "en" ? "🇬🇧" : "🇨🇳"}</span>
+            {langLabel[l]}
+          </button>
+        ))}
+      </div>
+
       <div className="lib-tabs">
         <button
           className={`t ${tab === "library" ? "on" : ""}`}
@@ -113,25 +141,16 @@ export default function ShadowingPage() {
 
           <div className="vid-grid">
             {list.map((v) => (
-              <div
-                key={v.id}
-                className="vid"
-                onClick={() => showToast(`Sắp mở: ${v.title} ▶️`)}
-              >
-                <div className="thumb">
-                  {v.emoji}
-                  <span className={`lvl ${levelCls[v.level]}`}>
-                    {levelLabel[v.level]}
-                  </span>
-                  <span className="dur">{v.dur}</span>
-                </div>
+              <Link key={v.id} href={`/shadowing/${v.id}`} className="vid">
+                <VidThumb v={v} />
                 <div className="meta">
                   <h4>{v.title}</h4>
                   <div className="badges">
                     <span>{v.source}</span>
+                    <span className="cnt">{v.segments.length} câu</span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
           {list.length === 0 && (
@@ -150,7 +169,6 @@ export default function ShadowingPage() {
           </p>
         </div>
       )}
-      {toastEl}
     </main>
   );
 }
