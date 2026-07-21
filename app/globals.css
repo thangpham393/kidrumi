@@ -268,7 +268,8 @@ button { font-family: inherit; }
 .sh-back:hover { background: #e3ddff; transform: translateX(-3px); box-shadow: var(--shadow-sm); }
 .sh-back .arw { font-size: 18px; line-height: 1; transition: transform .15s; }
 .sh-back:hover .arw { transform: translateX(-2px); }
-.sh-title { font-size: clamp(20px, 2.4vw, 28px); margin: 0; line-height: 1.25; }
+.sh-title { font-size: clamp(20px, 2.4vw, 28px); margin: 0; line-height: 1.25; min-width: 0; }
+.sh-ctl-speed { margin-left: auto; } /* đẩy tốc độ về phải hàng tiêu đề */
 .sh-controls { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: flex-end; margin-bottom: 16px; }
 .sh-ctl { display: flex; align-items: center; gap: 8px; }
 .sh-ctl .lbl { font-weight: 800; color: var(--ink-soft); font-size: 14px; }
@@ -389,11 +390,43 @@ button { font-family: inherit; }
   .act-thumb { flex-basis: 150px; height: 150px; }
   .wrap { padding: 32px 18px 320px; }
 
-  /* Shadowing detail: video on top, transcript below (mọi size về 1 cột) */
-  .sh-detail, .sh-detail.size-sm, .sh-detail.size-lg { grid-template-columns: 1fr; }
-  .sh-video-col { position: static; top: auto; }
-  .sh-scriptbox { max-height: none; }
-  .sh-list { max-height: 62vh; }
+  /* Shadowing detail trên mobile/tablet dọc: khoá màn hình 1 khung — video cố định
+     trên đầu, chỉ danh sách câu cuộn bên dưới (không cuộn cả trang). */
+  .wrap.sh-page {
+    height: calc(100dvh - 67px); /* trừ chiều cao nav dính (66px + viền 1px) */
+    padding: 12px 16px 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  /* Thanh công cụ thu gọn 1 hàng: nút back icon + tiêu đề (rút gọn) + tốc độ nhỏ */
+  .sh-page .sh-top { flex-wrap: nowrap; gap: 10px; margin-bottom: 10px; }
+  .sh-page .sh-back { padding: 9px 12px; }
+  .sh-page .sh-back-label { display: none; }
+  .sh-page .sh-title {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .sh-page .sh-ctl-speed { flex: 0 0 auto; margin-left: 0; gap: 0; }
+  .sh-page .sh-ctl-speed .lbl { display: none; } /* bỏ nhãn "Tốc độ:" cho gọn */
+  .sh-page .sh-select { padding: 6px 10px; min-height: 38px; }
+  .sh-page .sh-controls { display: none; } /* chỉ còn "Cỡ video" — ẩn cả hàng */
+  .sh-detail, .sh-detail.size-sm, .sh-detail.size-lg {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* nếu không sẽ co video về 0 chiều rộng */
+    flex: 1;
+    min-height: 0; /* cho phép con co lại để cuộn trong khung */
+    gap: 12px;
+  }
+  .sh-video-col { position: static; top: auto; flex: 0 0 auto; }
+  .sh-hint { display: none; } /* nhường chỗ cho danh sách câu */
+  .sh-scriptbox { max-height: none; flex: 1 1 auto; min-height: 0; }
+  .sh-list { max-height: none; flex: 1; }
 }
 
 /* Hamburger navigation (phones & small tablets) */
@@ -525,17 +558,16 @@ button { font-family: inherit; }
   .page-sub { font-size: 15px; margin-bottom: 22px; }
   .page-eyebrow { font-size: 12px; }
 
-  .vid-grid { gap: 14px; }
+  .vid-grid { grid-template-columns: 1fr; gap: 14px; }
   .type-stats { gap: 18px; }
   .type-stats .s .n { font-size: 24px; }
   .lib-tabs .t { font-size: 24px; }
   .modal { padding: 22px; }
 
-  /* Shadowing detail trên điện thoại */
+  /* Shadowing detail trên điện thoại (giữ khung khoá màn hình từ mốc 900px) */
   .sh-controls { gap: 12px 20px; }
   .sh-expl { margin-left: 0; }
-  .sh-script-head { padding: 14px 16px; }
-  .sh-list { max-height: 58vh; }
+  .sh-script-head { padding: 12px 16px; }
   .lang-tab { padding: 9px 16px; font-size: 14px; }
 }
 

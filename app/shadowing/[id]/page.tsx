@@ -186,18 +186,17 @@ function ShadowingPlayer({ video }: { video: Video }) {
     <main className="wrap sh-page">
       <div className="sh-top">
         <Link href="/shadowing" className="btn-ghost sh-back">
-          <span className="arw" aria-hidden>←</span> Thư viện
+          <span className="arw" aria-hidden>←</span>
+          <span className="sh-back-label">Thư viện</span>
         </Link>
         <h1 className="sh-title">{video.title}</h1>
-      </div>
-
-      <div className="sh-controls">
-        <div className="sh-ctl">
+        <div className="sh-ctl sh-ctl-speed">
           <span className="lbl">Tốc độ:</span>
           <select
             className="sh-select"
             value={speed}
             onChange={(e) => changeSpeed(Number(e.target.value))}
+            aria-label="Tốc độ phát"
           >
             {speeds.map((s) => (
               <option key={s} value={s}>
@@ -206,7 +205,10 @@ function ShadowingPlayer({ video }: { video: Video }) {
             ))}
           </select>
         </div>
-        <div className="sh-ctl">
+      </div>
+
+      <div className="sh-controls">
+        <div className="sh-ctl sh-ctl-size">
           <span className="lbl">Cỡ video:</span>
           {sizes.map((s) => (
             <button
