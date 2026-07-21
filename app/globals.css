@@ -538,6 +538,9 @@ button { font-family: inherit; }
 
 .empty-tasks { text-align: center; color: var(--ink-soft); padding: 22px 10px; line-height: 1.6; }
 
+.profile-del { margin-top: 10px; color: var(--red); box-shadow: inset 0 0 0 2px var(--red-soft); }
+.profile-del:hover { background: var(--red-soft); }
+
 /* Cổng ba mẹ (giải toán) */
 .gate-expr {
   font-family: var(--font-head); font-weight: 800; font-size: 40px; color: var(--brand);

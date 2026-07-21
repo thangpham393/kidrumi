@@ -24,6 +24,7 @@ type Ctx = {
   children: Child[];
   ready: boolean;
   createChild: (name: string, world: string) => Promise<Child | null>;
+  updateChild: (id: string, name: string, world: string) => Promise<void>;
   setActive: (id: string) => void;
   deleteChild: (id: string) => Promise<void>;
   addStars: (n: number) => void;
@@ -135,6 +136,24 @@ export function ChildProvider({ children: kids }: { children: ReactNode }) {
     return c;
   };
 
+  const updateChild = async (id: string, name: string, world: string) => {
+    const clean = name.trim() || "Bé Yêu";
+    setList((prev) =>
+      prev.map((c) => {
+        if (c.id !== id) return c;
+        const next = { ...c, name: clean, world };
+        if (user && id !== "local") {
+          void supabase.from("children").update({ name: clean, world }).eq("id", id);
+        } else {
+          try {
+            localStorage.setItem(KEY, JSON.stringify(next));
+          } catch {}
+        }
+        return next;
+      })
+    );
+  };
+
   const deleteChild = async (id: string) => {
     if (user && id !== "local") {
       await supabase.from("children").delete().eq("id", id);
@@ -188,6 +207,7 @@ export function ChildProvider({ children: kids }: { children: ReactNode }) {
         children: list,
         ready,
         createChild,
+        updateChild,
         setActive,
         deleteChild,
         addStars,

@@ -56,7 +56,8 @@ const todayVi = () => {
 };
 
 export default function TasksPage() {
-  const { child, children, ready, createChild, setActive, addStars } = useChild();
+  const { child, children, ready, createChild, updateChild, deleteChild, setActive, addStars } =
+    useChild();
   const { user } = useAuth();
   const { showToast, toastEl } = useToast();
   const supabase = useMemo(() => createClient(), []);
@@ -66,6 +67,7 @@ export default function TasksPage() {
   const [loadingTasks, setLoadingTasks] = useState(false);
 
   const [showProfile, setShowProfile] = useState(false);
+  const [editingProfile, setEditingProfile] = useState(false); // true = sửa bé đang chọn
   const [editMode, setEditMode] = useState(false);
   const [showGate, setShowGate] = useState(false);
   const [taskModal, setTaskModal] = useState(false);
@@ -214,6 +216,30 @@ export default function TasksPage() {
     setEditingTask(null);
   };
 
+  const openAddChild = () => {
+    setEditingProfile(false);
+    setShowProfile(true);
+  };
+  const openEditChild = () => {
+    setEditingProfile(true);
+    setShowProfile(true);
+  };
+  const closeProfile = () => {
+    setShowProfile(false);
+    setEditingProfile(false);
+  };
+  const saveProfile = async (name: string, world: string) => {
+    if (editingProfile && child) await updateChild(child.id, name, world);
+    else await createChild(name, world);
+    closeProfile();
+  };
+  const removeProfile = async () => {
+    if (!child) return;
+    if (!confirm(`Xoá hồ sơ của "${child.name}"? Mọi nhiệm vụ & sao sẽ mất.`)) return;
+    await deleteChild(child.id);
+    closeProfile();
+  };
+
   const enterEdit = () => {
     if (editMode) setEditMode(false);
     else setShowGate(true);
@@ -236,19 +262,13 @@ export default function TasksPage() {
             Tạo hồ sơ cho bé để bắt đầu: mỗi việc nhỏ hoàn thành là một lần bạn đồng hành
             reo hò, sao tích lũy và rương quà chờ mở cuối ngày.
           </p>
-          <button className="btn" style={{ marginTop: 16 }} onClick={() => setShowProfile(true)}>
+          <button className="btn" style={{ marginTop: 16 }} onClick={openAddChild}>
             Tạo hồ sơ cho bé 🎉
           </button>
         </div>
 
         {showProfile && (
-          <ProfileModal
-            onClose={() => setShowProfile(false)}
-            onCreate={async (name, world) => {
-              await createChild(name, world);
-              setShowProfile(false);
-            }}
-          />
+          <ProfileModal onClose={closeProfile} onSave={saveProfile} />
         )}
         {toastEl}
       </main>
@@ -293,7 +313,12 @@ export default function TasksPage() {
             </button>
           );
         })}
-        <button className="pill" onClick={() => setShowProfile(true)}>
+        {editMode && (
+          <button className="pill" onClick={openEditChild}>
+            ✏️ Sửa hồ sơ
+          </button>
+        )}
+        <button className="pill" onClick={openAddChild}>
           + Thêm bé
         </button>
       </div>
@@ -438,11 +463,10 @@ export default function TasksPage() {
 
       {showProfile && (
         <ProfileModal
-          onClose={() => setShowProfile(false)}
-          onCreate={async (name, world) => {
-            await createChild(name, world);
-            setShowProfile(false);
-          }}
+          initial={editingProfile && child ? { name: child.name, world: child.world } : undefined}
+          onClose={closeProfile}
+          onSave={saveProfile}
+          onDelete={editingProfile ? removeProfile : undefined}
         />
       )}
 
@@ -468,22 +492,27 @@ export default function TasksPage() {
   );
 }
 
-/* ---------- Modal tạo hồ sơ bé ---------- */
+/* ---------- Modal tạo / sửa hồ sơ bé ---------- */
 function ProfileModal({
+  initial,
   onClose,
-  onCreate,
+  onSave,
+  onDelete,
 }: {
+  initial?: { name: string; world: string };
   onClose: () => void;
-  onCreate: (name: string, world: string) => void;
+  onSave: (name: string, world: string) => void;
+  onDelete?: () => void;
 }) {
-  const [name, setName] = useState("");
-  const [world, setWorld] = useState("carrot");
+  const isEdit = !!initial;
+  const [name, setName] = useState(initial?.name ?? "");
+  const [world, setWorld] = useState(initial?.world ?? "carrot");
   return (
     <div className="modal-back" onClick={onClose}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
         <button className="x" onClick={onClose}>✕</button>
-        <p className="section-label">THÊM BÉ</p>
-        <h3>Bé nhà mình tên gì?</h3>
+        <p className="section-label">{isEdit ? "SỬA HỒ SƠ" : "THÊM BÉ"}</p>
+        <h3>{isEdit ? "Chỉnh hồ sơ của bé" : "Bé nhà mình tên gì?"}</h3>
 
         <div style={{ fontWeight: 800, marginBottom: 6 }}>Tên gọi ở nhà</div>
         <input
@@ -507,9 +536,14 @@ function ProfileModal({
           ))}
         </div>
 
-        <button className="btn btn-block" onClick={() => onCreate(name, world)}>
-          Tạo hồ sơ cho bé 🎉
+        <button className="btn btn-block" onClick={() => onSave(name, world)}>
+          {isEdit ? "Lưu hồ sơ 💾" : "Tạo hồ sơ cho bé 🎉"}
         </button>
+        {onDelete && (
+          <button className="btn btn-ghost btn-block profile-del" onClick={onDelete}>
+            🗑️ Xoá hồ sơ bé này
+          </button>
+        )}
       </div>
     </div>
   );
