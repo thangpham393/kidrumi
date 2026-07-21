@@ -480,7 +480,6 @@ button { font-family: inherit; }
   box-shadow: var(--shadow-sm); transition: transform .15s ease, filter .15s ease;
 }
 .nav-login:hover { transform: translateY(-1px); filter: brightness(1.04); }
-.nav-login.menu-only { color: #fff; }
 
 /* ---------------- Login page ---------------- */
 .login-wrap { display: grid; place-items: center; min-height: 70vh; padding-bottom: 120px; }

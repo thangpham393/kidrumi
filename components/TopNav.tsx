@@ -57,14 +57,10 @@ export default function TopNav() {
               {l.label}
             </Link>
           ))}
-          {user ? (
+          {user && (
             <button className="logout menu-only" onClick={handleLogout}>
               Đăng xuất
             </button>
-          ) : (
-            <Link href="/login" className="nav-login menu-only" onClick={close}>
-              Đăng nhập
-            </Link>
           )}
         </div>
 
@@ -83,7 +79,7 @@ export default function TopNav() {
               Đăng xuất
             </button>
           ) : (
-            <Link href="/login" className="nav-login inline-only">
+            <Link href="/login" className="nav-login">
               Đăng nhập
             </Link>
           )}
