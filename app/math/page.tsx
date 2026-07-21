@@ -78,9 +78,21 @@ export default function MathPage() {
     );
 
   const generate = useCallback(() => {
-    const list = Array.from({ length: count }, () =>
-      makeQ(ops.length ? ops : ["+"], range)
-    );
+    const activeOps: Op[] = ops.length ? ops : ["+"];
+    const list: Q[] = [];
+    const seen = new Set<string>();
+    // Try to keep every problem unique within the round…
+    let guard = 0;
+    while (list.length < count && guard < count * 40) {
+      guard++;
+      const q = makeQ(activeOps, range);
+      const key = `${q.a}${q.op}${q.b}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      list.push(q);
+    }
+    // …but if the range is too small to fill without repeats, allow the rest.
+    while (list.length < count) list.push(makeQ(activeOps, range));
     setQuestions(list);
     setSel(0);
   }, [ops, range, count]);
@@ -267,7 +279,7 @@ export default function MathPage() {
   // ---------- PLAY ----------
   return (
     <>
-      <main className="wrap">
+      <main className={`wrap ${padOpen ? "pad-space" : ""}`}>
         <div className="play-bar">
           <button className="pill" onClick={() => setPhase("setup")}>
             ← Cài đặt

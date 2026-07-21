@@ -399,6 +399,10 @@ button { font-family: inherit; }
   /* Single column of problems on phones */
   .q-grid { grid-template-columns: 1fr; }
 
+  /* When the keypad sheet is up, give the list room to scroll the active
+     problem clear above it. */
+  .wrap.pad-space { padding-bottom: 380px; }
+
   /* Keypad becomes a bottom sheet that only slides up when a problem is tapped */
   .pad {
     left: 0;
