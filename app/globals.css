@@ -152,6 +152,7 @@ button { font-family: inherit; }
 }
 @media (prefers-reduced-motion: reduce) {
   .act-card:hover { animation: none; transform: translateY(-6px) rotate(0deg); }
+  .q-card.wrong { animation: none; }
 }
 .act-thumb { position: relative; flex: 0 0 190px; height: 190px; border-radius: 20px; overflow: hidden; background: var(--brand-soft); box-shadow: inset 0 0 0 1px rgba(124,108,240,.06); }
 .thumb-img { object-fit: cover; transition: transform .3s ease; }
@@ -213,6 +214,14 @@ button { font-family: inherit; }
 .q-card.sel .q-ans { border-style: solid; border-color: var(--brand); }
 .q-card.correct .q-ans { background: var(--green-soft); border-color: var(--green); color: #3f8a5a; border-style: solid; }
 .q-card.wrong  .q-ans { background: var(--red-soft); border-color: var(--red); color: #cf5a42; border-style: solid; }
+.q-card.wrong { animation: q-shake 0.4s ease; }
+@keyframes q-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-7px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(3px); }
+}
 
 .pad { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: #fff; border-radius: 24px; box-shadow: var(--shadow); padding: 14px; display: grid; grid-template-columns: repeat(3, 104px); gap: 10px; z-index: 20; }
 .pad button { height: 52px; border: none; border-radius: 14px; background: #f4f3ff; font-family: var(--font-head); font-weight: 800; font-size: 26px; color: var(--ink); cursor: pointer; transition: .1s; }

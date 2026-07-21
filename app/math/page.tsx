@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useToast } from "@/components/useToast";
 import { useChild } from "@/components/ChildContext";
+import { confettiBurst, playSuccess, playWrong } from "@/components/celebrate";
 
 type Op = "+" | "-" | "×" | "÷";
 type Mark = "instant" | "end";
@@ -91,6 +92,40 @@ export default function MathPage() {
 
   const press = useCallback(
     (k: string) => {
+      if (k === "ok") {
+        const cur = questions[sel];
+        if (!cur || cur.val === "") return;
+        if (mark === "instant") {
+          const isRight = Number(cur.val) === cur.ans;
+          setQuestions((prev) => {
+            const next = [...prev];
+            next[sel] = { ...next[sel], state: isRight ? "correct" : "wrong" };
+            return next;
+          });
+          if (isRight) {
+            showToast("Giỏi quá! 🎉");
+            addStars(1);
+            playSuccess();
+            const rect = document
+              .querySelector(".q-card.sel")
+              ?.getBoundingClientRect();
+            confettiBurst(
+              rect ? rect.left + rect.width / 2 : undefined,
+              rect ? rect.top + rect.height / 2 : undefined
+            );
+          } else {
+            playWrong();
+          }
+        }
+        setSel((s) => {
+          const idx = questions.findIndex(
+            (x, i) => i > s && x.state !== "correct"
+          );
+          return idx >= 0 ? idx : s;
+        });
+        return;
+      }
+
       setQuestions((prev) => {
         const next = [...prev];
         const q = { ...next[sel] };
@@ -98,15 +133,6 @@ export default function MathPage() {
         if (k === "del") {
           q.val = q.val.slice(0, -1);
           q.state = "";
-        } else if (k === "ok") {
-          if (q.val === "") return prev;
-          if (mark === "instant") {
-            q.state = Number(q.val) === q.ans ? "correct" : "wrong";
-            if (q.state === "correct") {
-              showToast("Giỏi quá! 🎉");
-              addStars(1);
-            }
-          }
         } else {
           if (q.val.length < 4) q.val += k;
           q.state = "";
@@ -114,15 +140,6 @@ export default function MathPage() {
         next[sel] = q;
         return next;
       });
-
-      if (k === "ok") {
-        setSel((s) => {
-          const idx = questions.findIndex(
-            (x, i) => i > s && x.state !== "correct"
-          );
-          return idx >= 0 ? idx : s;
-        });
-      }
     },
     [sel, mark, questions, showToast, addStars]
   );
@@ -157,6 +174,12 @@ export default function MathPage() {
     );
     const c = questions.filter((q) => Number(q.val) === q.ans).length;
     showToast(`Bé làm đúng ${c}/${questions.length} câu! 🌟`);
+    if (c > 0) {
+      playSuccess();
+      confettiBurst();
+    } else {
+      playWrong();
+    }
   };
 
   // ---------- SETUP ----------
