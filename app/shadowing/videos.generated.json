@@ -32137,5 +32137,7761 @@
         ]
       }
     ]
+  },
+  {
+    "id": "lf2-4KSRNznLeOg",
+    "lang": "zh",
+    "title": "On the Monster (在怪物身上)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:12",
+    "emoji": "👹",
+    "youtubeId": "4KSRNznLeOg",
+    "segments": [
+      {
+        "t": 0,
+        "text": "在怪物身上。",
+        "tr": "Ở trên người quái vật.",
+        "words": [
+          {
+            "w": "怪物",
+            "ph": "guài wù",
+            "mean": "quái vật"
+          },
+          {
+            "w": "身上",
+            "ph": "shēn shang",
+            "mean": "trên người"
+          }
+        ]
+      },
+      {
+        "t": 7,
+        "text": "我一点也不怕怪物。",
+        "tr": "Mình chẳng sợ quái vật chút nào.",
+        "words": [
+          {
+            "w": "怕",
+            "ph": "pà",
+            "mean": "sợ"
+          },
+          {
+            "w": "怪物",
+            "ph": "guài wù",
+            "mean": "quái vật"
+          }
+        ]
+      },
+      {
+        "t": 13,
+        "text": "我在怪物身上。",
+        "tr": "Mình ở trên người quái vật.",
+        "words": [
+          {
+            "w": "身上",
+            "ph": "shēn shang",
+            "mean": "trên người"
+          }
+        ]
+      },
+      {
+        "t": 17,
+        "text": "我在怪物下面。",
+        "tr": "Mình ở dưới quái vật.",
+        "words": [
+          {
+            "w": "下面",
+            "ph": "xià miàn",
+            "mean": "phía dưới"
+          }
+        ]
+      },
+      {
+        "t": 22,
+        "text": "我在怪物前面。",
+        "tr": "Mình ở phía trước quái vật.",
+        "words": [
+          {
+            "w": "前面",
+            "ph": "qián miàn",
+            "mean": "phía trước"
+          }
+        ]
+      },
+      {
+        "t": 28,
+        "text": "我在怪物后面。",
+        "tr": "Mình ở phía sau quái vật.",
+        "words": [
+          {
+            "w": "后面",
+            "ph": "hòu miàn",
+            "mean": "phía sau"
+          }
+        ]
+      },
+      {
+        "t": 34,
+        "text": "我在怪物旁边。",
+        "tr": "Mình ở bên cạnh quái vật.",
+        "words": [
+          {
+            "w": "旁边",
+            "ph": "páng biān",
+            "mean": "bên cạnh"
+          }
+        ]
+      },
+      {
+        "t": 40,
+        "text": "我在怪物上面。",
+        "tr": "Mình ở phía trên quái vật.",
+        "words": [
+          {
+            "w": "上面",
+            "ph": "shàng miàn",
+            "mean": "phía trên"
+          }
+        ]
+      },
+      {
+        "t": 45,
+        "text": "我在直升飞机里面。",
+        "tr": "Mình ở trong máy bay trực thăng.",
+        "words": [
+          {
+            "w": "直升飞机",
+            "ph": "zhí shēng fēi jī",
+            "mean": "máy bay trực thăng"
+          },
+          {
+            "w": "里面",
+            "ph": "lǐ miàn",
+            "mean": "bên trong"
+          }
+        ]
+      },
+      {
+        "t": 51,
+        "text": "啊,不好!",
+        "tr": "Ôi, không ổn rồi!"
+      },
+      {
+        "t": 54,
+        "text": "我被怪物抓住了。",
+        "tr": "Mình bị quái vật bắt mất rồi.",
+        "words": [
+          {
+            "w": "抓住",
+            "ph": "zhuā zhù",
+            "mean": "bắt lấy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-axxpmQSemBM",
+    "lang": "zh",
+    "title": "What Makes This Sound? (这是什么声音？)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "2:24",
+    "emoji": "🎵",
+    "youtubeId": "axxpmQSemBM",
+    "segments": [
+      {
+        "t": 0,
+        "text": "这是什么声音?",
+        "tr": "Đây là âm thanh gì nhỉ?",
+        "words": [
+          {
+            "w": "声音",
+            "ph": "shēng yīn",
+            "mean": "âm thanh"
+          }
+        ]
+      },
+      {
+        "t": 11,
+        "text": "这是钢琴的声音?",
+        "tr": "Đây là tiếng đàn piano à?",
+        "words": [
+          {
+            "w": "钢琴",
+            "ph": "gāng qín",
+            "mean": "đàn piano"
+          }
+        ]
+      },
+      {
+        "t": 22,
+        "text": "这是中琴的声音?",
+        "tr": "Đây là tiếng đàn à?",
+        "words": [
+          {
+            "w": "琴",
+            "ph": "qín",
+            "mean": "cây đàn"
+          }
+        ]
+      },
+      {
+        "t": 31,
+        "text": "这是什么声音?",
+        "tr": "Đây là âm thanh gì nhỉ?",
+        "words": [
+          {
+            "w": "声音",
+            "ph": "shēng yīn",
+            "mean": "âm thanh"
+          }
+        ]
+      },
+      {
+        "t": 36,
+        "text": "这是捞箔的声音?",
+        "tr": "Đây là tiếng nhạc à?"
+      },
+      {
+        "t": 43,
+        "text": "这是什么声音?",
+        "tr": "Đây là âm thanh gì nhỉ?",
+        "words": [
+          {
+            "w": "声音",
+            "ph": "shēng yīn",
+            "mean": "âm thanh"
+          }
+        ]
+      },
+      {
+        "t": 48,
+        "text": "这是小提琴的声音?",
+        "tr": "Đây là tiếng đàn vĩ cầm à?",
+        "words": [
+          {
+            "w": "小提琴",
+            "ph": "xiǎo tí qín",
+            "mean": "đàn vĩ cầm"
+          }
+        ]
+      },
+      {
+        "t": 55,
+        "text": "这是什么声音?",
+        "tr": "Đây là âm thanh gì nhỉ?",
+        "words": [
+          {
+            "w": "声音",
+            "ph": "shēng yīn",
+            "mean": "âm thanh"
+          }
+        ]
+      },
+      {
+        "t": 62,
+        "text": "这是领鼓的声音?",
+        "tr": "Đây là tiếng trống à?",
+        "words": [
+          {
+            "w": "鼓",
+            "ph": "gǔ",
+            "mean": "cái trống"
+          }
+        ]
+      },
+      {
+        "t": 69,
+        "text": "这是什么声音?",
+        "tr": "Đây là âm thanh gì nhỉ?",
+        "words": [
+          {
+            "w": "声音",
+            "ph": "shēng yīn",
+            "mean": "âm thanh"
+          }
+        ]
+      },
+      {
+        "t": 73,
+        "text": "这是鼓的声音?",
+        "tr": "Đây là tiếng trống à?",
+        "words": [
+          {
+            "w": "鼓",
+            "ph": "gǔ",
+            "mean": "cái trống"
+          }
+        ]
+      },
+      {
+        "t": 80,
+        "text": "这是什么声音?",
+        "tr": "Đây là âm thanh gì nhỉ?",
+        "words": [
+          {
+            "w": "声音",
+            "ph": "shēng yīn",
+            "mean": "âm thanh"
+          }
+        ]
+      },
+      {
+        "t": 87,
+        "text": "这是口琴的声音?",
+        "tr": "Đây là tiếng kèn ac-mô-ni-ca à?",
+        "words": [
+          {
+            "w": "口琴",
+            "ph": "kǒu qín",
+            "mean": "kèn ac-mô-ni-ca"
+          }
+        ]
+      },
+      {
+        "t": 93,
+        "text": "这是什么声音?",
+        "tr": "Đây là âm thanh gì nhỉ?",
+        "words": [
+          {
+            "w": "声音",
+            "ph": "shēng yīn",
+            "mean": "âm thanh"
+          }
+        ]
+      },
+      {
+        "t": 98,
+        "text": "这是木琴的声音?",
+        "tr": "Đây là tiếng đàn mộc cầm à?",
+        "words": [
+          {
+            "w": "木琴",
+            "ph": "mù qín",
+            "mean": "đàn mộc cầm"
+          }
+        ]
+      },
+      {
+        "t": 105,
+        "text": "这是什么声音?",
+        "tr": "Đây là âm thanh gì nhỉ?",
+        "words": [
+          {
+            "w": "声音",
+            "ph": "shēng yīn",
+            "mean": "âm thanh"
+          }
+        ]
+      },
+      {
+        "t": 111,
+        "text": "这是长笛的声音?",
+        "tr": "Đây là tiếng sáo à?",
+        "words": [
+          {
+            "w": "长笛",
+            "ph": "cháng dí",
+            "mean": "cây sáo"
+          }
+        ]
+      },
+      {
+        "t": 117,
+        "text": "让我们一起演奏吧!",
+        "tr": "Chúng mình cùng chơi nhạc nào!",
+        "words": [
+          {
+            "w": "演奏",
+            "ph": "yǎn zòu",
+            "mean": "chơi nhạc"
+          },
+          {
+            "w": "一起",
+            "ph": "yì qǐ",
+            "mean": "cùng nhau"
+          }
+        ]
+      },
+      {
+        "t": 128,
+        "text": "这是什么声音?",
+        "tr": "Đây là âm thanh gì nhỉ?",
+        "words": [
+          {
+            "w": "声音",
+            "ph": "shēng yīn",
+            "mean": "âm thanh"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-wbitlIHPvTA",
+    "lang": "zh",
+    "title": "The Night Flight (夜晚飞行)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "2:15",
+    "emoji": "🌙",
+    "youtubeId": "wbitlIHPvTA",
+    "segments": [
+      {
+        "t": 0,
+        "text": "夜晚飞行",
+        "tr": "Chuyến bay đêm",
+        "words": [
+          {
+            "w": "夜晚",
+            "ph": "yè wǎn",
+            "mean": "ban đêm"
+          },
+          {
+            "w": "飞行",
+            "ph": "fēi xíng",
+            "mean": "bay"
+          }
+        ]
+      },
+      {
+        "t": 15,
+        "text": "晚上九点,丹妮上床睡觉",
+        "tr": "9 giờ tối, bé Đan Ni lên giường đi ngủ.",
+        "words": [
+          {
+            "w": "上床",
+            "ph": "shàng chuáng",
+            "mean": "lên giường"
+          },
+          {
+            "w": "睡觉",
+            "ph": "shuì jiào",
+            "mean": "đi ngủ"
+          }
+        ]
+      },
+      {
+        "t": 21,
+        "text": "晚上十点,丹妮开始做梦",
+        "tr": "10 giờ tối, Đan Ni bắt đầu nằm mơ.",
+        "words": [
+          {
+            "w": "做梦",
+            "ph": "zuò mèng",
+            "mean": "nằm mơ"
+          }
+        ]
+      },
+      {
+        "t": 37,
+        "text": "晚上十一点,彼得喷过来了",
+        "tr": "11 giờ tối, Bỉ Đắc bay tới rồi.",
+        "words": [
+          {
+            "w": "过来",
+            "ph": "guò lái",
+            "mean": "bay tới"
+          }
+        ]
+      },
+      {
+        "t": 43,
+        "text": "丹妮和彼得喷一起在夜晚飞行",
+        "tr": "Đan Ni và Bỉ Đắc cùng nhau bay trong đêm.",
+        "words": [
+          {
+            "w": "一起",
+            "ph": "yì qǐ",
+            "mean": "cùng nhau"
+          },
+          {
+            "w": "飞行",
+            "ph": "fēi xíng",
+            "mean": "bay"
+          }
+        ]
+      },
+      {
+        "t": 58,
+        "text": "凌晨一点,他们飞过城市",
+        "tr": "1 giờ sáng, hai bạn bay qua thành phố.",
+        "words": [
+          {
+            "w": "飞过",
+            "ph": "fēi guò",
+            "mean": "bay qua"
+          },
+          {
+            "w": "城市",
+            "ph": "chéng shì",
+            "mean": "thành phố"
+          }
+        ]
+      },
+      {
+        "t": 67,
+        "text": "凌晨两点,他们飞过海洋",
+        "tr": "2 giờ sáng, hai bạn bay qua đại dương.",
+        "words": [
+          {
+            "w": "海洋",
+            "ph": "hǎi yáng",
+            "mean": "đại dương"
+          }
+        ]
+      },
+      {
+        "t": 80,
+        "text": "凌晨三点,他们回到家",
+        "tr": "3 giờ sáng, hai bạn về đến nhà.",
+        "words": [
+          {
+            "w": "回到家",
+            "ph": "huí dào jiā",
+            "mean": "về đến nhà"
+          }
+        ]
+      },
+      {
+        "t": 88,
+        "text": "彼得喷说再见",
+        "tr": "Bỉ Đắc nói tạm biệt.",
+        "words": [
+          {
+            "w": "再见",
+            "ph": "zài jiàn",
+            "mean": "tạm biệt"
+          }
+        ]
+      },
+      {
+        "t": 94,
+        "text": "丹妮继续睡觉",
+        "tr": "Đan Ni ngủ tiếp.",
+        "words": [
+          {
+            "w": "继续",
+            "ph": "jì xù",
+            "mean": "tiếp tục"
+          }
+        ]
+      },
+      {
+        "t": 103,
+        "text": "早上七点,丹妮醒来了",
+        "tr": "7 giờ sáng, Đan Ni tỉnh dậy rồi.",
+        "words": [
+          {
+            "w": "醒来",
+            "ph": "xǐng lái",
+            "mean": "tỉnh dậy"
+          }
+        ]
+      },
+      {
+        "t": 112,
+        "text": "这全都是一场梦吗?",
+        "tr": "Tất cả chỉ là một giấc mơ thôi sao?",
+        "words": [
+          {
+            "w": "梦",
+            "ph": "mèng",
+            "mean": "giấc mơ"
+          }
+        ]
+      },
+      {
+        "t": 123,
+        "text": "小蜜蜂",
+        "tr": "Chú ong nhỏ.",
+        "words": [
+          {
+            "w": "蜜蜂",
+            "ph": "mì fēng",
+            "mean": "con ong"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-Wzu0NGk0Ssc",
+    "lang": "zh",
+    "title": "Rain on the Green Grass (雨下在草上)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:38",
+    "emoji": "🌧️",
+    "youtubeId": "Wzu0NGk0Ssc",
+    "segments": [
+      {
+        "t": 0,
+        "text": "雨下在草上",
+        "tr": "Mưa rơi trên cỏ.",
+        "words": [
+          {
+            "w": "雨",
+            "ph": "yǔ",
+            "mean": "mưa"
+          },
+          {
+            "w": "草",
+            "ph": "cǎo",
+            "mean": "cỏ"
+          }
+        ]
+      },
+      {
+        "t": 12,
+        "text": "雨下在绿色的草地上",
+        "tr": "Mưa rơi trên bãi cỏ xanh.",
+        "words": [
+          {
+            "w": "绿色",
+            "ph": "lǜ sè",
+            "mean": "màu xanh lá"
+          },
+          {
+            "w": "草地",
+            "ph": "cǎo dì",
+            "mean": "bãi cỏ"
+          }
+        ]
+      },
+      {
+        "t": 17,
+        "text": "雨下在树上",
+        "tr": "Mưa rơi trên cây.",
+        "words": [
+          {
+            "w": "树",
+            "ph": "shù",
+            "mean": "cây"
+          }
+        ]
+      },
+      {
+        "t": 22,
+        "text": "雨下在屋顶上",
+        "tr": "Mưa rơi trên mái nhà.",
+        "words": [
+          {
+            "w": "屋顶",
+            "ph": "wū dǐng",
+            "mean": "mái nhà"
+          }
+        ]
+      },
+      {
+        "t": 26,
+        "text": "但没有下在我身上",
+        "tr": "Nhưng không rơi trên người mình.",
+        "words": [
+          {
+            "w": "身上",
+            "ph": "shēn shàng",
+            "mean": "trên người"
+          }
+        ]
+      },
+      {
+        "t": 31,
+        "text": "雨下在人形道上",
+        "tr": "Mưa rơi trên lối đi bộ.",
+        "words": [
+          {
+            "w": "道",
+            "ph": "dào",
+            "mean": "lối, đường"
+          }
+        ]
+      },
+      {
+        "t": 36,
+        "text": "雨下在泥巴上",
+        "tr": "Mưa rơi trên bùn.",
+        "words": [
+          {
+            "w": "泥巴",
+            "ph": "ní ba",
+            "mean": "bùn đất"
+          }
+        ]
+      },
+      {
+        "t": 40,
+        "text": "雨下在油箱上",
+        "tr": "Mưa rơi trên thùng xăng.",
+        "words": [
+          {
+            "w": "油箱",
+            "ph": "yóu xiāng",
+            "mean": "thùng xăng"
+          }
+        ]
+      },
+      {
+        "t": 44,
+        "text": "但没有下在我身上",
+        "tr": "Nhưng không rơi trên người mình.",
+        "words": [
+          {
+            "w": "身上",
+            "ph": "shēn shàng",
+            "mean": "trên người"
+          }
+        ]
+      },
+      {
+        "t": 49,
+        "text": "雨下在车道上",
+        "tr": "Mưa rơi trên đường xe chạy.",
+        "words": [
+          {
+            "w": "车道",
+            "ph": "chē dào",
+            "mean": "lối xe chạy"
+          }
+        ]
+      },
+      {
+        "t": 53,
+        "text": "雨下在车上",
+        "tr": "Mưa rơi trên xe.",
+        "words": [
+          {
+            "w": "车",
+            "ph": "chē",
+            "mean": "xe"
+          }
+        ]
+      },
+      {
+        "t": 58,
+        "text": "雨下在大街上",
+        "tr": "Mưa rơi trên phố lớn.",
+        "words": [
+          {
+            "w": "大街",
+            "ph": "dà jiē",
+            "mean": "phố lớn"
+          }
+        ]
+      },
+      {
+        "t": 62,
+        "text": "但没有下在我身上",
+        "tr": "Nhưng không rơi trên người mình.",
+        "words": [
+          {
+            "w": "身上",
+            "ph": "shēn shàng",
+            "mean": "trên người"
+          }
+        ]
+      },
+      {
+        "t": 66,
+        "text": "雨下在鸟窝上",
+        "tr": "Mưa rơi trên tổ chim.",
+        "words": [
+          {
+            "w": "鸟窝",
+            "ph": "niǎo wō",
+            "mean": "tổ chim"
+          }
+        ]
+      },
+      {
+        "t": 71,
+        "text": "雨下在池塘里",
+        "tr": "Mưa rơi xuống ao.",
+        "words": [
+          {
+            "w": "池塘",
+            "ph": "chí táng",
+            "mean": "cái ao"
+          }
+        ]
+      },
+      {
+        "t": 76,
+        "text": "雨下在狗窝上",
+        "tr": "Mưa rơi trên chuồng chó.",
+        "words": [
+          {
+            "w": "狗窝",
+            "ph": "gǒu wō",
+            "mean": "chuồng chó"
+          }
+        ]
+      },
+      {
+        "t": 79,
+        "text": "但没有下在我身上",
+        "tr": "Nhưng không rơi trên người mình.",
+        "words": [
+          {
+            "w": "身上",
+            "ph": "shēn shàng",
+            "mean": "trên người"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-Gb3fAfUCNfQ",
+    "lang": "zh",
+    "title": "Shoes (鞋子)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:41",
+    "emoji": "👟",
+    "youtubeId": "Gb3fAfUCNfQ",
+    "segments": [
+      {
+        "t": 0,
+        "text": "鞋子",
+        "tr": "Đôi giày.",
+        "words": [
+          {
+            "w": "鞋子",
+            "ph": "xié zi",
+            "mean": "đôi giày"
+          }
+        ]
+      },
+      {
+        "t": 6,
+        "text": "这双鞋子是跑步时穿的。",
+        "tr": "Đôi giày này để đi chạy bộ.",
+        "words": [
+          {
+            "w": "跑步",
+            "ph": "pǎo bù",
+            "mean": "chạy bộ"
+          },
+          {
+            "w": "穿",
+            "ph": "chuān",
+            "mean": "mang, mặc"
+          }
+        ]
+      },
+      {
+        "t": 14,
+        "text": "这双鞋子是游泳时穿的。",
+        "tr": "Đôi giày này để đi bơi.",
+        "words": [
+          {
+            "w": "游泳",
+            "ph": "yóu yǒng",
+            "mean": "bơi"
+          }
+        ]
+      },
+      {
+        "t": 23,
+        "text": "这双鞋子是滑冰时穿的。",
+        "tr": "Đôi giày này để trượt băng.",
+        "words": [
+          {
+            "w": "滑冰",
+            "ph": "huá bīng",
+            "mean": "trượt băng"
+          }
+        ]
+      },
+      {
+        "t": 32,
+        "text": "这双鞋子是跳舞时穿的。",
+        "tr": "Đôi giày này để nhảy múa.",
+        "words": [
+          {
+            "w": "跳舞",
+            "ph": "tiào wǔ",
+            "mean": "nhảy múa"
+          }
+        ]
+      },
+      {
+        "t": 42,
+        "text": "这双鞋子是踢足球时穿的。",
+        "tr": "Đôi giày này để đá bóng.",
+        "words": [
+          {
+            "w": "踢足球",
+            "ph": "tī zú qiú",
+            "mean": "đá bóng"
+          }
+        ]
+      },
+      {
+        "t": 53,
+        "text": "这双鞋子是下雨时穿的。",
+        "tr": "Đôi giày này để đi lúc trời mưa.",
+        "words": [
+          {
+            "w": "下雨",
+            "ph": "xià yǔ",
+            "mean": "trời mưa"
+          }
+        ]
+      },
+      {
+        "t": 62,
+        "text": "这双鞋子是天热时穿的。",
+        "tr": "Đôi giày này để đi lúc trời nóng.",
+        "words": [
+          {
+            "w": "天热",
+            "ph": "tiān rè",
+            "mean": "trời nóng"
+          }
+        ]
+      },
+      {
+        "t": 72,
+        "text": "这双鞋子是给我小弟弟穿的。",
+        "tr": "Đôi giày này cho em trai nhỏ của mình mang.",
+        "words": [
+          {
+            "w": "弟弟",
+            "ph": "dì di",
+            "mean": "em trai"
+          }
+        ]
+      },
+      {
+        "t": 80,
+        "text": "慢慢走,别急。",
+        "tr": "Đi từ từ thôi, đừng vội nhé.",
+        "words": [
+          {
+            "w": "慢慢",
+            "ph": "màn màn",
+            "mean": "từ từ"
+          },
+          {
+            "w": "别急",
+            "ph": "bié jí",
+            "mean": "đừng vội"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-B_8s1aHd1R4",
+    "lang": "zh",
+    "title": "Once, Twice, All the Time (一次，两次，总是)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "2:29",
+    "emoji": "🐱",
+    "youtubeId": "B_8s1aHd1R4",
+    "segments": [
+      {
+        "t": 0,
+        "text": "一次、两次、总是",
+        "tr": "Một lần, hai lần, luôn luôn",
+        "words": [
+          {
+            "w": "总是",
+            "ph": "zǒng shì",
+            "mean": "luôn luôn"
+          }
+        ]
+      },
+      {
+        "t": 20,
+        "text": "可可和我是最好的朋友。",
+        "tr": "Koko và mình là bạn thân nhất.",
+        "words": [
+          {
+            "w": "朋友",
+            "ph": "péng you",
+            "mean": "bạn bè"
+          }
+        ]
+      },
+      {
+        "t": 31,
+        "text": "我每天帮可可刷一次毛。",
+        "tr": "Mỗi ngày mình chải lông cho Koko một lần.",
+        "words": [
+          {
+            "w": "刷毛",
+            "ph": "shuā máo",
+            "mean": "chải lông"
+          },
+          {
+            "w": "每天",
+            "ph": "měi tiān",
+            "mean": "mỗi ngày"
+          }
+        ]
+      },
+      {
+        "t": 50,
+        "text": "我每天喂可可两次。",
+        "tr": "Mỗi ngày mình cho Koko ăn hai lần.",
+        "words": [
+          {
+            "w": "喂",
+            "ph": "wèi",
+            "mean": "cho ăn"
+          }
+        ]
+      },
+      {
+        "t": 57,
+        "text": "我总是抱着可可。",
+        "tr": "Mình luôn ôm Koko trong lòng.",
+        "words": [
+          {
+            "w": "抱",
+            "ph": "bào",
+            "mean": "ôm"
+          }
+        ]
+      },
+      {
+        "t": 68,
+        "text": "可可每天舔一次爪子。",
+        "tr": "Mỗi ngày Koko liếm chân một lần.",
+        "words": [
+          {
+            "w": "舔",
+            "ph": "tiǎn",
+            "mean": "liếm"
+          },
+          {
+            "w": "爪子",
+            "ph": "zhǎo zi",
+            "mean": "bàn chân"
+          }
+        ]
+      },
+      {
+        "t": 86,
+        "text": "可可每天追两次小鸟。",
+        "tr": "Mỗi ngày Koko đuổi theo chim nhỏ hai lần.",
+        "words": [
+          {
+            "w": "追",
+            "ph": "zhuī",
+            "mean": "đuổi theo"
+          },
+          {
+            "w": "小鸟",
+            "ph": "xiǎo niǎo",
+            "mean": "chim nhỏ"
+          }
+        ]
+      },
+      {
+        "t": 99,
+        "text": "可可总是亲我。",
+        "tr": "Koko luôn hôn mình.",
+        "words": [
+          {
+            "w": "亲",
+            "ph": "qīn",
+            "mean": "hôn"
+          }
+        ]
+      },
+      {
+        "t": 107,
+        "text": "可可总是亲我。",
+        "tr": "Koko luôn hôn mình.",
+        "words": [
+          {
+            "w": "亲",
+            "ph": "qīn",
+            "mean": "hôn"
+          }
+        ]
+      },
+      {
+        "t": 123,
+        "text": "可可是我最好的朋友。",
+        "tr": "Koko là bạn thân nhất của mình.",
+        "words": [
+          {
+            "w": "最好",
+            "ph": "zuì hǎo",
+            "mean": "thân nhất"
+          }
+        ]
+      },
+      {
+        "t": 137,
+        "text": "可可和我是最好的朋友。",
+        "tr": "Koko và mình là bạn thân nhất.",
+        "words": [
+          {
+            "w": "朋友",
+            "ph": "péng you",
+            "mean": "bạn bè"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-pRSUOwVaEOw",
+    "lang": "zh",
+    "title": "Time to Clean Up (该整理了)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "2:00",
+    "emoji": "🧹",
+    "youtubeId": "pRSUOwVaEOw",
+    "segments": [
+      {
+        "t": 0,
+        "text": "该整理了。",
+        "tr": "Đến giờ dọn dẹp rồi.",
+        "words": [
+          {
+            "w": "整理",
+            "ph": "zhěng lǐ",
+            "mean": "dọn dẹp"
+          }
+        ]
+      },
+      {
+        "t": 7,
+        "text": "该整理积木了。",
+        "tr": "Đến giờ dọn khối xếp hình rồi.",
+        "words": [
+          {
+            "w": "积木",
+            "ph": "jī mù",
+            "mean": "khối xếp hình"
+          }
+        ]
+      },
+      {
+        "t": 16,
+        "text": "把积木放进箱子里吧。",
+        "tr": "Bỏ khối xếp hình vào thùng nào.",
+        "words": [
+          {
+            "w": "放进",
+            "ph": "fàng jìn",
+            "mean": "bỏ vào"
+          },
+          {
+            "w": "箱子",
+            "ph": "xiāng zi",
+            "mean": "cái thùng"
+          }
+        ]
+      },
+      {
+        "t": 31,
+        "text": "该整理蜡笔了。",
+        "tr": "Đến giờ dọn bút sáp màu rồi.",
+        "words": [
+          {
+            "w": "蜡笔",
+            "ph": "là bǐ",
+            "mean": "bút sáp màu"
+          }
+        ]
+      },
+      {
+        "t": 38,
+        "text": "该整理蜡笔了。",
+        "tr": "Đến giờ dọn bút sáp màu rồi.",
+        "words": [
+          {
+            "w": "蜡笔",
+            "ph": "là bǐ",
+            "mean": "bút sáp màu"
+          }
+        ]
+      },
+      {
+        "t": 46,
+        "text": "把蜡笔放进盒子里吧。",
+        "tr": "Bỏ bút sáp màu vào hộp nào.",
+        "words": [
+          {
+            "w": "盒子",
+            "ph": "hé zi",
+            "mean": "cái hộp"
+          }
+        ]
+      },
+      {
+        "t": 61,
+        "text": "该整理娃娃了。",
+        "tr": "Đến giờ dọn búp bê rồi.",
+        "words": [
+          {
+            "w": "娃娃",
+            "ph": "wá wa",
+            "mean": "búp bê"
+          }
+        ]
+      },
+      {
+        "t": 68,
+        "text": "把娃娃放进架子里吧。",
+        "tr": "Đặt búp bê lên kệ nào.",
+        "words": [
+          {
+            "w": "架子",
+            "ph": "jià zi",
+            "mean": "cái kệ"
+          }
+        ]
+      },
+      {
+        "t": 91,
+        "text": "该说再见了。",
+        "tr": "Đến giờ nói tạm biệt rồi.",
+        "words": [
+          {
+            "w": "再见",
+            "ph": "zài jiàn",
+            "mean": "tạm biệt"
+          }
+        ]
+      },
+      {
+        "t": 98,
+        "text": "再见!",
+        "tr": "Tạm biệt!"
+      },
+      {
+        "t": 101,
+        "text": "再见!",
+        "tr": "Tạm biệt!"
+      }
+    ]
+  },
+  {
+    "id": "lf2--MN2dv1aAhw",
+    "lang": "zh",
+    "title": "I Can Do Everything by Myself (自己的事情自己做)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:38",
+    "emoji": "🧒",
+    "youtubeId": "-MN2dv1aAhw",
+    "segments": [
+      {
+        "t": 0,
+        "text": "自己的事情自己做",
+        "tr": "Việc của mình thì mình tự làm.",
+        "words": [
+          {
+            "w": "自己",
+            "ph": "zì jǐ",
+            "mean": "tự mình"
+          }
+        ]
+      },
+      {
+        "t": 9,
+        "text": "快看我!",
+        "tr": "Nhìn mình này!",
+        "words": [
+          {
+            "w": "快看",
+            "ph": "kuài kàn",
+            "mean": "mau nhìn"
+          }
+        ]
+      },
+      {
+        "t": 13,
+        "text": "自己的事情自己做",
+        "tr": "Việc của mình thì mình tự làm.",
+        "words": [
+          {
+            "w": "自己",
+            "ph": "zì jǐ",
+            "mean": "tự mình"
+          }
+        ]
+      },
+      {
+        "t": 17,
+        "text": "我自己起床。",
+        "tr": "Mình tự thức dậy.",
+        "words": [
+          {
+            "w": "起床",
+            "ph": "qǐ chuáng",
+            "mean": "thức dậy"
+          }
+        ]
+      },
+      {
+        "t": 22,
+        "text": "我自己整理床铺。",
+        "tr": "Mình tự dọn giường.",
+        "words": [
+          {
+            "w": "整理",
+            "ph": "zhěng lǐ",
+            "mean": "sắp xếp"
+          },
+          {
+            "w": "床铺",
+            "ph": "chuáng pù",
+            "mean": "giường"
+          }
+        ]
+      },
+      {
+        "t": 26,
+        "text": "我自己洗脸。",
+        "tr": "Mình tự rửa mặt.",
+        "words": [
+          {
+            "w": "洗脸",
+            "ph": "xǐ liǎn",
+            "mean": "rửa mặt"
+          }
+        ]
+      },
+      {
+        "t": 31,
+        "text": "我自己刷牙。",
+        "tr": "Mình tự đánh răng.",
+        "words": [
+          {
+            "w": "刷牙",
+            "ph": "shuā yá",
+            "mean": "đánh răng"
+          }
+        ]
+      },
+      {
+        "t": 35,
+        "text": "我自己穿衣服。",
+        "tr": "Mình tự mặc quần áo.",
+        "words": [
+          {
+            "w": "穿",
+            "ph": "chuān",
+            "mean": "mặc"
+          },
+          {
+            "w": "衣服",
+            "ph": "yī fu",
+            "mean": "quần áo"
+          }
+        ]
+      },
+      {
+        "t": 39,
+        "text": "我自己穿袜子。",
+        "tr": "Mình tự đi tất.",
+        "words": [
+          {
+            "w": "袜子",
+            "ph": "wà zi",
+            "mean": "tất, vớ"
+          }
+        ]
+      },
+      {
+        "t": 44,
+        "text": "我自己整理书包。",
+        "tr": "Mình tự soạn cặp sách.",
+        "words": [
+          {
+            "w": "书包",
+            "ph": "shū bāo",
+            "mean": "cặp sách"
+          }
+        ]
+      },
+      {
+        "t": 48,
+        "text": "我可以自己的事情自己做。",
+        "tr": "Mình có thể tự làm việc của mình.",
+        "words": [
+          {
+            "w": "可以",
+            "ph": "kě yǐ",
+            "mean": "có thể"
+          }
+        ]
+      },
+      {
+        "t": 55,
+        "text": "我自己穿外套。",
+        "tr": "Mình tự mặc áo khoác.",
+        "words": [
+          {
+            "w": "外套",
+            "ph": "wài tào",
+            "mean": "áo khoác"
+          }
+        ]
+      },
+      {
+        "t": 59,
+        "text": "我自己穿鞋子。",
+        "tr": "Mình tự đi giày.",
+        "words": [
+          {
+            "w": "鞋子",
+            "ph": "xié zi",
+            "mean": "giày"
+          }
+        ]
+      },
+      {
+        "t": 63,
+        "text": "快看我!",
+        "tr": "Nhìn mình này!",
+        "words": [
+          {
+            "w": "快看",
+            "ph": "kuài kàn",
+            "mean": "mau nhìn"
+          }
+        ]
+      },
+      {
+        "t": 66,
+        "text": "自己的事情自己做。",
+        "tr": "Việc của mình thì mình tự làm.",
+        "words": [
+          {
+            "w": "自己",
+            "ph": "zì jǐ",
+            "mean": "tự mình"
+          }
+        ]
+      },
+      {
+        "t": 71,
+        "text": "妈妈说,",
+        "tr": "Mẹ nói,",
+        "words": [
+          {
+            "w": "妈妈",
+            "ph": "mā ma",
+            "mean": "mẹ"
+          }
+        ]
+      },
+      {
+        "t": 74,
+        "text": "对,你可以自己做所有的事情。",
+        "tr": "Đúng rồi, con có thể tự làm mọi việc.",
+        "words": [
+          {
+            "w": "所有",
+            "ph": "suǒ yǒu",
+            "mean": "tất cả"
+          }
+        ]
+      },
+      {
+        "t": 79,
+        "text": "但是,今天是星期天,",
+        "tr": "Nhưng hôm nay là Chủ nhật,",
+        "words": [
+          {
+            "w": "今天",
+            "ph": "jīn tiān",
+            "mean": "hôm nay"
+          },
+          {
+            "w": "星期天",
+            "ph": "xīng qī tiān",
+            "mean": "chủ nhật"
+          }
+        ]
+      },
+      {
+        "t": 82,
+        "text": "不用上学呀!",
+        "tr": "không phải đi học đâu!",
+        "words": [
+          {
+            "w": "上学",
+            "ph": "shàng xué",
+            "mean": "đi học"
+          }
+        ]
+      },
+      {
+        "t": 85,
+        "text": "我自己做的事情自己做。",
+        "tr": "Việc của mình thì mình tự làm.",
+        "words": [
+          {
+            "w": "自己",
+            "ph": "zì jǐ",
+            "mean": "tự mình"
+          }
+        ]
+      },
+      {
+        "t": 88,
+        "text": "我自己做的事情自己做。",
+        "tr": "Việc của mình thì mình tự làm.",
+        "words": [
+          {
+            "w": "自己",
+            "ph": "zì jǐ",
+            "mean": "tự mình"
+          }
+        ]
+      },
+      {
+        "t": 91,
+        "text": "我自己做的事情自己做。",
+        "tr": "Việc của mình thì mình tự làm.",
+        "words": [
+          {
+            "w": "自己",
+            "ph": "zì jǐ",
+            "mean": "tự mình"
+          }
+        ]
+      },
+      {
+        "t": 94,
+        "text": "我自己做的事情自己做。",
+        "tr": "Việc của mình thì mình tự làm.",
+        "words": [
+          {
+            "w": "自己",
+            "ph": "zì jǐ",
+            "mean": "tự mình"
+          }
+        ]
+      },
+      {
+        "t": 97,
+        "text": "我自己做的事情自己做。",
+        "tr": "Việc của mình thì mình tự làm.",
+        "words": [
+          {
+            "w": "自己",
+            "ph": "zì jǐ",
+            "mean": "tự mình"
+          }
+        ]
+      },
+      {
+        "t": 100,
+        "text": "我自己做的事情自己做。",
+        "tr": "Việc của mình thì mình tự làm.",
+        "words": [
+          {
+            "w": "自己",
+            "ph": "zì jǐ",
+            "mean": "tự mình"
+          }
+        ]
+      },
+      {
+        "t": 103,
+        "text": "我自己做的事情自己做。",
+        "tr": "Việc của mình thì mình tự làm.",
+        "words": [
+          {
+            "w": "自己",
+            "ph": "zì jǐ",
+            "mean": "tự mình"
+          }
+        ]
+      },
+      {
+        "t": 106,
+        "text": "我自己做的事情自己做。",
+        "tr": "Việc của mình thì mình tự làm.",
+        "words": [
+          {
+            "w": "自己",
+            "ph": "zì jǐ",
+            "mean": "tự mình"
+          }
+        ]
+      },
+      {
+        "t": 109,
+        "text": "我自己做的事情自己做。",
+        "tr": "Việc của mình thì mình tự làm.",
+        "words": [
+          {
+            "w": "自己",
+            "ph": "zì jǐ",
+            "mean": "tự mình"
+          }
+        ]
+      },
+      {
+        "t": 112,
+        "text": "我自己做的事情自己做。",
+        "tr": "Việc của mình thì mình tự làm.",
+        "words": [
+          {
+            "w": "自己",
+            "ph": "zì jǐ",
+            "mean": "tự mình"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-9tUfbXQYp4A",
+    "lang": "zh",
+    "title": "Do I Have To? (一定要做吗？)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:28",
+    "emoji": "🙋",
+    "youtubeId": "9tUfbXQYp4A",
+    "segments": [
+      {
+        "t": 0,
+        "text": "一定要做吗?",
+        "tr": "Nhất định phải làm sao?",
+        "words": [
+          {
+            "w": "一定要",
+            "ph": "yí dìng yào",
+            "mean": "nhất định phải"
+          }
+        ]
+      },
+      {
+        "t": 10,
+        "text": "小西,吃你的沙拉。",
+        "tr": "Tiểu Tây, ăn món xà lách của con đi.",
+        "words": [
+          {
+            "w": "沙拉",
+            "ph": "shā lā",
+            "mean": "xà lách"
+          }
+        ]
+      },
+      {
+        "t": 13,
+        "text": "我一定要吃吗?",
+        "tr": "Con nhất định phải ăn sao?",
+        "words": [
+          {
+            "w": "吃",
+            "ph": "chī",
+            "mean": "ăn"
+          }
+        ]
+      },
+      {
+        "t": 17,
+        "text": "卡拉,洗碗。",
+        "tr": "Ca-la, rửa bát đi.",
+        "words": [
+          {
+            "w": "洗碗",
+            "ph": "xǐ wǎn",
+            "mean": "rửa bát"
+          }
+        ]
+      },
+      {
+        "t": 20,
+        "text": "我一定要洗吗?",
+        "tr": "Con nhất định phải rửa sao?",
+        "words": [
+          {
+            "w": "洗",
+            "ph": "xǐ",
+            "mean": "rửa"
+          }
+        ]
+      },
+      {
+        "t": 25,
+        "text": "小西,去扔垃圾。",
+        "tr": "Tiểu Tây, đi đổ rác đi.",
+        "words": [
+          {
+            "w": "扔垃圾",
+            "ph": "rēng lā jī",
+            "mean": "đổ rác"
+          }
+        ]
+      },
+      {
+        "t": 28,
+        "text": "我一定要扔吗?",
+        "tr": "Con nhất định phải đổ sao?",
+        "words": [
+          {
+            "w": "扔",
+            "ph": "rēng",
+            "mean": "vứt, đổ"
+          }
+        ]
+      },
+      {
+        "t": 32,
+        "text": "卡拉,帮你爸爸。",
+        "tr": "Ca-la, giúp bố con đi.",
+        "words": [
+          {
+            "w": "帮",
+            "ph": "bāng",
+            "mean": "giúp"
+          },
+          {
+            "w": "爸爸",
+            "ph": "bà ba",
+            "mean": "bố"
+          }
+        ]
+      },
+      {
+        "t": 35,
+        "text": "我一定要帮吗?",
+        "tr": "Con nhất định phải giúp sao?",
+        "words": [
+          {
+            "w": "帮",
+            "ph": "bāng",
+            "mean": "giúp"
+          }
+        ]
+      },
+      {
+        "t": 45,
+        "text": "小西,卡拉,整理房间。",
+        "tr": "Tiểu Tây, Ca-la, dọn dẹp phòng đi.",
+        "words": [
+          {
+            "w": "整理",
+            "ph": "zhěng lǐ",
+            "mean": "dọn dẹp"
+          },
+          {
+            "w": "房间",
+            "ph": "fáng jiān",
+            "mean": "căn phòng"
+          }
+        ]
+      },
+      {
+        "t": 49,
+        "text": "我们一定要整理吗?",
+        "tr": "Chúng con nhất định phải dọn sao?",
+        "words": [
+          {
+            "w": "整理",
+            "ph": "zhěng lǐ",
+            "mean": "dọn dẹp"
+          }
+        ]
+      },
+      {
+        "t": 54,
+        "text": "孩子们,听妈妈的话。",
+        "tr": "Các con ơi, nghe lời mẹ nhé.",
+        "words": [
+          {
+            "w": "妈妈",
+            "ph": "mā ma",
+            "mean": "mẹ"
+          },
+          {
+            "w": "听",
+            "ph": "tīng",
+            "mean": "nghe"
+          }
+        ]
+      },
+      {
+        "t": 57,
+        "text": "我们一定要听吗?",
+        "tr": "Chúng con nhất định phải nghe sao?",
+        "words": [
+          {
+            "w": "听",
+            "ph": "tīng",
+            "mean": "nghe"
+          }
+        ]
+      },
+      {
+        "t": 61,
+        "text": "我们饿了,可以为我们做点心吗?",
+        "tr": "Chúng con đói rồi, mẹ làm bánh cho chúng con được không?",
+        "words": [
+          {
+            "w": "饿",
+            "ph": "è",
+            "mean": "đói"
+          },
+          {
+            "w": "点心",
+            "ph": "diǎn xin",
+            "mean": "bánh điểm tâm"
+          }
+        ]
+      },
+      {
+        "t": 67,
+        "text": "嗯,我们一定要做吗?",
+        "tr": "Ừm, chúng ta nhất định phải làm sao?",
+        "words": [
+          {
+            "w": "一定要",
+            "ph": "yí dìng yào",
+            "mean": "nhất định phải"
+          }
+        ]
+      },
+      {
+        "t": 87,
+        "text": "小西,你别走。",
+        "tr": "Tiểu Tây, đừng đi mà.",
+        "words": [
+          {
+            "w": "别走",
+            "ph": "bié zǒu",
+            "mean": "đừng đi"
+          }
+        ]
+      },
+      {
+        "t": 90,
+        "text": "我会帮你。",
+        "tr": "Mình sẽ giúp bạn.",
+        "words": [
+          {
+            "w": "帮",
+            "ph": "bāng",
+            "mean": "giúp"
+          }
+        ]
+      },
+      {
+        "t": 93,
+        "text": "小西,你别走。",
+        "tr": "Tiểu Tây, đừng đi mà.",
+        "words": [
+          {
+            "w": "别走",
+            "ph": "bié zǒu",
+            "mean": "đừng đi"
+          }
+        ]
+      },
+      {
+        "t": 96,
+        "text": "我会帮你。",
+        "tr": "Mình sẽ giúp bạn.",
+        "words": [
+          {
+            "w": "帮",
+            "ph": "bāng",
+            "mean": "giúp"
+          }
+        ]
+      },
+      {
+        "t": 99,
+        "text": "小西,你别走。",
+        "tr": "Tiểu Tây, đừng đi mà.",
+        "words": [
+          {
+            "w": "别走",
+            "ph": "bié zǒu",
+            "mean": "đừng đi"
+          }
+        ]
+      },
+      {
+        "t": 102,
+        "text": "我会帮你。",
+        "tr": "Mình sẽ giúp bạn.",
+        "words": [
+          {
+            "w": "帮",
+            "ph": "bāng",
+            "mean": "giúp"
+          }
+        ]
+      },
+      {
+        "t": 105,
+        "text": "小西,你别走。",
+        "tr": "Tiểu Tây, đừng đi mà.",
+        "words": [
+          {
+            "w": "别走",
+            "ph": "bié zǒu",
+            "mean": "đừng đi"
+          }
+        ]
+      },
+      {
+        "t": 108,
+        "text": "小西,你别走。",
+        "tr": "Tiểu Tây, đừng đi mà.",
+        "words": [
+          {
+            "w": "别走",
+            "ph": "bié zǒu",
+            "mean": "đừng đi"
+          }
+        ]
+      },
+      {
+        "t": 111,
+        "text": "小西,你别走。",
+        "tr": "Tiểu Tây, đừng đi mà.",
+        "words": [
+          {
+            "w": "别走",
+            "ph": "bié zǒu",
+            "mean": "đừng đi"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-JT1hobCSP40",
+    "lang": "zh",
+    "title": "My Helicopter (我的直升飞机)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:05",
+    "emoji": "🚁",
+    "youtubeId": "JT1hobCSP40",
+    "segments": [
+      {
+        "t": 0,
+        "text": "我的直升飞机",
+        "tr": "Chiếc trực thăng của mình",
+        "words": [
+          {
+            "w": "直升飞机",
+            "ph": "zhí shēng fēi jī",
+            "mean": "trực thăng"
+          }
+        ]
+      },
+      {
+        "t": 8,
+        "text": "我可以飞过田野",
+        "tr": "Mình có thể bay qua cánh đồng.",
+        "words": [
+          {
+            "w": "田野",
+            "ph": "tián yě",
+            "mean": "cánh đồng"
+          },
+          {
+            "w": "飞",
+            "ph": "fēi",
+            "mean": "bay"
+          }
+        ]
+      },
+      {
+        "t": 16,
+        "text": "我可以飞过山",
+        "tr": "Mình có thể bay qua núi.",
+        "words": [
+          {
+            "w": "山",
+            "ph": "shān",
+            "mean": "núi"
+          }
+        ]
+      },
+      {
+        "t": 21,
+        "text": "我可以飞过果园",
+        "tr": "Mình có thể bay qua vườn cây.",
+        "words": [
+          {
+            "w": "果园",
+            "ph": "guǒ yuán",
+            "mean": "vườn cây"
+          }
+        ]
+      },
+      {
+        "t": 26,
+        "text": "我可以飞过湖",
+        "tr": "Mình có thể bay qua hồ.",
+        "words": [
+          {
+            "w": "湖",
+            "ph": "hú",
+            "mean": "cái hồ"
+          }
+        ]
+      },
+      {
+        "t": 31,
+        "text": "我可以飞过城市",
+        "tr": "Mình có thể bay qua thành phố.",
+        "words": [
+          {
+            "w": "城市",
+            "ph": "chéng shì",
+            "mean": "thành phố"
+          }
+        ]
+      },
+      {
+        "t": 36,
+        "text": "我可以飞过桥",
+        "tr": "Mình có thể bay qua cây cầu.",
+        "words": [
+          {
+            "w": "桥",
+            "ph": "qiáo",
+            "mean": "cây cầu"
+          }
+        ]
+      },
+      {
+        "t": 41,
+        "text": "我可以飞过街道",
+        "tr": "Mình có thể bay qua đường phố.",
+        "words": [
+          {
+            "w": "街道",
+            "ph": "jiē dào",
+            "mean": "đường phố"
+          }
+        ]
+      },
+      {
+        "t": 46,
+        "text": "我可以飞到家",
+        "tr": "Mình có thể bay về nhà.",
+        "words": [
+          {
+            "w": "家",
+            "ph": "jiā",
+            "mean": "nhà"
+          }
+        ]
+      },
+      {
+        "t": 56,
+        "text": "我可以飞过海洋",
+        "tr": "Mình có thể bay qua biển.",
+        "words": [
+          {
+            "w": "海洋",
+            "ph": "hǎi yáng",
+            "mean": "biển cả"
+          }
+        ]
+      },
+      {
+        "t": 61,
+        "text": "我可以飞过海洋",
+        "tr": "Mình có thể bay qua biển.",
+        "words": [
+          {
+            "w": "海洋",
+            "ph": "hǎi yáng",
+            "mean": "biển cả"
+          }
+        ]
+      },
+      {
+        "t": 65,
+        "text": "我可以飞过海洋",
+        "tr": "Mình có thể bay qua biển.",
+        "words": [
+          {
+            "w": "海洋",
+            "ph": "hǎi yáng",
+            "mean": "biển cả"
+          }
+        ]
+      },
+      {
+        "t": 69,
+        "text": "我可以飞过湖",
+        "tr": "Mình có thể bay qua hồ.",
+        "words": [
+          {
+            "w": "湖",
+            "ph": "hú",
+            "mean": "cái hồ"
+          }
+        ]
+      },
+      {
+        "t": 73,
+        "text": "我可以飞过湖",
+        "tr": "Mình có thể bay qua hồ.",
+        "words": [
+          {
+            "w": "湖",
+            "ph": "hú",
+            "mean": "cái hồ"
+          }
+        ]
+      },
+      {
+        "t": 77,
+        "text": "我可以飞过湖",
+        "tr": "Mình có thể bay qua hồ.",
+        "words": [
+          {
+            "w": "湖",
+            "ph": "hú",
+            "mean": "cái hồ"
+          }
+        ]
+      },
+      {
+        "t": 81,
+        "text": "我可以飞过湖",
+        "tr": "Mình có thể bay qua hồ.",
+        "words": [
+          {
+            "w": "湖",
+            "ph": "hú",
+            "mean": "cái hồ"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-RYmzllTEC2Q",
+    "lang": "zh",
+    "title": "Let's Go! (走吧！)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:53",
+    "emoji": "🗺️",
+    "youtubeId": "RYmzllTEC2Q",
+    "segments": [
+      {
+        "t": 0,
+        "text": "走吧。",
+        "tr": "Đi thôi nào!",
+        "words": [
+          {
+            "w": "走",
+            "ph": "zǒu",
+            "mean": "đi"
+          }
+        ]
+      },
+      {
+        "t": 6,
+        "text": "我想去沙漠。",
+        "tr": "Mình muốn đi sa mạc.",
+        "words": [
+          {
+            "w": "沙漠",
+            "ph": "shā mò",
+            "mean": "sa mạc"
+          }
+        ]
+      },
+      {
+        "t": 16,
+        "text": "我想去北极。",
+        "tr": "Mình muốn đi Bắc Cực.",
+        "words": [
+          {
+            "w": "北极",
+            "ph": "běi jí",
+            "mean": "Bắc Cực"
+          }
+        ]
+      },
+      {
+        "t": 20,
+        "text": "我想去叢林。",
+        "tr": "Mình muốn đi rừng rậm.",
+        "words": [
+          {
+            "w": "叢林",
+            "ph": "cóng lín",
+            "mean": "rừng rậm"
+          }
+        ]
+      },
+      {
+        "t": 26,
+        "text": "我想去海边。",
+        "tr": "Mình muốn đi biển.",
+        "words": [
+          {
+            "w": "海边",
+            "ph": "hǎi biān",
+            "mean": "bờ biển"
+          }
+        ]
+      },
+      {
+        "t": 38,
+        "text": "我想去海边。",
+        "tr": "Mình muốn đi biển.",
+        "words": [
+          {
+            "w": "海边",
+            "ph": "hǎi biān",
+            "mean": "bờ biển"
+          }
+        ]
+      },
+      {
+        "t": 41,
+        "text": "我想去城堡。",
+        "tr": "Mình muốn đi lâu đài.",
+        "words": [
+          {
+            "w": "城堡",
+            "ph": "chéng bǎo",
+            "mean": "lâu đài"
+          }
+        ]
+      },
+      {
+        "t": 50,
+        "text": "我想去马戏团。",
+        "tr": "Mình muốn đi rạp xiếc.",
+        "words": [
+          {
+            "w": "马戏团",
+            "ph": "mǎ xì tuán",
+            "mean": "rạp xiếc"
+          }
+        ]
+      },
+      {
+        "t": 60,
+        "text": "我想去马戏团。",
+        "tr": "Mình muốn đi rạp xiếc.",
+        "words": [
+          {
+            "w": "马戏团",
+            "ph": "mǎ xì tuán",
+            "mean": "rạp xiếc"
+          }
+        ]
+      },
+      {
+        "t": 71,
+        "text": "我想去游乐园。",
+        "tr": "Mình muốn đi công viên giải trí.",
+        "words": [
+          {
+            "w": "游乐园",
+            "ph": "yóu lè yuán",
+            "mean": "công viên giải trí"
+          }
+        ]
+      },
+      {
+        "t": 83,
+        "text": "我想去月球。",
+        "tr": "Mình muốn lên mặt trăng.",
+        "words": [
+          {
+            "w": "月球",
+            "ph": "yuè qiú",
+            "mean": "mặt trăng"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-KJxMiB_8tQE",
+    "lang": "zh",
+    "title": "How to Make a Sandwich (怎么做三明治)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:58",
+    "emoji": "🥪",
+    "youtubeId": "KJxMiB_8tQE",
+    "segments": [
+      {
+        "t": 0,
+        "text": "怎么做三明治?",
+        "tr": "Làm bánh sandwich thế nào nhỉ?",
+        "words": [
+          {
+            "w": "三明治",
+            "ph": "sān míng zhì",
+            "mean": "bánh sandwich"
+          }
+        ]
+      },
+      {
+        "t": 8,
+        "text": "我们需要一些面包。",
+        "tr": "Mình cần một ít bánh mì.",
+        "words": [
+          {
+            "w": "需要",
+            "ph": "xū yào",
+            "mean": "cần"
+          },
+          {
+            "w": "面包",
+            "ph": "miàn bāo",
+            "mean": "bánh mì"
+          }
+        ]
+      },
+      {
+        "t": 18,
+        "text": "我们需要一些生菜。",
+        "tr": "Mình cần một ít xà lách.",
+        "words": [
+          {
+            "w": "生菜",
+            "ph": "shēng cài",
+            "mean": "xà lách"
+          }
+        ]
+      },
+      {
+        "t": 27,
+        "text": "我们需要一些番茄。",
+        "tr": "Mình cần một ít cà chua.",
+        "words": [
+          {
+            "w": "番茄",
+            "ph": "fān qié",
+            "mean": "cà chua"
+          }
+        ]
+      },
+      {
+        "t": 36,
+        "text": "我们需要一些奶酪。",
+        "tr": "Mình cần một ít phô mai.",
+        "words": [
+          {
+            "w": "奶酪",
+            "ph": "nǎi lào",
+            "mean": "phô mai"
+          }
+        ]
+      },
+      {
+        "t": 45,
+        "text": "我们需要一些芥末酱。",
+        "tr": "Mình cần một ít mù tạt.",
+        "words": [
+          {
+            "w": "芥末酱",
+            "ph": "jiè mò jiàng",
+            "mean": "mù tạt"
+          }
+        ]
+      },
+      {
+        "t": 56,
+        "text": "我们需要一些蛋黄酱。",
+        "tr": "Mình cần một ít sốt mayonnaise.",
+        "words": [
+          {
+            "w": "蛋黄酱",
+            "ph": "dàn huáng jiàng",
+            "mean": "sốt mayonnaise"
+          }
+        ]
+      },
+      {
+        "t": 66,
+        "text": "我们需要一些面包、生菜、番茄、奶酪、芥末酱和蛋黄酱。",
+        "tr": "Mình cần bánh mì, xà lách, cà chua, phô mai, mù tạt và sốt mayonnaise."
+      },
+      {
+        "t": 80,
+        "text": "哦,我们还需要一点火腿。",
+        "tr": "Ồ, mình còn cần một chút giăm bông nữa.",
+        "words": [
+          {
+            "w": "火腿",
+            "ph": "huǒ tuǐ",
+            "mean": "giăm bông"
+          }
+        ]
+      },
+      {
+        "t": 97,
+        "text": "我们需要更多的三明治。",
+        "tr": "Mình cần nhiều bánh sandwich hơn.",
+        "words": [
+          {
+            "w": "更多",
+            "ph": "gèng duō",
+            "mean": "nhiều hơn"
+          }
+        ]
+      },
+      {
+        "t": 109,
+        "text": "我们需要一些面包。",
+        "tr": "Mình cần một ít bánh mì.",
+        "words": [
+          {
+            "w": "面包",
+            "ph": "miàn bāo",
+            "mean": "bánh mì"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-VBSMf-tsETk",
+    "lang": "zh",
+    "title": "Come Play with Me (和我一起玩儿吧)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:22",
+    "emoji": "🤸",
+    "youtubeId": "VBSMf-tsETk",
+    "segments": [
+      {
+        "t": 0,
+        "text": "和我一起玩吧。",
+        "tr": "Cùng chơi với mình nhé.",
+        "words": [
+          {
+            "w": "一起",
+            "ph": "yì qǐ",
+            "mean": "cùng nhau"
+          },
+          {
+            "w": "玩",
+            "ph": "wán",
+            "mean": "chơi"
+          }
+        ]
+      },
+      {
+        "t": 12,
+        "text": "我们可以像风一样奔跑。",
+        "tr": "Chúng mình có thể chạy nhanh như gió.",
+        "words": [
+          {
+            "w": "风",
+            "ph": "fēng",
+            "mean": "gió"
+          },
+          {
+            "w": "奔跑",
+            "ph": "bēn pǎo",
+            "mean": "chạy nhanh"
+          }
+        ]
+      },
+      {
+        "t": 18,
+        "text": "我们可以在草地上打滚。",
+        "tr": "Chúng mình có thể lăn trên bãi cỏ.",
+        "words": [
+          {
+            "w": "草地",
+            "ph": "cǎo dì",
+            "mean": "bãi cỏ"
+          },
+          {
+            "w": "打滚",
+            "ph": "dǎ gǔn",
+            "mean": "lăn tròn"
+          }
+        ]
+      },
+      {
+        "t": 24,
+        "text": "我们可以像兔子一样蹦跳。",
+        "tr": "Chúng mình có thể nhảy tưng tưng như thỏ.",
+        "words": [
+          {
+            "w": "兔子",
+            "ph": "tù zi",
+            "mean": "con thỏ"
+          },
+          {
+            "w": "蹦跳",
+            "ph": "bèng tiào",
+            "mean": "nhảy tưng"
+          }
+        ]
+      },
+      {
+        "t": 30,
+        "text": "我们可以去登山。",
+        "tr": "Chúng mình có thể đi leo núi.",
+        "words": [
+          {
+            "w": "登山",
+            "ph": "dēng shān",
+            "mean": "leo núi"
+          }
+        ]
+      },
+      {
+        "t": 36,
+        "text": "我们可以像海豚一样游泳。",
+        "tr": "Chúng mình có thể bơi như cá heo.",
+        "words": [
+          {
+            "w": "海豚",
+            "ph": "hǎi tún",
+            "mean": "cá heo"
+          },
+          {
+            "w": "游泳",
+            "ph": "yóu yǒng",
+            "mean": "bơi"
+          }
+        ]
+      },
+      {
+        "t": 42,
+        "text": "我们可以在湖边钓鱼。",
+        "tr": "Chúng mình có thể câu cá bên hồ.",
+        "words": [
+          {
+            "w": "湖边",
+            "ph": "hú biān",
+            "mean": "bên hồ"
+          },
+          {
+            "w": "钓鱼",
+            "ph": "diào yú",
+            "mean": "câu cá"
+          }
+        ]
+      },
+      {
+        "t": 47,
+        "text": "我们可以像鸟一样唱歌。",
+        "tr": "Chúng mình có thể hát như chim.",
+        "words": [
+          {
+            "w": "鸟",
+            "ph": "niǎo",
+            "mean": "con chim"
+          },
+          {
+            "w": "唱歌",
+            "ph": "chàng gē",
+            "mean": "hát"
+          }
+        ]
+      },
+      {
+        "t": 53,
+        "text": "我们可以在公园骑自行车。",
+        "tr": "Chúng mình có thể đạp xe trong công viên.",
+        "words": [
+          {
+            "w": "公园",
+            "ph": "gōng yuán",
+            "mean": "công viên"
+          },
+          {
+            "w": "骑自行车",
+            "ph": "qí zì xíng chē",
+            "mean": "đạp xe"
+          }
+        ]
+      },
+      {
+        "t": 59,
+        "text": "我们是最好的朋友。",
+        "tr": "Chúng mình là bạn thân nhất.",
+        "words": [
+          {
+            "w": "最好",
+            "ph": "zuì hǎo",
+            "mean": "tốt nhất"
+          },
+          {
+            "w": "朋友",
+            "ph": "péng you",
+            "mean": "bạn bè"
+          }
+        ]
+      },
+      {
+        "t": 77,
+        "text": "我们可以像风一样奔跑。",
+        "tr": "Chúng mình có thể chạy nhanh như gió.",
+        "words": [
+          {
+            "w": "风",
+            "ph": "fēng",
+            "mean": "gió"
+          },
+          {
+            "w": "奔跑",
+            "ph": "bēn pǎo",
+            "mean": "chạy nhanh"
+          }
+        ]
+      },
+      {
+        "t": 83,
+        "text": "我们可以像风一样游泳。",
+        "tr": "Chúng mình có thể bơi như gió.",
+        "words": [
+          {
+            "w": "风",
+            "ph": "fēng",
+            "mean": "gió"
+          },
+          {
+            "w": "游泳",
+            "ph": "yóu yǒng",
+            "mean": "bơi"
+          }
+        ]
+      },
+      {
+        "t": 89,
+        "text": "我们可以像风一样游泳。",
+        "tr": "Chúng mình có thể bơi như gió.",
+        "words": [
+          {
+            "w": "风",
+            "ph": "fēng",
+            "mean": "gió"
+          },
+          {
+            "w": "游泳",
+            "ph": "yóu yǒng",
+            "mean": "bơi"
+          }
+        ]
+      },
+      {
+        "t": 95,
+        "text": "我们可以像风一样游泳。",
+        "tr": "Chúng mình có thể bơi như gió.",
+        "words": [
+          {
+            "w": "风",
+            "ph": "fēng",
+            "mean": "gió"
+          },
+          {
+            "w": "游泳",
+            "ph": "yóu yǒng",
+            "mean": "bơi"
+          }
+        ]
+      },
+      {
+        "t": 101,
+        "text": "我们可以像风一样游泳。",
+        "tr": "Chúng mình có thể bơi như gió.",
+        "words": [
+          {
+            "w": "风",
+            "ph": "fēng",
+            "mean": "gió"
+          },
+          {
+            "w": "游泳",
+            "ph": "yóu yǒng",
+            "mean": "bơi"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-9844rUJVscY",
+    "lang": "zh",
+    "title": "Valentine's Day (情人节)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:23",
+    "emoji": "💝",
+    "youtubeId": "9844rUJVscY",
+    "segments": [
+      {
+        "t": 0,
+        "text": "情人节",
+        "tr": "Ngày lễ Tình nhân",
+        "words": [
+          {
+            "w": "情人节",
+            "ph": "qíng rén jié",
+            "mean": "lễ Tình nhân"
+          }
+        ]
+      },
+      {
+        "t": 6,
+        "text": "今天是情人节。",
+        "tr": "Hôm nay là ngày lễ Tình nhân.",
+        "words": [
+          {
+            "w": "今天",
+            "ph": "jīn tiān",
+            "mean": "hôm nay"
+          }
+        ]
+      },
+      {
+        "t": 12,
+        "text": "露西送给我一张贺卡。",
+        "tr": "Lucy tặng mình một tấm thiệp.",
+        "words": [
+          {
+            "w": "贺卡",
+            "ph": "hè kǎ",
+            "mean": "tấm thiệp"
+          },
+          {
+            "w": "送",
+            "ph": "sòng",
+            "mean": "tặng"
+          }
+        ]
+      },
+      {
+        "t": 19,
+        "text": "情人节快乐。",
+        "tr": "Chúc mừng ngày lễ Tình nhân!",
+        "words": [
+          {
+            "w": "快乐",
+            "ph": "kuài lè",
+            "mean": "vui vẻ"
+          }
+        ]
+      },
+      {
+        "t": 22,
+        "text": "汤妮送给我一根棒棒糖。",
+        "tr": "Tony tặng mình một cây kẹo mút.",
+        "words": [
+          {
+            "w": "棒棒糖",
+            "ph": "bàng bàng táng",
+            "mean": "kẹo mút"
+          }
+        ]
+      },
+      {
+        "t": 28,
+        "text": "想你。",
+        "tr": "Nhớ bạn lắm.",
+        "words": [
+          {
+            "w": "想你",
+            "ph": "xiǎng nǐ",
+            "mean": "nhớ bạn"
+          }
+        ]
+      },
+      {
+        "t": 30,
+        "text": "麦琪送给我一块巧克力。",
+        "tr": "Maggie tặng mình một thanh sô-cô-la.",
+        "words": [
+          {
+            "w": "巧克力",
+            "ph": "qiǎo kè lì",
+            "mean": "sô-cô-la"
+          }
+        ]
+      },
+      {
+        "t": 35,
+        "text": "好朋友。",
+        "tr": "Bạn thân.",
+        "words": [
+          {
+            "w": "好朋友",
+            "ph": "hǎo péng you",
+            "mean": "bạn thân"
+          }
+        ]
+      },
+      {
+        "t": 38,
+        "text": "恰克送给我一个紫色的糖果。",
+        "tr": "Chuck tặng mình một viên kẹo màu tím.",
+        "words": [
+          {
+            "w": "紫色",
+            "ph": "zǐ sè",
+            "mean": "màu tím"
+          },
+          {
+            "w": "糖果",
+            "ph": "táng guǒ",
+            "mean": "kẹo"
+          }
+        ]
+      },
+      {
+        "t": 45,
+        "text": "你真甜。",
+        "tr": "Bạn ngọt ngào thật đấy.",
+        "words": [
+          {
+            "w": "甜",
+            "ph": "tián",
+            "mean": "ngọt"
+          }
+        ]
+      },
+      {
+        "t": 48,
+        "text": "秀枝送给我一朵红花。",
+        "tr": "Tú Chi tặng mình một bông hoa đỏ.",
+        "words": [
+          {
+            "w": "红花",
+            "ph": "hóng huā",
+            "mean": "hoa đỏ"
+          }
+        ]
+      },
+      {
+        "t": 52,
+        "text": "永远的朋友。",
+        "tr": "Bạn mãi mãi.",
+        "words": [
+          {
+            "w": "永远",
+            "ph": "yǒng yuǎn",
+            "mean": "mãi mãi"
+          }
+        ]
+      },
+      {
+        "t": 56,
+        "text": "我送给大家粉红色的纸杯蛋糕。",
+        "tr": "Mình tặng mọi người bánh cupcake màu hồng.",
+        "words": [
+          {
+            "w": "纸杯蛋糕",
+            "ph": "zhǐ bēi dàn gāo",
+            "mean": "bánh cupcake"
+          },
+          {
+            "w": "粉红色",
+            "ph": "fěn hóng sè",
+            "mean": "màu hồng"
+          }
+        ]
+      },
+      {
+        "t": 61,
+        "text": "大家情人节快乐。",
+        "tr": "Chúc cả nhà lễ Tình nhân vui vẻ!",
+        "words": [
+          {
+            "w": "大家",
+            "ph": "dà jiā",
+            "mean": "mọi người"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-KwNs8KSC328",
+    "lang": "zh",
+    "title": "Things That Go (交通工具)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "2:32",
+    "emoji": "🚗",
+    "youtubeId": "KwNs8KSC328",
+    "segments": [
+      {
+        "t": 0,
+        "text": "交通工具",
+        "tr": "Phương tiện giao thông",
+        "words": [
+          {
+            "w": "交通工具",
+            "ph": "jiāo tōng gōng jù",
+            "mean": "phương tiện giao thông"
+          }
+        ]
+      },
+      {
+        "t": 7,
+        "text": "公共汽车开往汽车站",
+        "tr": "Xe buýt chạy đến bến xe.",
+        "words": [
+          {
+            "w": "公共汽车",
+            "ph": "gōng gòng qì chē",
+            "mean": "xe buýt"
+          },
+          {
+            "w": "汽车站",
+            "ph": "qì chē zhàn",
+            "mean": "bến xe"
+          }
+        ]
+      },
+      {
+        "t": 27,
+        "text": "汽车开往百货商店",
+        "tr": "Ô tô chạy đến cửa hàng bách hóa.",
+        "words": [
+          {
+            "w": "汽车",
+            "ph": "qì chē",
+            "mean": "ô tô"
+          },
+          {
+            "w": "百货商店",
+            "ph": "bǎi huò shāng diàn",
+            "mean": "cửa hàng bách hóa"
+          }
+        ]
+      },
+      {
+        "t": 45,
+        "text": "火车开往火车站",
+        "tr": "Tàu hỏa chạy đến ga tàu.",
+        "words": [
+          {
+            "w": "火车",
+            "ph": "huǒ chē",
+            "mean": "tàu hỏa"
+          },
+          {
+            "w": "火车站",
+            "ph": "huǒ chē zhàn",
+            "mean": "ga tàu"
+          }
+        ]
+      },
+      {
+        "t": 57,
+        "text": "消防车开往起火的地方",
+        "tr": "Xe cứu hỏa chạy đến nơi cháy.",
+        "words": [
+          {
+            "w": "消防车",
+            "ph": "xiāo fáng chē",
+            "mean": "xe cứu hỏa"
+          },
+          {
+            "w": "起火",
+            "ph": "qǐ huǒ",
+            "mean": "bốc cháy"
+          }
+        ]
+      },
+      {
+        "t": 76,
+        "text": "警车开往出事故的地点",
+        "tr": "Xe cảnh sát chạy đến nơi xảy ra tai nạn.",
+        "words": [
+          {
+            "w": "警车",
+            "ph": "jǐng chē",
+            "mean": "xe cảnh sát"
+          },
+          {
+            "w": "事故",
+            "ph": "shì gù",
+            "mean": "tai nạn"
+          }
+        ]
+      },
+      {
+        "t": 93,
+        "text": "救护车开往医院",
+        "tr": "Xe cứu thương chạy đến bệnh viện.",
+        "words": [
+          {
+            "w": "救护车",
+            "ph": "jiù hù chē",
+            "mean": "xe cứu thương"
+          },
+          {
+            "w": "医院",
+            "ph": "yī yuàn",
+            "mean": "bệnh viện"
+          }
+        ]
+      },
+      {
+        "t": 105,
+        "text": "卡车开往商店",
+        "tr": "Xe tải chạy đến cửa hàng.",
+        "words": [
+          {
+            "w": "卡车",
+            "ph": "kǎ chē",
+            "mean": "xe tải"
+          },
+          {
+            "w": "商店",
+            "ph": "shāng diàn",
+            "mean": "cửa hàng"
+          }
+        ]
+      },
+      {
+        "t": 116,
+        "text": "飞机飞往城市",
+        "tr": "Máy bay bay đến thành phố.",
+        "words": [
+          {
+            "w": "飞机",
+            "ph": "fēi jī",
+            "mean": "máy bay"
+          },
+          {
+            "w": "城市",
+            "ph": "chéng shì",
+            "mean": "thành phố"
+          }
+        ]
+      },
+      {
+        "t": 127,
+        "text": "我去许多地方",
+        "tr": "Mình đi rất nhiều nơi.",
+        "words": [
+          {
+            "w": "许多",
+            "ph": "xǔ duō",
+            "mean": "rất nhiều"
+          },
+          {
+            "w": "地方",
+            "ph": "dì fang",
+            "mean": "nơi chốn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-FbcI1Hbe-b4",
+    "lang": "zh",
+    "title": "My Family (我的家庭)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:36",
+    "emoji": "👨‍👩‍👧‍👦",
+    "youtubeId": "FbcI1Hbe-b4",
+    "segments": [
+      {
+        "t": 0,
+        "text": "我的家庭",
+        "tr": "Gia đình của mình.",
+        "words": [
+          {
+            "w": "家庭",
+            "ph": "jiā tíng",
+            "mean": "gia đình"
+          }
+        ]
+      },
+      {
+        "t": 10,
+        "text": "我十岁了。",
+        "tr": "Mình mười tuổi rồi.",
+        "words": [
+          {
+            "w": "十岁",
+            "ph": "shí suì",
+            "mean": "mười tuổi"
+          }
+        ]
+      },
+      {
+        "t": 15,
+        "text": "我的表哥二十岁了。",
+        "tr": "Anh họ của mình hai mươi tuổi.",
+        "words": [
+          {
+            "w": "表哥",
+            "ph": "biǎo gē",
+            "mean": "anh họ"
+          }
+        ]
+      },
+      {
+        "t": 23,
+        "text": "我的妈妈三十岁了。",
+        "tr": "Mẹ của mình ba mươi tuổi.",
+        "words": [
+          {
+            "w": "妈妈",
+            "ph": "mā ma",
+            "mean": "mẹ"
+          }
+        ]
+      },
+      {
+        "t": 30,
+        "text": "我的爸爸四十岁了。",
+        "tr": "Bố của mình bốn mươi tuổi.",
+        "words": [
+          {
+            "w": "爸爸",
+            "ph": "bà ba",
+            "mean": "bố"
+          }
+        ]
+      },
+      {
+        "t": 36,
+        "text": "我的姑姑五十岁了。",
+        "tr": "Cô của mình năm mươi tuổi.",
+        "words": [
+          {
+            "w": "姑姑",
+            "ph": "gū gu",
+            "mean": "cô"
+          }
+        ]
+      },
+      {
+        "t": 41,
+        "text": "我的姑夫六十岁了。",
+        "tr": "Dượng của mình sáu mươi tuổi.",
+        "words": [
+          {
+            "w": "姑夫",
+            "ph": "gū fu",
+            "mean": "chồng của cô"
+          }
+        ]
+      },
+      {
+        "t": 48,
+        "text": "我的奶奶七十岁了。",
+        "tr": "Bà nội của mình bảy mươi tuổi.",
+        "words": [
+          {
+            "w": "奶奶",
+            "ph": "nǎi nai",
+            "mean": "bà nội"
+          }
+        ]
+      },
+      {
+        "t": 54,
+        "text": "我的爷爷八十岁了。",
+        "tr": "Ông nội của mình tám mươi tuổi.",
+        "words": [
+          {
+            "w": "爷爷",
+            "ph": "yé ye",
+            "mean": "ông nội"
+          }
+        ]
+      },
+      {
+        "t": 60,
+        "text": "我的曾祖母九十岁了。",
+        "tr": "Bà cố của mình chín mươi tuổi.",
+        "words": [
+          {
+            "w": "曾祖母",
+            "ph": "zēng zǔ mǔ",
+            "mean": "bà cố"
+          }
+        ]
+      },
+      {
+        "t": 70,
+        "text": "我的婴母一百岁了。",
+        "tr": "Cụ của mình một trăm tuổi.",
+        "words": [
+          {
+            "w": "一百岁",
+            "ph": "yì bǎi suì",
+            "mean": "một trăm tuổi"
+          }
+        ]
+      },
+      {
+        "t": 75,
+        "text": "她是最老的。",
+        "tr": "Cụ là người lớn tuổi nhất.",
+        "words": [
+          {
+            "w": "最老",
+            "ph": "zuì lǎo",
+            "mean": "già nhất"
+          }
+        ]
+      },
+      {
+        "t": 78,
+        "text": "你好。",
+        "tr": "Xin chào.",
+        "words": [
+          {
+            "w": "你好",
+            "ph": "nǐ hǎo",
+            "mean": "xin chào"
+          }
+        ]
+      },
+      {
+        "t": 90,
+        "text": "我十岁了。",
+        "tr": "Mình mười tuổi rồi.",
+        "words": [
+          {
+            "w": "十岁",
+            "ph": "shí suì",
+            "mean": "mười tuổi"
+          }
+        ]
+      },
+      {
+        "t": 93,
+        "text": "我的家庭",
+        "tr": "Gia đình của mình.",
+        "words": [
+          {
+            "w": "家庭",
+            "ph": "jiā tíng",
+            "mean": "gia đình"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-WL7Sa5iiLWM",
+    "lang": "zh",
+    "title": "I Am Reading (我在看书)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:38",
+    "emoji": "📚",
+    "youtubeId": "WL7Sa5iiLWM",
+    "segments": [
+      {
+        "t": 0,
+        "text": "我在看书。",
+        "tr": "Mình đang đọc sách.",
+        "words": [
+          {
+            "w": "看书",
+            "ph": "kàn shū",
+            "mean": "đọc sách"
+          }
+        ]
+      },
+      {
+        "t": 5,
+        "text": "我在看关于企鹅的书。",
+        "tr": "Mình đang đọc sách về chim cánh cụt.",
+        "words": [
+          {
+            "w": "企鹅",
+            "ph": "qǐ é",
+            "mean": "chim cánh cụt"
+          }
+        ]
+      },
+      {
+        "t": 15,
+        "text": "我在看关于金字塔的书。",
+        "tr": "Mình đang đọc sách về kim tự tháp.",
+        "words": [
+          {
+            "w": "金字塔",
+            "ph": "jīn zì tǎ",
+            "mean": "kim tự tháp"
+          }
+        ]
+      },
+      {
+        "t": 21,
+        "text": "我在看关于蛇的书。",
+        "tr": "Mình đang đọc sách về rắn.",
+        "words": [
+          {
+            "w": "蛇",
+            "ph": "shé",
+            "mean": "con rắn"
+          }
+        ]
+      },
+      {
+        "t": 27,
+        "text": "我在看关于恐龙的书。",
+        "tr": "Mình đang đọc sách về khủng long.",
+        "words": [
+          {
+            "w": "恐龙",
+            "ph": "kǒng lóng",
+            "mean": "khủng long"
+          }
+        ]
+      },
+      {
+        "t": 36,
+        "text": "我在看关于向日葵的书。",
+        "tr": "Mình đang đọc sách về hoa hướng dương.",
+        "words": [
+          {
+            "w": "向日葵",
+            "ph": "xiàng rì kuí",
+            "mean": "hoa hướng dương"
+          }
+        ]
+      },
+      {
+        "t": 45,
+        "text": "我在看关于向日葵的书。",
+        "tr": "Mình đang đọc sách về hoa hướng dương.",
+        "words": [
+          {
+            "w": "向日葵",
+            "ph": "xiàng rì kuí",
+            "mean": "hoa hướng dương"
+          }
+        ]
+      },
+      {
+        "t": 54,
+        "text": "我在看关于宇宙飞船的书。",
+        "tr": "Mình đang đọc sách về tàu vũ trụ.",
+        "words": [
+          {
+            "w": "宇宙飞船",
+            "ph": "yǔ zhòu fēi chuán",
+            "mean": "tàu vũ trụ"
+          }
+        ]
+      },
+      {
+        "t": 63,
+        "text": "我在看关于公主的书。",
+        "tr": "Mình đang đọc sách về công chúa.",
+        "words": [
+          {
+            "w": "公主",
+            "ph": "gōng zhǔ",
+            "mean": "công chúa"
+          }
+        ]
+      },
+      {
+        "t": 76,
+        "text": "我在看书。",
+        "tr": "Mình đang đọc sách.",
+        "words": [
+          {
+            "w": "看书",
+            "ph": "kàn shū",
+            "mean": "đọc sách"
+          }
+        ]
+      },
+      {
+        "t": 81,
+        "text": "我喜欢看书。",
+        "tr": "Mình thích đọc sách.",
+        "words": [
+          {
+            "w": "喜欢",
+            "ph": "xǐ huan",
+            "mean": "thích"
+          }
+        ]
+      },
+      {
+        "t": 92,
+        "text": "我在看关于公主的书。",
+        "tr": "Mình đang đọc sách về công chúa.",
+        "words": [
+          {
+            "w": "公主",
+            "ph": "gōng zhǔ",
+            "mean": "công chúa"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-UgQjlZ4ltso",
+    "lang": "zh",
+    "title": "Conversation Between The Animals (动物们的对话)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:53",
+    "emoji": "🐄",
+    "youtubeId": "UgQjlZ4ltso",
+    "segments": [
+      {
+        "t": 0,
+        "text": "动物们的对话",
+        "tr": "Cuộc trò chuyện của các con vật",
+        "words": [
+          {
+            "w": "动物",
+            "ph": "dòng wù",
+            "mean": "con vật"
+          },
+          {
+            "w": "对话",
+            "ph": "duì huà",
+            "mean": "trò chuyện"
+          }
+        ]
+      },
+      {
+        "t": 16,
+        "text": "小牛对着小猪叫,",
+        "tr": "Bê con kêu với heo con,",
+        "words": [
+          {
+            "w": "小牛",
+            "ph": "xiǎo niú",
+            "mean": "bê con"
+          },
+          {
+            "w": "小猪",
+            "ph": "xiǎo zhū",
+            "mean": "heo con"
+          }
+        ]
+      },
+      {
+        "t": 20,
+        "text": "喵,喵!",
+        "tr": "Meo, meo!"
+      },
+      {
+        "t": 23,
+        "text": "小猪吓了一跳,",
+        "tr": "Heo con giật mình,",
+        "words": [
+          {
+            "w": "吓一跳",
+            "ph": "xià yí tiào",
+            "mean": "giật mình"
+          }
+        ]
+      },
+      {
+        "t": 26,
+        "text": "逃走了。",
+        "tr": "chạy mất tiêu.",
+        "words": [
+          {
+            "w": "逃走",
+            "ph": "táo zǒu",
+            "mean": "chạy trốn"
+          }
+        ]
+      },
+      {
+        "t": 28,
+        "text": "小猪对着小狗叫,",
+        "tr": "Heo con kêu với chó con,",
+        "words": [
+          {
+            "w": "小狗",
+            "ph": "xiǎo gǒu",
+            "mean": "chó con"
+          }
+        ]
+      },
+      {
+        "t": 34,
+        "text": "小狗吓了一跳,",
+        "tr": "Chó con giật mình,",
+        "words": [
+          {
+            "w": "吓一跳",
+            "ph": "xià yí tiào",
+            "mean": "giật mình"
+          }
+        ]
+      },
+      {
+        "t": 37,
+        "text": "逃走了。",
+        "tr": "chạy mất tiêu.",
+        "words": [
+          {
+            "w": "逃走",
+            "ph": "táo zǒu",
+            "mean": "chạy trốn"
+          }
+        ]
+      },
+      {
+        "t": 40,
+        "text": "小狗对着小猫叫,",
+        "tr": "Chó con kêu với mèo con,",
+        "words": [
+          {
+            "w": "小猫",
+            "ph": "xiǎo māo",
+            "mean": "mèo con"
+          }
+        ]
+      },
+      {
+        "t": 46,
+        "text": "小猫吓了一跳,",
+        "tr": "Mèo con giật mình,",
+        "words": [
+          {
+            "w": "吓一跳",
+            "ph": "xià yí tiào",
+            "mean": "giật mình"
+          }
+        ]
+      },
+      {
+        "t": 49,
+        "text": "逃走了。",
+        "tr": "chạy mất tiêu.",
+        "words": [
+          {
+            "w": "逃走",
+            "ph": "táo zǒu",
+            "mean": "chạy trốn"
+          }
+        ]
+      },
+      {
+        "t": 52,
+        "text": "小猫对着小老鼠叫,",
+        "tr": "Mèo con kêu với chuột con,",
+        "words": [
+          {
+            "w": "小老鼠",
+            "ph": "xiǎo lǎo shǔ",
+            "mean": "chuột con"
+          }
+        ]
+      },
+      {
+        "t": 56,
+        "text": "喵,喵!",
+        "tr": "Meo, meo!"
+      },
+      {
+        "t": 59,
+        "text": "小老鼠吓了一跳,",
+        "tr": "Chuột con giật mình,",
+        "words": [
+          {
+            "w": "吓一跳",
+            "ph": "xià yí tiào",
+            "mean": "giật mình"
+          }
+        ]
+      },
+      {
+        "t": 61,
+        "text": "逃走了。",
+        "tr": "chạy mất tiêu.",
+        "words": [
+          {
+            "w": "逃走",
+            "ph": "táo zǒu",
+            "mean": "chạy trốn"
+          }
+        ]
+      },
+      {
+        "t": 64,
+        "text": "小老鼠对着小鹅叫,",
+        "tr": "Chuột con kêu với ngỗng con,",
+        "words": [
+          {
+            "w": "小鹅",
+            "ph": "xiǎo é",
+            "mean": "ngỗng con"
+          }
+        ]
+      },
+      {
+        "t": 69,
+        "text": "小鹅吓了一跳,",
+        "tr": "Ngỗng con giật mình,",
+        "words": [
+          {
+            "w": "吓一跳",
+            "ph": "xià yí tiào",
+            "mean": "giật mình"
+          }
+        ]
+      },
+      {
+        "t": 72,
+        "text": "逃走了。",
+        "tr": "chạy mất tiêu.",
+        "words": [
+          {
+            "w": "逃走",
+            "ph": "táo zǒu",
+            "mean": "chạy trốn"
+          }
+        ]
+      },
+      {
+        "t": 74,
+        "text": "小鹅对着小羊叫,",
+        "tr": "Ngỗng con kêu với cừu con,",
+        "words": [
+          {
+            "w": "小羊",
+            "ph": "xiǎo yáng",
+            "mean": "cừu con"
+          }
+        ]
+      },
+      {
+        "t": 78,
+        "text": "呱呱!",
+        "tr": "Quạc, quạc!"
+      },
+      {
+        "t": 80,
+        "text": "小羊吓了一跳,",
+        "tr": "Cừu con giật mình,",
+        "words": [
+          {
+            "w": "吓一跳",
+            "ph": "xià yí tiào",
+            "mean": "giật mình"
+          }
+        ]
+      },
+      {
+        "t": 83,
+        "text": "逃走了。",
+        "tr": "chạy mất tiêu.",
+        "words": [
+          {
+            "w": "逃走",
+            "ph": "táo zǒu",
+            "mean": "chạy trốn"
+          }
+        ]
+      },
+      {
+        "t": 85,
+        "text": "小羊对着小牛叫,",
+        "tr": "Cừu con kêu với bê con,",
+        "words": [
+          {
+            "w": "小牛",
+            "ph": "xiǎo niú",
+            "mean": "bê con"
+          }
+        ]
+      },
+      {
+        "t": 88,
+        "text": "喵,喵!",
+        "tr": "Meo, meo!"
+      },
+      {
+        "t": 91,
+        "text": "可是小牛还在吃东西。",
+        "tr": "Nhưng bê con vẫn đang mải ăn.",
+        "words": [
+          {
+            "w": "吃东西",
+            "ph": "chī dōng xi",
+            "mean": "ăn đồ"
+          }
+        ]
+      },
+      {
+        "t": 96,
+        "text": "可怜的小羊,",
+        "tr": "Chú cừu con tội nghiệp,",
+        "words": [
+          {
+            "w": "可怜",
+            "ph": "kě lián",
+            "mean": "tội nghiệp"
+          }
+        ]
+      },
+      {
+        "t": 98,
+        "text": "它饿了。",
+        "tr": "nó đói bụng rồi.",
+        "words": [
+          {
+            "w": "饿",
+            "ph": "è",
+            "mean": "đói"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-INsovRHxJQk",
+    "lang": "zh",
+    "title": "I Can Fly! (我可以飞！)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:32",
+    "emoji": "🦸",
+    "youtubeId": "INsovRHxJQk",
+    "segments": [
+      {
+        "t": 0,
+        "text": "我可以飞。",
+        "tr": "Mình có thể bay.",
+        "words": [
+          {
+            "w": "飞",
+            "ph": "fēi",
+            "mean": "bay"
+          }
+        ]
+      },
+      {
+        "t": 6,
+        "text": "我可以游过大海。",
+        "tr": "Mình có thể bơi qua biển lớn.",
+        "words": [
+          {
+            "w": "游",
+            "ph": "yóu",
+            "mean": "bơi"
+          },
+          {
+            "w": "大海",
+            "ph": "dà hǎi",
+            "mean": "biển lớn"
+          }
+        ]
+      },
+      {
+        "t": 13,
+        "text": "我还可以穿过沙漠。",
+        "tr": "Mình còn có thể băng qua sa mạc.",
+        "words": [
+          {
+            "w": "穿过",
+            "ph": "chuān guò",
+            "mean": "băng qua"
+          },
+          {
+            "w": "沙漠",
+            "ph": "shā mò",
+            "mean": "sa mạc"
+          }
+        ]
+      },
+      {
+        "t": 22,
+        "text": "我可以爬上高高的建筑。",
+        "tr": "Mình có thể leo lên tòa nhà cao ơi là cao.",
+        "words": [
+          {
+            "w": "爬上",
+            "ph": "pá shàng",
+            "mean": "leo lên"
+          },
+          {
+            "w": "建筑",
+            "ph": "jiàn zhù",
+            "mean": "tòa nhà"
+          }
+        ]
+      },
+      {
+        "t": 31,
+        "text": "我还可以攀岩。",
+        "tr": "Mình còn có thể leo vách núi đá.",
+        "words": [
+          {
+            "w": "攀岩",
+            "ph": "pān yán",
+            "mean": "leo núi đá"
+          }
+        ]
+      },
+      {
+        "t": 40,
+        "text": "我可以飞快的开车。",
+        "tr": "Mình có thể lái xe thật nhanh.",
+        "words": [
+          {
+            "w": "开车",
+            "ph": "kāi chē",
+            "mean": "lái xe"
+          },
+          {
+            "w": "飞快",
+            "ph": "fēi kuài",
+            "mean": "nhanh vun vút"
+          }
+        ]
+      },
+      {
+        "t": 49,
+        "text": "我还可以开火车。",
+        "tr": "Mình còn có thể lái tàu hỏa.",
+        "words": [
+          {
+            "w": "火车",
+            "ph": "huǒ chē",
+            "mean": "tàu hỏa"
+          }
+        ]
+      },
+      {
+        "t": 53,
+        "text": "我可以在高空中走绳索。",
+        "tr": "Mình có thể đi trên dây ở trên cao.",
+        "words": [
+          {
+            "w": "绳索",
+            "ph": "shéng suǒ",
+            "mean": "dây thừng"
+          },
+          {
+            "w": "高空",
+            "ph": "gāo kōng",
+            "mean": "trên cao"
+          }
+        ]
+      },
+      {
+        "t": 70,
+        "text": "我还可以从空中飞过。",
+        "tr": "Mình còn có thể bay lượn trên không.",
+        "words": [
+          {
+            "w": "空中",
+            "ph": "kōng zhōng",
+            "mean": "trên không"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-LUyaTQV46FI",
+    "lang": "zh",
+    "title": "Let's Jump Rope (我们跳绳吧)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "2:08",
+    "emoji": "🤸",
+    "youtubeId": "LUyaTQV46FI",
+    "segments": [
+      {
+        "t": 0,
+        "text": "我们跳绳吧。",
+        "tr": "Chúng mình nhảy dây nào.",
+        "words": [
+          {
+            "w": "跳绳",
+            "ph": "tiào shéng",
+            "mean": "nhảy dây"
+          }
+        ]
+      },
+      {
+        "t": 8,
+        "text": "我可以跳得很快。",
+        "tr": "Mình có thể nhảy rất nhanh.",
+        "words": [
+          {
+            "w": "快",
+            "ph": "kuài",
+            "mean": "nhanh"
+          }
+        ]
+      },
+      {
+        "t": 16,
+        "text": "我可以跳得很慢。",
+        "tr": "Mình có thể nhảy rất chậm.",
+        "words": [
+          {
+            "w": "慢",
+            "ph": "màn",
+            "mean": "chậm"
+          }
+        ]
+      },
+      {
+        "t": 23,
+        "text": "他可以跳得很高。",
+        "tr": "Bạn ấy có thể nhảy rất cao.",
+        "words": [
+          {
+            "w": "高",
+            "ph": "gāo",
+            "mean": "cao"
+          }
+        ]
+      },
+      {
+        "t": 30,
+        "text": "他可以跳得很低。",
+        "tr": "Bạn ấy có thể nhảy rất thấp.",
+        "words": [
+          {
+            "w": "低",
+            "ph": "dī",
+            "mean": "thấp"
+          }
+        ]
+      },
+      {
+        "t": 37,
+        "text": "他可以在原地跳。",
+        "tr": "Bạn ấy có thể nhảy tại chỗ.",
+        "words": [
+          {
+            "w": "原地",
+            "ph": "yuán dì",
+            "mean": "tại chỗ"
+          }
+        ]
+      },
+      {
+        "t": 43,
+        "text": "他可以跳前跳后。",
+        "tr": "Bạn ấy có thể nhảy tới nhảy lui.",
+        "words": [
+          {
+            "w": "前",
+            "ph": "qián",
+            "mean": "phía trước"
+          },
+          {
+            "w": "后",
+            "ph": "hòu",
+            "mean": "phía sau"
+          }
+        ]
+      },
+      {
+        "t": 49,
+        "text": "看,看,他们可以跳成一排。",
+        "tr": "Nhìn kìa, các bạn ấy nhảy thành một hàng.",
+        "words": [
+          {
+            "w": "一排",
+            "ph": "yì pái",
+            "mean": "một hàng"
+          }
+        ]
+      },
+      {
+        "t": 57,
+        "text": "我们一起跳吧。",
+        "tr": "Chúng mình cùng nhảy nào.",
+        "words": [
+          {
+            "w": "一起",
+            "ph": "yì qǐ",
+            "mean": "cùng nhau"
+          }
+        ]
+      },
+      {
+        "t": 63,
+        "text": "我们可以跳得很快。",
+        "tr": "Chúng mình có thể nhảy rất nhanh.",
+        "words": [
+          {
+            "w": "快",
+            "ph": "kuài",
+            "mean": "nhanh"
+          }
+        ]
+      },
+      {
+        "t": 70,
+        "text": "我们可以跳得很慢。",
+        "tr": "Chúng mình có thể nhảy rất chậm.",
+        "words": [
+          {
+            "w": "慢",
+            "ph": "màn",
+            "mean": "chậm"
+          }
+        ]
+      },
+      {
+        "t": 77,
+        "text": "我们可以跳得很高。",
+        "tr": "Chúng mình có thể nhảy rất cao.",
+        "words": [
+          {
+            "w": "高",
+            "ph": "gāo",
+            "mean": "cao"
+          }
+        ]
+      },
+      {
+        "t": 83,
+        "text": "我们可以跳得很低。",
+        "tr": "Chúng mình có thể nhảy rất thấp.",
+        "words": [
+          {
+            "w": "低",
+            "ph": "dī",
+            "mean": "thấp"
+          }
+        ]
+      },
+      {
+        "t": 89,
+        "text": "我们可以在原地跳。",
+        "tr": "Chúng mình có thể nhảy tại chỗ.",
+        "words": [
+          {
+            "w": "原地",
+            "ph": "yuán dì",
+            "mean": "tại chỗ"
+          }
+        ]
+      },
+      {
+        "t": 95,
+        "text": "我们可以跳前跳后。",
+        "tr": "Chúng mình có thể nhảy tới nhảy lui.",
+        "words": [
+          {
+            "w": "前",
+            "ph": "qián",
+            "mean": "phía trước"
+          },
+          {
+            "w": "后",
+            "ph": "hòu",
+            "mean": "phía sau"
+          }
+        ]
+      },
+      {
+        "t": 100,
+        "text": "看,看,我们可以跳成一排。",
+        "tr": "Nhìn kìa, chúng mình nhảy thành một hàng.",
+        "words": [
+          {
+            "w": "一排",
+            "ph": "yì pái",
+            "mean": "một hàng"
+          }
+        ]
+      },
+      {
+        "t": 108,
+        "text": "我们一起跳吧。",
+        "tr": "Chúng mình cùng nhảy nào.",
+        "words": [
+          {
+            "w": "一起",
+            "ph": "yì qǐ",
+            "mean": "cùng nhau"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-PBG3HBd0FB8",
+    "lang": "zh",
+    "title": "The Food Chant (食物歌)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:41",
+    "emoji": "🍎",
+    "youtubeId": "PBG3HBd0FB8",
+    "segments": [
+      {
+        "t": 0,
+        "text": "食物割",
+        "tr": "Bài hát về đồ ăn.",
+        "words": [
+          {
+            "w": "食物",
+            "ph": "shí wù",
+            "mean": "đồ ăn"
+          }
+        ]
+      },
+      {
+        "t": 6,
+        "text": "苹果在树上",
+        "tr": "Quả táo ở trên cây.",
+        "words": [
+          {
+            "w": "苹果",
+            "ph": "píng guǒ",
+            "mean": "quả táo"
+          },
+          {
+            "w": "树",
+            "ph": "shù",
+            "mean": "cây"
+          }
+        ]
+      },
+      {
+        "t": 11,
+        "text": "摘下来,咬一口。",
+        "tr": "Hái xuống, cắn một miếng.",
+        "words": [
+          {
+            "w": "摘",
+            "ph": "zhāi",
+            "mean": "hái"
+          },
+          {
+            "w": "咬",
+            "ph": "yǎo",
+            "mean": "cắn"
+          }
+        ]
+      },
+      {
+        "t": 16,
+        "text": "萝卜在地里,拔出来,洗干净。",
+        "tr": "Củ cải ở dưới đất, nhổ lên, rửa cho sạch.",
+        "words": [
+          {
+            "w": "萝卜",
+            "ph": "luó bo",
+            "mean": "củ cải"
+          },
+          {
+            "w": "拔",
+            "ph": "bá",
+            "mean": "nhổ"
+          }
+        ]
+      },
+      {
+        "t": 26,
+        "text": "金枪鱼面包,吃一口,慢慢嚼。",
+        "tr": "Bánh mì cá ngừ, ăn một miếng, nhai từ từ.",
+        "words": [
+          {
+            "w": "金枪鱼",
+            "ph": "jīn qiāng yú",
+            "mean": "cá ngừ"
+          },
+          {
+            "w": "嚼",
+            "ph": "jiáo",
+            "mean": "nhai"
+          }
+        ]
+      },
+      {
+        "t": 36,
+        "text": "麦片在碗里,倒牛奶,吃光它。",
+        "tr": "Ngũ cốc ở trong bát, rót sữa vào, ăn hết nào.",
+        "words": [
+          {
+            "w": "麦片",
+            "ph": "mài piàn",
+            "mean": "ngũ cốc"
+          },
+          {
+            "w": "牛奶",
+            "ph": "niú nǎi",
+            "mean": "sữa"
+          }
+        ]
+      },
+      {
+        "t": 46,
+        "text": "牛奶在杯里,拿起来,喝掉它。",
+        "tr": "Sữa ở trong ly, cầm lên, uống hết nào.",
+        "words": [
+          {
+            "w": "牛奶",
+            "ph": "niú nǎi",
+            "mean": "sữa"
+          },
+          {
+            "w": "喝",
+            "ph": "hē",
+            "mean": "uống"
+          }
+        ]
+      },
+      {
+        "t": 56,
+        "text": "糖果在罐里,拿出来,吃掉它。",
+        "tr": "Kẹo ở trong lọ, lấy ra, ăn hết nào.",
+        "words": [
+          {
+            "w": "糖果",
+            "ph": "táng guǒ",
+            "mean": "kẹo"
+          },
+          {
+            "w": "罐",
+            "ph": "guàn",
+            "mean": "cái lọ"
+          }
+        ]
+      },
+      {
+        "t": 66,
+        "text": "香肠在锅里,翻一翻,烤一烤。",
+        "tr": "Xúc xích ở trong nồi, lật qua lật lại, nướng lên nào.",
+        "words": [
+          {
+            "w": "香肠",
+            "ph": "xiāng cháng",
+            "mean": "xúc xích"
+          },
+          {
+            "w": "烤",
+            "ph": "kǎo",
+            "mean": "nướng"
+          }
+        ]
+      },
+      {
+        "t": 77,
+        "text": "食物在肚里,舔舌头,真好吃。",
+        "tr": "Đồ ăn ở trong bụng, liếm môi, ngon thật đó.",
+        "words": [
+          {
+            "w": "肚",
+            "ph": "dù",
+            "mean": "bụng"
+          },
+          {
+            "w": "好吃",
+            "ph": "hǎo chī",
+            "mean": "ngon"
+          }
+        ]
+      },
+      {
+        "t": 95,
+        "text": "食物在家里,吃一口。",
+        "tr": "Đồ ăn ở trong nhà, ăn một miếng.",
+        "words": [
+          {
+            "w": "食物",
+            "ph": "shí wù",
+            "mean": "đồ ăn"
+          },
+          {
+            "w": "家",
+            "ph": "jiā",
+            "mean": "nhà"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2---6uAkUxVXA",
+    "lang": "zh",
+    "title": "The Fourth of July (美国独立日)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:14",
+    "emoji": "🎆",
+    "youtubeId": "--6uAkUxVXA",
+    "segments": [
+      {
+        "t": 0,
+        "text": "美国独立日",
+        "tr": "Ngày Quốc khánh Mỹ",
+        "words": [
+          {
+            "w": "独立日",
+            "ph": "dú lì rì",
+            "mean": "ngày Quốc khánh"
+          }
+        ]
+      },
+      {
+        "t": 5,
+        "text": "每个人都想着游行",
+        "tr": "Ai cũng nghĩ đến cuộc diễu hành.",
+        "words": [
+          {
+            "w": "游行",
+            "ph": "yóu xíng",
+            "mean": "diễu hành"
+          },
+          {
+            "w": "每个人",
+            "ph": "měi gè rén",
+            "mean": "mọi người"
+          }
+        ]
+      },
+      {
+        "t": 9,
+        "text": "没有人想到家里的狗",
+        "tr": "Chẳng ai nhớ đến chú chó ở nhà.",
+        "words": [
+          {
+            "w": "狗",
+            "ph": "gǒu",
+            "mean": "con chó"
+          }
+        ]
+      },
+      {
+        "t": 14,
+        "text": "每个人都在听乐队演奏",
+        "tr": "Ai cũng đang nghe ban nhạc chơi.",
+        "words": [
+          {
+            "w": "乐队",
+            "ph": "yuè duì",
+            "mean": "ban nhạc"
+          },
+          {
+            "w": "演奏",
+            "ph": "yǎn zòu",
+            "mean": "chơi nhạc"
+          }
+        ]
+      },
+      {
+        "t": 19,
+        "text": "没有人听从警卫的指挥",
+        "tr": "Chẳng ai nghe theo chú bảo vệ chỉ dẫn.",
+        "words": [
+          {
+            "w": "警卫",
+            "ph": "jǐng wèi",
+            "mean": "bảo vệ"
+          }
+        ]
+      },
+      {
+        "t": 25,
+        "text": "每个人都在看烟花",
+        "tr": "Ai cũng đang ngắm pháo hoa.",
+        "words": [
+          {
+            "w": "烟花",
+            "ph": "yān huā",
+            "mean": "pháo hoa"
+          }
+        ]
+      },
+      {
+        "t": 35,
+        "text": "没有人看护小宝宝",
+        "tr": "Chẳng ai trông em bé.",
+        "words": [
+          {
+            "w": "小宝宝",
+            "ph": "xiǎo bǎo bao",
+            "mean": "em bé"
+          },
+          {
+            "w": "看护",
+            "ph": "kān hù",
+            "mean": "trông nom"
+          }
+        ]
+      },
+      {
+        "t": 41,
+        "text": "每个人都收拾毯子",
+        "tr": "Ai cũng dọn tấm chăn của mình.",
+        "words": [
+          {
+            "w": "毯子",
+            "ph": "tǎn zi",
+            "mean": "tấm chăn"
+          },
+          {
+            "w": "收拾",
+            "ph": "shōu shi",
+            "mean": "thu dọn"
+          }
+        ]
+      },
+      {
+        "t": 46,
+        "text": "没有人收拾垃圾",
+        "tr": "Chẳng ai dọn rác.",
+        "words": [
+          {
+            "w": "垃圾",
+            "ph": "lā jī",
+            "mean": "rác"
+          }
+        ]
+      },
+      {
+        "t": 51,
+        "text": "每个人都很开心",
+        "tr": "Ai cũng rất vui.",
+        "words": [
+          {
+            "w": "开心",
+            "ph": "kāi xīn",
+            "mean": "vui vẻ"
+          }
+        ]
+      },
+      {
+        "t": 55,
+        "text": "没有人在美国独立日这一天觉得无聊",
+        "tr": "Chẳng ai thấy chán trong ngày Quốc khánh Mỹ cả.",
+        "words": [
+          {
+            "w": "无聊",
+            "ph": "wú liáo",
+            "mean": "buồn chán"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-pd6pgMUy6Gw",
+    "lang": "zh",
+    "title": "At Night (在晚上)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:55",
+    "emoji": "😴",
+    "youtubeId": "pd6pgMUy6Gw",
+    "segments": [
+      {
+        "t": 0,
+        "text": "在晚上",
+        "tr": "Vào ban đêm",
+        "words": [
+          {
+            "w": "晚上",
+            "ph": "wǎn shang",
+            "mean": "buổi tối"
+          }
+        ]
+      },
+      {
+        "t": 10,
+        "text": "马在马旧里睡觉",
+        "tr": "Ngựa ngủ trong chuồng ngựa.",
+        "words": [
+          {
+            "w": "马",
+            "ph": "mǎ",
+            "mean": "con ngựa"
+          },
+          {
+            "w": "睡觉",
+            "ph": "shuì jiào",
+            "mean": "ngủ"
+          }
+        ]
+      },
+      {
+        "t": 22,
+        "text": "猪在猪圈里睡觉",
+        "tr": "Lợn ngủ trong chuồng lợn.",
+        "words": [
+          {
+            "w": "猪",
+            "ph": "zhū",
+            "mean": "con lợn"
+          },
+          {
+            "w": "猪圈",
+            "ph": "zhū juàn",
+            "mean": "chuồng lợn"
+          }
+        ]
+      },
+      {
+        "t": 30,
+        "text": "松鼠在树洞里睡觉",
+        "tr": "Sóc ngủ trong hốc cây.",
+        "words": [
+          {
+            "w": "松鼠",
+            "ph": "sōng shǔ",
+            "mean": "con sóc"
+          },
+          {
+            "w": "树洞",
+            "ph": "shù dòng",
+            "mean": "hốc cây"
+          }
+        ]
+      },
+      {
+        "t": 40,
+        "text": "鹦鹉在笼子里睡觉",
+        "tr": "Vẹt ngủ trong lồng.",
+        "words": [
+          {
+            "w": "鹦鹉",
+            "ph": "yīng wǔ",
+            "mean": "con vẹt"
+          },
+          {
+            "w": "笼子",
+            "ph": "lóng zi",
+            "mean": "cái lồng"
+          }
+        ]
+      },
+      {
+        "t": 50,
+        "text": "猫在篮子里睡觉",
+        "tr": "Mèo ngủ trong giỏ.",
+        "words": [
+          {
+            "w": "猫",
+            "ph": "māo",
+            "mean": "con mèo"
+          },
+          {
+            "w": "篮子",
+            "ph": "lán zi",
+            "mean": "cái giỏ"
+          }
+        ]
+      },
+      {
+        "t": 61,
+        "text": "鲸鱼在鱼缸里睡觉",
+        "tr": "Cá voi ngủ trong bể cá.",
+        "words": [
+          {
+            "w": "鲸鱼",
+            "ph": "jīng yú",
+            "mean": "cá voi"
+          },
+          {
+            "w": "鱼缸",
+            "ph": "yú gāng",
+            "mean": "bể cá"
+          }
+        ]
+      },
+      {
+        "t": 71,
+        "text": "月亮在天空里睡觉",
+        "tr": "Mặt trăng ngủ trên bầu trời.",
+        "words": [
+          {
+            "w": "月亮",
+            "ph": "yuè liang",
+            "mean": "mặt trăng"
+          },
+          {
+            "w": "天空",
+            "ph": "tiān kōng",
+            "mean": "bầu trời"
+          }
+        ]
+      },
+      {
+        "t": 83,
+        "text": "你在哪里睡觉?",
+        "tr": "Còn bé ngủ ở đâu nhỉ?",
+        "words": [
+          {
+            "w": "哪里",
+            "ph": "nǎ lǐ",
+            "mean": "ở đâu"
+          }
+        ]
+      },
+      {
+        "t": 90,
+        "text": "我在床上睡觉",
+        "tr": "Mình ngủ ở trên giường.",
+        "words": [
+          {
+            "w": "床",
+            "ph": "chuáng",
+            "mean": "cái giường"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-Kvuuq2koUcw",
+    "lang": "zh",
+    "title": "My Pet (我的宠物)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:20",
+    "emoji": "🐹",
+    "youtubeId": "Kvuuq2koUcw",
+    "segments": [
+      {
+        "t": 0,
+        "text": "我的宠物",
+        "tr": "Thú cưng của mình.",
+        "words": [
+          {
+            "w": "宠物",
+            "ph": "chǒng wù",
+            "mean": "thú cưng"
+          }
+        ]
+      },
+      {
+        "t": 6,
+        "text": "星期一,我看到苍鼠。",
+        "tr": "Thứ Hai, mình thấy chuột hamster.",
+        "words": [
+          {
+            "w": "星期一",
+            "ph": "xīng qī yī",
+            "mean": "thứ Hai"
+          },
+          {
+            "w": "苍鼠",
+            "ph": "cāng shǔ",
+            "mean": "chuột hamster"
+          }
+        ]
+      },
+      {
+        "t": 14,
+        "text": "星期二,我看到兔子。",
+        "tr": "Thứ Ba, mình thấy con thỏ.",
+        "words": [
+          {
+            "w": "星期二",
+            "ph": "xīng qī èr",
+            "mean": "thứ Ba"
+          },
+          {
+            "w": "兔子",
+            "ph": "tù zi",
+            "mean": "con thỏ"
+          }
+        ]
+      },
+      {
+        "t": 22,
+        "text": "星期三,我看到小猫。",
+        "tr": "Thứ Tư, mình thấy chú mèo con.",
+        "words": [
+          {
+            "w": "星期三",
+            "ph": "xīng qī sān",
+            "mean": "thứ Tư"
+          },
+          {
+            "w": "小猫",
+            "ph": "xiǎo māo",
+            "mean": "mèo con"
+          }
+        ]
+      },
+      {
+        "t": 31,
+        "text": "星期四,我看到小狗。",
+        "tr": "Thứ Năm, mình thấy chú cún con.",
+        "words": [
+          {
+            "w": "星期四",
+            "ph": "xīng qī sì",
+            "mean": "thứ Năm"
+          },
+          {
+            "w": "小狗",
+            "ph": "xiǎo gǒu",
+            "mean": "cún con"
+          }
+        ]
+      },
+      {
+        "t": 39,
+        "text": "星期五,我看到乌龟。",
+        "tr": "Thứ Sáu, mình thấy con rùa.",
+        "words": [
+          {
+            "w": "星期五",
+            "ph": "xīng qī wǔ",
+            "mean": "thứ Sáu"
+          },
+          {
+            "w": "乌龟",
+            "ph": "wū guī",
+            "mean": "con rùa"
+          }
+        ]
+      },
+      {
+        "t": 46,
+        "text": "星期六,我看到鹦鹉。",
+        "tr": "Thứ Bảy, mình thấy con vẹt.",
+        "words": [
+          {
+            "w": "星期六",
+            "ph": "xīng qī liù",
+            "mean": "thứ Bảy"
+          },
+          {
+            "w": "鹦鹉",
+            "ph": "yīng wǔ",
+            "mean": "con vẹt"
+          }
+        ]
+      },
+      {
+        "t": 52,
+        "text": "星期天,我得到自己的宠物。",
+        "tr": "Chủ nhật, mình có thú cưng của riêng mình.",
+        "words": [
+          {
+            "w": "星期天",
+            "ph": "xīng qī tiān",
+            "mean": "chủ nhật"
+          },
+          {
+            "w": "宠物",
+            "ph": "chǒng wù",
+            "mean": "thú cưng"
+          }
+        ]
+      },
+      {
+        "t": 58,
+        "text": "你好,小家伙。",
+        "tr": "Chào nhé, bạn nhỏ.",
+        "words": [
+          {
+            "w": "小家伙",
+            "ph": "xiǎo jiā huo",
+            "mean": "bạn nhỏ"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-GYtWIEzzWG8",
+    "lang": "zh",
+    "title": "What Are Things Made Of? (这是什么做的？)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:44",
+    "emoji": "🔨",
+    "youtubeId": "GYtWIEzzWG8",
+    "segments": [
+      {
+        "t": 0,
+        "text": "这是什么做的?",
+        "tr": "Cái này làm bằng gì vậy?",
+        "words": [
+          {
+            "w": "做",
+            "ph": "zuò",
+            "mean": "làm"
+          }
+        ]
+      },
+      {
+        "t": 10,
+        "text": "剪刀是钢做的。",
+        "tr": "Cái kéo làm bằng thép.",
+        "words": [
+          {
+            "w": "剪刀",
+            "ph": "jiǎn dāo",
+            "mean": "cái kéo"
+          },
+          {
+            "w": "钢",
+            "ph": "gāng",
+            "mean": "thép"
+          }
+        ]
+      },
+      {
+        "t": 14,
+        "text": "钢很闪亮。",
+        "tr": "Thép rất sáng bóng.",
+        "words": [
+          {
+            "w": "闪亮",
+            "ph": "shǎn liàng",
+            "mean": "sáng bóng"
+          }
+        ]
+      },
+      {
+        "t": 18,
+        "text": "我的桌子是木头做的。",
+        "tr": "Cái bàn của mình làm bằng gỗ.",
+        "words": [
+          {
+            "w": "桌子",
+            "ph": "zhuō zi",
+            "mean": "cái bàn"
+          },
+          {
+            "w": "木头",
+            "ph": "mù tou",
+            "mean": "gỗ"
+          }
+        ]
+      },
+      {
+        "t": 23,
+        "text": "木头很光滑。",
+        "tr": "Gỗ rất trơn láng.",
+        "words": [
+          {
+            "w": "光滑",
+            "ph": "guāng huá",
+            "mean": "trơn láng"
+          }
+        ]
+      },
+      {
+        "t": 26,
+        "text": "窗户是玻璃做的。",
+        "tr": "Cửa sổ làm bằng thủy tinh.",
+        "words": [
+          {
+            "w": "窗户",
+            "ph": "chuāng hu",
+            "mean": "cửa sổ"
+          },
+          {
+            "w": "玻璃",
+            "ph": "bō li",
+            "mean": "thủy tinh"
+          }
+        ]
+      },
+      {
+        "t": 31,
+        "text": "玻璃很透明。",
+        "tr": "Thủy tinh rất trong suốt.",
+        "words": [
+          {
+            "w": "透明",
+            "ph": "tòu míng",
+            "mean": "trong suốt"
+          }
+        ]
+      },
+      {
+        "t": 35,
+        "text": "短袖是棉做的。",
+        "tr": "Áo cộc tay làm bằng bông.",
+        "words": [
+          {
+            "w": "短袖",
+            "ph": "duǎn xiù",
+            "mean": "áo cộc tay"
+          },
+          {
+            "w": "棉",
+            "ph": "mián",
+            "mean": "bông"
+          }
+        ]
+      },
+      {
+        "t": 40,
+        "text": "棉很柔。",
+        "tr": "Bông rất mềm.",
+        "words": [
+          {
+            "w": "柔",
+            "ph": "róu",
+            "mean": "mềm"
+          }
+        ]
+      },
+      {
+        "t": 44,
+        "text": "房子是砖头盖的。",
+        "tr": "Ngôi nhà xây bằng gạch.",
+        "words": [
+          {
+            "w": "房子",
+            "ph": "fáng zi",
+            "mean": "ngôi nhà"
+          },
+          {
+            "w": "砖头",
+            "ph": "zhuān tou",
+            "mean": "viên gạch"
+          }
+        ]
+      },
+      {
+        "t": 49,
+        "text": "砖头很重。",
+        "tr": "Gạch rất nặng.",
+        "words": [
+          {
+            "w": "重",
+            "ph": "zhòng",
+            "mean": "nặng"
+          }
+        ]
+      },
+      {
+        "t": 53,
+        "text": "毛衣是羊毛织的。",
+        "tr": "Áo len được dệt bằng lông cừu.",
+        "words": [
+          {
+            "w": "毛衣",
+            "ph": "máo yī",
+            "mean": "áo len"
+          },
+          {
+            "w": "羊毛",
+            "ph": "yáng máo",
+            "mean": "lông cừu"
+          }
+        ]
+      },
+      {
+        "t": 58,
+        "text": "羊毛很暖和。",
+        "tr": "Lông cừu rất ấm áp.",
+        "words": [
+          {
+            "w": "暖和",
+            "ph": "nuǎn huo",
+            "mean": "ấm áp"
+          }
+        ]
+      },
+      {
+        "t": 63,
+        "text": "风筝是纸做的。",
+        "tr": "Con diều làm bằng giấy.",
+        "words": [
+          {
+            "w": "风筝",
+            "ph": "fēng zheng",
+            "mean": "con diều"
+          },
+          {
+            "w": "纸",
+            "ph": "zhǐ",
+            "mean": "giấy"
+          }
+        ]
+      },
+      {
+        "t": 67,
+        "text": "纸很轻。",
+        "tr": "Giấy rất nhẹ.",
+        "words": [
+          {
+            "w": "轻",
+            "ph": "qīng",
+            "mean": "nhẹ"
+          }
+        ]
+      },
+      {
+        "t": 72,
+        "text": "狗的外套是毛做的。",
+        "tr": "Áo khoác của chú chó làm bằng lông.",
+        "words": [
+          {
+            "w": "外套",
+            "ph": "wài tào",
+            "mean": "áo khoác"
+          },
+          {
+            "w": "毛",
+            "ph": "máo",
+            "mean": "lông"
+          }
+        ]
+      },
+      {
+        "t": 77,
+        "text": "毛很柔。",
+        "tr": "Lông rất mềm.",
+        "words": [
+          {
+            "w": "柔",
+            "ph": "róu",
+            "mean": "mềm"
+          }
+        ]
+      },
+      {
+        "t": 82,
+        "text": "我喜欢狗的柔柔的外套。",
+        "tr": "Mình thích bộ áo lông mềm mại của chú chó.",
+        "words": [
+          {
+            "w": "喜欢",
+            "ph": "xǐ huan",
+            "mean": "thích"
+          },
+          {
+            "w": "外套",
+            "ph": "wài tào",
+            "mean": "áo khoác"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-Nme_FduIrqY",
+    "lang": "zh",
+    "title": "I Get Up At Six Thirty (我在六点半起床)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:50",
+    "emoji": "⏰",
+    "youtubeId": "Nme_FduIrqY",
+    "segments": [
+      {
+        "t": 0,
+        "text": "我在六点半起床。",
+        "tr": "Mình thức dậy lúc sáu giờ rưỡi.",
+        "words": [
+          {
+            "w": "起床",
+            "ph": "qǐ chuáng",
+            "mean": "thức dậy"
+          },
+          {
+            "w": "六点半",
+            "ph": "liù diǎn bàn",
+            "mean": "sáu giờ rưỡi"
+          }
+        ]
+      },
+      {
+        "t": 11,
+        "text": "我在六点半起床。",
+        "tr": "Mình thức dậy lúc sáu giờ rưỡi.",
+        "words": [
+          {
+            "w": "起床",
+            "ph": "qǐ chuáng",
+            "mean": "thức dậy"
+          },
+          {
+            "w": "六点半",
+            "ph": "liù diǎn bàn",
+            "mean": "sáu giờ rưỡi"
+          }
+        ]
+      },
+      {
+        "t": 21,
+        "text": "我在七点洗脸。",
+        "tr": "Mình rửa mặt lúc bảy giờ.",
+        "words": [
+          {
+            "w": "洗脸",
+            "ph": "xǐ liǎn",
+            "mean": "rửa mặt"
+          },
+          {
+            "w": "七点",
+            "ph": "qī diǎn",
+            "mean": "bảy giờ"
+          }
+        ]
+      },
+      {
+        "t": 31,
+        "text": "我在七点半吃早饭。",
+        "tr": "Mình ăn sáng lúc bảy giờ rưỡi.",
+        "words": [
+          {
+            "w": "早饭",
+            "ph": "zǎo fàn",
+            "mean": "bữa sáng"
+          }
+        ]
+      },
+      {
+        "t": 42,
+        "text": "我在八点去学校。",
+        "tr": "Mình đi học lúc tám giờ.",
+        "words": [
+          {
+            "w": "学校",
+            "ph": "xué xiào",
+            "mean": "trường học"
+          },
+          {
+            "w": "八点",
+            "ph": "bā diǎn",
+            "mean": "tám giờ"
+          }
+        ]
+      },
+      {
+        "t": 54,
+        "text": "我在十一点玩。",
+        "tr": "Mình chơi lúc mười một giờ.",
+        "words": [
+          {
+            "w": "玩",
+            "ph": "wán",
+            "mean": "chơi"
+          }
+        ]
+      },
+      {
+        "t": 60,
+        "text": "我在三点半打扫。",
+        "tr": "Mình dọn dẹp lúc ba giờ rưỡi.",
+        "words": [
+          {
+            "w": "打扫",
+            "ph": "dǎ sǎo",
+            "mean": "dọn dẹp"
+          }
+        ]
+      },
+      {
+        "t": 67,
+        "text": "我在九点睡觉。",
+        "tr": "Mình đi ngủ lúc chín giờ.",
+        "words": [
+          {
+            "w": "睡觉",
+            "ph": "shuì jiào",
+            "mean": "đi ngủ"
+          }
+        ]
+      },
+      {
+        "t": 71,
+        "text": "晚安。",
+        "tr": "Chúc ngủ ngon.",
+        "words": [
+          {
+            "w": "晚安",
+            "ph": "wǎn ān",
+            "mean": "ngủ ngon"
+          }
+        ]
+      },
+      {
+        "t": 90,
+        "text": "我在十点起床。",
+        "tr": "Mình thức dậy lúc mười giờ.",
+        "words": [
+          {
+            "w": "起床",
+            "ph": "qǐ chuáng",
+            "mean": "thức dậy"
+          },
+          {
+            "w": "十点",
+            "ph": "shí diǎn",
+            "mean": "mười giờ"
+          }
+        ]
+      },
+      {
+        "t": 95,
+        "text": "不行。",
+        "tr": "Không được đâu.",
+        "words": [
+          {
+            "w": "不行",
+            "ph": "bù xíng",
+            "mean": "không được"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-lTTxGSH6ATU",
+    "lang": "zh",
+    "title": "How Do I Eat This? (我用什么吃这个？)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:48",
+    "emoji": "🍴",
+    "youtubeId": "lTTxGSH6ATU",
+    "segments": [
+      {
+        "t": 0,
+        "text": "我用什么吃这个?",
+        "tr": "Mình dùng gì để ăn cái này nhỉ?",
+        "words": [
+          {
+            "w": "吃",
+            "ph": "chī",
+            "mean": "ăn"
+          }
+        ]
+      },
+      {
+        "t": 11,
+        "text": "我用勺子吃米饭。",
+        "tr": "Mình dùng thìa để ăn cơm.",
+        "words": [
+          {
+            "w": "勺子",
+            "ph": "sháo zi",
+            "mean": "cái thìa"
+          },
+          {
+            "w": "米饭",
+            "ph": "mǐ fàn",
+            "mean": "cơm"
+          }
+        ]
+      },
+      {
+        "t": 22,
+        "text": "我用筷子吃面条。",
+        "tr": "Mình dùng đũa để ăn mì.",
+        "words": [
+          {
+            "w": "筷子",
+            "ph": "kuài zi",
+            "mean": "đôi đũa"
+          },
+          {
+            "w": "面条",
+            "ph": "miàn tiáo",
+            "mean": "mì sợi"
+          }
+        ]
+      },
+      {
+        "t": 30,
+        "text": "我用勺子喝汤。",
+        "tr": "Mình dùng thìa để húp canh.",
+        "words": [
+          {
+            "w": "喝",
+            "ph": "hē",
+            "mean": "húp, uống"
+          },
+          {
+            "w": "汤",
+            "ph": "tāng",
+            "mean": "canh"
+          }
+        ]
+      },
+      {
+        "t": 43,
+        "text": "我用刀子和叉子吃肉。",
+        "tr": "Mình dùng dao và nĩa để ăn thịt.",
+        "words": [
+          {
+            "w": "刀子",
+            "ph": "dāo zi",
+            "mean": "con dao"
+          },
+          {
+            "w": "叉子",
+            "ph": "chā zi",
+            "mean": "cái nĩa"
+          },
+          {
+            "w": "肉",
+            "ph": "ròu",
+            "mean": "thịt"
+          }
+        ]
+      },
+      {
+        "t": 51,
+        "text": "我用叉子吃蛋糕。",
+        "tr": "Mình dùng nĩa để ăn bánh kem.",
+        "words": [
+          {
+            "w": "叉子",
+            "ph": "chā zi",
+            "mean": "cái nĩa"
+          },
+          {
+            "w": "蛋糕",
+            "ph": "dàn gāo",
+            "mean": "bánh kem"
+          }
+        ]
+      },
+      {
+        "t": 67,
+        "text": "我用叉子吃意大利面。",
+        "tr": "Mình dùng nĩa để ăn mì Ý.",
+        "words": [
+          {
+            "w": "意大利面",
+            "ph": "yì dà lì miàn",
+            "mean": "mì Ý"
+          }
+        ]
+      },
+      {
+        "t": 75,
+        "text": "我用筷子吃寿司。",
+        "tr": "Mình dùng đũa để ăn sushi.",
+        "words": [
+          {
+            "w": "筷子",
+            "ph": "kuài zi",
+            "mean": "đôi đũa"
+          },
+          {
+            "w": "寿司",
+            "ph": "shòu sī",
+            "mean": "sushi"
+          }
+        ]
+      },
+      {
+        "t": 90,
+        "text": "我用手吃这个。",
+        "tr": "Mình dùng tay để ăn cái này.",
+        "words": [
+          {
+            "w": "手",
+            "ph": "shǒu",
+            "mean": "bàn tay"
+          }
+        ]
+      },
+      {
+        "t": 105,
+        "text": "我用筷子吃面条。",
+        "tr": "Mình dùng đũa để ăn mì.",
+        "words": [
+          {
+            "w": "筷子",
+            "ph": "kuài zi",
+            "mean": "đôi đũa"
+          },
+          {
+            "w": "面条",
+            "ph": "miàn tiáo",
+            "mean": "mì sợi"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-VGv6BdnAozs",
+    "lang": "zh",
+    "title": "Crayons (蜡笔)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:59",
+    "emoji": "🖍️",
+    "youtubeId": "VGv6BdnAozs",
+    "segments": [
+      {
+        "t": 0,
+        "text": "蜡笔",
+        "tr": "Bút sáp màu.",
+        "words": [
+          {
+            "w": "蜡笔",
+            "ph": "là bǐ",
+            "mean": "bút sáp màu"
+          }
+        ]
+      },
+      {
+        "t": 7,
+        "text": "我有一盒新蜡笔。",
+        "tr": "Mình có một hộp bút sáp mới.",
+        "words": [
+          {
+            "w": "一盒",
+            "ph": "yì hé",
+            "mean": "một hộp"
+          },
+          {
+            "w": "新",
+            "ph": "xīn",
+            "mean": "mới"
+          }
+        ]
+      },
+      {
+        "t": 11,
+        "text": "盒子里有八支蜡笔。",
+        "tr": "Trong hộp có tám cây bút sáp.",
+        "words": [
+          {
+            "w": "盒子",
+            "ph": "hé zi",
+            "mean": "cái hộp"
+          },
+          {
+            "w": "八支",
+            "ph": "bā zhī",
+            "mean": "tám cây"
+          }
+        ]
+      },
+      {
+        "t": 16,
+        "text": "第一支蜡笔是红色的。",
+        "tr": "Cây bút sáp thứ nhất màu đỏ.",
+        "words": [
+          {
+            "w": "红色",
+            "ph": "hóng sè",
+            "mean": "màu đỏ"
+          }
+        ]
+      },
+      {
+        "t": 21,
+        "text": "我用它画了苹果。",
+        "tr": "Mình dùng nó vẽ quả táo.",
+        "words": [
+          {
+            "w": "画",
+            "ph": "huà",
+            "mean": "vẽ"
+          },
+          {
+            "w": "苹果",
+            "ph": "píng guǒ",
+            "mean": "quả táo"
+          }
+        ]
+      },
+      {
+        "t": 27,
+        "text": "第二支蜡笔是橙色的。",
+        "tr": "Cây bút sáp thứ hai màu cam.",
+        "words": [
+          {
+            "w": "橙色",
+            "ph": "chéng sè",
+            "mean": "màu cam"
+          }
+        ]
+      },
+      {
+        "t": 31,
+        "text": "我用它画了橙子。",
+        "tr": "Mình dùng nó vẽ quả cam.",
+        "words": [
+          {
+            "w": "橙子",
+            "ph": "chéng zi",
+            "mean": "quả cam"
+          }
+        ]
+      },
+      {
+        "t": 36,
+        "text": "第三支蜡笔是黄色的。",
+        "tr": "Cây bút sáp thứ ba màu vàng.",
+        "words": [
+          {
+            "w": "黄色",
+            "ph": "huáng sè",
+            "mean": "màu vàng"
+          }
+        ]
+      },
+      {
+        "t": 41,
+        "text": "我用它画了香蕉。",
+        "tr": "Mình dùng nó vẽ quả chuối.",
+        "words": [
+          {
+            "w": "香蕉",
+            "ph": "xiāng jiāo",
+            "mean": "quả chuối"
+          }
+        ]
+      },
+      {
+        "t": 46,
+        "text": "第四支蜡笔是绿色的。",
+        "tr": "Cây bút sáp thứ tư màu xanh lá.",
+        "words": [
+          {
+            "w": "绿色",
+            "ph": "lǜ sè",
+            "mean": "màu xanh lá"
+          }
+        ]
+      },
+      {
+        "t": 51,
+        "text": "我用它画了西瓜。",
+        "tr": "Mình dùng nó vẽ quả dưa hấu.",
+        "words": [
+          {
+            "w": "西瓜",
+            "ph": "xī guā",
+            "mean": "dưa hấu"
+          }
+        ]
+      },
+      {
+        "t": 56,
+        "text": "第五支蜡笔是紫色的。",
+        "tr": "Cây bút sáp thứ năm màu tím.",
+        "words": [
+          {
+            "w": "紫色",
+            "ph": "zǐ sè",
+            "mean": "màu tím"
+          }
+        ]
+      },
+      {
+        "t": 61,
+        "text": "我用它画了葡萄。",
+        "tr": "Mình dùng nó vẽ chùm nho.",
+        "words": [
+          {
+            "w": "葡萄",
+            "ph": "pú tao",
+            "mean": "quả nho"
+          }
+        ]
+      },
+      {
+        "t": 66,
+        "text": "第六支蜡笔是棕色的。",
+        "tr": "Cây bút sáp thứ sáu màu nâu.",
+        "words": [
+          {
+            "w": "棕色",
+            "ph": "zōng sè",
+            "mean": "màu nâu"
+          }
+        ]
+      },
+      {
+        "t": 71,
+        "text": "我用它画了奇异果。",
+        "tr": "Mình dùng nó vẽ quả kiwi.",
+        "words": [
+          {
+            "w": "奇异果",
+            "ph": "qí yì guǒ",
+            "mean": "quả kiwi"
+          }
+        ]
+      },
+      {
+        "t": 76,
+        "text": "第七支蜡笔是蓝色的。",
+        "tr": "Cây bút sáp thứ bảy màu xanh dương.",
+        "words": [
+          {
+            "w": "蓝色",
+            "ph": "lán sè",
+            "mean": "màu xanh dương"
+          }
+        ]
+      },
+      {
+        "t": 81,
+        "text": "我用它画了蓝莓。",
+        "tr": "Mình dùng nó vẽ quả việt quất.",
+        "words": [
+          {
+            "w": "蓝莓",
+            "ph": "lán méi",
+            "mean": "quả việt quất"
+          }
+        ]
+      },
+      {
+        "t": 86,
+        "text": "第八支蜡笔是粉色的。",
+        "tr": "Cây bút sáp thứ tám màu hồng.",
+        "words": [
+          {
+            "w": "粉色",
+            "ph": "fěn sè",
+            "mean": "màu hồng"
+          }
+        ]
+      },
+      {
+        "t": 91,
+        "text": "我用它画了桃子。",
+        "tr": "Mình dùng nó vẽ quả đào.",
+        "words": [
+          {
+            "w": "桃子",
+            "ph": "táo zi",
+            "mean": "quả đào"
+          }
+        ]
+      },
+      {
+        "t": 96,
+        "text": "看看这些水果。",
+        "tr": "Ngắm những trái cây này nào.",
+        "words": [
+          {
+            "w": "水果",
+            "ph": "shuǐ guǒ",
+            "mean": "trái cây"
+          }
+        ]
+      },
+      {
+        "t": 99,
+        "text": "蜡笔真好玩!",
+        "tr": "Bút sáp thật là vui!",
+        "words": [
+          {
+            "w": "好玩",
+            "ph": "hǎo wán",
+            "mean": "vui, thú vị"
+          }
+        ]
+      },
+      {
+        "t": 106,
+        "text": "小小的小蜡笔",
+        "tr": "Bút sáp bé xíu.",
+        "words": [
+          {
+            "w": "蜡笔",
+            "ph": "là bǐ",
+            "mean": "bút sáp màu"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-C9sJK_BBRsc",
+    "lang": "zh",
+    "title": "Things That Fly (会飞的东西)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "2:06",
+    "emoji": "🎈",
+    "youtubeId": "C9sJK_BBRsc",
+    "segments": [
+      {
+        "t": 0,
+        "text": "会飞的东西",
+        "tr": "Những thứ biết bay.",
+        "words": [
+          {
+            "w": "飞",
+            "ph": "fēi",
+            "mean": "bay"
+          },
+          {
+            "w": "东西",
+            "ph": "dōng xi",
+            "mean": "đồ vật"
+          }
+        ]
+      },
+      {
+        "t": 18,
+        "text": "气球飞进云朵",
+        "tr": "Bong bóng bay vào trong mây.",
+        "words": [
+          {
+            "w": "气球",
+            "ph": "qì qiú",
+            "mean": "bong bóng"
+          },
+          {
+            "w": "云朵",
+            "ph": "yún duǒ",
+            "mean": "đám mây"
+          }
+        ]
+      },
+      {
+        "t": 27,
+        "text": "方丈飞过河",
+        "tr": "Bay vèo qua con sông.",
+        "words": [
+          {
+            "w": "飞过",
+            "ph": "fēi guò",
+            "mean": "bay qua"
+          },
+          {
+            "w": "河",
+            "ph": "hé",
+            "mean": "con sông"
+          }
+        ]
+      },
+      {
+        "t": 38,
+        "text": "鸟儿飞进鸟巢",
+        "tr": "Chú chim bay vào tổ.",
+        "words": [
+          {
+            "w": "鸟儿",
+            "ph": "niǎo ér",
+            "mean": "chú chim"
+          },
+          {
+            "w": "鸟巢",
+            "ph": "niǎo cháo",
+            "mean": "tổ chim"
+          }
+        ]
+      },
+      {
+        "t": 46,
+        "text": "老鹰飞进大山",
+        "tr": "Đại bàng bay vào núi lớn.",
+        "words": [
+          {
+            "w": "老鹰",
+            "ph": "lǎo yīng",
+            "mean": "đại bàng"
+          },
+          {
+            "w": "大山",
+            "ph": "dà shān",
+            "mean": "núi lớn"
+          }
+        ]
+      },
+      {
+        "t": 59,
+        "text": "直升飞机飞向医院",
+        "tr": "Trực thăng bay về phía bệnh viện.",
+        "words": [
+          {
+            "w": "直升飞机",
+            "ph": "zhí shēng fēi jī",
+            "mean": "máy bay trực thăng"
+          },
+          {
+            "w": "医院",
+            "ph": "yī yuàn",
+            "mean": "bệnh viện"
+          }
+        ]
+      },
+      {
+        "t": 69,
+        "text": "飞机飞向机场",
+        "tr": "Máy bay bay về phía sân bay.",
+        "words": [
+          {
+            "w": "飞机",
+            "ph": "fēi jī",
+            "mean": "máy bay"
+          },
+          {
+            "w": "机场",
+            "ph": "jī chǎng",
+            "mean": "sân bay"
+          }
+        ]
+      },
+      {
+        "t": 84,
+        "text": "宇宙飞船飞向太空",
+        "tr": "Tàu vũ trụ bay lên không gian.",
+        "words": [
+          {
+            "w": "宇宙飞船",
+            "ph": "yǔ zhòu fēi chuán",
+            "mean": "tàu vũ trụ"
+          },
+          {
+            "w": "太空",
+            "ph": "tài kōng",
+            "mean": "không gian"
+          }
+        ]
+      },
+      {
+        "t": 99,
+        "text": "我飞过山坡",
+        "tr": "Mình bay qua sườn đồi.",
+        "words": [
+          {
+            "w": "山坡",
+            "ph": "shān pō",
+            "mean": "sườn đồi"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-NbZeFcRX-iY",
+    "lang": "zh",
+    "title": "Is It a Vegetable? (它是一种蔬菜吗？)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "2:36",
+    "emoji": "🥒",
+    "youtubeId": "NbZeFcRX-iY",
+    "segments": [
+      {
+        "t": 0,
+        "text": "它是一种蔬菜吗?",
+        "tr": "Nó có phải là rau không nhỉ?",
+        "words": [
+          {
+            "w": "蔬菜",
+            "ph": "shū cài",
+            "mean": "rau củ"
+          }
+        ]
+      },
+      {
+        "t": 6,
+        "text": "它又多汁,又是橙色。",
+        "tr": "Nó vừa mọng nước, vừa màu cam.",
+        "words": [
+          {
+            "w": "多汁",
+            "ph": "duō zhī",
+            "mean": "mọng nước"
+          },
+          {
+            "w": "橙色",
+            "ph": "chéng sè",
+            "mean": "màu cam"
+          }
+        ]
+      },
+      {
+        "t": 11,
+        "text": "它是一种蔬菜吗?",
+        "tr": "Nó có phải là rau không nhỉ?",
+        "words": [
+          {
+            "w": "蔬菜",
+            "ph": "shū cài",
+            "mean": "rau củ"
+          }
+        ]
+      },
+      {
+        "t": 15,
+        "text": "不是。",
+        "tr": "Không phải đâu."
+      },
+      {
+        "t": 17,
+        "text": "橙子是一种水果。",
+        "tr": "Quả cam là một loại trái cây.",
+        "words": [
+          {
+            "w": "橙子",
+            "ph": "chéng zi",
+            "mean": "quả cam"
+          },
+          {
+            "w": "水果",
+            "ph": "shuǐ guǒ",
+            "mean": "trái cây"
+          }
+        ]
+      },
+      {
+        "t": 23,
+        "text": "它又脆,又红。",
+        "tr": "Nó vừa giòn, vừa đỏ.",
+        "words": [
+          {
+            "w": "脆",
+            "ph": "cuì",
+            "mean": "giòn"
+          },
+          {
+            "w": "红",
+            "ph": "hóng",
+            "mean": "đỏ"
+          }
+        ]
+      },
+      {
+        "t": 28,
+        "text": "它是一种蔬菜吗?",
+        "tr": "Nó có phải là rau không nhỉ?",
+        "words": [
+          {
+            "w": "蔬菜",
+            "ph": "shū cài",
+            "mean": "rau củ"
+          }
+        ]
+      },
+      {
+        "t": 32,
+        "text": "不是。",
+        "tr": "Không phải đâu."
+      },
+      {
+        "t": 34,
+        "text": "苹果是一种水果。",
+        "tr": "Quả táo là một loại trái cây.",
+        "words": [
+          {
+            "w": "苹果",
+            "ph": "píng guǒ",
+            "mean": "quả táo"
+          }
+        ]
+      },
+      {
+        "t": 40,
+        "text": "它又大,又红。",
+        "tr": "Nó vừa to, vừa đỏ.",
+        "words": [
+          {
+            "w": "大",
+            "ph": "dà",
+            "mean": "to lớn"
+          }
+        ]
+      },
+      {
+        "t": 44,
+        "text": "它是一种蔬菜吗?",
+        "tr": "Nó có phải là rau không nhỉ?",
+        "words": [
+          {
+            "w": "蔬菜",
+            "ph": "shū cài",
+            "mean": "rau củ"
+          }
+        ]
+      },
+      {
+        "t": 49,
+        "text": "不是。",
+        "tr": "Không phải đâu."
+      },
+      {
+        "t": 50,
+        "text": "西瓜是一种水果。",
+        "tr": "Quả dưa hấu là một loại trái cây.",
+        "words": [
+          {
+            "w": "西瓜",
+            "ph": "xī guā",
+            "mean": "dưa hấu"
+          }
+        ]
+      },
+      {
+        "t": 56,
+        "text": "它又多毛,又是粉色。",
+        "tr": "Nó vừa nhiều lông, vừa màu hồng.",
+        "words": [
+          {
+            "w": "多毛",
+            "ph": "duō máo",
+            "mean": "nhiều lông"
+          },
+          {
+            "w": "粉色",
+            "ph": "fěn sè",
+            "mean": "màu hồng"
+          }
+        ]
+      },
+      {
+        "t": 62,
+        "text": "它是一种蔬菜吗?",
+        "tr": "Nó có phải là rau không nhỉ?",
+        "words": [
+          {
+            "w": "蔬菜",
+            "ph": "shū cài",
+            "mean": "rau củ"
+          }
+        ]
+      },
+      {
+        "t": 66,
+        "text": "不是。",
+        "tr": "Không phải đâu."
+      },
+      {
+        "t": 68,
+        "text": "桃子是一种水果。",
+        "tr": "Quả đào là một loại trái cây.",
+        "words": [
+          {
+            "w": "桃子",
+            "ph": "táo zi",
+            "mean": "quả đào"
+          }
+        ]
+      },
+      {
+        "t": 73,
+        "text": "它们又小,又红。",
+        "tr": "Chúng vừa nhỏ, vừa đỏ.",
+        "words": [
+          {
+            "w": "小",
+            "ph": "xiǎo",
+            "mean": "nhỏ"
+          }
+        ]
+      },
+      {
+        "t": 78,
+        "text": "它们是一种蔬菜吗?",
+        "tr": "Chúng có phải là rau không nhỉ?",
+        "words": [
+          {
+            "w": "蔬菜",
+            "ph": "shū cài",
+            "mean": "rau củ"
+          }
+        ]
+      },
+      {
+        "t": 83,
+        "text": "不是。",
+        "tr": "Không phải đâu."
+      },
+      {
+        "t": 85,
+        "text": "草莓是一种水果。",
+        "tr": "Quả dâu tây là một loại trái cây.",
+        "words": [
+          {
+            "w": "草莓",
+            "ph": "cǎo méi",
+            "mean": "dâu tây"
+          }
+        ]
+      },
+      {
+        "t": 91,
+        "text": "它们又长,又黄。",
+        "tr": "Chúng vừa dài, vừa vàng.",
+        "words": [
+          {
+            "w": "长",
+            "ph": "cháng",
+            "mean": "dài"
+          },
+          {
+            "w": "黄",
+            "ph": "huáng",
+            "mean": "vàng"
+          }
+        ]
+      },
+      {
+        "t": 96,
+        "text": "它们是一种蔬菜吗?",
+        "tr": "Chúng có phải là rau không nhỉ?",
+        "words": [
+          {
+            "w": "蔬菜",
+            "ph": "shū cài",
+            "mean": "rau củ"
+          }
+        ]
+      },
+      {
+        "t": 100,
+        "text": "不是。",
+        "tr": "Không phải đâu."
+      },
+      {
+        "t": 102,
+        "text": "香蕉是一种水果。",
+        "tr": "Quả chuối là một loại trái cây.",
+        "words": [
+          {
+            "w": "香蕉",
+            "ph": "xiāng jiāo",
+            "mean": "quả chuối"
+          }
+        ]
+      },
+      {
+        "t": 107,
+        "text": "它们又小,又紫。",
+        "tr": "Chúng vừa nhỏ, vừa tím.",
+        "words": [
+          {
+            "w": "紫",
+            "ph": "zǐ",
+            "mean": "tím"
+          }
+        ]
+      },
+      {
+        "t": 112,
+        "text": "它们是一种蔬菜吗?",
+        "tr": "Chúng có phải là rau không nhỉ?",
+        "words": [
+          {
+            "w": "蔬菜",
+            "ph": "shū cài",
+            "mean": "rau củ"
+          }
+        ]
+      },
+      {
+        "t": 116,
+        "text": "不是。",
+        "tr": "Không phải đâu."
+      },
+      {
+        "t": 118,
+        "text": "葡萄是一种水果。",
+        "tr": "Quả nho là một loại trái cây.",
+        "words": [
+          {
+            "w": "葡萄",
+            "ph": "pú tao",
+            "mean": "quả nho"
+          }
+        ]
+      },
+      {
+        "t": 124,
+        "text": "它们又细,又绿。",
+        "tr": "Chúng vừa mảnh, vừa xanh.",
+        "words": [
+          {
+            "w": "细",
+            "ph": "xì",
+            "mean": "mảnh"
+          },
+          {
+            "w": "绿",
+            "ph": "lǜ",
+            "mean": "xanh lá"
+          }
+        ]
+      },
+      {
+        "t": 128,
+        "text": "它们是一种蔬菜吗?",
+        "tr": "Chúng có phải là rau không nhỉ?",
+        "words": [
+          {
+            "w": "蔬菜",
+            "ph": "shū cài",
+            "mean": "rau củ"
+          }
+        ]
+      },
+      {
+        "t": 133,
+        "text": "是的。",
+        "tr": "Đúng vậy đó!",
+        "words": [
+          {
+            "w": "是的",
+            "ph": "shì de",
+            "mean": "đúng vậy"
+          }
+        ]
+      },
+      {
+        "t": 136,
+        "text": "黄瓜是一种蔬菜。",
+        "tr": "Quả dưa leo là một loại rau.",
+        "words": [
+          {
+            "w": "黄瓜",
+            "ph": "huáng guā",
+            "mean": "dưa leo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-LLvD_VTERzU",
+    "lang": "zh",
+    "title": "New Clothes (新衣服)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:52",
+    "emoji": "👕",
+    "youtubeId": "LLvD_VTERzU",
+    "segments": [
+      {
+        "t": 0,
+        "text": "新衣服",
+        "tr": "Quần áo mới",
+        "words": [
+          {
+            "w": "新",
+            "ph": "xīn",
+            "mean": "mới"
+          },
+          {
+            "w": "衣服",
+            "ph": "yī fu",
+            "mean": "quần áo"
+          }
+        ]
+      },
+      {
+        "t": 8,
+        "text": "我在生日当天收到很多礼物。",
+        "tr": "Ngày sinh nhật, mình nhận được thật nhiều quà.",
+        "words": [
+          {
+            "w": "生日",
+            "ph": "shēng rì",
+            "mean": "sinh nhật"
+          },
+          {
+            "w": "礼物",
+            "ph": "lǐ wù",
+            "mean": "quà tặng"
+          }
+        ]
+      },
+      {
+        "t": 15,
+        "text": "在绿色盒子里的是什么?",
+        "tr": "Trong hộp màu xanh lá là gì nhỉ?",
+        "words": [
+          {
+            "w": "绿色",
+            "ph": "lǜ sè",
+            "mean": "màu xanh lá"
+          },
+          {
+            "w": "盒子",
+            "ph": "hé zi",
+            "mean": "cái hộp"
+          }
+        ]
+      },
+      {
+        "t": 22,
+        "text": "是一件新衬衫。",
+        "tr": "Là một chiếc áo sơ mi mới.",
+        "words": [
+          {
+            "w": "衬衫",
+            "ph": "chèn shān",
+            "mean": "áo sơ mi"
+          }
+        ]
+      },
+      {
+        "t": 26,
+        "text": "在黄色盒子里的是什么?",
+        "tr": "Trong hộp màu vàng là gì nhỉ?",
+        "words": [
+          {
+            "w": "黄色",
+            "ph": "huáng sè",
+            "mean": "màu vàng"
+          }
+        ]
+      },
+      {
+        "t": 33,
+        "text": "是一条新裤子。",
+        "tr": "Là một chiếc quần mới.",
+        "words": [
+          {
+            "w": "裤子",
+            "ph": "kù zi",
+            "mean": "cái quần"
+          }
+        ]
+      },
+      {
+        "t": 38,
+        "text": "在粉色盒子里的是什么?",
+        "tr": "Trong hộp màu hồng là gì nhỉ?",
+        "words": [
+          {
+            "w": "粉色",
+            "ph": "fěn sè",
+            "mean": "màu hồng"
+          }
+        ]
+      },
+      {
+        "t": 44,
+        "text": "是一条新裙子。",
+        "tr": "Là một chiếc váy mới.",
+        "words": [
+          {
+            "w": "裙子",
+            "ph": "qún zi",
+            "mean": "cái váy"
+          }
+        ]
+      },
+      {
+        "t": 49,
+        "text": "在棕色盒子里的是什么?",
+        "tr": "Trong hộp màu nâu là gì nhỉ?",
+        "words": [
+          {
+            "w": "棕色",
+            "ph": "zōng sè",
+            "mean": "màu nâu"
+          }
+        ]
+      },
+      {
+        "t": 56,
+        "text": "是一双新袜子。",
+        "tr": "Là một đôi tất mới.",
+        "words": [
+          {
+            "w": "袜子",
+            "ph": "wà zi",
+            "mean": "đôi tất"
+          }
+        ]
+      },
+      {
+        "t": 61,
+        "text": "在紫色盒子里的是什么?",
+        "tr": "Trong hộp màu tím là gì nhỉ?",
+        "words": [
+          {
+            "w": "紫色",
+            "ph": "zǐ sè",
+            "mean": "màu tím"
+          }
+        ]
+      },
+      {
+        "t": 68,
+        "text": "是一件新毛衣。",
+        "tr": "Là một chiếc áo len mới.",
+        "words": [
+          {
+            "w": "毛衣",
+            "ph": "máo yī",
+            "mean": "áo len"
+          }
+        ]
+      },
+      {
+        "t": 73,
+        "text": "在蓝色盒子里的是什么?",
+        "tr": "Trong hộp màu xanh dương là gì nhỉ?",
+        "words": [
+          {
+            "w": "蓝色",
+            "ph": "lán sè",
+            "mean": "màu xanh dương"
+          }
+        ]
+      },
+      {
+        "t": 80,
+        "text": "是一双新鞋。",
+        "tr": "Là một đôi giày mới.",
+        "words": [
+          {
+            "w": "鞋",
+            "ph": "xié",
+            "mean": "giày"
+          }
+        ]
+      },
+      {
+        "t": 84,
+        "text": "在红色盒子里的是什么?",
+        "tr": "Trong hộp màu đỏ là gì nhỉ?",
+        "words": [
+          {
+            "w": "红色",
+            "ph": "hóng sè",
+            "mean": "màu đỏ"
+          }
+        ]
+      },
+      {
+        "t": 91,
+        "text": "是一件新夹克。",
+        "tr": "Là một chiếc áo khoác mới.",
+        "words": [
+          {
+            "w": "夹克",
+            "ph": "jiā kè",
+            "mean": "áo khoác"
+          }
+        ]
+      },
+      {
+        "t": 96,
+        "text": "我喜欢我的新衣服。",
+        "tr": "Mình thích bộ quần áo mới của mình.",
+        "words": [
+          {
+            "w": "喜欢",
+            "ph": "xǐ huan",
+            "mean": "thích"
+          },
+          {
+            "w": "衣服",
+            "ph": "yī fu",
+            "mean": "quần áo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-MUv8qt1qwJ0",
+    "lang": "zh",
+    "title": "Good Dog, Digly! (听话的迪格里!)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "2:03",
+    "emoji": "🐶",
+    "youtubeId": "MUv8qt1qwJ0",
+    "segments": [
+      {
+        "t": 0,
+        "text": "听话的狄格里",
+        "tr": "Chú chó ngoan Digly.",
+        "words": [
+          {
+            "w": "听话",
+            "ph": "tīng huà",
+            "mean": "biết nghe lời"
+          }
+        ]
+      },
+      {
+        "t": 7,
+        "text": "这是我的宠物。",
+        "tr": "Đây là thú cưng của mình.",
+        "words": [
+          {
+            "w": "宠物",
+            "ph": "chǒng wù",
+            "mean": "thú cưng"
+          }
+        ]
+      },
+      {
+        "t": 12,
+        "text": "他叫狄格里。",
+        "tr": "Bạn ấy tên là Digly.",
+        "words": [
+          {
+            "w": "叫",
+            "ph": "jiào",
+            "mean": "tên gọi"
+          }
+        ]
+      },
+      {
+        "t": 15,
+        "text": "他能听懂很多话。",
+        "tr": "Bạn ấy hiểu được nhiều lời nói.",
+        "words": [
+          {
+            "w": "听懂",
+            "ph": "tīng dǒng",
+            "mean": "nghe hiểu"
+          }
+        ]
+      },
+      {
+        "t": 20,
+        "text": "他会坐下。",
+        "tr": "Bạn ấy biết ngồi xuống.",
+        "words": [
+          {
+            "w": "坐下",
+            "ph": "zuò xià",
+            "mean": "ngồi xuống"
+          }
+        ]
+      },
+      {
+        "t": 23,
+        "text": "狄格里,坐下。",
+        "tr": "Digly, ngồi xuống.",
+        "words": [
+          {
+            "w": "坐下",
+            "ph": "zuò xià",
+            "mean": "ngồi xuống"
+          }
+        ]
+      },
+      {
+        "t": 28,
+        "text": "他会站起来。",
+        "tr": "Bạn ấy biết đứng lên.",
+        "words": [
+          {
+            "w": "站起来",
+            "ph": "zhàn qǐ lái",
+            "mean": "đứng dậy"
+          }
+        ]
+      },
+      {
+        "t": 32,
+        "text": "狄格里,站起来。",
+        "tr": "Digly, đứng lên.",
+        "words": [
+          {
+            "w": "站起来",
+            "ph": "zhàn qǐ lái",
+            "mean": "đứng dậy"
+          }
+        ]
+      },
+      {
+        "t": 35,
+        "text": "好孩子。",
+        "tr": "Cún ngoan.",
+        "words": [
+          {
+            "w": "好孩子",
+            "ph": "hǎo hái zi",
+            "mean": "bé ngoan"
+          }
+        ]
+      },
+      {
+        "t": 40,
+        "text": "他能跳上盒子。",
+        "tr": "Bạn ấy nhảy lên được cái hộp.",
+        "words": [
+          {
+            "w": "跳上",
+            "ph": "tiào shàng",
+            "mean": "nhảy lên"
+          },
+          {
+            "w": "盒子",
+            "ph": "hé zi",
+            "mean": "cái hộp"
+          }
+        ]
+      },
+      {
+        "t": 44,
+        "text": "狄格里,跳上来。",
+        "tr": "Digly, nhảy lên đây.",
+        "words": [
+          {
+            "w": "跳上来",
+            "ph": "tiào shàng lái",
+            "mean": "nhảy lên đây"
+          }
+        ]
+      },
+      {
+        "t": 50,
+        "text": "他能跳下去。",
+        "tr": "Bạn ấy nhảy xuống được.",
+        "words": [
+          {
+            "w": "跳下去",
+            "ph": "tiào xià qù",
+            "mean": "nhảy xuống"
+          }
+        ]
+      },
+      {
+        "t": 53,
+        "text": "狄格里,跳下去。",
+        "tr": "Digly, nhảy xuống đi.",
+        "words": [
+          {
+            "w": "跳下去",
+            "ph": "tiào xià qù",
+            "mean": "nhảy xuống"
+          }
+        ]
+      },
+      {
+        "t": 57,
+        "text": "好孩子。",
+        "tr": "Cún ngoan.",
+        "words": [
+          {
+            "w": "好孩子",
+            "ph": "hǎo hái zi",
+            "mean": "bé ngoan"
+          }
+        ]
+      },
+      {
+        "t": 62,
+        "text": "他能走上坡道。",
+        "tr": "Bạn ấy đi lên được đường dốc.",
+        "words": [
+          {
+            "w": "坡道",
+            "ph": "pō dào",
+            "mean": "đường dốc"
+          }
+        ]
+      },
+      {
+        "t": 65,
+        "text": "狄格里,走上来。",
+        "tr": "Digly, đi lên đây.",
+        "words": [
+          {
+            "w": "走上来",
+            "ph": "zǒu shàng lái",
+            "mean": "đi lên đây"
+          }
+        ]
+      },
+      {
+        "t": 73,
+        "text": "他能走下坡道。",
+        "tr": "Bạn ấy đi xuống được đường dốc.",
+        "words": [
+          {
+            "w": "坡道",
+            "ph": "pō dào",
+            "mean": "đường dốc"
+          }
+        ]
+      },
+      {
+        "t": 77,
+        "text": "狄格里,走下去。",
+        "tr": "Digly, đi xuống đi.",
+        "words": [
+          {
+            "w": "走下去",
+            "ph": "zǒu xià qù",
+            "mean": "đi xuống"
+          }
+        ]
+      },
+      {
+        "t": 80,
+        "text": "好孩子。",
+        "tr": "Cún ngoan.",
+        "words": [
+          {
+            "w": "好孩子",
+            "ph": "hǎo hái zi",
+            "mean": "bé ngoan"
+          }
+        ]
+      },
+      {
+        "t": 82,
+        "text": "他会躺在地板上。",
+        "tr": "Bạn ấy biết nằm trên sàn.",
+        "words": [
+          {
+            "w": "躺",
+            "ph": "tǎng",
+            "mean": "nằm"
+          },
+          {
+            "w": "地板",
+            "ph": "dì bǎn",
+            "mean": "sàn nhà"
+          }
+        ]
+      },
+      {
+        "t": 86,
+        "text": "狄格里,躺下。",
+        "tr": "Digly, nằm xuống.",
+        "words": [
+          {
+            "w": "躺下",
+            "ph": "tǎng xià",
+            "mean": "nằm xuống"
+          }
+        ]
+      },
+      {
+        "t": 91,
+        "text": "他会爬起来。",
+        "tr": "Bạn ấy biết bò dậy.",
+        "words": [
+          {
+            "w": "爬起来",
+            "ph": "pá qǐ lái",
+            "mean": "bò dậy"
+          }
+        ]
+      },
+      {
+        "t": 94,
+        "text": "狄格里,爬起来。",
+        "tr": "Digly, bò dậy nào.",
+        "words": [
+          {
+            "w": "爬起来",
+            "ph": "pá qǐ lái",
+            "mean": "bò dậy"
+          }
+        ]
+      },
+      {
+        "t": 101,
+        "text": "狄格里,慢点。",
+        "tr": "Digly, chậm thôi.",
+        "words": [
+          {
+            "w": "慢点",
+            "ph": "màn diǎn",
+            "mean": "chậm lại"
+          }
+        ]
+      },
+      {
+        "t": 105,
+        "text": "狄格里,等等。",
+        "tr": "Digly, đợi đã.",
+        "words": [
+          {
+            "w": "等等",
+            "ph": "děng deng",
+            "mean": "đợi chút"
+          }
+        ]
+      },
+      {
+        "t": 108,
+        "text": "好孩子。",
+        "tr": "Cún ngoan.",
+        "words": [
+          {
+            "w": "好孩子",
+            "ph": "hǎo hái zi",
+            "mean": "bé ngoan"
+          }
+        ]
+      },
+      {
+        "t": 110,
+        "text": "等等。",
+        "tr": "Đợi đã.",
+        "words": [
+          {
+            "w": "等等",
+            "ph": "děng deng",
+            "mean": "đợi chút"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-yYQiRL4INCw",
+    "lang": "zh",
+    "title": "What I Like (我喜欢)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:41",
+    "emoji": "😍",
+    "youtubeId": "yYQiRL4INCw",
+    "segments": [
+      {
+        "t": 0,
+        "text": "我喜欢。",
+        "tr": "Mình thích lắm.",
+        "words": [
+          {
+            "w": "喜欢",
+            "ph": "xǐ huan",
+            "mean": "thích"
+          }
+        ]
+      },
+      {
+        "t": 8,
+        "text": "我喜欢小丑,因为小丑很搞笑。",
+        "tr": "Mình thích chú hề, vì chú hề rất hài hước.",
+        "words": [
+          {
+            "w": "小丑",
+            "ph": "xiǎo chǒu",
+            "mean": "chú hề"
+          },
+          {
+            "w": "搞笑",
+            "ph": "gǎo xiào",
+            "mean": "hài hước"
+          }
+        ]
+      },
+      {
+        "t": 18,
+        "text": "我喜欢玫瑰,因为玫瑰很美丽。",
+        "tr": "Mình thích hoa hồng, vì hoa hồng rất đẹp.",
+        "words": [
+          {
+            "w": "玫瑰",
+            "ph": "méi guī",
+            "mean": "hoa hồng"
+          },
+          {
+            "w": "美丽",
+            "ph": "měi lì",
+            "mean": "xinh đẹp"
+          }
+        ]
+      },
+      {
+        "t": 28,
+        "text": "我喜欢海滩,因为海滩很好玩。",
+        "tr": "Mình thích bãi biển, vì bãi biển rất vui.",
+        "words": [
+          {
+            "w": "海滩",
+            "ph": "hǎi tān",
+            "mean": "bãi biển"
+          },
+          {
+            "w": "好玩",
+            "ph": "hǎo wán",
+            "mean": "vui, thú vị"
+          }
+        ]
+      },
+      {
+        "t": 40,
+        "text": "我喜欢小狗,因为小狗很可爱。",
+        "tr": "Mình thích cún con, vì cún con rất đáng yêu.",
+        "words": [
+          {
+            "w": "小狗",
+            "ph": "xiǎo gǒu",
+            "mean": "cún con"
+          },
+          {
+            "w": "可爱",
+            "ph": "kě ài",
+            "mean": "đáng yêu"
+          }
+        ]
+      },
+      {
+        "t": 51,
+        "text": "我喜欢香蕉,因为香蕉很好吃。",
+        "tr": "Mình thích chuối, vì chuối rất ngon.",
+        "words": [
+          {
+            "w": "香蕉",
+            "ph": "xiāng jiāo",
+            "mean": "quả chuối"
+          },
+          {
+            "w": "好吃",
+            "ph": "hǎo chī",
+            "mean": "ngon"
+          }
+        ]
+      },
+      {
+        "t": 62,
+        "text": "我喜欢毯子,因为毯子很暖和。",
+        "tr": "Mình thích cái chăn, vì cái chăn rất ấm.",
+        "words": [
+          {
+            "w": "毯子",
+            "ph": "tǎn zi",
+            "mean": "cái chăn"
+          },
+          {
+            "w": "暖和",
+            "ph": "nuǎn huo",
+            "mean": "ấm áp"
+          }
+        ]
+      },
+      {
+        "t": 71,
+        "text": "我喜欢爷爷,因为爷爷很幽默。",
+        "tr": "Mình thích ông nội, vì ông nội rất hóm hỉnh.",
+        "words": [
+          {
+            "w": "爷爷",
+            "ph": "yé ye",
+            "mean": "ông nội"
+          },
+          {
+            "w": "幽默",
+            "ph": "yōu mò",
+            "mean": "hóm hỉnh"
+          }
+        ]
+      },
+      {
+        "t": 80,
+        "text": "我喜欢朋友,因为朋友很善良。",
+        "tr": "Mình thích bạn bè, vì bạn bè rất tốt bụng.",
+        "words": [
+          {
+            "w": "朋友",
+            "ph": "péng you",
+            "mean": "bạn bè"
+          },
+          {
+            "w": "善良",
+            "ph": "shàn liáng",
+            "mean": "tốt bụng"
+          }
+        ]
+      },
+      {
+        "t": 100,
+        "text": "我喜欢小狗,因为小狗很可爱。",
+        "tr": "Mình thích cún con, vì cún con rất đáng yêu.",
+        "words": [
+          {
+            "w": "小狗",
+            "ph": "xiǎo gǒu",
+            "mean": "cún con"
+          },
+          {
+            "w": "可爱",
+            "ph": "kě ài",
+            "mean": "đáng yêu"
+          }
+        ]
+      },
+      {
+        "t": 111,
+        "text": "我喜欢小狗,因为小狗很可爱。",
+        "tr": "Mình thích cún con, vì cún con rất đáng yêu.",
+        "words": [
+          {
+            "w": "小狗",
+            "ph": "xiǎo gǒu",
+            "mean": "cún con"
+          },
+          {
+            "w": "可爱",
+            "ph": "kě ài",
+            "mean": "đáng yêu"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-b30DeFwr3xM",
+    "lang": "zh",
+    "title": "A New Bike (新自行车)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "1:42",
+    "emoji": "🚲",
+    "youtubeId": "b30DeFwr3xM",
+    "segments": [
+      {
+        "t": 0,
+        "text": "新自行车",
+        "tr": "Chiếc xe đạp mới",
+        "words": [
+          {
+            "w": "自行车",
+            "ph": "zì xíng chē",
+            "mean": "xe đạp"
+          }
+        ]
+      },
+      {
+        "t": 5,
+        "text": "我得到了一辆新自行车。",
+        "tr": "Mình có một chiếc xe đạp mới.",
+        "words": [
+          {
+            "w": "新",
+            "ph": "xīn",
+            "mean": "mới"
+          }
+        ]
+      },
+      {
+        "t": 12,
+        "text": "它的速度很快。",
+        "tr": "Nó chạy nhanh lắm.",
+        "words": [
+          {
+            "w": "速度",
+            "ph": "sù dù",
+            "mean": "tốc độ"
+          },
+          {
+            "w": "快",
+            "ph": "kuài",
+            "mean": "nhanh"
+          }
+        ]
+      },
+      {
+        "t": 17,
+        "text": "汽车的速度比自行车快。",
+        "tr": "Ô tô chạy nhanh hơn xe đạp.",
+        "words": [
+          {
+            "w": "汽车",
+            "ph": "qì chē",
+            "mean": "ô tô"
+          }
+        ]
+      },
+      {
+        "t": 25,
+        "text": "飞机的速度比车快。",
+        "tr": "Máy bay chạy nhanh hơn ô tô.",
+        "words": [
+          {
+            "w": "飞机",
+            "ph": "fēi jī",
+            "mean": "máy bay"
+          }
+        ]
+      },
+      {
+        "t": 34,
+        "text": "火箭的速度比飞机快。",
+        "tr": "Tên lửa chạy nhanh hơn máy bay.",
+        "words": [
+          {
+            "w": "火箭",
+            "ph": "huǒ jiàn",
+            "mean": "tên lửa"
+          }
+        ]
+      },
+      {
+        "t": 41,
+        "text": "哇哦,火箭是最快的。",
+        "tr": "Ồ, tên lửa là nhanh nhất!",
+        "words": [
+          {
+            "w": "最快",
+            "ph": "zuì kuài",
+            "mean": "nhanh nhất"
+          }
+        ]
+      },
+      {
+        "t": 48,
+        "text": "飞机的速度比火箭慢。",
+        "tr": "Máy bay chậm hơn tên lửa.",
+        "words": [
+          {
+            "w": "慢",
+            "ph": "màn",
+            "mean": "chậm"
+          }
+        ]
+      },
+      {
+        "t": 57,
+        "text": "汽车的速度比飞机慢。",
+        "tr": "Ô tô chậm hơn máy bay.",
+        "words": [
+          {
+            "w": "汽车",
+            "ph": "qì chē",
+            "mean": "ô tô"
+          }
+        ]
+      },
+      {
+        "t": 63,
+        "text": "自行车的速度比汽车慢。",
+        "tr": "Xe đạp chậm hơn ô tô.",
+        "words": [
+          {
+            "w": "自行车",
+            "ph": "zì xíng chē",
+            "mean": "xe đạp"
+          }
+        ]
+      },
+      {
+        "t": 69,
+        "text": "哎,我的自行车是最慢的。",
+        "tr": "Chao ôi, xe đạp của mình chậm nhất.",
+        "words": [
+          {
+            "w": "最慢",
+            "ph": "zuì màn",
+            "mean": "chậm nhất"
+          }
+        ]
+      },
+      {
+        "t": 74,
+        "text": "但是没关系,我喜欢我的新自行车。",
+        "tr": "Nhưng không sao, mình thích chiếc xe đạp mới của mình.",
+        "words": [
+          {
+            "w": "喜欢",
+            "ph": "xǐ huan",
+            "mean": "thích"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-z4aXZpQq7Qo",
+    "lang": "zh",
+    "title": "Where Is the Ball? (球在哪里？)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "2:27",
+    "emoji": "⚽",
+    "youtubeId": "z4aXZpQq7Qo",
+    "segments": [
+      {
+        "t": 0,
+        "text": "球在哪里?",
+        "tr": "Quả bóng ở đâu nhỉ?",
+        "words": [
+          {
+            "w": "球",
+            "ph": "qiú",
+            "mean": "quả bóng"
+          },
+          {
+            "w": "哪里",
+            "ph": "nǎ lǐ",
+            "mean": "ở đâu"
+          }
+        ]
+      },
+      {
+        "t": 8,
+        "text": "球在哪里?球在门后面吗?",
+        "tr": "Quả bóng ở đâu? Bóng ở sau cánh cửa à?",
+        "words": [
+          {
+            "w": "门",
+            "ph": "mén",
+            "mean": "cửa"
+          },
+          {
+            "w": "后面",
+            "ph": "hòu miàn",
+            "mean": "phía sau"
+          }
+        ]
+      },
+      {
+        "t": 16,
+        "text": "不是,门后面是一只恐龙。",
+        "tr": "Không phải, sau cửa là một chú khủng long.",
+        "words": [
+          {
+            "w": "恐龙",
+            "ph": "kǒng lóng",
+            "mean": "khủng long"
+          }
+        ]
+      },
+      {
+        "t": 25,
+        "text": "球在哪里?球在桌子下面吗?",
+        "tr": "Quả bóng ở đâu? Bóng ở dưới gầm bàn à?",
+        "words": [
+          {
+            "w": "桌子",
+            "ph": "zhuō zi",
+            "mean": "cái bàn"
+          },
+          {
+            "w": "下面",
+            "ph": "xià miàn",
+            "mean": "phía dưới"
+          }
+        ]
+      },
+      {
+        "t": 34,
+        "text": "不是,桌子下面是一个娃娃。",
+        "tr": "Không phải, dưới gầm bàn là một con búp bê.",
+        "words": [
+          {
+            "w": "娃娃",
+            "ph": "wá wa",
+            "mean": "búp bê"
+          }
+        ]
+      },
+      {
+        "t": 43,
+        "text": "球在哪里?球在厨子前面吗?",
+        "tr": "Quả bóng ở đâu? Bóng ở trước cái tủ à?",
+        "words": [
+          {
+            "w": "前面",
+            "ph": "qián miàn",
+            "mean": "phía trước"
+          }
+        ]
+      },
+      {
+        "t": 51,
+        "text": "不是,厨子前面是一个牛仔帽。",
+        "tr": "Không phải, trước tủ là một chiếc mũ cao bồi.",
+        "words": [
+          {
+            "w": "牛仔帽",
+            "ph": "niú zǎi mào",
+            "mean": "mũ cao bồi"
+          }
+        ]
+      },
+      {
+        "t": 61,
+        "text": "球在哪里?球在壁炉旁边吗?",
+        "tr": "Quả bóng ở đâu? Bóng ở cạnh lò sưởi à?",
+        "words": [
+          {
+            "w": "壁炉",
+            "ph": "bì lú",
+            "mean": "lò sưởi"
+          },
+          {
+            "w": "旁边",
+            "ph": "páng biān",
+            "mean": "bên cạnh"
+          }
+        ]
+      },
+      {
+        "t": 70,
+        "text": "不是,壁炉旁边是机器人。",
+        "tr": "Không phải, cạnh lò sưởi là một chú người máy.",
+        "words": [
+          {
+            "w": "机器人",
+            "ph": "jī qì rén",
+            "mean": "người máy"
+          }
+        ]
+      },
+      {
+        "t": 80,
+        "text": "球在哪里?球在沙发上面吗?",
+        "tr": "Quả bóng ở đâu? Bóng ở trên ghế sô pha à?",
+        "words": [
+          {
+            "w": "沙发",
+            "ph": "shā fā",
+            "mean": "ghế sô pha"
+          },
+          {
+            "w": "上面",
+            "ph": "shàng miàn",
+            "mean": "phía trên"
+          }
+        ]
+      },
+      {
+        "t": 89,
+        "text": "不是,沙发上面是一些毛线。",
+        "tr": "Không phải, trên ghế sô pha là mấy cuộn len.",
+        "words": [
+          {
+            "w": "毛线",
+            "ph": "máo xiàn",
+            "mean": "len sợi"
+          }
+        ]
+      },
+      {
+        "t": 98,
+        "text": "球在哪里?球在花盆之间吗?",
+        "tr": "Quả bóng ở đâu? Bóng ở giữa mấy chậu hoa à?",
+        "words": [
+          {
+            "w": "花盆",
+            "ph": "huā pén",
+            "mean": "chậu hoa"
+          },
+          {
+            "w": "之间",
+            "ph": "zhī jiān",
+            "mean": "ở giữa"
+          }
+        ]
+      },
+      {
+        "t": 106,
+        "text": "不是,花盆之间是一个红色的小车。",
+        "tr": "Không phải, giữa mấy chậu hoa là một chiếc xe nhỏ màu đỏ.",
+        "words": [
+          {
+            "w": "红色",
+            "ph": "hóng sè",
+            "mean": "màu đỏ"
+          },
+          {
+            "w": "小车",
+            "ph": "xiǎo chē",
+            "mean": "xe nhỏ"
+          }
+        ]
+      },
+      {
+        "t": 117,
+        "text": "球在哪里?球在玩具箱里吗?",
+        "tr": "Quả bóng ở đâu? Bóng ở trong thùng đồ chơi à?",
+        "words": [
+          {
+            "w": "玩具箱",
+            "ph": "wán jù xiāng",
+            "mean": "thùng đồ chơi"
+          }
+        ]
+      },
+      {
+        "t": 125,
+        "text": "是的,球在玩具箱里。我找到球啦!",
+        "tr": "Đúng rồi, bóng ở trong thùng đồ chơi. Mình tìm thấy bóng rồi!",
+        "words": [
+          {
+            "w": "找到",
+            "ph": "zhǎo dào",
+            "mean": "tìm thấy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lf2-HbWP2tVbMHg",
+    "lang": "zh",
+    "title": "What Do They Need? (他们需要什么？)",
+    "source": "Little Fox",
+    "level": "l2",
+    "dur": "2:17",
+    "emoji": "🐾",
+    "youtubeId": "HbWP2tVbMHg",
+    "segments": [
+      {
+        "t": 0,
+        "text": "他们需要什么?",
+        "tr": "Chúng cần gì nhỉ?",
+        "words": [
+          {
+            "w": "需要",
+            "ph": "xū yào",
+            "mean": "cần"
+          }
+        ]
+      },
+      {
+        "t": 6,
+        "text": "小狗们有一个问题。",
+        "tr": "Các chú cún gặp một vấn đề.",
+        "words": [
+          {
+            "w": "小狗",
+            "ph": "xiǎo gǒu",
+            "mean": "chú cún"
+          },
+          {
+            "w": "问题",
+            "ph": "wèn tí",
+            "mean": "vấn đề"
+          }
+        ]
+      },
+      {
+        "t": 11,
+        "text": "他们需要什么?",
+        "tr": "Chúng cần gì nhỉ?",
+        "words": [
+          {
+            "w": "需要",
+            "ph": "xū yào",
+            "mean": "cần"
+          }
+        ]
+      },
+      {
+        "t": 14,
+        "text": "他们需要一个碗来装麦片。",
+        "tr": "Chúng cần một cái bát để đựng ngũ cốc.",
+        "words": [
+          {
+            "w": "碗",
+            "ph": "wǎn",
+            "mean": "cái bát"
+          },
+          {
+            "w": "麦片",
+            "ph": "mài piàn",
+            "mean": "ngũ cốc"
+          }
+        ]
+      },
+      {
+        "t": 20,
+        "text": "小熊有一个问题。",
+        "tr": "Chú gấu con gặp một vấn đề.",
+        "words": [
+          {
+            "w": "小熊",
+            "ph": "xiǎo xióng",
+            "mean": "gấu con"
+          }
+        ]
+      },
+      {
+        "t": 24,
+        "text": "他需要什么?",
+        "tr": "Bạn ấy cần gì nhỉ?",
+        "words": [
+          {
+            "w": "需要",
+            "ph": "xū yào",
+            "mean": "cần"
+          }
+        ]
+      },
+      {
+        "t": 26,
+        "text": "他需要一个罐子来装蜂蜜。",
+        "tr": "Bạn ấy cần một cái hũ để đựng mật ong.",
+        "words": [
+          {
+            "w": "罐子",
+            "ph": "guàn zi",
+            "mean": "cái hũ"
+          },
+          {
+            "w": "蜂蜜",
+            "ph": "fēng mì",
+            "mean": "mật ong"
+          }
+        ]
+      },
+      {
+        "t": 33,
+        "text": "小猴子们有一个问题。",
+        "tr": "Các chú khỉ gặp một vấn đề.",
+        "words": [
+          {
+            "w": "猴子",
+            "ph": "hóu zi",
+            "mean": "con khỉ"
+          }
+        ]
+      },
+      {
+        "t": 38,
+        "text": "他们需要什么?",
+        "tr": "Chúng cần gì nhỉ?",
+        "words": [
+          {
+            "w": "需要",
+            "ph": "xū yào",
+            "mean": "cần"
+          }
+        ]
+      },
+      {
+        "t": 43,
+        "text": "他们需要一个垃圾箱来装香蕉皮。",
+        "tr": "Chúng cần một thùng rác để đựng vỏ chuối.",
+        "words": [
+          {
+            "w": "垃圾箱",
+            "ph": "lā jī xiāng",
+            "mean": "thùng rác"
+          },
+          {
+            "w": "香蕉皮",
+            "ph": "xiāng jiāo pí",
+            "mean": "vỏ chuối"
+          }
+        ]
+      },
+      {
+        "t": 51,
+        "text": "小兔子有一个问题。",
+        "tr": "Chú thỏ con gặp một vấn đề.",
+        "words": [
+          {
+            "w": "兔子",
+            "ph": "tù zi",
+            "mean": "con thỏ"
+          }
+        ]
+      },
+      {
+        "t": 56,
+        "text": "他需要什么?",
+        "tr": "Bạn ấy cần gì nhỉ?",
+        "words": [
+          {
+            "w": "需要",
+            "ph": "xū yào",
+            "mean": "cần"
+          }
+        ]
+      },
+      {
+        "t": 60,
+        "text": "他需要一个推车来装胡萝卜。",
+        "tr": "Bạn ấy cần một chiếc xe đẩy để đựng cà rốt.",
+        "words": [
+          {
+            "w": "推车",
+            "ph": "tuī chē",
+            "mean": "xe đẩy"
+          },
+          {
+            "w": "胡萝卜",
+            "ph": "hú luó bo",
+            "mean": "cà rốt"
+          }
+        ]
+      },
+      {
+        "t": 66,
+        "text": "袋鼠有一个问题。",
+        "tr": "Chú kangaroo gặp một vấn đề.",
+        "words": [
+          {
+            "w": "袋鼠",
+            "ph": "dài shǔ",
+            "mean": "kangaroo"
+          }
+        ]
+      },
+      {
+        "t": 71,
+        "text": "他需要什么?",
+        "tr": "Bạn ấy cần gì nhỉ?",
+        "words": [
+          {
+            "w": "需要",
+            "ph": "xū yào",
+            "mean": "cần"
+          }
+        ]
+      },
+      {
+        "t": 74,
+        "text": "他需要一个更大的袋子来装小袋鼠。",
+        "tr": "Bạn ấy cần một cái túi to hơn để đựng kangaroo con.",
+        "words": [
+          {
+            "w": "袋子",
+            "ph": "dài zi",
+            "mean": "cái túi"
+          },
+          {
+            "w": "更大",
+            "ph": "gèng dà",
+            "mean": "to hơn"
+          }
+        ]
+      },
+      {
+        "t": 81,
+        "text": "小老虎有一个问题。",
+        "tr": "Chú hổ con gặp một vấn đề.",
+        "words": [
+          {
+            "w": "老虎",
+            "ph": "lǎo hǔ",
+            "mean": "con hổ"
+          }
+        ]
+      },
+      {
+        "t": 85,
+        "text": "他需要什么?",
+        "tr": "Bạn ấy cần gì nhỉ?",
+        "words": [
+          {
+            "w": "需要",
+            "ph": "xū yào",
+            "mean": "cần"
+          }
+        ]
+      },
+      {
+        "t": 88,
+        "text": "他需要一张纸巾来擦脸。",
+        "tr": "Bạn ấy cần một tờ khăn giấy để lau mặt.",
+        "words": [
+          {
+            "w": "纸巾",
+            "ph": "zhǐ jīn",
+            "mean": "khăn giấy"
+          },
+          {
+            "w": "擦脸",
+            "ph": "cā liǎn",
+            "mean": "lau mặt"
+          }
+        ]
+      },
+      {
+        "t": 93,
+        "text": "小狐狸有一个问题。",
+        "tr": "Chú cáo con gặp một vấn đề.",
+        "words": [
+          {
+            "w": "狐狸",
+            "ph": "hú li",
+            "mean": "con cáo"
+          }
+        ]
+      },
+      {
+        "t": 97,
+        "text": "他需要什么?",
+        "tr": "Bạn ấy cần gì nhỉ?",
+        "words": [
+          {
+            "w": "需要",
+            "ph": "xū yào",
+            "mean": "cần"
+          }
+        ]
+      },
+      {
+        "t": 100,
+        "text": "他需要一个工具来摘刀葡萄。",
+        "tr": "Bạn ấy cần một dụng cụ để hái nho.",
+        "words": [
+          {
+            "w": "工具",
+            "ph": "gōng jù",
+            "mean": "dụng cụ"
+          },
+          {
+            "w": "葡萄",
+            "ph": "pú tao",
+            "mean": "quả nho"
+          }
+        ]
+      },
+      {
+        "t": 107,
+        "text": "安迪有一个问题。",
+        "tr": "Andy gặp một vấn đề.",
+        "words": [
+          {
+            "w": "问题",
+            "ph": "wèn tí",
+            "mean": "vấn đề"
+          }
+        ]
+      },
+      {
+        "t": 112,
+        "text": "他需要什么?",
+        "tr": "Bạn ấy cần gì nhỉ?",
+        "words": [
+          {
+            "w": "需要",
+            "ph": "xū yào",
+            "mean": "cần"
+          }
+        ]
+      },
+      {
+        "t": 115,
+        "text": "安迪需要一个梯子来拿到风筝。",
+        "tr": "Andy cần một cái thang để lấy con diều.",
+        "words": [
+          {
+            "w": "梯子",
+            "ph": "tī zi",
+            "mean": "cái thang"
+          },
+          {
+            "w": "风筝",
+            "ph": "fēng zheng",
+            "mean": "con diều"
+          }
+        ]
+      }
+    ]
   }
 ]
