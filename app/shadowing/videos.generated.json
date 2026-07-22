@@ -120149,5 +120149,6506 @@
         "py": "qǐng bù lìn diǎn zàn dìng yuè zhuǎn fā dǎ shǎng zhī chí míng jìng yǔ diǎn diǎn lán mù"
       }
     ]
+  },
+  {
+    "id": "lfk-ePzxGxOj7us",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 1: Hello! (凯丽老师的课堂 1: 你好!)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "0:39",
+    "emoji": "👋",
+    "youtubeId": "ePzxGxOj7us",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凱莉老师的课堂一,你好。",
+        "tr": "Lớp học của cô Kelly, bài 1: Xin chào.",
+        "words": [
+          {
+            "w": "老师",
+            "ph": "lǎo shī",
+            "mean": "cô giáo"
+          },
+          {
+            "w": "你好",
+            "ph": "nǐ hǎo",
+            "mean": "xin chào"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng yī nǐ hǎo"
+      },
+      {
+        "t": 17,
+        "text": "老师好。",
+        "tr": "Chào cô ạ.",
+        "words": [
+          {
+            "w": "老师",
+            "ph": "lǎo shī",
+            "mean": "cô giáo"
+          }
+        ],
+        "py": "lǎo shī hǎo"
+      },
+      {
+        "t": 19,
+        "text": "你好。",
+        "tr": "Xin chào!",
+        "words": [
+          {
+            "w": "你好",
+            "ph": "nǐ hǎo",
+            "mean": "xin chào"
+          }
+        ],
+        "py": "nǐ hǎo"
+      },
+      {
+        "t": 22,
+        "text": "你好。",
+        "tr": "Xin chào!",
+        "words": [
+          {
+            "w": "你好",
+            "ph": "nǐ hǎo",
+            "mean": "xin chào"
+          }
+        ],
+        "py": "nǐ hǎo"
+      },
+      {
+        "t": 24,
+        "text": "你好。",
+        "tr": "Xin chào!",
+        "words": [
+          {
+            "w": "你好",
+            "ph": "nǐ hǎo",
+            "mean": "xin chào"
+          }
+        ],
+        "py": "nǐ hǎo"
+      }
+    ]
+  },
+  {
+    "id": "lfk-729XWG2z-Ic",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 2: My Name Is Minwoo (凯丽老师的课堂 2：我叫敏宇)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:21",
+    "emoji": "🙋",
+    "youtubeId": "729XWG2z-Ic",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凯莉老师的课堂二,我叫明语。",
+        "tr": "Lớp học của cô Kelly, bài 2: Mình tên là Minh Ngữ.",
+        "words": [
+          {
+            "w": "我叫",
+            "ph": "wǒ jiào",
+            "mean": "mình tên là"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng èr wǒ jiào míng yǔ"
+      },
+      {
+        "t": 20,
+        "text": "你好,我是凯莉老师。",
+        "tr": "Xin chào, cô là cô giáo Kelly.",
+        "words": [
+          {
+            "w": "老师",
+            "ph": "lǎo shī",
+            "mean": "cô giáo"
+          }
+        ],
+        "py": "nǐ hǎo wǒ shì kǎi lì lǎo shī"
+      },
+      {
+        "t": 25,
+        "text": "老师好。",
+        "tr": "Chào cô ạ.",
+        "words": [
+          {
+            "w": "老师",
+            "ph": "lǎo shī",
+            "mean": "cô giáo"
+          }
+        ],
+        "py": "lǎo shī hǎo"
+      },
+      {
+        "t": 28,
+        "text": "你叫什么名字?",
+        "tr": "Bé tên là gì?",
+        "words": [
+          {
+            "w": "名字",
+            "ph": "míng zi",
+            "mean": "tên"
+          },
+          {
+            "w": "什么",
+            "ph": "shén me",
+            "mean": "gì"
+          }
+        ],
+        "py": "nǐ jiào shén me míng zì"
+      },
+      {
+        "t": 35,
+        "text": "我叫明语。",
+        "tr": "Mình tên là Minh Ngữ.",
+        "words": [
+          {
+            "w": "我叫",
+            "ph": "wǒ jiào",
+            "mean": "mình tên là"
+          }
+        ],
+        "py": "wǒ jiào míng yǔ"
+      },
+      {
+        "t": 41,
+        "text": "你叫什么名字?",
+        "tr": "Bé tên là gì?",
+        "words": [
+          {
+            "w": "名字",
+            "ph": "míng zi",
+            "mean": "tên"
+          }
+        ],
+        "py": "nǐ jiào shén me míng zì"
+      },
+      {
+        "t": 48,
+        "text": "我叫沙莉。",
+        "tr": "Mình tên là Sha Li.",
+        "words": [
+          {
+            "w": "我叫",
+            "ph": "wǒ jiào",
+            "mean": "mình tên là"
+          }
+        ],
+        "py": "wǒ jiào shā lì"
+      },
+      {
+        "t": 51,
+        "text": "你叫什么名字?",
+        "tr": "Bé tên là gì?",
+        "words": [
+          {
+            "w": "名字",
+            "ph": "míng zi",
+            "mean": "tên"
+          }
+        ],
+        "py": "nǐ jiào shén me míng zì"
+      },
+      {
+        "t": 57,
+        "text": "我叫皮特。",
+        "tr": "Mình tên là Pi Tè.",
+        "words": [
+          {
+            "w": "我叫",
+            "ph": "wǒ jiào",
+            "mean": "mình tên là"
+          }
+        ],
+        "py": "wǒ jiào pí tè"
+      }
+    ]
+  },
+  {
+    "id": "lfk-_NSQyG66Osg",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 3: What's This? (凯丽老师的课堂 3：这是什么?)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:35",
+    "emoji": "📚",
+    "youtubeId": "_NSQyG66Osg",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凱莉老师的课堂三 这是什么?",
+        "tr": "Lớp học của cô Kelly, bài 3: Đây là cái gì?",
+        "words": [
+          {
+            "w": "什么",
+            "ph": "shén me",
+            "mean": "gì"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng sān zhè shì shén me"
+      },
+      {
+        "t": 16,
+        "text": "这是什么?",
+        "tr": "Đây là cái gì?",
+        "words": [
+          {
+            "w": "这是",
+            "ph": "zhè shì",
+            "mean": "đây là"
+          },
+          {
+            "w": "什么",
+            "ph": "shén me",
+            "mean": "gì"
+          }
+        ],
+        "py": "zhè shì shén me"
+      },
+      {
+        "t": 19,
+        "text": "这是书。",
+        "tr": "Đây là quyển sách.",
+        "words": [
+          {
+            "w": "书",
+            "ph": "shū",
+            "mean": "sách"
+          }
+        ],
+        "py": "zhè shì shū"
+      },
+      {
+        "t": 26,
+        "text": "这是什么?",
+        "tr": "Đây là cái gì?",
+        "words": [
+          {
+            "w": "什么",
+            "ph": "shén me",
+            "mean": "gì"
+          }
+        ],
+        "py": "zhè shì shén me"
+      },
+      {
+        "t": 28,
+        "text": "这是桌子。",
+        "tr": "Đây là cái bàn.",
+        "words": [
+          {
+            "w": "桌子",
+            "ph": "zhuō zi",
+            "mean": "cái bàn"
+          }
+        ],
+        "py": "zhè shì zhuō zi"
+      },
+      {
+        "t": 33,
+        "text": "这是什么?",
+        "tr": "Đây là cái gì?",
+        "words": [
+          {
+            "w": "什么",
+            "ph": "shén me",
+            "mean": "gì"
+          }
+        ],
+        "py": "zhè shì shén me"
+      },
+      {
+        "t": 36,
+        "text": "这是包。",
+        "tr": "Đây là cái cặp.",
+        "words": [
+          {
+            "w": "包",
+            "ph": "bāo",
+            "mean": "cặp, túi"
+          }
+        ],
+        "py": "zhè shì bāo"
+      },
+      {
+        "t": 41,
+        "text": "名语,这是什么?",
+        "tr": "Minh Ngữ, đây là cái gì?",
+        "words": [
+          {
+            "w": "什么",
+            "ph": "shén me",
+            "mean": "gì"
+          }
+        ],
+        "py": "míng yǔ zhè shì shén me"
+      },
+      {
+        "t": 47,
+        "text": "这是蜡笔。",
+        "tr": "Đây là bút sáp.",
+        "words": [
+          {
+            "w": "蜡笔",
+            "ph": "là bǐ",
+            "mean": "bút sáp"
+          }
+        ],
+        "py": "zhè shì là bǐ"
+      },
+      {
+        "t": 52,
+        "text": "少利,这是什么?",
+        "tr": "Sha Li, đây là cái gì?",
+        "words": [
+          {
+            "w": "什么",
+            "ph": "shén me",
+            "mean": "gì"
+          }
+        ],
+        "py": "shǎo lì zhè shì shén me"
+      },
+      {
+        "t": 55,
+        "text": "这是签笔。",
+        "tr": "Đây là cây bút.",
+        "words": [
+          {
+            "w": "笔",
+            "ph": "bǐ",
+            "mean": "bút"
+          }
+        ],
+        "py": "zhè shì qiān bǐ"
+      },
+      {
+        "t": 64,
+        "text": "老师,这是什么?",
+        "tr": "Cô ơi, đây là cái gì?",
+        "words": [
+          {
+            "w": "老师",
+            "ph": "lǎo shī",
+            "mean": "cô giáo"
+          }
+        ],
+        "py": "lǎo shī zhè shì shén me"
+      },
+      {
+        "t": 69,
+        "text": "这是椅子。",
+        "tr": "Đây là cái ghế.",
+        "words": [
+          {
+            "w": "椅子",
+            "ph": "yǐ zi",
+            "mean": "cái ghế"
+          }
+        ],
+        "py": "zhè shì yǐ zi"
+      },
+      {
+        "t": 72,
+        "text": "不对,这是沙粒。",
+        "tr": "Không đúng, đây là Sha Li.",
+        "words": [
+          {
+            "w": "不对",
+            "ph": "bù duì",
+            "mean": "không đúng"
+          }
+        ],
+        "py": "bù duì zhè shì shā lì"
+      },
+      {
+        "t": 85,
+        "text": "这是小蜡笔。",
+        "tr": "Đây là bút sáp nhỏ.",
+        "words": [
+          {
+            "w": "小",
+            "ph": "xiǎo",
+            "mean": "nhỏ"
+          },
+          {
+            "w": "蜡笔",
+            "ph": "là bǐ",
+            "mean": "bút sáp"
+          }
+        ],
+        "py": "zhè shì xiǎo là bǐ"
+      }
+    ]
+  },
+  {
+    "id": "lfk-suGzFNOmYB0",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 4: Let's Play! (凯丽老师的课堂 4：休息时间!)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:18",
+    "emoji": "🎨",
+    "youtubeId": "suGzFNOmYB0",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凯莉老师的课堂四 休息时间",
+        "tr": "Lớp học của cô Kelly, bài 4: Giờ nghỉ.",
+        "words": [
+          {
+            "w": "休息",
+            "ph": "xiū xi",
+            "mean": "nghỉ ngơi"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng sì xiū xī shí jiān"
+      },
+      {
+        "t": 11,
+        "text": "同学们,休息时间到了。",
+        "tr": "Các bạn ơi, đến giờ nghỉ rồi.",
+        "words": [
+          {
+            "w": "同学",
+            "ph": "tóng xué",
+            "mean": "bạn học"
+          },
+          {
+            "w": "休息",
+            "ph": "xiū xi",
+            "mean": "nghỉ ngơi"
+          }
+        ],
+        "py": "tóng xué men xiū xī shí jiān dào le"
+      },
+      {
+        "t": 19,
+        "text": "我们画画吧。",
+        "tr": "Chúng mình vẽ tranh nhé.",
+        "words": [
+          {
+            "w": "画画",
+            "ph": "huà huà",
+            "mean": "vẽ tranh"
+          }
+        ],
+        "py": "wǒ men huà huà ba"
+      },
+      {
+        "t": 26,
+        "text": "我们唱歌吧。",
+        "tr": "Chúng mình hát nhé.",
+        "words": [
+          {
+            "w": "唱歌",
+            "ph": "chàng gē",
+            "mean": "hát"
+          }
+        ],
+        "py": "wǒ men chàng gē ba"
+      },
+      {
+        "t": 30,
+        "text": "我们玩游戏吧。",
+        "tr": "Chúng mình chơi trò chơi nhé.",
+        "words": [
+          {
+            "w": "游戏",
+            "ph": "yóu xì",
+            "mean": "trò chơi"
+          },
+          {
+            "w": "玩",
+            "ph": "wán",
+            "mean": "chơi"
+          }
+        ],
+        "py": "wǒ men wán yóu xì ba"
+      },
+      {
+        "t": 35,
+        "text": "好的。",
+        "tr": "Được thôi.",
+        "py": "hǎo de"
+      },
+      {
+        "t": 38,
+        "text": "轮到我了。",
+        "tr": "Đến lượt mình rồi.",
+        "words": [
+          {
+            "w": "轮到",
+            "ph": "lún dào",
+            "mean": "đến lượt"
+          }
+        ],
+        "py": "lún dào wǒ le"
+      },
+      {
+        "t": 43,
+        "text": "轮到我了。",
+        "tr": "Đến lượt mình rồi.",
+        "words": [
+          {
+            "w": "轮到",
+            "ph": "lún dào",
+            "mean": "đến lượt"
+          }
+        ],
+        "py": "lún dào wǒ le"
+      },
+      {
+        "t": 49,
+        "text": "轮到我了。",
+        "tr": "Đến lượt mình rồi.",
+        "words": [
+          {
+            "w": "轮到",
+            "ph": "lún dào",
+            "mean": "đến lượt"
+          }
+        ],
+        "py": "lún dào wǒ le"
+      },
+      {
+        "t": 58,
+        "text": "我们涂颜色吧。",
+        "tr": "Chúng mình tô màu nhé.",
+        "words": [
+          {
+            "w": "涂",
+            "ph": "tú",
+            "mean": "tô"
+          },
+          {
+            "w": "颜色",
+            "ph": "yán sè",
+            "mean": "màu sắc"
+          }
+        ],
+        "py": "wǒ men tú yán sè ba"
+      }
+    ]
+  },
+  {
+    "id": "lfk--25AdXugQXw",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 5: Sit Down! (凯丽老师的课堂 5：坐下!)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:00",
+    "emoji": "🪑",
+    "youtubeId": "-25AdXugQXw",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凯莉老师的课堂五,坐下。",
+        "tr": "Lớp học của cô Kelly, bài 5: Ngồi xuống.",
+        "words": [
+          {
+            "w": "坐下",
+            "ph": "zuò xià",
+            "mean": "ngồi xuống"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng wǔ zuò xià"
+      },
+      {
+        "t": 10,
+        "text": "坐下。",
+        "tr": "Ngồi xuống nào.",
+        "words": [
+          {
+            "w": "坐下",
+            "ph": "zuò xià",
+            "mean": "ngồi xuống"
+          }
+        ],
+        "py": "zuò xià"
+      },
+      {
+        "t": 14,
+        "text": "莎莉,请安静。",
+        "tr": "Sha Li, trật tự nào.",
+        "words": [
+          {
+            "w": "安静",
+            "ph": "ān jìng",
+            "mean": "yên lặng"
+          }
+        ],
+        "py": "shā lì qǐng ān jìng"
+      },
+      {
+        "t": 18,
+        "text": "同学们,请整理好教室。",
+        "tr": "Các bạn ơi, dọn dẹp lớp học nào.",
+        "words": [
+          {
+            "w": "整理",
+            "ph": "zhěng lǐ",
+            "mean": "dọn dẹp"
+          },
+          {
+            "w": "教室",
+            "ph": "jiào shì",
+            "mean": "lớp học"
+          }
+        ],
+        "py": "tóng xué men qǐng zhěng lǐ hǎo jiào shì"
+      },
+      {
+        "t": 23,
+        "text": "老师,对不起。",
+        "tr": "Cô ơi, con xin lỗi.",
+        "words": [
+          {
+            "w": "对不起",
+            "ph": "duì bu qǐ",
+            "mean": "xin lỗi"
+          }
+        ],
+        "py": "lǎo shī duì bù qǐ"
+      },
+      {
+        "t": 28,
+        "text": "老师,对不起。",
+        "tr": "Cô ơi, con xin lỗi.",
+        "words": [
+          {
+            "w": "对不起",
+            "ph": "duì bu qǐ",
+            "mean": "xin lỗi"
+          }
+        ],
+        "py": "lǎo shī duì bù qǐ"
+      },
+      {
+        "t": 32,
+        "text": "没关系。",
+        "tr": "Không sao đâu.",
+        "words": [
+          {
+            "w": "没关系",
+            "ph": "méi guān xi",
+            "mean": "không sao"
+          }
+        ],
+        "py": "méi guān xì"
+      },
+      {
+        "t": 37,
+        "text": "同学们,请打开课本。",
+        "tr": "Các bạn ơi, mở sách ra nào.",
+        "words": [
+          {
+            "w": "打开",
+            "ph": "dǎ kāi",
+            "mean": "mở"
+          },
+          {
+            "w": "课本",
+            "ph": "kè běn",
+            "mean": "sách giáo khoa"
+          }
+        ],
+        "py": "tóng xué men qǐng dǎ kāi kè běn"
+      },
+      {
+        "t": 48,
+        "text": "小小的饭",
+        "tr": "Nhỏ nhỏ xinh xinh.",
+        "words": [
+          {
+            "w": "小",
+            "ph": "xiǎo",
+            "mean": "nhỏ"
+          }
+        ],
+        "py": "xiǎo xiǎo de fàn"
+      },
+      {
+        "t": 50,
+        "text": "小小的饭",
+        "tr": "Nhỏ nhỏ xinh xinh.",
+        "words": [
+          {
+            "w": "小",
+            "ph": "xiǎo",
+            "mean": "nhỏ"
+          }
+        ],
+        "py": "xiǎo xiǎo de fàn"
+      }
+    ]
+  },
+  {
+    "id": "lfk-It21cAdgzD8",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 6: What Color...? (凯丽老师的课堂 6: 这是什么颜色?)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:27",
+    "emoji": "🌈",
+    "youtubeId": "It21cAdgzD8",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凯莉老师的课堂六。这是什么颜色?",
+        "tr": "Lớp học của cô Kelly, bài 6: Đây là màu gì?",
+        "words": [
+          {
+            "w": "颜色",
+            "ph": "yán sè",
+            "mean": "màu sắc"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng liù zhè shì shén me yán sè"
+      },
+      {
+        "t": 12,
+        "text": "这是什么颜色?",
+        "tr": "Đây là màu gì?",
+        "words": [
+          {
+            "w": "颜色",
+            "ph": "yán sè",
+            "mean": "màu sắc"
+          }
+        ],
+        "py": "zhè shì shén me yán sè"
+      },
+      {
+        "t": 19,
+        "text": "这是红色。",
+        "tr": "Đây là màu đỏ.",
+        "words": [
+          {
+            "w": "红色",
+            "ph": "hóng sè",
+            "mean": "màu đỏ"
+          }
+        ],
+        "py": "zhè shì hóng sè"
+      },
+      {
+        "t": 25,
+        "text": "这是什么颜色?",
+        "tr": "Đây là màu gì?",
+        "words": [
+          {
+            "w": "颜色",
+            "ph": "yán sè",
+            "mean": "màu sắc"
+          }
+        ],
+        "py": "zhè shì shén me yán sè"
+      },
+      {
+        "t": 31,
+        "text": "这是黄色。",
+        "tr": "Đây là màu vàng.",
+        "words": [
+          {
+            "w": "黄色",
+            "ph": "huáng sè",
+            "mean": "màu vàng"
+          }
+        ],
+        "py": "zhè shì huáng sè"
+      },
+      {
+        "t": 39,
+        "text": "这是橙色。",
+        "tr": "Đây là màu cam.",
+        "words": [
+          {
+            "w": "橙色",
+            "ph": "chéng sè",
+            "mean": "màu cam"
+          }
+        ],
+        "py": "zhè shì chéng sè"
+      },
+      {
+        "t": 45,
+        "text": "这是绿色。",
+        "tr": "Đây là màu xanh lá.",
+        "words": [
+          {
+            "w": "绿色",
+            "ph": "lǜ sè",
+            "mean": "màu xanh lá"
+          }
+        ],
+        "py": "zhè shì lǜ sè"
+      },
+      {
+        "t": 55,
+        "text": "这是蓝色。",
+        "tr": "Đây là màu xanh dương.",
+        "words": [
+          {
+            "w": "蓝色",
+            "ph": "lán sè",
+            "mean": "màu xanh dương"
+          }
+        ],
+        "py": "zhè shì lán sè"
+      },
+      {
+        "t": 61,
+        "text": "这是黄色。",
+        "tr": "Đây là màu vàng.",
+        "words": [
+          {
+            "w": "黄色",
+            "ph": "huáng sè",
+            "mean": "màu vàng"
+          }
+        ],
+        "py": "zhè shì huáng sè"
+      },
+      {
+        "t": 65,
+        "text": "这是橙色。",
+        "tr": "Đây là màu cam.",
+        "words": [
+          {
+            "w": "橙色",
+            "ph": "chéng sè",
+            "mean": "màu cam"
+          }
+        ],
+        "py": "zhè shì chéng sè"
+      },
+      {
+        "t": 69,
+        "text": "这是绿色。",
+        "tr": "Đây là màu xanh lá.",
+        "words": [
+          {
+            "w": "绿色",
+            "ph": "lǜ sè",
+            "mean": "màu xanh lá"
+          }
+        ],
+        "py": "zhè shì lǜ sè"
+      },
+      {
+        "t": 84,
+        "text": "这是橙色。",
+        "tr": "Đây là màu cam.",
+        "words": [
+          {
+            "w": "橙色",
+            "ph": "chéng sè",
+            "mean": "màu cam"
+          }
+        ],
+        "py": "zhè shì chéng sè"
+      },
+      {
+        "t": 90,
+        "text": "这是橙色。",
+        "tr": "Đây là màu cam.",
+        "words": [
+          {
+            "w": "橙色",
+            "ph": "chéng sè",
+            "mean": "màu cam"
+          }
+        ],
+        "py": "zhè shì chéng sè"
+      },
+      {
+        "t": 96,
+        "text": "这是橙色。",
+        "tr": "Đây là màu cam.",
+        "words": [
+          {
+            "w": "橙色",
+            "ph": "chéng sè",
+            "mean": "màu cam"
+          }
+        ],
+        "py": "zhè shì chéng sè"
+      },
+      {
+        "t": 102,
+        "text": "这是橙色。",
+        "tr": "Đây là màu cam.",
+        "words": [
+          {
+            "w": "橙色",
+            "ph": "chéng sè",
+            "mean": "màu cam"
+          }
+        ],
+        "py": "zhè shì chéng sè"
+      },
+      {
+        "t": 108,
+        "text": "这是橙色。",
+        "tr": "Đây là màu cam.",
+        "words": [
+          {
+            "w": "橙色",
+            "ph": "chéng sè",
+            "mean": "màu cam"
+          }
+        ],
+        "py": "zhè shì chéng sè"
+      }
+    ]
+  },
+  {
+    "id": "lfk-QvnOm9RQOOY",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 7: How Old Are You? (凯丽老师的课堂 7: 你几岁?)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:06",
+    "emoji": "🎂",
+    "youtubeId": "QvnOm9RQOOY",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凱莉老师的课堂七,你几岁?",
+        "tr": "Lớp học của cô Kelly, bài 7: Bé mấy tuổi?",
+        "words": [
+          {
+            "w": "几岁",
+            "ph": "jǐ suì",
+            "mean": "mấy tuổi"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng qī nǐ jǐ suì"
+      },
+      {
+        "t": 10,
+        "text": "明语,你几岁?",
+        "tr": "Minh Ngữ, bé mấy tuổi?",
+        "words": [
+          {
+            "w": "几岁",
+            "ph": "jǐ suì",
+            "mean": "mấy tuổi"
+          }
+        ],
+        "py": "míng yǔ nǐ jǐ suì"
+      },
+      {
+        "t": 15,
+        "text": "我五岁。",
+        "tr": "Mình năm tuổi.",
+        "words": [
+          {
+            "w": "五",
+            "ph": "wǔ",
+            "mean": "năm"
+          },
+          {
+            "w": "岁",
+            "ph": "suì",
+            "mean": "tuổi"
+          }
+        ],
+        "py": "wǒ wǔ suì"
+      },
+      {
+        "t": 19,
+        "text": "皮特,你几岁?",
+        "tr": "Pi Tè, bé mấy tuổi?",
+        "words": [
+          {
+            "w": "几岁",
+            "ph": "jǐ suì",
+            "mean": "mấy tuổi"
+          }
+        ],
+        "py": "pí tè nǐ jǐ suì"
+      },
+      {
+        "t": 24,
+        "text": "我六岁。",
+        "tr": "Mình sáu tuổi.",
+        "words": [
+          {
+            "w": "六",
+            "ph": "liù",
+            "mean": "sáu"
+          },
+          {
+            "w": "岁",
+            "ph": "suì",
+            "mean": "tuổi"
+          }
+        ],
+        "py": "wǒ liù suì"
+      },
+      {
+        "t": 28,
+        "text": "我也六岁。",
+        "tr": "Mình cũng sáu tuổi.",
+        "words": [
+          {
+            "w": "也",
+            "ph": "yě",
+            "mean": "cũng"
+          }
+        ],
+        "py": "wǒ yě liù suì"
+      },
+      {
+        "t": 32,
+        "text": "老师,您几岁?",
+        "tr": "Cô ơi, cô bao nhiêu tuổi ạ?",
+        "words": [
+          {
+            "w": "几岁",
+            "ph": "jǐ suì",
+            "mean": "mấy tuổi"
+          }
+        ],
+        "py": "lǎo shī nín jǐ suì"
+      },
+      {
+        "t": 37,
+        "text": "我一加二,加三,加四,加五,加六,加七。",
+        "tr": "Cô là một cộng hai, cộng ba, cộng bốn, cộng năm, cộng sáu, cộng bảy.",
+        "words": [
+          {
+            "w": "加",
+            "ph": "jiā",
+            "mean": "cộng"
+          }
+        ],
+        "py": "wǒ yī jiā èr jiā sān jiā sì jiā wǔ jiā liù jiā qī"
+      }
+    ]
+  },
+  {
+    "id": "lfk-b_1EJXjh2Zw",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 8: She's My Mother (凯丽老师的课堂 8: 她是我妈妈)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:13",
+    "emoji": "👩",
+    "youtubeId": "b_1EJXjh2Zw",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凯莉老师的课堂八",
+        "tr": "Lớp học của cô Kelly, bài 8.",
+        "words": [
+          {
+            "w": "老师",
+            "ph": "lǎo shī",
+            "mean": "cô giáo"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng bā"
+      },
+      {
+        "t": 4,
+        "text": "她是我妈妈。",
+        "tr": "Đây là mẹ của mình.",
+        "words": [
+          {
+            "w": "妈妈",
+            "ph": "mā ma",
+            "mean": "mẹ"
+          },
+          {
+            "w": "她",
+            "ph": "tā",
+            "mean": "cô ấy"
+          }
+        ],
+        "py": "tā shì wǒ mā mā"
+      },
+      {
+        "t": 15,
+        "text": "皮特,她是谁?",
+        "tr": "Pi Tè, đây là ai?",
+        "words": [
+          {
+            "w": "谁",
+            "ph": "shéi",
+            "mean": "ai"
+          }
+        ],
+        "py": "pí tè tā shì shuí"
+      },
+      {
+        "t": 19,
+        "text": "她是我妹妹。",
+        "tr": "Đây là em gái của mình.",
+        "words": [
+          {
+            "w": "妹妹",
+            "ph": "mèi mei",
+            "mean": "em gái"
+          }
+        ],
+        "py": "tā shì wǒ mèi mèi"
+      },
+      {
+        "t": 26,
+        "text": "她是谁?",
+        "tr": "Đây là ai?",
+        "words": [
+          {
+            "w": "谁",
+            "ph": "shéi",
+            "mean": "ai"
+          }
+        ],
+        "py": "tā shì shuí"
+      },
+      {
+        "t": 30,
+        "text": "她是我爸爸。",
+        "tr": "Đây là bố của mình.",
+        "words": [
+          {
+            "w": "爸爸",
+            "ph": "bà ba",
+            "mean": "bố"
+          }
+        ],
+        "py": "tā shì wǒ bà bà"
+      },
+      {
+        "t": 36,
+        "text": "她是谁?",
+        "tr": "Đây là ai?",
+        "words": [
+          {
+            "w": "谁",
+            "ph": "shéi",
+            "mean": "ai"
+          }
+        ],
+        "py": "tā shì shuí"
+      },
+      {
+        "t": 40,
+        "text": "她是我妈妈。",
+        "tr": "Đây là mẹ của mình.",
+        "words": [
+          {
+            "w": "妈妈",
+            "ph": "mā ma",
+            "mean": "mẹ"
+          }
+        ],
+        "py": "tā shì wǒ mā mā"
+      },
+      {
+        "t": 47,
+        "text": "哇哦!",
+        "tr": "Oa!",
+        "py": "wa ó"
+      },
+      {
+        "t": 49,
+        "text": "她是谁?",
+        "tr": "Đây là ai?",
+        "words": [
+          {
+            "w": "谁",
+            "ph": "shéi",
+            "mean": "ai"
+          }
+        ],
+        "py": "tā shì shuí"
+      },
+      {
+        "t": 52,
+        "text": "她是我朋友。",
+        "tr": "Đây là bạn của mình.",
+        "words": [
+          {
+            "w": "朋友",
+            "ph": "péng you",
+            "mean": "bạn"
+          }
+        ],
+        "py": "tā shì wǒ péng yǒu"
+      }
+    ]
+  },
+  {
+    "id": "lfk-nP_Dd5O0qb8",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 9: Good-bye! (凯丽老师的课堂 9: 再见!)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:03",
+    "emoji": "👋",
+    "youtubeId": "nP_Dd5O0qb8",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凱莉老师的课堂九 再见",
+        "tr": "Lớp học của cô Kelly, bài 9: Tạm biệt.",
+        "words": [
+          {
+            "w": "再见",
+            "ph": "zài jiàn",
+            "mean": "tạm biệt"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng jiǔ zài jiàn"
+      },
+      {
+        "t": 12,
+        "text": "同学们,再见!",
+        "tr": "Các bạn ơi, tạm biệt!",
+        "words": [
+          {
+            "w": "同学",
+            "ph": "tóng xué",
+            "mean": "bạn học"
+          },
+          {
+            "w": "再见",
+            "ph": "zài jiàn",
+            "mean": "tạm biệt"
+          }
+        ],
+        "py": "tóng xué men zài jiàn"
+      },
+      {
+        "t": 15,
+        "text": "老师,再见!",
+        "tr": "Cô ơi, tạm biệt ạ!",
+        "words": [
+          {
+            "w": "老师",
+            "ph": "lǎo shī",
+            "mean": "cô giáo"
+          }
+        ],
+        "py": "lǎo shī zài jiàn"
+      },
+      {
+        "t": 19,
+        "text": "皮特,明天见!",
+        "tr": "Pi Tè, mai gặp lại nhé!",
+        "words": [
+          {
+            "w": "明天",
+            "ph": "míng tiān",
+            "mean": "ngày mai"
+          }
+        ],
+        "py": "pí tè míng tiān jiàn"
+      },
+      {
+        "t": 24,
+        "text": "沙利,再见!",
+        "tr": "Sha Li, tạm biệt!",
+        "words": [
+          {
+            "w": "再见",
+            "ph": "zài jiàn",
+            "mean": "tạm biệt"
+          }
+        ],
+        "py": "shā lì zài jiàn"
+      },
+      {
+        "t": 27,
+        "text": "明语,再见!",
+        "tr": "Minh Ngữ, tạm biệt!",
+        "words": [
+          {
+            "w": "再见",
+            "ph": "zài jiàn",
+            "mean": "tạm biệt"
+          }
+        ],
+        "py": "míng yǔ zài jiàn"
+      },
+      {
+        "t": 37,
+        "text": "电脑,再见!",
+        "tr": "Máy tính ơi, tạm biệt!",
+        "words": [
+          {
+            "w": "电脑",
+            "ph": "diàn nǎo",
+            "mean": "máy tính"
+          }
+        ],
+        "py": "diàn nǎo zài jiàn"
+      },
+      {
+        "t": 40,
+        "text": "黑板,再见!",
+        "tr": "Bảng đen ơi, tạm biệt!",
+        "words": [
+          {
+            "w": "黑板",
+            "ph": "hēi bǎn",
+            "mean": "bảng đen"
+          }
+        ],
+        "py": "hēi bǎn zài jiàn"
+      },
+      {
+        "t": 45,
+        "text": "皮特,再见!",
+        "tr": "Pi Tè, tạm biệt!",
+        "words": [
+          {
+            "w": "再见",
+            "ph": "zài jiàn",
+            "mean": "tạm biệt"
+          }
+        ],
+        "py": "pí tè zài jiàn"
+      },
+      {
+        "t": 56,
+        "text": "老师,再见!",
+        "tr": "Cô ơi, tạm biệt ạ!",
+        "words": [
+          {
+            "w": "老师",
+            "ph": "lǎo shī",
+            "mean": "cô giáo"
+          }
+        ],
+        "py": "lǎo shī zài jiàn"
+      }
+    ]
+  },
+  {
+    "id": "lfk-cy24yTMQuIc",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 10: Water, Please! (凯丽老师的课堂 10: 请给我水!)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:17",
+    "emoji": "💧",
+    "youtubeId": "cy24yTMQuIc",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凱莉老师的课堂 十",
+        "tr": "Lớp học của cô Kelly, bài mười.",
+        "words": [
+          {
+            "w": "老师",
+            "ph": "lǎo shī",
+            "mean": "cô giáo"
+          },
+          {
+            "w": "课堂",
+            "ph": "kè táng",
+            "mean": "lớp học"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng shí"
+      },
+      {
+        "t": 5,
+        "text": "请给我水。",
+        "tr": "Cho con xin nước với ạ.",
+        "words": [
+          {
+            "w": "请",
+            "ph": "qǐng",
+            "mean": "làm ơn"
+          },
+          {
+            "w": "水",
+            "ph": "shuǐ",
+            "mean": "nước"
+          }
+        ],
+        "py": "qǐng gěi wǒ shuǐ"
+      },
+      {
+        "t": 16,
+        "text": "我回来了。",
+        "tr": "Con về rồi đây.",
+        "words": [
+          {
+            "w": "回来",
+            "ph": "huí lái",
+            "mean": "trở về"
+          }
+        ],
+        "py": "wǒ huí lái le"
+      },
+      {
+        "t": 20,
+        "text": "今天开心吗?",
+        "tr": "Hôm nay con có vui không?",
+        "words": [
+          {
+            "w": "今天",
+            "ph": "jīn tiān",
+            "mean": "hôm nay"
+          },
+          {
+            "w": "开心",
+            "ph": "kāi xīn",
+            "mean": "vui"
+          }
+        ],
+        "py": "jīn tiān kāi xīn ma"
+      },
+      {
+        "t": 24,
+        "text": "今天很开心。",
+        "tr": "Hôm nay con rất vui.",
+        "words": [
+          {
+            "w": "开心",
+            "ph": "kāi xīn",
+            "mean": "vui"
+          }
+        ],
+        "py": "jīn tiān hěn kāi xīn"
+      },
+      {
+        "t": 30,
+        "text": "请给我一杯水。",
+        "tr": "Cho con xin một cốc nước ạ.",
+        "words": [
+          {
+            "w": "一杯",
+            "ph": "yì bēi",
+            "mean": "một cốc"
+          },
+          {
+            "w": "水",
+            "ph": "shuǐ",
+            "mean": "nước"
+          }
+        ],
+        "py": "qǐng gěi wǒ yī bēi shuǐ"
+      },
+      {
+        "t": 40,
+        "text": "谢谢。",
+        "tr": "Con cảm ơn.",
+        "words": [
+          {
+            "w": "谢谢",
+            "ph": "xiè xie",
+            "mean": "cảm ơn"
+          }
+        ],
+        "py": "xiè xiè"
+      },
+      {
+        "t": 45,
+        "text": "请给我饼干。",
+        "tr": "Cho con xin bánh quy ạ.",
+        "words": [
+          {
+            "w": "饼干",
+            "ph": "bǐng gān",
+            "mean": "bánh quy"
+          }
+        ],
+        "py": "qǐng gěi wǒ bǐng gàn"
+      },
+      {
+        "t": 50,
+        "text": "谢谢。",
+        "tr": "Con cảm ơn.",
+        "words": [
+          {
+            "w": "谢谢",
+            "ph": "xiè xie",
+            "mean": "cảm ơn"
+          }
+        ],
+        "py": "xiè xiè"
+      },
+      {
+        "t": 53,
+        "text": "请给我饮料。",
+        "tr": "Cho con xin đồ uống ạ.",
+        "words": [
+          {
+            "w": "饮料",
+            "ph": "yǐn liào",
+            "mean": "đồ uống"
+          }
+        ],
+        "py": "qǐng gěi wǒ yǐn liào"
+      },
+      {
+        "t": 57,
+        "text": "谢谢。",
+        "tr": "Con cảm ơn.",
+        "words": [
+          {
+            "w": "谢谢",
+            "ph": "xiè xie",
+            "mean": "cảm ơn"
+          }
+        ],
+        "py": "xiè xiè"
+      },
+      {
+        "t": 60,
+        "text": "皮特。",
+        "tr": "Pete ơi.",
+        "py": "pí tè"
+      }
+    ]
+  },
+  {
+    "id": "lfk-RxLCU2xB3HU",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 11: What Do You...(凯丽老师的课堂 11: 你喜欢什么?)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:30",
+    "emoji": "🐶",
+    "youtubeId": "RxLCU2xB3HU",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凯莉老师的课堂十一,你喜欢什么?",
+        "tr": "Lớp học của cô Kelly, bài mười một: Con thích gì?",
+        "words": [
+          {
+            "w": "喜欢",
+            "ph": "xǐ huan",
+            "mean": "thích"
+          },
+          {
+            "w": "什么",
+            "ph": "shén me",
+            "mean": "cái gì"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng shí yī nǐ xǐ huān shén me"
+      },
+      {
+        "t": 12,
+        "text": "我回来了。",
+        "tr": "Con về rồi đây.",
+        "words": [
+          {
+            "w": "回来",
+            "ph": "huí lái",
+            "mean": "trở về"
+          }
+        ],
+        "py": "wǒ huí lái le"
+      },
+      {
+        "t": 18,
+        "text": "沙丽,看,你喜欢什么?",
+        "tr": "Sally, nhìn này, con thích con nào?",
+        "words": [
+          {
+            "w": "看",
+            "ph": "kàn",
+            "mean": "nhìn"
+          },
+          {
+            "w": "喜欢",
+            "ph": "xǐ huan",
+            "mean": "thích"
+          }
+        ],
+        "py": "shā lì kàn nǐ xǐ huān shén me"
+      },
+      {
+        "t": 23,
+        "text": "我喜欢苍鼠。",
+        "tr": "Con thích chuột hamster.",
+        "words": [
+          {
+            "w": "喜欢",
+            "ph": "xǐ huan",
+            "mean": "thích"
+          },
+          {
+            "w": "苍鼠",
+            "ph": "cāng shǔ",
+            "mean": "chuột"
+          }
+        ],
+        "py": "wǒ xǐ huān cāng shǔ"
+      },
+      {
+        "t": 29,
+        "text": "我也喜欢兔子。",
+        "tr": "Con cũng thích thỏ nữa.",
+        "words": [
+          {
+            "w": "兔子",
+            "ph": "tù zi",
+            "mean": "con thỏ"
+          },
+          {
+            "w": "也",
+            "ph": "yě",
+            "mean": "cũng"
+          }
+        ],
+        "py": "wǒ yě xǐ huān tù zi"
+      },
+      {
+        "t": 34,
+        "text": "妈妈,你喜欢什么?",
+        "tr": "Mẹ ơi, mẹ thích con nào?",
+        "words": [
+          {
+            "w": "妈妈",
+            "ph": "mā ma",
+            "mean": "mẹ"
+          },
+          {
+            "w": "喜欢",
+            "ph": "xǐ huan",
+            "mean": "thích"
+          }
+        ],
+        "py": "mā mā nǐ xǐ huān shén me"
+      },
+      {
+        "t": 40,
+        "text": "我喜欢鱼。",
+        "tr": "Mẹ thích cá.",
+        "words": [
+          {
+            "w": "鱼",
+            "ph": "yú",
+            "mean": "con cá"
+          }
+        ],
+        "py": "wǒ xǐ huān yú"
+      },
+      {
+        "t": 45,
+        "text": "我喜欢猫。",
+        "tr": "Con thích mèo.",
+        "words": [
+          {
+            "w": "猫",
+            "ph": "māo",
+            "mean": "con mèo"
+          }
+        ],
+        "py": "wǒ xǐ huān māo"
+      },
+      {
+        "t": 49,
+        "text": "我喜欢鸭子。",
+        "tr": "Con thích vịt.",
+        "words": [
+          {
+            "w": "鸭子",
+            "ph": "yā zi",
+            "mean": "con vịt"
+          }
+        ],
+        "py": "wǒ xǐ huān yā zi"
+      },
+      {
+        "t": 55,
+        "text": "我非常喜欢狗。",
+        "tr": "Con rất thích chó.",
+        "words": [
+          {
+            "w": "非常",
+            "ph": "fēi cháng",
+            "mean": "rất"
+          },
+          {
+            "w": "狗",
+            "ph": "gǒu",
+            "mean": "con chó"
+          }
+        ],
+        "py": "wǒ fēi cháng xǐ huān gǒu"
+      },
+      {
+        "t": 65,
+        "text": "给你个惊喜哦!",
+        "tr": "Có một điều bất ngờ cho con nè!",
+        "words": [
+          {
+            "w": "惊喜",
+            "ph": "jīng xǐ",
+            "mean": "điều bất ngờ"
+          }
+        ],
+        "py": "gěi nǐ gè jīng xǐ ó"
+      },
+      {
+        "t": 70,
+        "text": "小狗,谢谢!",
+        "tr": "Cún con ơi, cảm ơn nhé!",
+        "words": [
+          {
+            "w": "小狗",
+            "ph": "xiǎo gǒu",
+            "mean": "cún con"
+          },
+          {
+            "w": "谢谢",
+            "ph": "xiè xie",
+            "mean": "cảm ơn"
+          }
+        ],
+        "py": "xiǎo gǒu xiè xiè"
+      },
+      {
+        "t": 75,
+        "text": "小狗",
+        "tr": "Cún con.",
+        "words": [
+          {
+            "w": "小狗",
+            "ph": "xiǎo gǒu",
+            "mean": "cún con"
+          }
+        ],
+        "py": "xiǎo gǒu"
+      }
+    ]
+  },
+  {
+    "id": "lfk-SfJxodHpgXA",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 12: I Can Run (凯丽老师的课堂 12: 我会跑)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:15",
+    "emoji": "🏃",
+    "youtubeId": "SfJxodHpgXA",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凯莉老师的课堂十二,我会跑。",
+        "tr": "Lớp học của cô Kelly, bài mười hai: Con biết chạy.",
+        "words": [
+          {
+            "w": "会",
+            "ph": "huì",
+            "mean": "biết"
+          },
+          {
+            "w": "跑",
+            "ph": "pǎo",
+            "mean": "chạy"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng shí èr wǒ huì pǎo"
+      },
+      {
+        "t": 13,
+        "text": "你好,沙莉。",
+        "tr": "Chào Sally.",
+        "words": [
+          {
+            "w": "你好",
+            "ph": "nǐ hǎo",
+            "mean": "xin chào"
+          }
+        ],
+        "py": "nǐ hǎo shā lì"
+      },
+      {
+        "t": 17,
+        "text": "这是我的狗,小旺。",
+        "tr": "Đây là chú chó của mình, Xiao Wang.",
+        "words": [
+          {
+            "w": "狗",
+            "ph": "gǒu",
+            "mean": "con chó"
+          }
+        ],
+        "py": "zhè shì wǒ de gǒu xiǎo wàng"
+      },
+      {
+        "t": 23,
+        "text": "快看,小旺,我会跑。",
+        "tr": "Nhìn nè Xiao Wang, mình biết chạy.",
+        "words": [
+          {
+            "w": "看",
+            "ph": "kàn",
+            "mean": "nhìn"
+          },
+          {
+            "w": "跑",
+            "ph": "pǎo",
+            "mean": "chạy"
+          }
+        ],
+        "py": "kuài kàn xiǎo wàng wǒ huì pǎo"
+      },
+      {
+        "t": 28,
+        "text": "它会跑。",
+        "tr": "Nó biết chạy.",
+        "words": [
+          {
+            "w": "跑",
+            "ph": "pǎo",
+            "mean": "chạy"
+          }
+        ],
+        "py": "tā huì pǎo"
+      },
+      {
+        "t": 32,
+        "text": "小旺,我会坐。",
+        "tr": "Xiao Wang, mình biết ngồi.",
+        "words": [
+          {
+            "w": "坐",
+            "ph": "zuò",
+            "mean": "ngồi"
+          }
+        ],
+        "py": "xiǎo wàng wǒ huì zuò"
+      },
+      {
+        "t": 37,
+        "text": "它会坐。",
+        "tr": "Nó biết ngồi.",
+        "words": [
+          {
+            "w": "坐",
+            "ph": "zuò",
+            "mean": "ngồi"
+          }
+        ],
+        "py": "tā huì zuò"
+      },
+      {
+        "t": 40,
+        "text": "轮到我了。",
+        "tr": "Đến lượt mình rồi.",
+        "words": [
+          {
+            "w": "轮到",
+            "ph": "lún dào",
+            "mean": "đến lượt"
+          }
+        ],
+        "py": "lún dào wǒ le"
+      },
+      {
+        "t": 43,
+        "text": "小旺,我会跳。",
+        "tr": "Xiao Wang, mình biết nhảy.",
+        "words": [
+          {
+            "w": "跳",
+            "ph": "tiào",
+            "mean": "nhảy"
+          }
+        ],
+        "py": "xiǎo wàng wǒ huì tiào"
+      },
+      {
+        "t": 47,
+        "text": "它会跳。",
+        "tr": "Nó biết nhảy.",
+        "words": [
+          {
+            "w": "跳",
+            "ph": "tiào",
+            "mean": "nhảy"
+          }
+        ],
+        "py": "tā huì tiào"
+      },
+      {
+        "t": 51,
+        "text": "小旺,再来一次。",
+        "tr": "Xiao Wang, làm lại lần nữa nào.",
+        "words": [
+          {
+            "w": "再来",
+            "ph": "zài lái",
+            "mean": "làm lại"
+          }
+        ],
+        "py": "xiǎo wàng zài lái yī cì"
+      },
+      {
+        "t": 54,
+        "text": "小旺,你会飞呀。",
+        "tr": "Xiao Wang, cậu biết bay luôn kìa!",
+        "words": [
+          {
+            "w": "飞",
+            "ph": "fēi",
+            "mean": "bay"
+          }
+        ],
+        "py": "xiǎo wàng nǐ huì fēi ya"
+      }
+    ]
+  },
+  {
+    "id": "lfk-9PqSx1E3e-s",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 13: I'm Hungry (凯丽老师的课堂 13: 我饿了)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:21",
+    "emoji": "🍽️",
+    "youtubeId": "9PqSx1E3e-s",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凱莉老师的课堂 十三 我饿了",
+        "tr": "Lớp học của cô Kelly, bài mười ba: Con đói rồi.",
+        "words": [
+          {
+            "w": "饿",
+            "ph": "è",
+            "mean": "đói"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng shí sān wǒ è le"
+      },
+      {
+        "t": 9,
+        "text": "妈妈 你忙吗?",
+        "tr": "Mẹ ơi, mẹ có bận không?",
+        "words": [
+          {
+            "w": "妈妈",
+            "ph": "mā ma",
+            "mean": "mẹ"
+          },
+          {
+            "w": "忙",
+            "ph": "máng",
+            "mean": "bận"
+          }
+        ],
+        "py": "mā mā nǐ máng ma"
+      },
+      {
+        "t": 15,
+        "text": "我很忙。",
+        "tr": "Mẹ bận lắm.",
+        "words": [
+          {
+            "w": "忙",
+            "ph": "máng",
+            "mean": "bận"
+          }
+        ],
+        "py": "wǒ hěn máng"
+      },
+      {
+        "t": 18,
+        "text": "你饿了吗?",
+        "tr": "Con đói chưa?",
+        "words": [
+          {
+            "w": "饿",
+            "ph": "è",
+            "mean": "đói"
+          }
+        ],
+        "py": "nǐ è le ma"
+      },
+      {
+        "t": 21,
+        "text": "对,我饿了。",
+        "tr": "Dạ, con đói rồi.",
+        "words": [
+          {
+            "w": "对",
+            "ph": "duì",
+            "mean": "đúng vậy"
+          },
+          {
+            "w": "饿",
+            "ph": "è",
+            "mean": "đói"
+          }
+        ],
+        "py": "duì wǒ è le"
+      },
+      {
+        "t": 25,
+        "text": "晚饭做好了。",
+        "tr": "Bữa tối làm xong rồi.",
+        "words": [
+          {
+            "w": "晚饭",
+            "ph": "wǎn fàn",
+            "mean": "bữa tối"
+          }
+        ],
+        "py": "wǎn fàn zuò hǎo le"
+      },
+      {
+        "t": 30,
+        "text": "大家快吃吧。",
+        "tr": "Cả nhà ăn thôi nào.",
+        "words": [
+          {
+            "w": "吃",
+            "ph": "chī",
+            "mean": "ăn"
+          }
+        ],
+        "py": "dà jiā kuài chī ba"
+      },
+      {
+        "t": 35,
+        "text": "哇哦,沙拉!我真开心。",
+        "tr": "Ồ, xà lách! Con vui quá.",
+        "words": [
+          {
+            "w": "沙拉",
+            "ph": "shā lā",
+            "mean": "xà lách"
+          },
+          {
+            "w": "开心",
+            "ph": "kāi xīn",
+            "mean": "vui"
+          }
+        ],
+        "py": "wa ó shā lā wǒ zhēn kāi xīn"
+      },
+      {
+        "t": 43,
+        "text": "我饱了。",
+        "tr": "Con no rồi.",
+        "words": [
+          {
+            "w": "饱",
+            "ph": "bǎo",
+            "mean": "no"
+          }
+        ],
+        "py": "wǒ bǎo le"
+      },
+      {
+        "t": 45,
+        "text": "你饱了吗?",
+        "tr": "Con no chưa?",
+        "words": [
+          {
+            "w": "饱",
+            "ph": "bǎo",
+            "mean": "no"
+          }
+        ],
+        "py": "nǐ bǎo le ma"
+      },
+      {
+        "t": 48,
+        "text": "我还没饱。",
+        "tr": "Con vẫn chưa no.",
+        "words": [
+          {
+            "w": "还没",
+            "ph": "hái méi",
+            "mean": "vẫn chưa"
+          },
+          {
+            "w": "饱",
+            "ph": "bǎo",
+            "mean": "no"
+          }
+        ],
+        "py": "wǒ hái méi bǎo"
+      },
+      {
+        "t": 56,
+        "text": "我困了。",
+        "tr": "Con buồn ngủ rồi.",
+        "words": [
+          {
+            "w": "困",
+            "ph": "kùn",
+            "mean": "buồn ngủ"
+          }
+        ],
+        "py": "wǒ kùn le"
+      },
+      {
+        "t": 58,
+        "text": "你困吗?",
+        "tr": "Con buồn ngủ không?",
+        "words": [
+          {
+            "w": "困",
+            "ph": "kùn",
+            "mean": "buồn ngủ"
+          }
+        ],
+        "py": "nǐ kùn ma"
+      },
+      {
+        "t": 60,
+        "text": "我不困。",
+        "tr": "Con không buồn ngủ.",
+        "words": [
+          {
+            "w": "困",
+            "ph": "kùn",
+            "mean": "buồn ngủ"
+          }
+        ],
+        "py": "wǒ bù kùn"
+      },
+      {
+        "t": 63,
+        "text": "我很自豪。",
+        "tr": "Con thấy tự hào lắm.",
+        "words": [
+          {
+            "w": "自豪",
+            "ph": "zì háo",
+            "mean": "tự hào"
+          }
+        ],
+        "py": "wǒ hěn zì háo"
+      }
+    ]
+  },
+  {
+    "id": "lfk-mXmBAu-dUTA",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 14: Wash Your Face (凯丽老师的课堂 14: 洗脸)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "0:57",
+    "emoji": "🧼",
+    "youtubeId": "mXmBAu-dUTA",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凯莉老师的课堂 十四 洗脸",
+        "tr": "Lớp học của cô Kelly, bài mười bốn: Rửa mặt.",
+        "words": [
+          {
+            "w": "洗脸",
+            "ph": "xǐ liǎn",
+            "mean": "rửa mặt"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng shí sì xǐ liǎn"
+      },
+      {
+        "t": 10,
+        "text": "皮特,该洗澡啦。",
+        "tr": "Pete ơi, đến giờ tắm rồi.",
+        "words": [
+          {
+            "w": "洗澡",
+            "ph": "xǐ zǎo",
+            "mean": "tắm"
+          }
+        ],
+        "py": "pí tè gāi xǐ zǎo la"
+      },
+      {
+        "t": 15,
+        "text": "妈妈,我困啦。",
+        "tr": "Mẹ ơi, con buồn ngủ rồi.",
+        "words": [
+          {
+            "w": "妈妈",
+            "ph": "mā ma",
+            "mean": "mẹ"
+          },
+          {
+            "w": "困",
+            "ph": "kùn",
+            "mean": "buồn ngủ"
+          }
+        ],
+        "py": "mā mā wǒ kùn la"
+      },
+      {
+        "t": 20,
+        "text": "快洗脸吧。",
+        "tr": "Rửa mặt đi nào.",
+        "words": [
+          {
+            "w": "洗脸",
+            "ph": "xǐ liǎn",
+            "mean": "rửa mặt"
+          }
+        ],
+        "py": "kuài xǐ liǎn ba"
+      },
+      {
+        "t": 24,
+        "text": "好吧。",
+        "tr": "Dạ được ạ.",
+        "py": "hǎo ba"
+      },
+      {
+        "t": 27,
+        "text": "快洗脚吧。",
+        "tr": "Rửa chân đi nào.",
+        "words": [
+          {
+            "w": "洗脚",
+            "ph": "xǐ jiǎo",
+            "mean": "rửa chân"
+          }
+        ],
+        "py": "kuài xǐ jiǎo ba"
+      },
+      {
+        "t": 32,
+        "text": "皮特,快刷牙吧。",
+        "tr": "Pete ơi, đánh răng đi nào.",
+        "words": [
+          {
+            "w": "刷牙",
+            "ph": "shuā yá",
+            "mean": "đánh răng"
+          }
+        ],
+        "py": "pí tè kuài shuā yá ba"
+      },
+      {
+        "t": 39,
+        "text": "皮特。",
+        "tr": "Pete ơi.",
+        "py": "pí tè"
+      },
+      {
+        "t": 56,
+        "text": "皮特,快刷牙吧。",
+        "tr": "Pete ơi, đánh răng đi nào.",
+        "words": [
+          {
+            "w": "刷牙",
+            "ph": "shuā yá",
+            "mean": "đánh răng"
+          }
+        ],
+        "py": "pí tè kuài shuā yá ba"
+      },
+      {
+        "t": 62,
+        "text": "皮特,快刷牙吧。",
+        "tr": "Pete ơi, đánh răng đi nào.",
+        "words": [
+          {
+            "w": "刷牙",
+            "ph": "shuā yá",
+            "mean": "đánh răng"
+          }
+        ],
+        "py": "pí tè kuài shuā yá ba"
+      },
+      {
+        "t": 68,
+        "text": "皮特,快刷牙吧。",
+        "tr": "Pete ơi, đánh răng đi nào.",
+        "words": [
+          {
+            "w": "刷牙",
+            "ph": "shuā yá",
+            "mean": "đánh răng"
+          }
+        ],
+        "py": "pí tè kuài shuā yá ba"
+      },
+      {
+        "t": 74,
+        "text": "皮特,快刷牙吧。",
+        "tr": "Pete ơi, đánh răng đi nào.",
+        "words": [
+          {
+            "w": "刷牙",
+            "ph": "shuā yá",
+            "mean": "đánh răng"
+          }
+        ],
+        "py": "pí tè kuài shuā yá ba"
+      }
+    ]
+  },
+  {
+    "id": "lfk-eS5tIYXn-Ig",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 15: Can I Watch..(凯丽老师的课堂 15: 我可以看电视吗?)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:07",
+    "emoji": "📺",
+    "youtubeId": "eS5tIYXn-Ig",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凯莉老师的课堂15。我可以看电视吗?",
+        "tr": "Lớp học của cô Kelly, bài mười lăm: Con xem tivi được không?",
+        "words": [
+          {
+            "w": "可以",
+            "ph": "kě yǐ",
+            "mean": "được, có thể"
+          },
+          {
+            "w": "电视",
+            "ph": "diàn shì",
+            "mean": "tivi"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng wǒ kě yǐ kàn diàn shì ma"
+      },
+      {
+        "t": 13,
+        "text": "音语,该睡觉了。",
+        "tr": "Yin Yu ơi, đến giờ đi ngủ rồi.",
+        "words": [
+          {
+            "w": "睡觉",
+            "ph": "shuì jiào",
+            "mean": "đi ngủ"
+          }
+        ],
+        "py": "yīn yǔ gāi shuì jué le"
+      },
+      {
+        "t": 17,
+        "text": "爸爸,我可以玩吗?",
+        "tr": "Bố ơi, con chơi được không?",
+        "words": [
+          {
+            "w": "爸爸",
+            "ph": "bà ba",
+            "mean": "bố"
+          },
+          {
+            "w": "玩",
+            "ph": "wán",
+            "mean": "chơi"
+          }
+        ],
+        "py": "bà bà wǒ kě yǐ wán ma"
+      },
+      {
+        "t": 23,
+        "text": "不可以。",
+        "tr": "Không được đâu.",
+        "words": [
+          {
+            "w": "不可以",
+            "ph": "bù kě yǐ",
+            "mean": "không được"
+          }
+        ],
+        "py": "bù kě yǐ"
+      },
+      {
+        "t": 26,
+        "text": "爸爸,我可以看电视吗?",
+        "tr": "Bố ơi, con xem tivi được không?",
+        "words": [
+          {
+            "w": "电视",
+            "ph": "diàn shì",
+            "mean": "tivi"
+          },
+          {
+            "w": "看",
+            "ph": "kàn",
+            "mean": "xem"
+          }
+        ],
+        "py": "bà bà wǒ kě yǐ kàn diàn shì ma"
+      },
+      {
+        "t": 33,
+        "text": "不可以。",
+        "tr": "Không được đâu.",
+        "words": [
+          {
+            "w": "不可以",
+            "ph": "bù kě yǐ",
+            "mean": "không được"
+          }
+        ],
+        "py": "bù kě yǐ"
+      },
+      {
+        "t": 36,
+        "text": "音语,该睡觉了。",
+        "tr": "Yin Yu ơi, đến giờ đi ngủ rồi.",
+        "words": [
+          {
+            "w": "睡觉",
+            "ph": "shuì jiào",
+            "mean": "đi ngủ"
+          }
+        ],
+        "py": "yīn yǔ gāi shuì jué le"
+      },
+      {
+        "t": 40,
+        "text": "那,我可以看书吗?",
+        "tr": "Vậy, con đọc sách được không ạ?",
+        "words": [
+          {
+            "w": "看书",
+            "ph": "kàn shū",
+            "mean": "đọc sách"
+          }
+        ],
+        "py": "nà wǒ kě yǐ kàn shū ma"
+      },
+      {
+        "t": 46,
+        "text": "可以。我们一起看书吧。",
+        "tr": "Được chứ. Bố con mình cùng đọc sách nhé.",
+        "words": [
+          {
+            "w": "可以",
+            "ph": "kě yǐ",
+            "mean": "được"
+          },
+          {
+            "w": "看书",
+            "ph": "kàn shū",
+            "mean": "đọc sách"
+          }
+        ],
+        "py": "kě yǐ wǒ men yī qǐ kàn shū ba"
+      }
+    ]
+  },
+  {
+    "id": "lfk-8uqyIfFV6Vc",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 16: Wake Up! (凯丽老师的课堂 16: 起床!)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:01",
+    "emoji": "⏰",
+    "youtubeId": "8uqyIfFV6Vc",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凱莉老师的课堂 十六 起床",
+        "tr": "Lớp học của cô Kelly, bài mười sáu: Dậy thôi!",
+        "words": [
+          {
+            "w": "起床",
+            "ph": "qǐ chuáng",
+            "mean": "thức dậy"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng shí liù qǐ chuáng"
+      },
+      {
+        "t": 10,
+        "text": "皮特 起床",
+        "tr": "Pete ơi, dậy thôi.",
+        "words": [
+          {
+            "w": "起床",
+            "ph": "qǐ chuáng",
+            "mean": "thức dậy"
+          }
+        ],
+        "py": "pí tè qǐ chuáng"
+      },
+      {
+        "t": 16,
+        "text": "不要!我很困!",
+        "tr": "Không muốn đâu! Con buồn ngủ lắm!",
+        "words": [
+          {
+            "w": "不要",
+            "ph": "bú yào",
+            "mean": "không muốn"
+          },
+          {
+            "w": "困",
+            "ph": "kùn",
+            "mean": "buồn ngủ"
+          }
+        ],
+        "py": "bù yào wǒ hěn kùn"
+      },
+      {
+        "t": 22,
+        "text": "该起床了!",
+        "tr": "Đến giờ dậy rồi!",
+        "words": [
+          {
+            "w": "起床",
+            "ph": "qǐ chuáng",
+            "mean": "thức dậy"
+          }
+        ],
+        "py": "gāi qǐ chuáng le"
+      },
+      {
+        "t": 25,
+        "text": "不要!我很困!",
+        "tr": "Không muốn đâu! Con buồn ngủ lắm!",
+        "words": [
+          {
+            "w": "不要",
+            "ph": "bú yào",
+            "mean": "không muốn"
+          },
+          {
+            "w": "困",
+            "ph": "kùn",
+            "mean": "buồn ngủ"
+          }
+        ],
+        "py": "bù yào wǒ hěn kùn"
+      },
+      {
+        "t": 33,
+        "text": "皮特 早上好!",
+        "tr": "Pete ơi, chào buổi sáng!",
+        "words": [
+          {
+            "w": "早上好",
+            "ph": "zǎo shang hǎo",
+            "mean": "chào buổi sáng"
+          }
+        ],
+        "py": "pí tè zǎo shàng hǎo"
+      },
+      {
+        "t": 37,
+        "text": "该洗澡了!皮特!",
+        "tr": "Đến giờ tắm rồi! Pete ơi!",
+        "words": [
+          {
+            "w": "洗澡",
+            "ph": "xǐ zǎo",
+            "mean": "tắm"
+          }
+        ],
+        "py": "gāi xǐ zǎo le pí tè"
+      },
+      {
+        "t": 41,
+        "text": "立杀!",
+        "tr": "Ào!",
+        "py": "lì shā"
+      },
+      {
+        "t": 43,
+        "text": "她现在不困了!",
+        "tr": "Bây giờ cô bé hết buồn ngủ rồi!",
+        "words": [
+          {
+            "w": "困",
+            "ph": "kùn",
+            "mean": "buồn ngủ"
+          }
+        ],
+        "py": "tā xiàn zài bù kùn le"
+      },
+      {
+        "t": 55,
+        "text": "皮特 起床",
+        "tr": "Pete ơi, dậy thôi.",
+        "words": [
+          {
+            "w": "起床",
+            "ph": "qǐ chuáng",
+            "mean": "thức dậy"
+          }
+        ],
+        "py": "pí tè qǐ chuáng"
+      }
+    ]
+  },
+  {
+    "id": "lfk-3UuiiaPJP4s",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 17: Where Is...?(凯丽老师的课堂 17: 我的短袖在哪里?)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:23",
+    "emoji": "👕",
+    "youtubeId": "3UuiiaPJP4s",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凱莉老师的课堂17。我的短袖在哪里?",
+        "tr": "Lớp học của cô Kelly, bài mười bảy: Áo cộc tay của con đâu rồi?",
+        "words": [
+          {
+            "w": "短袖",
+            "ph": "duǎn xiù",
+            "mean": "áo cộc tay"
+          },
+          {
+            "w": "哪里",
+            "ph": "nǎ lǐ",
+            "mean": "ở đâu"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng wǒ de duǎn xiù zài nǎ lǐ"
+      },
+      {
+        "t": 14,
+        "text": "沙莉,你的袜子。",
+        "tr": "Sally, tất của con này.",
+        "words": [
+          {
+            "w": "袜子",
+            "ph": "wà zi",
+            "mean": "đôi tất"
+          }
+        ],
+        "py": "shā lì nǐ de wà zi"
+      },
+      {
+        "t": 22,
+        "text": "我的裙子在哪里?",
+        "tr": "Váy của con đâu rồi?",
+        "words": [
+          {
+            "w": "裙子",
+            "ph": "qún zi",
+            "mean": "cái váy"
+          },
+          {
+            "w": "哪里",
+            "ph": "nǎ lǐ",
+            "mean": "ở đâu"
+          }
+        ],
+        "py": "wǒ de qún zi zài nǎ lǐ"
+      },
+      {
+        "t": 28,
+        "text": "在这里。",
+        "tr": "Ở đây này.",
+        "words": [
+          {
+            "w": "这里",
+            "ph": "zhè lǐ",
+            "mean": "ở đây"
+          }
+        ],
+        "py": "zài zhè lǐ"
+      },
+      {
+        "t": 34,
+        "text": "我的包在哪里?",
+        "tr": "Cặp của con đâu rồi?",
+        "words": [
+          {
+            "w": "包",
+            "ph": "bāo",
+            "mean": "cái cặp"
+          },
+          {
+            "w": "哪里",
+            "ph": "nǎ lǐ",
+            "mean": "ở đâu"
+          }
+        ],
+        "py": "wǒ de bāo zài nǎ lǐ"
+      },
+      {
+        "t": 39,
+        "text": "在这里。",
+        "tr": "Ở đây này.",
+        "words": [
+          {
+            "w": "这里",
+            "ph": "zhè lǐ",
+            "mean": "ở đây"
+          }
+        ],
+        "py": "zài zhè lǐ"
+      },
+      {
+        "t": 43,
+        "text": "我的短袖在哪里?",
+        "tr": "Áo cộc tay của con đâu rồi?",
+        "words": [
+          {
+            "w": "短袖",
+            "ph": "duǎn xiù",
+            "mean": "áo cộc tay"
+          },
+          {
+            "w": "哪里",
+            "ph": "nǎ lǐ",
+            "mean": "ở đâu"
+          }
+        ],
+        "py": "wǒ de duǎn xiù zài nǎ lǐ"
+      },
+      {
+        "t": 50,
+        "text": "在这里。",
+        "tr": "Ở đây này.",
+        "words": [
+          {
+            "w": "这里",
+            "ph": "zhè lǐ",
+            "mean": "ở đây"
+          }
+        ],
+        "py": "zài zhè lǐ"
+      },
+      {
+        "t": 54,
+        "text": "不是这个,是黄色的短袖。",
+        "tr": "Không phải cái này, là áo cộc tay màu vàng cơ.",
+        "words": [
+          {
+            "w": "黄色",
+            "ph": "huáng sè",
+            "mean": "màu vàng"
+          },
+          {
+            "w": "短袖",
+            "ph": "duǎn xiù",
+            "mean": "áo cộc tay"
+          }
+        ],
+        "py": "bù shì zhè gè shì huáng sè de duǎn xiù"
+      },
+      {
+        "t": 62,
+        "text": "谢谢你,小旺。",
+        "tr": "Cảm ơn con nhé, Xiao Wang.",
+        "words": [
+          {
+            "w": "谢谢",
+            "ph": "xiè xie",
+            "mean": "cảm ơn"
+          }
+        ],
+        "py": "xiè xiè nǐ xiǎo wàng"
+      },
+      {
+        "t": 66,
+        "text": "小旺真棒!",
+        "tr": "Xiao Wang giỏi quá!",
+        "words": [
+          {
+            "w": "真棒",
+            "ph": "zhēn bàng",
+            "mean": "giỏi quá"
+          }
+        ],
+        "py": "xiǎo wàng zhēn bàng"
+      }
+    ]
+  },
+  {
+    "id": "lfk-Id6UkrKkhsE",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 18: What Do You...(凯丽老师的课堂 18: 你要什么?)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:10",
+    "emoji": "🥞",
+    "youtubeId": "Id6UkrKkhsE",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凯利老师的课堂18,你要什么?",
+        "tr": "Lớp học của cô Kelly, bài mười tám: Con muốn gì nào?",
+        "words": [
+          {
+            "w": "要",
+            "ph": "yào",
+            "mean": "muốn"
+          },
+          {
+            "w": "什么",
+            "ph": "shén me",
+            "mean": "cái gì"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng nǐ yào shén me"
+      },
+      {
+        "t": 11,
+        "text": "早上好。",
+        "tr": "Chào buổi sáng.",
+        "words": [
+          {
+            "w": "早上好",
+            "ph": "zǎo shang hǎo",
+            "mean": "chào buổi sáng"
+          }
+        ],
+        "py": "zǎo shàng hǎo"
+      },
+      {
+        "t": 16,
+        "text": "你要什么?牛奶还是果汁?",
+        "tr": "Con muốn gì nào? Sữa hay nước ép?",
+        "words": [
+          {
+            "w": "牛奶",
+            "ph": "niú nǎi",
+            "mean": "sữa"
+          },
+          {
+            "w": "果汁",
+            "ph": "guǒ zhī",
+            "mean": "nước ép"
+          }
+        ],
+        "py": "nǐ yào shén me niú nǎi hái shì guǒ zhī"
+      },
+      {
+        "t": 22,
+        "text": "请给我牛奶。",
+        "tr": "Cho con xin sữa ạ.",
+        "words": [
+          {
+            "w": "牛奶",
+            "ph": "niú nǎi",
+            "mean": "sữa"
+          }
+        ],
+        "py": "qǐng gěi wǒ niú nǎi"
+      },
+      {
+        "t": 25,
+        "text": "你要什么?煎饼还是麦片?",
+        "tr": "Con muốn gì nào? Bánh kếp hay ngũ cốc?",
+        "words": [
+          {
+            "w": "煎饼",
+            "ph": "jiān bǐng",
+            "mean": "bánh kếp"
+          },
+          {
+            "w": "麦片",
+            "ph": "mài piàn",
+            "mean": "ngũ cốc"
+          }
+        ],
+        "py": "nǐ yào shén me jiān bǐng hái shì mài piàn"
+      },
+      {
+        "t": 32,
+        "text": "请给我煎饼。",
+        "tr": "Cho con xin bánh kếp ạ.",
+        "words": [
+          {
+            "w": "煎饼",
+            "ph": "jiān bǐng",
+            "mean": "bánh kếp"
+          }
+        ],
+        "py": "qǐng gěi wǒ jiān bǐng"
+      },
+      {
+        "t": 40,
+        "text": "真好吃!我爱煎饼。",
+        "tr": "Ngon quá! Con thích bánh kếp lắm.",
+        "words": [
+          {
+            "w": "好吃",
+            "ph": "hǎo chī",
+            "mean": "ngon"
+          },
+          {
+            "w": "煎饼",
+            "ph": "jiān bǐng",
+            "mean": "bánh kếp"
+          }
+        ],
+        "py": "zhēn hǎo chī wǒ ài jiān bǐng"
+      },
+      {
+        "t": 45,
+        "text": "妈妈,我也要煎饼。",
+        "tr": "Mẹ ơi, con cũng muốn bánh kếp.",
+        "words": [
+          {
+            "w": "妈妈",
+            "ph": "mā ma",
+            "mean": "mẹ"
+          },
+          {
+            "w": "煎饼",
+            "ph": "jiān bǐng",
+            "mean": "bánh kếp"
+          }
+        ],
+        "py": "mā mā wǒ yě yào jiān bǐng"
+      },
+      {
+        "t": 49,
+        "text": "妈妈,我也要煎饼。",
+        "tr": "Mẹ ơi, con cũng muốn bánh kếp.",
+        "words": [
+          {
+            "w": "妈妈",
+            "ph": "mā ma",
+            "mean": "mẹ"
+          },
+          {
+            "w": "煎饼",
+            "ph": "jiān bǐng",
+            "mean": "bánh kếp"
+          }
+        ],
+        "py": "mā mā wǒ yě yào jiān bǐng"
+      },
+      {
+        "t": 53,
+        "text": "莉莎,吃你的麦片。",
+        "tr": "Lisa, ăn ngũ cốc của con đi.",
+        "words": [
+          {
+            "w": "麦片",
+            "ph": "mài piàn",
+            "mean": "ngũ cốc"
+          },
+          {
+            "w": "吃",
+            "ph": "chī",
+            "mean": "ăn"
+          }
+        ],
+        "py": "lì shā chī nǐ de mài piàn"
+      }
+    ]
+  },
+  {
+    "id": "lfk-f5YiObnOgmA",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 19: How's the...(凯丽老师的课堂 19: 天气怎么样?)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:48",
+    "emoji": "⛅",
+    "youtubeId": "f5YiObnOgmA",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凱莉老师的课堂 十九 天气怎么样?",
+        "tr": "Lớp học cô Kelly bài 19: Thời tiết thế nào?",
+        "words": [
+          {
+            "w": "天气",
+            "ph": "tiān qì",
+            "mean": "thời tiết"
+          },
+          {
+            "w": "怎么样",
+            "ph": "zěn me yàng",
+            "mean": "thế nào"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng shí jiǔ tiān qì zěn me yàng"
+      },
+      {
+        "t": 17,
+        "text": "天气怎么样?",
+        "tr": "Thời tiết thế nào nhỉ?",
+        "words": [
+          {
+            "w": "天气",
+            "ph": "tiān qì",
+            "mean": "thời tiết"
+          },
+          {
+            "w": "怎么样",
+            "ph": "zěn me yàng",
+            "mean": "thế nào"
+          }
+        ],
+        "py": "tiān qì zěn me yàng"
+      },
+      {
+        "t": 21,
+        "text": "天气很冷。",
+        "tr": "Trời rất lạnh.",
+        "words": [
+          {
+            "w": "冷",
+            "ph": "lěng",
+            "mean": "lạnh"
+          }
+        ],
+        "py": "tiān qì hěn lěng"
+      },
+      {
+        "t": 30,
+        "text": "天气怎么样?",
+        "tr": "Thời tiết thế nào nhỉ?",
+        "words": [
+          {
+            "w": "天气",
+            "ph": "tiān qì",
+            "mean": "thời tiết"
+          }
+        ],
+        "py": "tiān qì zěn me yàng"
+      },
+      {
+        "t": 34,
+        "text": "下雪了。",
+        "tr": "Tuyết rơi rồi.",
+        "words": [
+          {
+            "w": "下雪",
+            "ph": "xià xuě",
+            "mean": "rơi tuyết"
+          }
+        ],
+        "py": "xià xuě le"
+      },
+      {
+        "t": 42,
+        "text": "天气怎么样?",
+        "tr": "Thời tiết thế nào nhỉ?",
+        "words": [
+          {
+            "w": "天气",
+            "ph": "tiān qì",
+            "mean": "thời tiết"
+          }
+        ],
+        "py": "tiān qì zěn me yàng"
+      },
+      {
+        "t": 46,
+        "text": "刮风了。",
+        "tr": "Gió thổi rồi.",
+        "words": [
+          {
+            "w": "刮风",
+            "ph": "guā fēng",
+            "mean": "nổi gió"
+          }
+        ],
+        "py": "guā fēng le"
+      },
+      {
+        "t": 49,
+        "text": "天很晕。",
+        "tr": "Trời âm u quá.",
+        "words": [
+          {
+            "w": "天",
+            "ph": "tiān",
+            "mean": "trời"
+          }
+        ],
+        "py": "tiān hěn yūn"
+      },
+      {
+        "t": 56,
+        "text": "天气怎么样?",
+        "tr": "Thời tiết thế nào nhỉ?",
+        "words": [
+          {
+            "w": "怎么样",
+            "ph": "zěn me yàng",
+            "mean": "thế nào"
+          }
+        ],
+        "py": "tiān qì zěn me yàng"
+      },
+      {
+        "t": 60,
+        "text": "是晴天。",
+        "tr": "Trời nắng đẹp.",
+        "words": [
+          {
+            "w": "晴天",
+            "ph": "qíng tiān",
+            "mean": "trời nắng"
+          }
+        ],
+        "py": "shì qíng tiān"
+      },
+      {
+        "t": 64,
+        "text": "我们一起去农场吧。",
+        "tr": "Chúng mình cùng đi trang trại nào.",
+        "words": [
+          {
+            "w": "农场",
+            "ph": "nóng chǎng",
+            "mean": "trang trại"
+          },
+          {
+            "w": "一起",
+            "ph": "yì qǐ",
+            "mean": "cùng nhau"
+          }
+        ],
+        "py": "wǒ men yī qǐ qù nóng chǎng ba"
+      },
+      {
+        "t": 75,
+        "text": "老师,下雨了。",
+        "tr": "Cô ơi, mưa rồi.",
+        "words": [
+          {
+            "w": "下雨",
+            "ph": "xià yǔ",
+            "mean": "mưa"
+          },
+          {
+            "w": "老师",
+            "ph": "lǎo shī",
+            "mean": "cô giáo"
+          }
+        ],
+        "py": "lǎo shī xià yǔ le"
+      },
+      {
+        "t": 81,
+        "text": "老师,下雨了。",
+        "tr": "Cô ơi, mưa rồi.",
+        "words": [
+          {
+            "w": "下雨",
+            "ph": "xià yǔ",
+            "mean": "mưa"
+          }
+        ],
+        "py": "lǎo shī xià yǔ le"
+      },
+      {
+        "t": 85,
+        "text": "老师,下雨了。",
+        "tr": "Cô ơi, mưa rồi.",
+        "words": [
+          {
+            "w": "下雨",
+            "ph": "xià yǔ",
+            "mean": "mưa"
+          }
+        ],
+        "py": "lǎo shī xià yǔ le"
+      },
+      {
+        "t": 88,
+        "text": "皮特",
+        "tr": "Pete ơi!",
+        "py": "pí tè"
+      }
+    ]
+  },
+  {
+    "id": "lfk-2KcO78CAFwg",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 20: What's That? (凯丽老师的课堂 20: 那是什么?)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:13",
+    "emoji": "🐑",
+    "youtubeId": "2KcO78CAFwg",
+    "segments": [
+      {
+        "t": 0,
+        "text": "Kellie 老师的课堂二十 那是什么?",
+        "tr": "Lớp học cô Kelly bài 20: Kia là gì?",
+        "words": [
+          {
+            "w": "那是什么",
+            "ph": "nà shì shén me",
+            "mean": "kia là gì"
+          }
+        ],
+        "py": "lǎo shī de kè táng èr shí nà shì shén me"
+      },
+      {
+        "t": 17,
+        "text": "这是什么?",
+        "tr": "Đây là gì nhỉ?",
+        "words": [
+          {
+            "w": "什么",
+            "ph": "shén me",
+            "mean": "gì"
+          }
+        ],
+        "py": "zhè shì shén me"
+      },
+      {
+        "t": 27,
+        "text": "这是羊。",
+        "tr": "Đây là con cừu.",
+        "words": [
+          {
+            "w": "羊",
+            "ph": "yáng",
+            "mean": "con cừu"
+          }
+        ],
+        "py": "zhè shì yáng"
+      },
+      {
+        "t": 32,
+        "text": "那是什么?",
+        "tr": "Kia là gì nhỉ?",
+        "words": [
+          {
+            "w": "什么",
+            "ph": "shén me",
+            "mean": "gì"
+          }
+        ],
+        "py": "nà shì shén me"
+      },
+      {
+        "t": 39,
+        "text": "那是牛。",
+        "tr": "Kia là con bò.",
+        "words": [
+          {
+            "w": "牛",
+            "ph": "niú",
+            "mean": "con bò"
+          }
+        ],
+        "py": "nà shì niú"
+      },
+      {
+        "t": 43,
+        "text": "那是什么?",
+        "tr": "Kia là gì nhỉ?",
+        "words": [
+          {
+            "w": "什么",
+            "ph": "shén me",
+            "mean": "gì"
+          }
+        ],
+        "py": "nà shì shén me"
+      },
+      {
+        "t": 50,
+        "text": "那是马。",
+        "tr": "Kia là con ngựa.",
+        "words": [
+          {
+            "w": "马",
+            "ph": "mǎ",
+            "mean": "con ngựa"
+          }
+        ],
+        "py": "nà shì mǎ"
+      }
+    ]
+  },
+  {
+    "id": "lfk-HR_ViHPxAJw",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 21: Is This a...(凯丽老师的课堂 21: 这是胡萝卜吗?)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:48",
+    "emoji": "🥕",
+    "youtubeId": "HR_ViHPxAJw",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凱莉老师的课堂 二十一",
+        "tr": "Lớp học cô Kelly bài 21.",
+        "py": "kǎi lì lǎo shī de kè táng èr shí yī"
+      },
+      {
+        "t": 5,
+        "text": "这是胡萝卜吗?",
+        "tr": "Đây là củ cà rốt phải không?",
+        "words": [
+          {
+            "w": "胡萝卜",
+            "ph": "hú luó bo",
+            "mean": "cà rốt"
+          }
+        ],
+        "py": "zhè shì hú luó bo ma"
+      },
+      {
+        "t": 17,
+        "text": "我们有许多蔬菜。",
+        "tr": "Chúng mình có thật nhiều rau.",
+        "words": [
+          {
+            "w": "蔬菜",
+            "ph": "shū cài",
+            "mean": "rau"
+          },
+          {
+            "w": "许多",
+            "ph": "xǔ duō",
+            "mean": "rất nhiều"
+          }
+        ],
+        "py": "wǒ men yǒu xǔ duō shū cài"
+      },
+      {
+        "t": 24,
+        "text": "这是玉米吗?",
+        "tr": "Đây là bắp ngô phải không?",
+        "words": [
+          {
+            "w": "玉米",
+            "ph": "yù mǐ",
+            "mean": "ngô"
+          }
+        ],
+        "py": "zhè shì yù mǐ ma"
+      },
+      {
+        "t": 28,
+        "text": "这不是玉米。",
+        "tr": "Đây không phải bắp ngô.",
+        "words": [
+          {
+            "w": "玉米",
+            "ph": "yù mǐ",
+            "mean": "ngô"
+          }
+        ],
+        "py": "zhè bù shì yù mǐ"
+      },
+      {
+        "t": 38,
+        "text": "这是胡萝卜吗?",
+        "tr": "Đây là củ cà rốt phải không?",
+        "words": [
+          {
+            "w": "胡萝卜",
+            "ph": "hú luó bo",
+            "mean": "cà rốt"
+          }
+        ],
+        "py": "zhè shì hú luó bo ma"
+      },
+      {
+        "t": 44,
+        "text": "是的,这是胡萝卜。",
+        "tr": "Đúng rồi, đây là củ cà rốt.",
+        "words": [
+          {
+            "w": "是的",
+            "ph": "shì de",
+            "mean": "đúng vậy"
+          },
+          {
+            "w": "胡萝卜",
+            "ph": "hú luó bo",
+            "mean": "cà rốt"
+          }
+        ],
+        "py": "shì de zhè shì hú luó bo"
+      },
+      {
+        "t": 53,
+        "text": "这是卷心菜吗?",
+        "tr": "Đây là bắp cải phải không?",
+        "words": [
+          {
+            "w": "卷心菜",
+            "ph": "juǎn xīn cài",
+            "mean": "bắp cải"
+          }
+        ],
+        "py": "zhè shì juǎn xīn cài ma"
+      },
+      {
+        "t": 57,
+        "text": "不是,这是生菜。",
+        "tr": "Không phải, đây là rau xà lách.",
+        "words": [
+          {
+            "w": "生菜",
+            "ph": "shēng cài",
+            "mean": "xà lách"
+          }
+        ],
+        "py": "bù shì zhè shì shēng cài"
+      },
+      {
+        "t": 67,
+        "text": "这是黄瓜吗?",
+        "tr": "Đây là quả dưa chuột phải không?",
+        "words": [
+          {
+            "w": "黄瓜",
+            "ph": "huáng guā",
+            "mean": "dưa chuột"
+          }
+        ],
+        "py": "zhè shì huáng guā ma"
+      },
+      {
+        "t": 73,
+        "text": "是的,这是黄瓜。",
+        "tr": "Đúng rồi, đây là quả dưa chuột.",
+        "words": [
+          {
+            "w": "黄瓜",
+            "ph": "huáng guā",
+            "mean": "dưa chuột"
+          }
+        ],
+        "py": "shì de zhè shì huáng guā"
+      },
+      {
+        "t": 83,
+        "text": "这是人吗?",
+        "tr": "Đây là người phải không?",
+        "words": [
+          {
+            "w": "人",
+            "ph": "rén",
+            "mean": "người"
+          }
+        ],
+        "py": "zhè shì rén ma"
+      },
+      {
+        "t": 86,
+        "text": "不是,这是南瓜。",
+        "tr": "Không phải, đây là quả bí ngô.",
+        "words": [
+          {
+            "w": "南瓜",
+            "ph": "nán guā",
+            "mean": "bí ngô"
+          }
+        ],
+        "py": "bù shì zhè shì nán guā"
+      }
+    ]
+  },
+  {
+    "id": "lfk-8h9dHDi5qNg",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 22: This Is My Bat(凯丽老师的课堂 22: 这是我的球棒)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:59",
+    "emoji": "⚾",
+    "youtubeId": "8h9dHDi5qNg",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凱莉老师的课堂二十二,这是我的球棒。",
+        "tr": "Lớp học cô Kelly bài 22: Đây là gậy bóng chày của mình.",
+        "words": [
+          {
+            "w": "球棒",
+            "ph": "qiú bàng",
+            "mean": "gậy bóng chày"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng èr shí èr zhè shì wǒ de qiú bàng"
+      },
+      {
+        "t": 16,
+        "text": "这是我的头盔。",
+        "tr": "Đây là mũ bảo hiểm của mình.",
+        "words": [
+          {
+            "w": "头盔",
+            "ph": "tóu kuī",
+            "mean": "mũ bảo hiểm"
+          }
+        ],
+        "py": "zhè shì wǒ de tóu kuī"
+      },
+      {
+        "t": 21,
+        "text": "这是莎莉的头盔。",
+        "tr": "Đây là mũ bảo hiểm của Sally.",
+        "words": [
+          {
+            "w": "头盔",
+            "ph": "tóu kuī",
+            "mean": "mũ bảo hiểm"
+          }
+        ],
+        "py": "zhè shì shā lì de tóu kuī"
+      },
+      {
+        "t": 31,
+        "text": "这是我的包。",
+        "tr": "Đây là cái túi của mình.",
+        "words": [
+          {
+            "w": "包",
+            "ph": "bāo",
+            "mean": "cái túi"
+          }
+        ],
+        "py": "zhè shì wǒ de bāo"
+      },
+      {
+        "t": 37,
+        "text": "这是我的风筝。",
+        "tr": "Đây là con diều của mình.",
+        "words": [
+          {
+            "w": "风筝",
+            "ph": "fēng zheng",
+            "mean": "con diều"
+          }
+        ],
+        "py": "zhè shì wǒ de fēng zhēng"
+      },
+      {
+        "t": 44,
+        "text": "这是你的球。",
+        "tr": "Đây là quả bóng của bạn.",
+        "words": [
+          {
+            "w": "球",
+            "ph": "qiú",
+            "mean": "quả bóng"
+          }
+        ],
+        "py": "zhè shì nǐ de qiú"
+      },
+      {
+        "t": 48,
+        "text": "谢谢你,明宇。",
+        "tr": "Cảm ơn bạn, Minwoo.",
+        "words": [
+          {
+            "w": "谢谢",
+            "ph": "xiè xie",
+            "mean": "cảm ơn"
+          }
+        ],
+        "py": "xiè xiè nǐ míng yǔ"
+      },
+      {
+        "t": 53,
+        "text": "这是明宇的球棒。",
+        "tr": "Đây là gậy bóng chày của Minwoo.",
+        "words": [
+          {
+            "w": "球棒",
+            "ph": "qiú bàng",
+            "mean": "gậy bóng chày"
+          }
+        ],
+        "py": "zhè shì míng yǔ de qiú bàng"
+      },
+      {
+        "t": 61,
+        "text": "这是你的棒球手套。",
+        "tr": "Đây là găng tay bóng chày của bạn.",
+        "words": [
+          {
+            "w": "棒球",
+            "ph": "bàng qiú",
+            "mean": "bóng chày"
+          },
+          {
+            "w": "手套",
+            "ph": "shǒu tào",
+            "mean": "găng tay"
+          }
+        ],
+        "py": "zhè shì nǐ de bàng qiú shǒu tào"
+      },
+      {
+        "t": 67,
+        "text": "不对,那是我的棒球手套。",
+        "tr": "Không đúng, kia là găng tay bóng chày của mình.",
+        "words": [
+          {
+            "w": "手套",
+            "ph": "shǒu tào",
+            "mean": "găng tay"
+          }
+        ],
+        "py": "bù duì nà shì wǒ de bàng qiú shǒu tào"
+      },
+      {
+        "t": 76,
+        "text": "莎莉,明宇,快看!",
+        "tr": "Sally, Minwoo, mau nhìn kìa!",
+        "words": [
+          {
+            "w": "快看",
+            "ph": "kuài kàn",
+            "mean": "mau nhìn"
+          }
+        ],
+        "py": "shā lì míng yǔ kuài kàn"
+      },
+      {
+        "t": 84,
+        "text": "那是什么?",
+        "tr": "Kia là gì vậy?",
+        "words": [
+          {
+            "w": "什么",
+            "ph": "shén me",
+            "mean": "gì"
+          }
+        ],
+        "py": "nà shì shén me"
+      },
+      {
+        "t": 90,
+        "text": "那是你的棒球手套。",
+        "tr": "Kia là găng tay bóng chày của bạn.",
+        "words": [
+          {
+            "w": "手套",
+            "ph": "shǒu tào",
+            "mean": "găng tay"
+          }
+        ],
+        "py": "nà shì nǐ de bàng qiú shǒu tào"
+      },
+      {
+        "t": 98,
+        "text": "我们一起玩吧!",
+        "tr": "Chúng mình cùng chơi nào!",
+        "words": [
+          {
+            "w": "玩",
+            "ph": "wán",
+            "mean": "chơi"
+          }
+        ],
+        "py": "wǒ men yī qǐ wán ba"
+      }
+    ]
+  },
+  {
+    "id": "lfk-VTyyOxtwlHM",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 23: Can You Ride..(凯丽老师的课堂 23: 你会骑车吗?)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "2:00",
+    "emoji": "🚲",
+    "youtubeId": "VTyyOxtwlHM",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凱莉老师的课堂二十三 你会骑车吗?",
+        "tr": "Lớp học cô Kelly bài 23: Bạn biết đi xe không?",
+        "words": [
+          {
+            "w": "骑车",
+            "ph": "qí chē",
+            "mean": "đi xe"
+          },
+          {
+            "w": "会",
+            "ph": "huì",
+            "mean": "biết, có thể"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng èr shí sān nǐ huì qí chē ma"
+      },
+      {
+        "t": 16,
+        "text": "你会骑自行车吗?",
+        "tr": "Bạn biết đi xe đạp không?",
+        "words": [
+          {
+            "w": "自行车",
+            "ph": "zì xíng chē",
+            "mean": "xe đạp"
+          },
+          {
+            "w": "骑",
+            "ph": "qí",
+            "mean": "đi (xe)"
+          }
+        ],
+        "py": "nǐ huì qí zì xíng chē ma"
+      },
+      {
+        "t": 21,
+        "text": "我会骑。",
+        "tr": "Mình biết đi.",
+        "words": [
+          {
+            "w": "会骑",
+            "ph": "huì qí",
+            "mean": "biết đi xe"
+          }
+        ],
+        "py": "wǒ huì qí"
+      },
+      {
+        "t": 23,
+        "text": "你会滑轮滑吗?",
+        "tr": "Bạn biết trượt patin không?",
+        "words": [
+          {
+            "w": "轮滑",
+            "ph": "lún huá",
+            "mean": "trượt patin"
+          }
+        ],
+        "py": "nǐ huì huá lún huá ma"
+      },
+      {
+        "t": 26,
+        "text": "我不会。",
+        "tr": "Mình không biết.",
+        "words": [
+          {
+            "w": "不会",
+            "ph": "bú huì",
+            "mean": "không biết"
+          }
+        ],
+        "py": "wǒ bù huì"
+      },
+      {
+        "t": 34,
+        "text": "你会画画吗?",
+        "tr": "Bạn biết vẽ tranh không?",
+        "words": [
+          {
+            "w": "画画",
+            "ph": "huà huà",
+            "mean": "vẽ tranh"
+          }
+        ],
+        "py": "nǐ huì huà huà ma"
+      },
+      {
+        "t": 37,
+        "text": "我会画画。",
+        "tr": "Mình biết vẽ tranh.",
+        "words": [
+          {
+            "w": "画画",
+            "ph": "huà huà",
+            "mean": "vẽ tranh"
+          }
+        ],
+        "py": "wǒ huì huà huà"
+      },
+      {
+        "t": 54,
+        "text": "沙蒂,你会唱歌吗?",
+        "tr": "Shati ơi, bạn biết hát không?",
+        "words": [
+          {
+            "w": "唱歌",
+            "ph": "chàng gē",
+            "mean": "hát"
+          }
+        ],
+        "py": "shā dì nǐ huì chàng gē ma"
+      },
+      {
+        "t": 60,
+        "text": "我会唱歌。",
+        "tr": "Mình biết hát.",
+        "words": [
+          {
+            "w": "唱歌",
+            "ph": "chàng gē",
+            "mean": "hát"
+          }
+        ],
+        "py": "wǒ huì chàng gē"
+      },
+      {
+        "t": 73,
+        "text": "皮特,你会打棒球吗?",
+        "tr": "Pete ơi, bạn biết chơi bóng chày không?",
+        "words": [
+          {
+            "w": "打棒球",
+            "ph": "dǎ bàng qiú",
+            "mean": "chơi bóng chày"
+          }
+        ],
+        "py": "pí tè nǐ huì dǎ bàng qiú ma"
+      },
+      {
+        "t": 78,
+        "text": "我不会。",
+        "tr": "Mình không biết.",
+        "words": [
+          {
+            "w": "不会",
+            "ph": "bú huì",
+            "mean": "không biết"
+          }
+        ],
+        "py": "wǒ bù huì"
+      },
+      {
+        "t": 84,
+        "text": "鸣语,沙蒂,你们会踢足球吗?",
+        "tr": "Minwoo, Shati ơi, các bạn biết đá bóng không?",
+        "words": [
+          {
+            "w": "踢足球",
+            "ph": "tī zú qiú",
+            "mean": "đá bóng"
+          }
+        ],
+        "py": "míng yǔ shā dì nǐ men huì tī zú qiú ma"
+      },
+      {
+        "t": 94,
+        "text": "我不会。",
+        "tr": "Mình không biết.",
+        "words": [
+          {
+            "w": "不会",
+            "ph": "bú huì",
+            "mean": "không biết"
+          }
+        ],
+        "py": "wǒ bù huì"
+      },
+      {
+        "t": 97,
+        "text": "我会。",
+        "tr": "Mình biết.",
+        "words": [
+          {
+            "w": "会",
+            "ph": "huì",
+            "mean": "biết"
+          }
+        ],
+        "py": "wǒ huì"
+      }
+    ]
+  },
+  {
+    "id": "lfk-db2FoEhVC9A",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 24: How Many Ants?(凯丽老师的课堂 24: 多少只蚂蚁?)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:29",
+    "emoji": "🐜",
+    "youtubeId": "db2FoEhVC9A",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凱莉老师的课堂二十四 多少只蚂蚁",
+        "tr": "Lớp học cô Kelly bài 24: Có bao nhiêu con kiến?",
+        "words": [
+          {
+            "w": "多少",
+            "ph": "duō shao",
+            "mean": "bao nhiêu"
+          },
+          {
+            "w": "蚂蚁",
+            "ph": "mǎ yǐ",
+            "mean": "con kiến"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng èr shí sì duō shǎo zhǐ mǎ yǐ"
+      },
+      {
+        "t": 12,
+        "text": "我饿了。",
+        "tr": "Mình đói rồi.",
+        "words": [
+          {
+            "w": "饿",
+            "ph": "è",
+            "mean": "đói"
+          }
+        ],
+        "py": "wǒ è le"
+      },
+      {
+        "t": 20,
+        "text": "哦,有一只蚂蚁。",
+        "tr": "Ồ, có một con kiến.",
+        "words": [
+          {
+            "w": "蚂蚁",
+            "ph": "mǎ yǐ",
+            "mean": "con kiến"
+          }
+        ],
+        "py": "ó yǒu yī zhǐ mǎ yǐ"
+      },
+      {
+        "t": 26,
+        "text": "有多少只蚂蚁?",
+        "tr": "Có bao nhiêu con kiến nhỉ?",
+        "words": [
+          {
+            "w": "多少",
+            "ph": "duō shao",
+            "mean": "bao nhiêu"
+          },
+          {
+            "w": "蚂蚁",
+            "ph": "mǎ yǐ",
+            "mean": "con kiến"
+          }
+        ],
+        "py": "yǒu duō shǎo zhǐ mǎ yǐ"
+      },
+      {
+        "t": 31,
+        "text": "一只蚂蚁,两只蚂蚁,三只蚂蚁。",
+        "tr": "Một con kiến, hai con kiến, ba con kiến.",
+        "words": [
+          {
+            "w": "蚂蚁",
+            "ph": "mǎ yǐ",
+            "mean": "con kiến"
+          }
+        ],
+        "py": "yī zhǐ mǎ yǐ liǎng zhǐ mǎ yǐ sān zhǐ mǎ yǐ"
+      },
+      {
+        "t": 40,
+        "text": "六只蚂蚁,七只蚂蚁,八只蚂蚁。",
+        "tr": "Sáu con kiến, bảy con kiến, tám con kiến.",
+        "words": [
+          {
+            "w": "八",
+            "ph": "bā",
+            "mean": "tám"
+          }
+        ],
+        "py": "liù zhǐ mǎ yǐ qī zhǐ mǎ yǐ bā zhǐ mǎ yǐ"
+      },
+      {
+        "t": 50,
+        "text": "哦,有一只蜜蜂。",
+        "tr": "Ồ, có một con ong.",
+        "words": [
+          {
+            "w": "蜜蜂",
+            "ph": "mì fēng",
+            "mean": "con ong"
+          }
+        ],
+        "py": "ó yǒu yī zhǐ mì fēng"
+      },
+      {
+        "t": 56,
+        "text": "有多少只蜜蜂?",
+        "tr": "Có bao nhiêu con ong nhỉ?",
+        "words": [
+          {
+            "w": "多少",
+            "ph": "duō shao",
+            "mean": "bao nhiêu"
+          },
+          {
+            "w": "蜜蜂",
+            "ph": "mì fēng",
+            "mean": "con ong"
+          }
+        ],
+        "py": "yǒu duō shǎo zhǐ mì fēng"
+      },
+      {
+        "t": 61,
+        "text": "一只蜜蜂,两只蜜蜂,三只蜜蜂。",
+        "tr": "Một con ong, hai con ong, ba con ong.",
+        "words": [
+          {
+            "w": "蜜蜂",
+            "ph": "mì fēng",
+            "mean": "con ong"
+          }
+        ],
+        "py": "yī zhǐ mì fēng liǎng zhǐ mì fēng sān zhǐ mì fēng"
+      },
+      {
+        "t": 71,
+        "text": "快跑!",
+        "tr": "Mau chạy đi!",
+        "words": [
+          {
+            "w": "快跑",
+            "ph": "kuài pǎo",
+            "mean": "mau chạy"
+          }
+        ],
+        "py": "kuài pǎo"
+      },
+      {
+        "t": 80,
+        "text": "小蜜蜂",
+        "tr": "Chú ong nhỏ.",
+        "words": [
+          {
+            "w": "蜜蜂",
+            "ph": "mì fēng",
+            "mean": "con ong"
+          }
+        ],
+        "py": "xiǎo mì fēng"
+      }
+    ]
+  },
+  {
+    "id": "lfk-XI_sH77zN20",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 25: They're Bananas(凯丽老师的课堂 25: 这些是香蕉)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:54",
+    "emoji": "🍌",
+    "youtubeId": "XI_sH77zN20",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凯莉老师的课堂 二十五",
+        "tr": "Lớp học cô Kelly bài 25.",
+        "py": "kǎi lì lǎo shī de kè táng èr shí wǔ"
+      },
+      {
+        "t": 5,
+        "text": "这些是香蕉",
+        "tr": "Đây là những quả chuối.",
+        "words": [
+          {
+            "w": "香蕉",
+            "ph": "xiāng jiāo",
+            "mean": "quả chuối"
+          },
+          {
+            "w": "这些",
+            "ph": "zhè xiē",
+            "mean": "những cái này"
+          }
+        ],
+        "py": "zhè xiē shì xiāng jiāo"
+      },
+      {
+        "t": 16,
+        "text": "这些是什么?",
+        "tr": "Đây là những gì nhỉ?",
+        "words": [
+          {
+            "w": "什么",
+            "ph": "shén me",
+            "mean": "gì"
+          }
+        ],
+        "py": "zhè xiē shì shén me"
+      },
+      {
+        "t": 21,
+        "text": "这些是猫。",
+        "tr": "Đây là những con mèo.",
+        "words": [
+          {
+            "w": "猫",
+            "ph": "māo",
+            "mean": "con mèo"
+          }
+        ],
+        "py": "zhè xiē shì māo"
+      },
+      {
+        "t": 25,
+        "text": "这些是橘子。",
+        "tr": "Đây là những quả quýt.",
+        "words": [
+          {
+            "w": "橘子",
+            "ph": "jú zi",
+            "mean": "quả quýt"
+          }
+        ],
+        "py": "zhè xiē shì jú zi"
+      },
+      {
+        "t": 31,
+        "text": "这些是什么?",
+        "tr": "Đây là những gì nhỉ?",
+        "words": [
+          {
+            "w": "什么",
+            "ph": "shén me",
+            "mean": "gì"
+          }
+        ],
+        "py": "zhè xiē shì shén me"
+      },
+      {
+        "t": 37,
+        "text": "这些是章鱼。",
+        "tr": "Đây là những con bạch tuộc.",
+        "words": [
+          {
+            "w": "章鱼",
+            "ph": "zhāng yú",
+            "mean": "bạch tuộc"
+          }
+        ],
+        "py": "zhè xiē shì zhāng yú"
+      },
+      {
+        "t": 42,
+        "text": "这些是香蕉。",
+        "tr": "Đây là những quả chuối.",
+        "words": [
+          {
+            "w": "香蕉",
+            "ph": "xiāng jiāo",
+            "mean": "quả chuối"
+          }
+        ],
+        "py": "zhè xiē shì xiāng jiāo"
+      },
+      {
+        "t": 52,
+        "text": "这些是什么?",
+        "tr": "Đây là những gì nhỉ?",
+        "words": [
+          {
+            "w": "什么",
+            "ph": "shén me",
+            "mean": "gì"
+          }
+        ],
+        "py": "zhè xiē shì shén me"
+      },
+      {
+        "t": 56,
+        "text": "这些是什么?",
+        "tr": "Đây là những gì nhỉ?",
+        "words": [
+          {
+            "w": "什么",
+            "ph": "shén me",
+            "mean": "gì"
+          }
+        ],
+        "py": "zhè xiē shì shén me"
+      },
+      {
+        "t": 61,
+        "text": "这些是小鸟。",
+        "tr": "Đây là những con chim nhỏ.",
+        "words": [
+          {
+            "w": "小鸟",
+            "ph": "xiǎo niǎo",
+            "mean": "chim nhỏ"
+          }
+        ],
+        "py": "zhè xiē shì xiǎo niǎo"
+      },
+      {
+        "t": 66,
+        "text": "这些是苹果。",
+        "tr": "Đây là những quả táo.",
+        "words": [
+          {
+            "w": "苹果",
+            "ph": "píng guǒ",
+            "mean": "quả táo"
+          }
+        ],
+        "py": "zhè xiē shì píng guǒ"
+      },
+      {
+        "t": 77,
+        "text": "这些是什么?",
+        "tr": "Đây là những gì nhỉ?",
+        "words": [
+          {
+            "w": "什么",
+            "ph": "shén me",
+            "mean": "gì"
+          }
+        ],
+        "py": "zhè xiē shì shén me"
+      },
+      {
+        "t": 84,
+        "text": "这些是鱼。",
+        "tr": "Đây là những con cá.",
+        "words": [
+          {
+            "w": "鱼",
+            "ph": "yú",
+            "mean": "con cá"
+          }
+        ],
+        "py": "zhè xiē shì yú"
+      },
+      {
+        "t": 87,
+        "text": "这些是鱼。",
+        "tr": "Đây là những con cá.",
+        "words": [
+          {
+            "w": "鱼",
+            "ph": "yú",
+            "mean": "con cá"
+          }
+        ],
+        "py": "zhè xiē shì yú"
+      },
+      {
+        "t": 91,
+        "text": "这些是柠檬。",
+        "tr": "Đây là những quả chanh.",
+        "words": [
+          {
+            "w": "柠檬",
+            "ph": "níng méng",
+            "mean": "quả chanh"
+          }
+        ],
+        "py": "zhè xiē shì níng méng"
+      },
+      {
+        "t": 97,
+        "text": "真可爱!",
+        "tr": "Đáng yêu quá!",
+        "words": [
+          {
+            "w": "可爱",
+            "ph": "kě ài",
+            "mean": "đáng yêu"
+          }
+        ],
+        "py": "zhēn kě ài"
+      }
+    ]
+  },
+  {
+    "id": "lfk-yeTTgRZjofs",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 26: They're Light (凯丽老师的课堂 26: 它们很轻)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:10",
+    "emoji": "🍉",
+    "youtubeId": "yeTTgRZjofs",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凯莉老师的课堂,二十六。",
+        "tr": "Lớp học cô Kelly bài 26.",
+        "py": "kǎi lì lǎo shī de kè táng èr shí liù"
+      },
+      {
+        "t": 5,
+        "text": "她们很轻。",
+        "tr": "Chúng rất nhẹ.",
+        "words": [
+          {
+            "w": "轻",
+            "ph": "qīng",
+            "mean": "nhẹ"
+          }
+        ],
+        "py": "tā men hěn qīng"
+      },
+      {
+        "t": 13,
+        "text": "这是西瓜。",
+        "tr": "Đây là quả dưa hấu.",
+        "words": [
+          {
+            "w": "西瓜",
+            "ph": "xī guā",
+            "mean": "dưa hấu"
+          }
+        ],
+        "py": "zhè shì xī guā"
+      },
+      {
+        "t": 16,
+        "text": "它很大。",
+        "tr": "Nó rất to.",
+        "words": [
+          {
+            "w": "大",
+            "ph": "dà",
+            "mean": "to, lớn"
+          }
+        ],
+        "py": "tā hěn dà"
+      },
+      {
+        "t": 21,
+        "text": "这是柠檬。",
+        "tr": "Đây là quả chanh.",
+        "words": [
+          {
+            "w": "柠檬",
+            "ph": "níng méng",
+            "mean": "quả chanh"
+          }
+        ],
+        "py": "zhè shì níng méng"
+      },
+      {
+        "t": 24,
+        "text": "它很小。",
+        "tr": "Nó rất nhỏ.",
+        "words": [
+          {
+            "w": "小",
+            "ph": "xiǎo",
+            "mean": "nhỏ"
+          }
+        ],
+        "py": "tā hěn xiǎo"
+      },
+      {
+        "t": 30,
+        "text": "这些是苹果。",
+        "tr": "Đây là những quả táo.",
+        "words": [
+          {
+            "w": "苹果",
+            "ph": "píng guǒ",
+            "mean": "quả táo"
+          }
+        ],
+        "py": "zhè xiē shì píng guǒ"
+      },
+      {
+        "t": 34,
+        "text": "它们很重。",
+        "tr": "Chúng rất nặng.",
+        "words": [
+          {
+            "w": "重",
+            "ph": "zhòng",
+            "mean": "nặng"
+          }
+        ],
+        "py": "tā men hěn zhòng"
+      },
+      {
+        "t": 37,
+        "text": "这些是葡萄。",
+        "tr": "Đây là những chùm nho.",
+        "words": [
+          {
+            "w": "葡萄",
+            "ph": "pú tao",
+            "mean": "quả nho"
+          }
+        ],
+        "py": "zhè xiē shì pú táo"
+      },
+      {
+        "t": 42,
+        "text": "它们很轻。",
+        "tr": "Chúng rất nhẹ.",
+        "words": [
+          {
+            "w": "轻",
+            "ph": "qīng",
+            "mean": "nhẹ"
+          }
+        ],
+        "py": "tā men hěn qīng"
+      },
+      {
+        "t": 47,
+        "text": "它们很短。",
+        "tr": "Chúng rất ngắn.",
+        "words": [
+          {
+            "w": "短",
+            "ph": "duǎn",
+            "mean": "ngắn"
+          }
+        ],
+        "py": "tā men hěn duǎn"
+      },
+      {
+        "t": 52,
+        "text": "它们很长。",
+        "tr": "Chúng rất dài.",
+        "words": [
+          {
+            "w": "长",
+            "ph": "cháng",
+            "mean": "dài"
+          }
+        ],
+        "py": "tā men hěn zhǎng"
+      },
+      {
+        "t": 60,
+        "text": "这是小苹果。",
+        "tr": "Đây là quả táo nhỏ.",
+        "words": [
+          {
+            "w": "小",
+            "ph": "xiǎo",
+            "mean": "nhỏ"
+          },
+          {
+            "w": "苹果",
+            "ph": "píng guǒ",
+            "mean": "quả táo"
+          }
+        ],
+        "py": "zhè shì xiǎo píng guǒ"
+      }
+    ]
+  },
+  {
+    "id": "lfk-UT7_XdJZ5RE",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 27: Where's the...?(凯丽老师的课堂 27: 西瓜在哪里?)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:15",
+    "emoji": "🍉",
+    "youtubeId": "UT7_XdJZ5RE",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凯莉老师的课堂 二十七 西瓜在哪里?",
+        "tr": "Lớp học cô Kelly bài 27: Quả dưa hấu ở đâu?",
+        "words": [
+          {
+            "w": "西瓜",
+            "ph": "xī guā",
+            "mean": "dưa hấu"
+          },
+          {
+            "w": "哪里",
+            "ph": "nǎ lǐ",
+            "mean": "ở đâu"
+          }
+        ],
+        "py": "kǎi lì lǎo shī de kè táng èr shí qī xī guā zài nǎ lǐ"
+      },
+      {
+        "t": 12,
+        "text": "妈妈,我们回来了。",
+        "tr": "Mẹ ơi, chúng con về rồi.",
+        "words": [
+          {
+            "w": "妈妈",
+            "ph": "mā ma",
+            "mean": "mẹ"
+          },
+          {
+            "w": "回来",
+            "ph": "huí lái",
+            "mean": "về nhà"
+          }
+        ],
+        "py": "mā mā wǒ men huí lái le"
+      },
+      {
+        "t": 19,
+        "text": "西瓜在哪里?",
+        "tr": "Quả dưa hấu ở đâu nhỉ?",
+        "words": [
+          {
+            "w": "西瓜",
+            "ph": "xī guā",
+            "mean": "dưa hấu"
+          },
+          {
+            "w": "哪里",
+            "ph": "nǎ lǐ",
+            "mean": "ở đâu"
+          }
+        ],
+        "py": "xī guā zài nǎ lǐ"
+      },
+      {
+        "t": 23,
+        "text": "它在桌子下面。",
+        "tr": "Nó ở dưới gầm bàn.",
+        "words": [
+          {
+            "w": "桌子",
+            "ph": "zhuō zi",
+            "mean": "cái bàn"
+          },
+          {
+            "w": "下面",
+            "ph": "xià mian",
+            "mean": "bên dưới"
+          }
+        ],
+        "py": "tā zài zhuō zi xià miàn"
+      },
+      {
+        "t": 28,
+        "text": "苹果在哪里?",
+        "tr": "Quả táo ở đâu nhỉ?",
+        "words": [
+          {
+            "w": "苹果",
+            "ph": "píng guǒ",
+            "mean": "quả táo"
+          },
+          {
+            "w": "哪里",
+            "ph": "nǎ lǐ",
+            "mean": "ở đâu"
+          }
+        ],
+        "py": "píng guǒ zài nǎ lǐ"
+      },
+      {
+        "t": 33,
+        "text": "它在桌子上。",
+        "tr": "Nó ở trên bàn.",
+        "words": [
+          {
+            "w": "桌子",
+            "ph": "zhuō zi",
+            "mean": "cái bàn"
+          },
+          {
+            "w": "上",
+            "ph": "shàng",
+            "mean": "bên trên"
+          }
+        ],
+        "py": "tā zài zhuō zi shàng"
+      },
+      {
+        "t": 38,
+        "text": "柠檬在哪里?",
+        "tr": "Quả chanh ở đâu nhỉ?",
+        "words": [
+          {
+            "w": "柠檬",
+            "ph": "níng méng",
+            "mean": "quả chanh"
+          },
+          {
+            "w": "哪里",
+            "ph": "nǎ lǐ",
+            "mean": "ở đâu"
+          }
+        ],
+        "py": "níng méng zài nǎ lǐ"
+      },
+      {
+        "t": 42,
+        "text": "它在香蕉后面。",
+        "tr": "Nó ở phía sau quả chuối.",
+        "words": [
+          {
+            "w": "香蕉",
+            "ph": "xiāng jiāo",
+            "mean": "quả chuối"
+          },
+          {
+            "w": "后面",
+            "ph": "hòu mian",
+            "mean": "phía sau"
+          }
+        ],
+        "py": "tā zài xiāng jiāo hòu miàn"
+      },
+      {
+        "t": 51,
+        "text": "葡萄在哪里?",
+        "tr": "Chùm nho ở đâu nhỉ?",
+        "words": [
+          {
+            "w": "葡萄",
+            "ph": "pú tao",
+            "mean": "quả nho"
+          },
+          {
+            "w": "哪里",
+            "ph": "nǎ lǐ",
+            "mean": "ở đâu"
+          }
+        ],
+        "py": "pú táo zài nǎ lǐ"
+      },
+      {
+        "t": 54,
+        "text": "它们在电视上面。",
+        "tr": "Chúng ở trên nóc tivi.",
+        "words": [
+          {
+            "w": "电视",
+            "ph": "diàn shì",
+            "mean": "tivi"
+          },
+          {
+            "w": "上面",
+            "ph": "shàng mian",
+            "mean": "bên trên"
+          }
+        ],
+        "py": "tā men zài diàn shì shàng miàn"
+      }
+    ]
+  },
+  {
+    "id": "lfk-Ic56lg8BVBQ",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 28: There's a Snake (凯丽老师的课堂 28: 有一条蛇)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:18",
+    "emoji": "🐍",
+    "youtubeId": "Ic56lg8BVBQ",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凯莉老师的课堂 二十八",
+        "tr": "Lớp học của cô Kelly bài hai mươi tám",
+        "py": "kǎi lì lǎo shī de kè táng èr shí bā"
+      },
+      {
+        "t": 6,
+        "text": "有一条蛇",
+        "tr": "Có một con rắn.",
+        "words": [
+          {
+            "w": "蛇",
+            "ph": "shé",
+            "mean": "con rắn"
+          }
+        ],
+        "py": "yǒu yī tiáo shé"
+      },
+      {
+        "t": 12,
+        "text": "哇!这里有一条蛇。",
+        "tr": "Ồ! Ở đây có một con rắn.",
+        "words": [
+          {
+            "w": "蛇",
+            "ph": "shé",
+            "mean": "con rắn"
+          }
+        ],
+        "py": "wa zhè lǐ yǒu yī tiáo shé"
+      },
+      {
+        "t": 19,
+        "text": "石头上有一条蛇。",
+        "tr": "Trên hòn đá có một con rắn.",
+        "words": [
+          {
+            "w": "石头",
+            "ph": "shí tou",
+            "mean": "hòn đá"
+          },
+          {
+            "w": "蛇",
+            "ph": "shé",
+            "mean": "con rắn"
+          }
+        ],
+        "py": "shí tóu shàng yǒu yī tiáo shé"
+      },
+      {
+        "t": 26,
+        "text": "这里有两只斑马。",
+        "tr": "Ở đây có hai con ngựa vằn.",
+        "words": [
+          {
+            "w": "斑马",
+            "ph": "bān mǎ",
+            "mean": "ngựa vằn"
+          }
+        ],
+        "py": "zhè lǐ yǒu liǎng zhǐ bān mǎ"
+      },
+      {
+        "t": 35,
+        "text": "这里有三只老虎。",
+        "tr": "Ở đây có ba con hổ.",
+        "words": [
+          {
+            "w": "老虎",
+            "ph": "lǎo hǔ",
+            "mean": "con hổ"
+          }
+        ],
+        "py": "zhè lǐ yǒu sān zhǐ lǎo hǔ"
+      },
+      {
+        "t": 45,
+        "text": "这里有四只猴子。",
+        "tr": "Ở đây có bốn con khỉ.",
+        "words": [
+          {
+            "w": "猴子",
+            "ph": "hóu zi",
+            "mean": "con khỉ"
+          }
+        ],
+        "py": "zhè lǐ yǒu sì zhǐ hóu zi"
+      },
+      {
+        "t": 55,
+        "text": "快看!那里有一只小象。",
+        "tr": "Nhìn kìa! Đằng kia có một chú voi con.",
+        "words": [
+          {
+            "w": "小象",
+            "ph": "xiǎo xiàng",
+            "mean": "voi con"
+          }
+        ],
+        "py": "kuài kàn nà lǐ yǒu yī zhǐ xiǎo xiàng"
+      },
+      {
+        "t": 61,
+        "text": "真可爱!",
+        "tr": "Đáng yêu quá!",
+        "words": [
+          {
+            "w": "可爱",
+            "ph": "kě ài",
+            "mean": "đáng yêu"
+          }
+        ],
+        "py": "zhēn kě ài"
+      }
+    ]
+  },
+  {
+    "id": "lfk-rRcrv32SxkM",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 29: What Do You Have?(凯丽老师的课堂 29: 你有什么?)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:30",
+    "emoji": "🍿",
+    "youtubeId": "rRcrv32SxkM",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凱莉老师的课堂二十九 你有什么?",
+        "tr": "Lớp học của cô Kelly bài hai mươi chín: Bé có gì?",
+        "py": "kǎi lì lǎo shī de kè táng èr shí jiǔ nǐ yǒu shén me"
+      },
+      {
+        "t": 15,
+        "text": "你有什么?",
+        "tr": "Bé có gì thế?",
+        "words": [
+          {
+            "w": "有",
+            "ph": "yǒu",
+            "mean": "có"
+          }
+        ],
+        "py": "nǐ yǒu shén me"
+      },
+      {
+        "t": 18,
+        "text": "我有酸奶。",
+        "tr": "Mình có sữa chua.",
+        "words": [
+          {
+            "w": "酸奶",
+            "ph": "suān nǎi",
+            "mean": "sữa chua"
+          }
+        ],
+        "py": "wǒ yǒu suān nǎi"
+      },
+      {
+        "t": 24,
+        "text": "皮特,你有什么?",
+        "tr": "Pete ơi, bé có gì thế?",
+        "py": "pí tè nǐ yǒu shén me"
+      },
+      {
+        "t": 28,
+        "text": "我有三明治。",
+        "tr": "Mình có bánh mì kẹp.",
+        "words": [
+          {
+            "w": "三明治",
+            "ph": "sān míng zhì",
+            "mean": "bánh mì kẹp"
+          }
+        ],
+        "py": "wǒ yǒu sān míng zhì"
+      },
+      {
+        "t": 33,
+        "text": "沙利,你有什么?",
+        "tr": "Sally ơi, bé có gì thế?",
+        "py": "shā lì nǐ yǒu shén me"
+      },
+      {
+        "t": 38,
+        "text": "我有甜甜圈。",
+        "tr": "Mình có bánh vòng.",
+        "words": [
+          {
+            "w": "甜甜圈",
+            "ph": "tián tián quān",
+            "mean": "bánh vòng"
+          }
+        ],
+        "py": "wǒ yǒu tián tián quān"
+      },
+      {
+        "t": 44,
+        "text": "老师,您有什么?",
+        "tr": "Cô ơi, cô có gì ạ?",
+        "py": "lǎo shī nín yǒu shén me"
+      },
+      {
+        "t": 49,
+        "text": "我有饼干。",
+        "tr": "Cô có bánh quy.",
+        "words": [
+          {
+            "w": "饼干",
+            "ph": "bǐng gān",
+            "mean": "bánh quy"
+          }
+        ],
+        "py": "wǒ yǒu bǐng gàn"
+      },
+      {
+        "t": 52,
+        "text": "谢谢!",
+        "tr": "Cảm ơn ạ!",
+        "words": [
+          {
+            "w": "谢谢",
+            "ph": "xiè xie",
+            "mean": "cảm ơn"
+          }
+        ],
+        "py": "xiè xiè"
+      },
+      {
+        "t": 59,
+        "text": "你有什么?",
+        "tr": "Bé có gì thế?",
+        "words": [
+          {
+            "w": "有",
+            "ph": "yǒu",
+            "mean": "có"
+          }
+        ],
+        "py": "nǐ yǒu shén me"
+      },
+      {
+        "t": 64,
+        "text": "我有爆米花。",
+        "tr": "Mình có bỏng ngô.",
+        "words": [
+          {
+            "w": "爆米花",
+            "ph": "bào mǐ huā",
+            "mean": "bỏng ngô"
+          }
+        ],
+        "py": "wǒ yǒu bào mǐ huā"
+      },
+      {
+        "t": 68,
+        "text": "我有汽水。",
+        "tr": "Mình có nước ngọt.",
+        "words": [
+          {
+            "w": "汽水",
+            "ph": "qì shuǐ",
+            "mean": "nước ngọt"
+          }
+        ],
+        "py": "wǒ yǒu qì shuǐ"
+      },
+      {
+        "t": 88,
+        "text": "我没有。",
+        "tr": "Mình không có.",
+        "words": [
+          {
+            "w": "没有",
+            "ph": "méi yǒu",
+            "mean": "không có"
+          }
+        ],
+        "py": "wǒ méi yǒu"
+      },
+      {
+        "t": 90,
+        "text": "我没有。",
+        "tr": "Mình không có.",
+        "words": [
+          {
+            "w": "没有",
+            "ph": "méi yǒu",
+            "mean": "không có"
+          }
+        ],
+        "py": "wǒ méi yǒu"
+      },
+      {
+        "t": 92,
+        "text": "我没有。",
+        "tr": "Mình không có.",
+        "words": [
+          {
+            "w": "没有",
+            "ph": "méi yǒu",
+            "mean": "không có"
+          }
+        ],
+        "py": "wǒ méi yǒu"
+      },
+      {
+        "t": 94,
+        "text": "我没有。",
+        "tr": "Mình không có.",
+        "words": [
+          {
+            "w": "没有",
+            "ph": "méi yǒu",
+            "mean": "không có"
+          }
+        ],
+        "py": "wǒ méi yǒu"
+      },
+      {
+        "t": 96,
+        "text": "我没有。",
+        "tr": "Mình không có.",
+        "words": [
+          {
+            "w": "没有",
+            "ph": "méi yǒu",
+            "mean": "không có"
+          }
+        ],
+        "py": "wǒ méi yǒu"
+      },
+      {
+        "t": 98,
+        "text": "我没有。",
+        "tr": "Mình không có.",
+        "words": [
+          {
+            "w": "没有",
+            "ph": "méi yǒu",
+            "mean": "không có"
+          }
+        ],
+        "py": "wǒ méi yǒu"
+      },
+      {
+        "t": 100,
+        "text": "我没有。",
+        "tr": "Mình không có.",
+        "words": [
+          {
+            "w": "没有",
+            "ph": "méi yǒu",
+            "mean": "không có"
+          }
+        ],
+        "py": "wǒ méi yǒu"
+      },
+      {
+        "t": 102,
+        "text": "我没有。",
+        "tr": "Mình không có.",
+        "words": [
+          {
+            "w": "没有",
+            "ph": "méi yǒu",
+            "mean": "không có"
+          }
+        ],
+        "py": "wǒ méi yǒu"
+      },
+      {
+        "t": 104,
+        "text": "我没有。",
+        "tr": "Mình không có.",
+        "words": [
+          {
+            "w": "没有",
+            "ph": "méi yǒu",
+            "mean": "không có"
+          }
+        ],
+        "py": "wǒ méi yǒu"
+      },
+      {
+        "t": 106,
+        "text": "我没有。",
+        "tr": "Mình không có.",
+        "words": [
+          {
+            "w": "没有",
+            "ph": "méi yǒu",
+            "mean": "không có"
+          }
+        ],
+        "py": "wǒ méi yǒu"
+      },
+      {
+        "t": 108,
+        "text": "我没有。",
+        "tr": "Mình không có.",
+        "words": [
+          {
+            "w": "没有",
+            "ph": "méi yǒu",
+            "mean": "không có"
+          }
+        ],
+        "py": "wǒ méi yǒu"
+      },
+      {
+        "t": 110,
+        "text": "我没有。",
+        "tr": "Mình không có.",
+        "words": [
+          {
+            "w": "没有",
+            "ph": "méi yǒu",
+            "mean": "không có"
+          }
+        ],
+        "py": "wǒ méi yǒu"
+      },
+      {
+        "t": 112,
+        "text": "我没有。",
+        "tr": "Mình không có.",
+        "words": [
+          {
+            "w": "没有",
+            "ph": "méi yǒu",
+            "mean": "không có"
+          }
+        ],
+        "py": "wǒ méi yǒu"
+      },
+      {
+        "t": 114,
+        "text": "我没有。",
+        "tr": "Mình không có.",
+        "words": [
+          {
+            "w": "没有",
+            "ph": "méi yǒu",
+            "mean": "không có"
+          }
+        ],
+        "py": "wǒ méi yǒu"
+      }
+    ]
+  },
+  {
+    "id": "lfk-KtyLmc1dc4Q",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 30: What Time Is It?(凯丽老师的课堂 30: 几点了?)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:39",
+    "emoji": "🕐",
+    "youtubeId": "KtyLmc1dc4Q",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凯莉老师的课堂三十,几点了?",
+        "tr": "Lớp học của cô Kelly bài ba mươi: Mấy giờ rồi?",
+        "py": "kǎi lì lǎo shī de kè táng sān shí jǐ diǎn le"
+      },
+      {
+        "t": 9,
+        "text": "老师,现在几点了?",
+        "tr": "Cô ơi, bây giờ mấy giờ rồi ạ?",
+        "words": [
+          {
+            "w": "几点",
+            "ph": "jǐ diǎn",
+            "mean": "mấy giờ"
+          }
+        ],
+        "py": "lǎo shī xiàn zài jǐ diǎn le"
+      },
+      {
+        "t": 15,
+        "text": "现在十一点了。",
+        "tr": "Bây giờ mười một giờ rồi.",
+        "words": [
+          {
+            "w": "十一点",
+            "ph": "shí yī diǎn",
+            "mean": "mười một giờ"
+          }
+        ],
+        "py": "xiàn zài shí yī diǎn le"
+      },
+      {
+        "t": 19,
+        "text": "我们排队吧。",
+        "tr": "Chúng mình xếp hàng nào.",
+        "words": [
+          {
+            "w": "排队",
+            "ph": "pái duì",
+            "mean": "xếp hàng"
+          }
+        ],
+        "py": "wǒ men pái duì ba"
+      },
+      {
+        "t": 23,
+        "text": "不好意思,请问现在几点了?",
+        "tr": "Xin lỗi, cho hỏi bây giờ mấy giờ rồi ạ?",
+        "words": [
+          {
+            "w": "几点",
+            "ph": "jǐ diǎn",
+            "mean": "mấy giờ"
+          }
+        ],
+        "py": "bù hǎo yì sī qǐng wèn xiàn zài jǐ diǎn le"
+      },
+      {
+        "t": 33,
+        "text": "现在十二点了。",
+        "tr": "Bây giờ mười hai giờ rồi.",
+        "words": [
+          {
+            "w": "十二点",
+            "ph": "shí èr diǎn",
+            "mean": "mười hai giờ"
+          }
+        ],
+        "py": "xiàn zài shí èr diǎn le"
+      },
+      {
+        "t": 45,
+        "text": "现在几点了?",
+        "tr": "Bây giờ mấy giờ rồi?",
+        "words": [
+          {
+            "w": "几点",
+            "ph": "jǐ diǎn",
+            "mean": "mấy giờ"
+          }
+        ],
+        "py": "xiàn zài jǐ diǎn le"
+      },
+      {
+        "t": 48,
+        "text": "现在一点了。",
+        "tr": "Bây giờ một giờ rồi.",
+        "words": [
+          {
+            "w": "一点",
+            "ph": "yī diǎn",
+            "mean": "một giờ"
+          }
+        ],
+        "py": "xiàn zài yī diǎn le"
+      },
+      {
+        "t": 52,
+        "text": "现在几点了?",
+        "tr": "Bây giờ mấy giờ rồi?",
+        "words": [
+          {
+            "w": "几点",
+            "ph": "jǐ diǎn",
+            "mean": "mấy giờ"
+          }
+        ],
+        "py": "xiàn zài jǐ diǎn le"
+      },
+      {
+        "t": 58,
+        "text": "现在两点了。",
+        "tr": "Bây giờ hai giờ rồi.",
+        "words": [
+          {
+            "w": "两点",
+            "ph": "liǎng diǎn",
+            "mean": "hai giờ"
+          }
+        ],
+        "py": "xiàn zài liǎng diǎn le"
+      },
+      {
+        "t": 64,
+        "text": "孩子们,现在三点了。",
+        "tr": "Các con ơi, bây giờ ba giờ rồi.",
+        "words": [
+          {
+            "w": "孩子们",
+            "ph": "hái zi men",
+            "mean": "các con"
+          },
+          {
+            "w": "三点",
+            "ph": "sān diǎn",
+            "mean": "ba giờ"
+          }
+        ],
+        "py": "hái zi men xiàn zài sān diǎn le"
+      },
+      {
+        "t": 71,
+        "text": "该回家了。",
+        "tr": "Đến giờ về nhà rồi.",
+        "words": [
+          {
+            "w": "回家",
+            "ph": "huí jiā",
+            "mean": "về nhà"
+          }
+        ],
+        "py": "gāi huí jiā le"
+      },
+      {
+        "t": 74,
+        "text": "现在三点了。",
+        "tr": "Bây giờ ba giờ rồi.",
+        "words": [
+          {
+            "w": "三点",
+            "ph": "sān diǎn",
+            "mean": "ba giờ"
+          }
+        ],
+        "py": "xiàn zài sān diǎn le"
+      },
+      {
+        "t": 78,
+        "text": "该回家了。",
+        "tr": "Đến giờ về nhà rồi.",
+        "words": [
+          {
+            "w": "回家",
+            "ph": "huí jiā",
+            "mean": "về nhà"
+          }
+        ],
+        "py": "gāi huí jiā le"
+      },
+      {
+        "t": 82,
+        "text": "再见。",
+        "tr": "Tạm biệt.",
+        "words": [
+          {
+            "w": "再见",
+            "ph": "zài jiàn",
+            "mean": "tạm biệt"
+          }
+        ],
+        "py": "zài jiàn"
+      }
+    ]
+  },
+  {
+    "id": "lfk-ZG5Wj7zNX8E",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 31: What Day Is ...(凯丽老师的课堂 31: 今天星期几)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:29",
+    "emoji": "📅",
+    "youtubeId": "ZG5Wj7zNX8E",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凯莉老师的课堂 31,今天星期几?",
+        "tr": "Lớp học của cô Kelly bài ba mươi mốt: Hôm nay thứ mấy?",
+        "py": "kǎi lì lǎo shī de kè táng jīn tiān xīng qī jǐ"
+      },
+      {
+        "t": 12,
+        "text": "今天星期几?",
+        "tr": "Hôm nay thứ mấy?",
+        "words": [
+          {
+            "w": "今天",
+            "ph": "jīn tiān",
+            "mean": "hôm nay"
+          },
+          {
+            "w": "星期几",
+            "ph": "xīng qī jǐ",
+            "mean": "thứ mấy"
+          }
+        ],
+        "py": "jīn tiān xīng qī jǐ"
+      },
+      {
+        "t": 17,
+        "text": "今天星期二。",
+        "tr": "Hôm nay thứ Ba.",
+        "words": [
+          {
+            "w": "星期二",
+            "ph": "xīng qī èr",
+            "mean": "thứ Ba"
+          }
+        ],
+        "py": "jīn tiān xīng qī èr"
+      },
+      {
+        "t": 24,
+        "text": "今天星期几?",
+        "tr": "Hôm nay thứ mấy?",
+        "words": [
+          {
+            "w": "星期几",
+            "ph": "xīng qī jǐ",
+            "mean": "thứ mấy"
+          }
+        ],
+        "py": "jīn tiān xīng qī jǐ"
+      },
+      {
+        "t": 31,
+        "text": "今天星期三。",
+        "tr": "Hôm nay thứ Tư.",
+        "words": [
+          {
+            "w": "星期三",
+            "ph": "xīng qī sān",
+            "mean": "thứ Tư"
+          }
+        ],
+        "py": "jīn tiān xīng qī sān"
+      },
+      {
+        "t": 37,
+        "text": "小旺,今天星期四。我去上学了。",
+        "tr": "Xiao Wang ơi, hôm nay thứ Năm. Mình đi học đây.",
+        "words": [
+          {
+            "w": "星期四",
+            "ph": "xīng qī sì",
+            "mean": "thứ Năm"
+          },
+          {
+            "w": "上学",
+            "ph": "shàng xué",
+            "mean": "đi học"
+          }
+        ],
+        "py": "xiǎo wàng jīn tiān xīng qī sì wǒ qù shàng xué le"
+      },
+      {
+        "t": 54,
+        "text": "沙利,今天星期几?",
+        "tr": "Sally ơi, hôm nay thứ mấy?",
+        "words": [
+          {
+            "w": "星期几",
+            "ph": "xīng qī jǐ",
+            "mean": "thứ mấy"
+          }
+        ],
+        "py": "shā lì jīn tiān xīng qī jǐ"
+      },
+      {
+        "t": 63,
+        "text": "今天星期五。我放假了。",
+        "tr": "Hôm nay thứ Sáu. Mình được nghỉ rồi.",
+        "words": [
+          {
+            "w": "星期五",
+            "ph": "xīng qī wǔ",
+            "mean": "thứ Sáu"
+          },
+          {
+            "w": "放假",
+            "ph": "fàng jià",
+            "mean": "nghỉ học"
+          }
+        ],
+        "py": "jīn tiān xīng qī wǔ wǒ fàng jiǎ le"
+      },
+      {
+        "t": 70,
+        "text": "一起玩吧!",
+        "tr": "Cùng chơi nào!",
+        "words": [
+          {
+            "w": "一起",
+            "ph": "yì qǐ",
+            "mean": "cùng nhau"
+          },
+          {
+            "w": "玩",
+            "ph": "wán",
+            "mean": "chơi"
+          }
+        ],
+        "py": "yī qǐ wán ba"
+      },
+      {
+        "t": 83,
+        "text": "今天星期五。我去上学了。",
+        "tr": "Hôm nay thứ Sáu. Mình đi học đây.",
+        "words": [
+          {
+            "w": "星期五",
+            "ph": "xīng qī wǔ",
+            "mean": "thứ Sáu"
+          },
+          {
+            "w": "上学",
+            "ph": "shàng xué",
+            "mean": "đi học"
+          }
+        ],
+        "py": "jīn tiān xīng qī wǔ wǒ qù shàng xué le"
+      }
+    ]
+  },
+  {
+    "id": "lfk-PqPxeuXu_bo",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 32: What Do...?(凯丽老师的课堂 32: 星期一你做什么?)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:17",
+    "emoji": "🏸",
+    "youtubeId": "PqPxeuXu_bo",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凯莉老师的课堂32 星期一你做什么?",
+        "tr": "Lớp học của cô Kelly bài ba mươi hai: Thứ Hai bé làm gì?",
+        "py": "kǎi lì lǎo shī de kè táng xīng qī yī nǐ zuò shén me"
+      },
+      {
+        "t": 12,
+        "text": "星期一你做什么?",
+        "tr": "Thứ Hai bé làm gì?",
+        "words": [
+          {
+            "w": "星期一",
+            "ph": "xīng qī yī",
+            "mean": "thứ Hai"
+          },
+          {
+            "w": "做什么",
+            "ph": "zuò shén me",
+            "mean": "làm gì"
+          }
+        ],
+        "py": "xīng qī yī nǐ zuò shén me"
+      },
+      {
+        "t": 17,
+        "text": "星期一我打羽毛球。",
+        "tr": "Thứ Hai mình chơi cầu lông.",
+        "words": [
+          {
+            "w": "羽毛球",
+            "ph": "yǔ máo qiú",
+            "mean": "cầu lông"
+          }
+        ],
+        "py": "xīng qī yī wǒ dǎ yǔ máo qiú"
+      },
+      {
+        "t": 23,
+        "text": "沙丽,星期二你做什么?",
+        "tr": "Sally ơi, thứ Ba bé làm gì?",
+        "words": [
+          {
+            "w": "星期二",
+            "ph": "xīng qī èr",
+            "mean": "thứ Ba"
+          }
+        ],
+        "py": "shā lì xīng qī èr nǐ zuò shén me"
+      },
+      {
+        "t": 30,
+        "text": "我和小旺踢足球。",
+        "tr": "Mình và Xiao Wang đá bóng.",
+        "words": [
+          {
+            "w": "踢足球",
+            "ph": "tī zú qiú",
+            "mean": "đá bóng"
+          }
+        ],
+        "py": "wǒ hé xiǎo wàng tī zú qiú"
+      },
+      {
+        "t": 35,
+        "text": "一定很有意思。",
+        "tr": "Chắc là vui lắm.",
+        "words": [
+          {
+            "w": "有意思",
+            "ph": "yǒu yì si",
+            "mean": "thú vị"
+          }
+        ],
+        "py": "yī dìng hěn yǒu yì sī"
+      },
+      {
+        "t": 40,
+        "text": "皮特,星期五你做什么?",
+        "tr": "Pete ơi, thứ Sáu bé làm gì?",
+        "words": [
+          {
+            "w": "星期五",
+            "ph": "xīng qī wǔ",
+            "mean": "thứ Sáu"
+          }
+        ],
+        "py": "pí tè xīng qī wǔ nǐ zuò shén me"
+      },
+      {
+        "t": 46,
+        "text": "星期五我打乒乓球。",
+        "tr": "Thứ Sáu mình chơi bóng bàn.",
+        "words": [
+          {
+            "w": "乒乓球",
+            "ph": "pīng pāng qiú",
+            "mean": "bóng bàn"
+          }
+        ],
+        "py": "xīng qī wǔ wǒ dǎ pīng pāng qiú"
+      },
+      {
+        "t": 53,
+        "text": "明禹,星期天你做什么?",
+        "tr": "Minwoo ơi, Chủ Nhật bé làm gì?",
+        "words": [
+          {
+            "w": "星期天",
+            "ph": "xīng qī tiān",
+            "mean": "Chủ Nhật"
+          }
+        ],
+        "py": "míng yǔ xīng qī tiān nǐ zuò shén me"
+      },
+      {
+        "t": 58,
+        "text": "我打棒球。",
+        "tr": "Mình chơi bóng chày.",
+        "words": [
+          {
+            "w": "棒球",
+            "ph": "bàng qiú",
+            "mean": "bóng chày"
+          }
+        ],
+        "py": "wǒ dǎ bàng qiú"
+      }
+    ]
+  },
+  {
+    "id": "lfk-j1qbPmOuXic",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 33: It's His Book (凯丽老师的课堂 33: 这是他的书)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:20",
+    "emoji": "📖",
+    "youtubeId": "j1qbPmOuXic",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凱莉老师的课堂-33",
+        "tr": "Lớp học của cô Kelly bài ba mươi ba",
+        "py": "kǎi lì lǎo shī de kè táng"
+      },
+      {
+        "t": 5,
+        "text": "这是她的书。",
+        "tr": "Đây là sách của cô ấy.",
+        "words": [
+          {
+            "w": "书",
+            "ph": "shū",
+            "mean": "sách"
+          }
+        ],
+        "py": "zhè shì tā de shū"
+      },
+      {
+        "t": 20,
+        "text": "这是谁的漫画书?",
+        "tr": "Đây là truyện tranh của ai?",
+        "words": [
+          {
+            "w": "漫画书",
+            "ph": "màn huà shū",
+            "mean": "truyện tranh"
+          },
+          {
+            "w": "谁",
+            "ph": "shuí",
+            "mean": "ai"
+          }
+        ],
+        "py": "zhè shì shuí de màn huà shū"
+      },
+      {
+        "t": 24,
+        "text": "这是沙莉的漫画书。",
+        "tr": "Đây là truyện tranh của Sally.",
+        "words": [
+          {
+            "w": "漫画书",
+            "ph": "màn huà shū",
+            "mean": "truyện tranh"
+          }
+        ],
+        "py": "zhè shì shā lì de màn huà shū"
+      },
+      {
+        "t": 30,
+        "text": "这是谁的书?",
+        "tr": "Đây là sách của ai?",
+        "words": [
+          {
+            "w": "书",
+            "ph": "shū",
+            "mean": "sách"
+          },
+          {
+            "w": "谁",
+            "ph": "shuí",
+            "mean": "ai"
+          }
+        ],
+        "py": "zhè shì shuí de shū"
+      },
+      {
+        "t": 36,
+        "text": "这是她的书。",
+        "tr": "Đây là sách của cô ấy.",
+        "words": [
+          {
+            "w": "书",
+            "ph": "shū",
+            "mean": "sách"
+          }
+        ],
+        "py": "zhè shì tā de shū"
+      },
+      {
+        "t": 44,
+        "text": "这是谁的书?",
+        "tr": "Đây là sách của ai?",
+        "words": [
+          {
+            "w": "书",
+            "ph": "shū",
+            "mean": "sách"
+          },
+          {
+            "w": "谁",
+            "ph": "shuí",
+            "mean": "ai"
+          }
+        ],
+        "py": "zhè shì shuí de shū"
+      },
+      {
+        "t": 48,
+        "text": "这是明宇的书。",
+        "tr": "Đây là sách của Minwoo.",
+        "words": [
+          {
+            "w": "书",
+            "ph": "shū",
+            "mean": "sách"
+          }
+        ],
+        "py": "zhè shì míng yǔ de shū"
+      },
+      {
+        "t": 54,
+        "text": "这是谁的电脑游戏?",
+        "tr": "Đây là trò chơi điện tử của ai?",
+        "words": [
+          {
+            "w": "电脑游戏",
+            "ph": "diàn nǎo yóu xì",
+            "mean": "trò chơi điện tử"
+          }
+        ],
+        "py": "zhè shì shuí de diàn nǎo yóu xì"
+      },
+      {
+        "t": 60,
+        "text": "这是我的电脑游戏。",
+        "tr": "Đây là trò chơi điện tử của mình.",
+        "words": [
+          {
+            "w": "电脑游戏",
+            "ph": "diàn nǎo yóu xì",
+            "mean": "trò chơi điện tử"
+          }
+        ],
+        "py": "zhè shì wǒ de diàn nǎo yóu xì"
+      }
+    ]
+  },
+  {
+    "id": "lfk-k-rjnvy0OM8",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 34: Open the Window (凯丽老师的课堂 34: 开窗)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:14",
+    "emoji": "🪟",
+    "youtubeId": "k-rjnvy0OM8",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凯莉老师的课堂34 开窗",
+        "tr": "Lớp học của cô Kelly bài ba mươi tư: Mở cửa sổ",
+        "py": "kǎi lì lǎo shī de kè táng kāi chuāng"
+      },
+      {
+        "t": 10,
+        "text": "太热了,开窗户吧。",
+        "tr": "Nóng quá, mở cửa sổ ra nào.",
+        "words": [
+          {
+            "w": "热",
+            "ph": "rè",
+            "mean": "nóng"
+          },
+          {
+            "w": "窗户",
+            "ph": "chuāng hu",
+            "mean": "cửa sổ"
+          }
+        ],
+        "py": "tài rè le kāi chuāng hù ba"
+      },
+      {
+        "t": 15,
+        "text": "好。",
+        "tr": "Vâng ạ.",
+        "py": "hǎo"
+      },
+      {
+        "t": 16,
+        "text": "沙利请关灯。",
+        "tr": "Sally ơi, tắt đèn giúp cô nhé.",
+        "words": [
+          {
+            "w": "关灯",
+            "ph": "guān dēng",
+            "mean": "tắt đèn"
+          }
+        ],
+        "py": "shā lì qǐng guān dēng"
+      },
+      {
+        "t": 30,
+        "text": "鸣鱼,不好意思。",
+        "tr": "Mingyu ơi, xin lỗi nhé.",
+        "words": [
+          {
+            "w": "不好意思",
+            "ph": "bù hǎo yì si",
+            "mean": "xin lỗi"
+          }
+        ],
+        "py": "míng yú bù hǎo yì sī"
+      },
+      {
+        "t": 37,
+        "text": "皮特开电视。",
+        "tr": "Pete ơi, bật ti vi lên.",
+        "words": [
+          {
+            "w": "开",
+            "ph": "kāi",
+            "mean": "bật, mở"
+          },
+          {
+            "w": "电视",
+            "ph": "diàn shì",
+            "mean": "ti vi"
+          }
+        ],
+        "py": "pí tè kāi diàn shì"
+      },
+      {
+        "t": 42,
+        "text": "沙利关电脑。",
+        "tr": "Sally ơi, tắt máy tính đi.",
+        "words": [
+          {
+            "w": "关",
+            "ph": "guān",
+            "mean": "tắt"
+          },
+          {
+            "w": "电脑",
+            "ph": "diàn nǎo",
+            "mean": "máy tính"
+          }
+        ],
+        "py": "shā lì guān diàn nǎo"
+      },
+      {
+        "t": 46,
+        "text": "鸣鱼,快从桌子上下来。",
+        "tr": "Mingyu ơi, mau xuống khỏi bàn nào.",
+        "words": [
+          {
+            "w": "桌子",
+            "ph": "zhuō zi",
+            "mean": "cái bàn"
+          },
+          {
+            "w": "下来",
+            "ph": "xià lái",
+            "mean": "đi xuống"
+          }
+        ],
+        "py": "míng yú kuài cóng zhuō zi shàng xià lái"
+      },
+      {
+        "t": 63,
+        "text": "小小的小狗。",
+        "tr": "Chú cún nhỏ xíu.",
+        "words": [
+          {
+            "w": "小狗",
+            "ph": "xiǎo gǒu",
+            "mean": "cún con"
+          }
+        ],
+        "py": "xiǎo xiǎo de xiǎo gǒu"
+      }
+    ]
+  },
+  {
+    "id": "lfk-zlq_Tu5dT2M",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 35: What Does...(凯丽老师的课堂 35: 他做什么工作?)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "2:08",
+    "emoji": "👮",
+    "youtubeId": "zlq_Tu5dT2M",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凯莉老师的课堂35",
+        "tr": "Lớp học của cô Kelly bài ba mươi lăm",
+        "py": "kǎi lì lǎo shī de kè táng"
+      },
+      {
+        "t": 5,
+        "text": "她做什么工作?",
+        "tr": "Cô ấy làm nghề gì?",
+        "words": [
+          {
+            "w": "工作",
+            "ph": "gōng zuò",
+            "mean": "công việc"
+          }
+        ],
+        "py": "tā zuò shén me gōng zuò"
+      },
+      {
+        "t": 21,
+        "text": "她是谁?",
+        "tr": "Cô ấy là ai?",
+        "words": [
+          {
+            "w": "谁",
+            "ph": "shuí",
+            "mean": "ai"
+          }
+        ],
+        "py": "tā shì shuí"
+      },
+      {
+        "t": 24,
+        "text": "她是我的叔叔。",
+        "tr": "Đó là chú của mình.",
+        "words": [
+          {
+            "w": "叔叔",
+            "ph": "shū shu",
+            "mean": "chú"
+          }
+        ],
+        "py": "tā shì wǒ de shū shū"
+      },
+      {
+        "t": 33,
+        "text": "她做什么工作?",
+        "tr": "Cô ấy làm nghề gì?",
+        "words": [
+          {
+            "w": "工作",
+            "ph": "gōng zuò",
+            "mean": "công việc"
+          }
+        ],
+        "py": "tā zuò shén me gōng zuò"
+      },
+      {
+        "t": 39,
+        "text": "她是客车司机。",
+        "tr": "Cô ấy là tài xế xe khách.",
+        "words": [
+          {
+            "w": "司机",
+            "ph": "sī jī",
+            "mean": "tài xế"
+          }
+        ],
+        "py": "tā shì kè chē sī jī"
+      },
+      {
+        "t": 46,
+        "text": "她做什么工作?",
+        "tr": "Cô ấy làm nghề gì?",
+        "words": [
+          {
+            "w": "工作",
+            "ph": "gōng zuò",
+            "mean": "công việc"
+          }
+        ],
+        "py": "tā zuò shén me gōng zuò"
+      },
+      {
+        "t": 53,
+        "text": "她是医生。",
+        "tr": "Cô ấy là bác sĩ.",
+        "words": [
+          {
+            "w": "医生",
+            "ph": "yī shēng",
+            "mean": "bác sĩ"
+          }
+        ],
+        "py": "tā shì yī shēng"
+      },
+      {
+        "t": 59,
+        "text": "她做什么工作?",
+        "tr": "Cô ấy làm nghề gì?",
+        "words": [
+          {
+            "w": "工作",
+            "ph": "gōng zuò",
+            "mean": "công việc"
+          }
+        ],
+        "py": "tā zuò shén me gōng zuò"
+      },
+      {
+        "t": 66,
+        "text": "她是老师。",
+        "tr": "Cô ấy là giáo viên.",
+        "words": [
+          {
+            "w": "老师",
+            "ph": "lǎo shī",
+            "mean": "giáo viên"
+          }
+        ],
+        "py": "tā shì lǎo shī"
+      },
+      {
+        "t": 72,
+        "text": "她做什么工作?",
+        "tr": "Cô ấy làm nghề gì?",
+        "words": [
+          {
+            "w": "工作",
+            "ph": "gōng zuò",
+            "mean": "công việc"
+          }
+        ],
+        "py": "tā zuò shén me gōng zuò"
+      },
+      {
+        "t": 79,
+        "text": "她是姚医。",
+        "tr": "Cô ấy là nha sĩ.",
+        "py": "tā shì yáo yī"
+      },
+      {
+        "t": 84,
+        "text": "她做什么工作?",
+        "tr": "Cô ấy làm nghề gì?",
+        "words": [
+          {
+            "w": "工作",
+            "ph": "gōng zuò",
+            "mean": "công việc"
+          }
+        ],
+        "py": "tā zuò shén me gōng zuò"
+      },
+      {
+        "t": 92,
+        "text": "她是警察。",
+        "tr": "Cô ấy là cảnh sát.",
+        "words": [
+          {
+            "w": "警察",
+            "ph": "jǐng chá",
+            "mean": "cảnh sát"
+          }
+        ],
+        "py": "tā shì jǐng chá"
+      },
+      {
+        "t": 96,
+        "text": "哇!她太酷了!",
+        "tr": "Ồ! Cô ấy ngầu quá!",
+        "words": [
+          {
+            "w": "酷",
+            "ph": "kù",
+            "mean": "ngầu"
+          }
+        ],
+        "py": "wa tā tài kù le"
+      },
+      {
+        "t": 103,
+        "text": "她做什么工作?",
+        "tr": "Cô ấy làm nghề gì?",
+        "words": [
+          {
+            "w": "工作",
+            "ph": "gōng zuò",
+            "mean": "công việc"
+          }
+        ],
+        "py": "tā zuò shén me gōng zuò"
+      },
+      {
+        "t": 108,
+        "text": "她是学生。",
+        "tr": "Cô ấy là học sinh.",
+        "words": [
+          {
+            "w": "学生",
+            "ph": "xué shēng",
+            "mean": "học sinh"
+          }
+        ],
+        "py": "tā shì xué shēng"
+      }
+    ]
+  },
+  {
+    "id": "lfk-XAPitNPlXqg",
+    "lang": "zh",
+    "title": "Mrs. Kelly's Class 36: Do You Like..(凯丽老师的课堂 36: 你喜欢沙拉吗?)",
+    "source": "Little Fox Chinese",
+    "level": "kelly",
+    "dur": "1:54",
+    "emoji": "🍜",
+    "youtubeId": "XAPitNPlXqg",
+    "segments": [
+      {
+        "t": 0,
+        "text": "凯莉老师的课堂36,你喜欢沙拉吗?",
+        "tr": "Lớp học của cô Kelly bài ba mươi sáu: Bé thích rau trộn không?",
+        "py": "kǎi lì lǎo shī de kè táng nǐ xǐ huān shā lā ma"
+      },
+      {
+        "t": 15,
+        "text": "妈妈,我们饿了。",
+        "tr": "Mẹ ơi, chúng con đói rồi.",
+        "words": [
+          {
+            "w": "妈妈",
+            "ph": "mā ma",
+            "mean": "mẹ"
+          },
+          {
+            "w": "饿",
+            "ph": "è",
+            "mean": "đói"
+          }
+        ],
+        "py": "mā mā wǒ men è le"
+      },
+      {
+        "t": 20,
+        "text": "你喜欢鸡肉吗?",
+        "tr": "Bé thích thịt gà không?",
+        "words": [
+          {
+            "w": "喜欢",
+            "ph": "xǐ huan",
+            "mean": "thích"
+          },
+          {
+            "w": "鸡肉",
+            "ph": "jī ròu",
+            "mean": "thịt gà"
+          }
+        ],
+        "py": "nǐ xǐ huān jī ròu ma"
+      },
+      {
+        "t": 24,
+        "text": "我喜欢鸡肉。",
+        "tr": "Con thích thịt gà.",
+        "words": [
+          {
+            "w": "鸡肉",
+            "ph": "jī ròu",
+            "mean": "thịt gà"
+          }
+        ],
+        "py": "wǒ xǐ huān jī ròu"
+      },
+      {
+        "t": 31,
+        "text": "我喜欢沙拉。",
+        "tr": "Con thích rau trộn.",
+        "words": [
+          {
+            "w": "沙拉",
+            "ph": "shā lā",
+            "mean": "rau trộn"
+          }
+        ],
+        "py": "wǒ xǐ huān shā lā"
+      },
+      {
+        "t": 36,
+        "text": "你喜欢沙拉吗?",
+        "tr": "Bé thích rau trộn không?",
+        "words": [
+          {
+            "w": "沙拉",
+            "ph": "shā lā",
+            "mean": "rau trộn"
+          }
+        ],
+        "py": "nǐ xǐ huān shā lā ma"
+      },
+      {
+        "t": 40,
+        "text": "我不喜欢沙拉。",
+        "tr": "Con không thích rau trộn.",
+        "words": [
+          {
+            "w": "不喜欢",
+            "ph": "bù xǐ huan",
+            "mean": "không thích"
+          },
+          {
+            "w": "沙拉",
+            "ph": "shā lā",
+            "mean": "rau trộn"
+          }
+        ],
+        "py": "wǒ bù xǐ huān shā lā"
+      },
+      {
+        "t": 45,
+        "text": "我喜欢汤。",
+        "tr": "Con thích canh.",
+        "words": [
+          {
+            "w": "汤",
+            "ph": "tāng",
+            "mean": "canh"
+          }
+        ],
+        "py": "wǒ xǐ huān tāng"
+      },
+      {
+        "t": 50,
+        "text": "我喜欢面包。",
+        "tr": "Con thích bánh mì.",
+        "words": [
+          {
+            "w": "面包",
+            "ph": "miàn bāo",
+            "mean": "bánh mì"
+          }
+        ],
+        "py": "wǒ xǐ huān miàn bāo"
+      },
+      {
+        "t": 54,
+        "text": "你喜欢面包吗?",
+        "tr": "Bé thích bánh mì không?",
+        "words": [
+          {
+            "w": "面包",
+            "ph": "miàn bāo",
+            "mean": "bánh mì"
+          }
+        ],
+        "py": "nǐ xǐ huān miàn bāo ma"
+      },
+      {
+        "t": 57,
+        "text": "我不喜欢面包。",
+        "tr": "Con không thích bánh mì.",
+        "words": [
+          {
+            "w": "面包",
+            "ph": "miàn bāo",
+            "mean": "bánh mì"
+          }
+        ],
+        "py": "wǒ bù xǐ huān miàn bāo"
+      },
+      {
+        "t": 61,
+        "text": "我喜欢米饭。",
+        "tr": "Con thích cơm.",
+        "words": [
+          {
+            "w": "米饭",
+            "ph": "mǐ fàn",
+            "mean": "cơm"
+          }
+        ],
+        "py": "wǒ xǐ huān mǐ fàn"
+      },
+      {
+        "t": 69,
+        "text": "我喜欢面条。",
+        "tr": "Con thích mì.",
+        "words": [
+          {
+            "w": "面条",
+            "ph": "miàn tiáo",
+            "mean": "mì"
+          }
+        ],
+        "py": "wǒ xǐ huān miàn tiáo"
+      },
+      {
+        "t": 74,
+        "text": "你喜欢面条吗?",
+        "tr": "Bé thích mì không?",
+        "words": [
+          {
+            "w": "面条",
+            "ph": "miàn tiáo",
+            "mean": "mì"
+          }
+        ],
+        "py": "nǐ xǐ huān miàn tiáo ma"
+      },
+      {
+        "t": 79,
+        "text": "我喜欢面条。",
+        "tr": "Con thích mì.",
+        "words": [
+          {
+            "w": "面条",
+            "ph": "miàn tiáo",
+            "mean": "mì"
+          }
+        ],
+        "py": "wǒ xǐ huān miàn tiáo"
+      },
+      {
+        "t": 82,
+        "text": "我喜欢面条。",
+        "tr": "Con thích mì.",
+        "words": [
+          {
+            "w": "面条",
+            "ph": "miàn tiáo",
+            "mean": "mì"
+          }
+        ],
+        "py": "wǒ xǐ huān miàn tiáo"
+      },
+      {
+        "t": 86,
+        "text": "我也喜欢面条。",
+        "tr": "Con cũng thích mì.",
+        "words": [
+          {
+            "w": "也",
+            "ph": "yě",
+            "mean": "cũng"
+          },
+          {
+            "w": "面条",
+            "ph": "miàn tiáo",
+            "mean": "mì"
+          }
+        ],
+        "py": "wǒ yě xǐ huān miàn tiáo"
+      },
+      {
+        "t": 91,
+        "text": "我们想吃面条。",
+        "tr": "Chúng con muốn ăn mì.",
+        "words": [
+          {
+            "w": "想",
+            "ph": "xiǎng",
+            "mean": "muốn"
+          },
+          {
+            "w": "面条",
+            "ph": "miàn tiáo",
+            "mean": "mì"
+          }
+        ],
+        "py": "wǒ men xiǎng chī miàn tiáo"
+      },
+      {
+        "t": 112,
+        "text": "我们想吃面条。",
+        "tr": "Chúng con muốn ăn mì.",
+        "words": [
+          {
+            "w": "面条",
+            "ph": "miàn tiáo",
+            "mean": "mì"
+          }
+        ],
+        "py": "wǒ men xiǎng chī miàn tiáo"
+      },
+      {
+        "t": 116,
+        "text": "我们想吃面条。",
+        "tr": "Chúng con muốn ăn mì.",
+        "words": [
+          {
+            "w": "面条",
+            "ph": "miàn tiáo",
+            "mean": "mì"
+          }
+        ],
+        "py": "wǒ men xiǎng chī miàn tiáo"
+      },
+      {
+        "t": 120,
+        "text": "我们想吃面条。",
+        "tr": "Chúng con muốn ăn mì.",
+        "words": [
+          {
+            "w": "面条",
+            "ph": "miàn tiáo",
+            "mean": "mì"
+          }
+        ],
+        "py": "wǒ men xiǎng chī miàn tiáo"
+      },
+      {
+        "t": 124,
+        "text": "我们想吃面条。",
+        "tr": "Chúng con muốn ăn mì.",
+        "words": [
+          {
+            "w": "面条",
+            "ph": "miàn tiáo",
+            "mean": "mì"
+          }
+        ],
+        "py": "wǒ men xiǎng chī miàn tiáo"
+      },
+      {
+        "t": 128,
+        "text": "我们想吃面条。",
+        "tr": "Chúng con muốn ăn mì.",
+        "words": [
+          {
+            "w": "面条",
+            "ph": "miàn tiáo",
+            "mean": "mì"
+          }
+        ],
+        "py": "wǒ men xiǎng chī miàn tiáo"
+      },
+      {
+        "t": 132,
+        "text": "我们想吃面条。",
+        "tr": "Chúng con muốn ăn mì.",
+        "words": [
+          {
+            "w": "面条",
+            "ph": "miàn tiáo",
+            "mean": "mì"
+          }
+        ],
+        "py": "wǒ men xiǎng chī miàn tiáo"
+      },
+      {
+        "t": 136,
+        "text": "我们想吃面条。",
+        "tr": "Chúng con muốn ăn mì.",
+        "words": [
+          {
+            "w": "面条",
+            "ph": "miàn tiáo",
+            "mean": "mì"
+          }
+        ],
+        "py": "wǒ men xiǎng chī miàn tiáo"
+      }
+    ]
   }
 ]
