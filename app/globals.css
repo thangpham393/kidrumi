@@ -256,6 +256,15 @@ button { font-family: inherit; }
 .vid .badges .cnt { background: var(--green-soft); color: var(--green); }
 .vid { text-decoration: none; display: block; }
 
+/* Phân trang thư viện video */
+.pager { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; margin-top: 34px; }
+.pager button { min-width: 44px; height: 44px; padding: 0 14px; border-radius: 999px; border: 2px solid var(--line); background: #fff; font-family: var(--font-head); font-weight: 800; font-size: 15px; color: var(--ink-soft); cursor: pointer; transition: background .15s, color .15s, border-color .15s, transform .15s; }
+.pager-num { padding: 0; }
+.pager button:hover:not(:disabled) { border-color: var(--brand-soft); background: var(--brand-soft); color: var(--brand); }
+.pager button:disabled { opacity: .45; cursor: not-allowed; }
+.pager-num.on { background: linear-gradient(100deg, var(--brand) 0%, #a06ff0 100%); border-color: transparent; color: #fff; box-shadow: var(--shadow-sm); }
+.pager-num.on:hover { background: linear-gradient(100deg, var(--brand) 0%, #a06ff0 100%); color: #fff; }
+
 /* Tab ngôn ngữ (English / Chinese) — cấp cao nhất của trang Shadowing */
 .lang-tabs { display: inline-flex; gap: 6px; background: #fff; border: 2px solid var(--line); border-radius: 999px; padding: 5px; box-shadow: var(--shadow-sm); margin-bottom: 16px; }
 .lang-tab { display: inline-flex; align-items: center; gap: 7px; border: none; background: none; cursor: pointer; font-family: var(--font-head); font-weight: 800; font-size: 15px; color: var(--muted); padding: 9px 20px; border-radius: 999px; transition: .15s; min-height: 44px; }
@@ -405,11 +414,21 @@ button { font-family: inherit; }
 
 /* Tablet & below: single-column layouts, tighter grids */
 @media (max-width: 900px) {
-  .grid-2, .task-cols { grid-template-columns: 1fr; }
+  .task-cols { grid-template-columns: 1fr; }
   .vid-grid { grid-template-columns: repeat(2, 1fr); }
-  /* iPad keeps two columns of problems — single column starts at phones (720px) */
-  .act-thumb { flex-basis: 150px; height: 150px; }
   .wrap { padding: 32px 18px 320px; }
+
+  /* Tablet (gồm iPad dọc 768px): thẻ hoạt động 2 cột DỌC — ảnh trên, chữ dưới.
+     Vẫn giữ mô tả vì còn rộng; điện thoại (≤720) mới ẩn bớt cho gọn. */
+  .grid-2 { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .act-card { --tilt: 0deg; flex-direction: column; gap: 0; padding: 14px; text-align: center; border-radius: 24px; }
+  .act-thumb { flex: none; width: 100%; height: auto; aspect-ratio: 1 / 1; border-radius: 18px; }
+  .act-body { align-items: center; }
+  .act-body h3 { margin: 12px 0 2px; }
+  .act-body .act-cta { align-self: center; }
+  .act-card .tape { left: 50%; transform: translateX(-50%) rotate(-4deg); }
+  .act-card:hover { animation: none; transform: rotate(0deg); }
+  .act-card:active { transform: translateY(-2px) scale(0.99); }
 
   /* Shadowing detail trên mobile/tablet dọc: khoá màn hình 1 khung — video cố định
      trên đầu, chỉ danh sách câu cuộn bên dưới (không cuộn cả trang). */

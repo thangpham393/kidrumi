@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import {
   type Lang,
@@ -19,6 +19,7 @@ import {
 // (phòng khi i.ytimg chặn tạm 1 vài request); nếu ID không có ảnh hợp lệ
 // (YouTube trả ảnh xám 120px) thì rớt hẳn về emoji trên nền vàng.
 const YT_QUALITIES = ["hqdefault", "mqdefault"] as const;
+const PER_PAGE = 30; // số video mỗi trang
 
 function VidThumb({ v }: { v: Video }) {
   const [imgOk, setImgOk] = useState(false);
@@ -60,6 +61,7 @@ export default function ShadowingPage() {
   const [source, setSource] = useState("Tất cả");
   const [level, setLevel] = useState<"all" | Level>("all");
   const [query, setQuery] = useState("");
+  const [page, setPage] = useState(1);
 
   const sources = sourcesByLang[lang];
   const levels = levelsByLang[lang];
@@ -73,6 +75,22 @@ export default function ShadowingPage() {
         (q === "" || v.title.toLowerCase().includes(q))
     );
   }, [lang, source, level, query]);
+
+  // Phân trang: chia danh sách đã lọc thành các trang 30 video.
+  const totalPages = Math.max(1, Math.ceil(list.length / PER_PAGE));
+  const current = Math.min(page, totalPages); // kẹp trang khi bộ lọc thu nhỏ danh sách
+  const paged = list.slice((current - 1) * PER_PAGE, current * PER_PAGE);
+
+  // Đổi bộ lọc/tìm kiếm/ngôn ngữ thì về trang 1.
+  useEffect(() => {
+    setPage(1);
+  }, [lang, source, level, query]);
+
+  // Chuyển trang: cuộn lên đầu cho bé thấy từ video đầu tiên.
+  const goPage = (n: number) => {
+    setPage(n);
+    if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   // Đổi ngôn ngữ thì reset bộ lọc nguồn (nguồn khác nhau giữa EN/ZH).
   const pickLang = (l: Lang) => {
@@ -172,7 +190,7 @@ export default function ShadowingPage() {
           </div>
 
           <div className="vid-grid">
-            {list.map((v) => (
+            {paged.map((v) => (
               <Link key={v.id} href={`/shadowing/${v.id}`} className="vid">
                 <VidThumb v={v} />
                 <div className="meta">
@@ -189,6 +207,35 @@ export default function ShadowingPage() {
             <p style={{ textAlign: "center", color: "var(--ink-soft)", marginTop: 40 }}>
               Chưa có video phù hợp bộ lọc. Thử chọn lại nhé! 🔎
             </p>
+          )}
+
+          {totalPages > 1 && (
+            <nav className="pager" aria-label="Phân trang">
+              <button
+                className="pager-nav"
+                onClick={() => goPage(current - 1)}
+                disabled={current === 1}
+              >
+                ← Trước
+              </button>
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
+                <button
+                  key={n}
+                  className={`pager-num ${n === current ? "on" : ""}`}
+                  onClick={() => goPage(n)}
+                  aria-current={n === current ? "page" : undefined}
+                >
+                  {n}
+                </button>
+              ))}
+              <button
+                className="pager-nav"
+                onClick={() => goPage(current + 1)}
+                disabled={current === totalPages}
+              >
+                Sau →
+              </button>
+            </nav>
           )}
         </>
       ) : (

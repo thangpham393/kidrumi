@@ -108,13 +108,15 @@ Tạo thành phần mới: kế thừa cùng bo góc (`--radius`/`--radius-lg`),
 
 ## 9. Responsive — breakpoints chuẩn
 Mobile-first về trải nghiệm; hiện dùng 4 mốc **max-width**:
-- **`900px`** — lưới về 1 cột (`.grid-2`, `.task-cols`), video 4→2 cột, thumb nhỏ lại.
+- **`900px`** — `.task-cols` về 1 cột, video (`.vid-grid`) 4→2 cột. **Thẻ home
+  (`.grid-2`) chuyển sang 2 cột DỌC** (ảnh trên chữ dưới) — phủ luôn iPad dọc (768px)
+  nên tablet vẫn 2 cột; ở dải này **vẫn giữ mô tả + CTA** vì còn rộng.
 - **`820px`** — **nav thành hamburger**: `.nav-links` biến thành dropdown góc phải
   (`.nav-burger` mở/đóng, đổi thành ✕), tên tài khoản dồn về góc phải (`margin-left:auto`).
   Mục chỉ hiện trong menu dùng `.menu-only`; mục chỉ hiện inline dùng `.inline-only`.
-- **`720px`** (điện thoại) — **thẻ home 2 cột dọc**: `.act-card` chuyển `flex-direction:
-  column`, ảnh trên chữ dưới canh giữa, ẩn mô tả dài + CTA, băng keo canh giữa, tắt nhún
-  hover. Bàn phím số (`.pad`) thành **bottom-sheet** trượt lên.
+- **`720px`** (điện thoại) — thẻ home vẫn 2 cột dọc nhưng **thu gọn cho máy nhỏ**:
+  **ẩn mô tả dài + CTA**, thu chữ, giảm gap/padding. Bàn phím số (`.pad`) thành
+  **bottom-sheet** trượt lên.
 - **`380px`** — tinh chỉnh máy nhỏ (thu chữ, thu keypad).
 
 Nguyên tắc: `overflow-x: clip` ở `html,body` chống tràn ngang; `img/svg/video` luôn
