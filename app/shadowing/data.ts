@@ -13,8 +13,10 @@ export type Level = "de" | "mid" | "hard" | "l1" | "l2";
 
 // Một câu trong transcript. `t` = mốc bắt đầu (giây). `tr` = bản dịch tiếng Việt.
 // `words` = từ/cụm từ đáng chú ý; `ph` là phiên âm (IPA cho tiếng Anh, pinyin cho tiếng Trung).
+// `py` (chỉ tiếng Trung) = pinyin từng chữ Hán, cách nhau bằng dấu cách, ĐÚNG THỨ TỰ &
+// SỐ LƯỢNG với các chữ Hán trong `text` — để render ruby (phiên âm trên đầu chữ).
 export type Word = { w: string; ph?: string; mean: string };
-export type Segment = { t: number; text: string; tr: string; words?: Word[] };
+export type Segment = { t: number; text: string; tr: string; words?: Word[]; py?: string };
 
 export type Video = {
   id: string; // slug dùng cho URL /shadowing/[id]

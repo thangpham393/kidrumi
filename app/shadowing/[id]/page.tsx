@@ -31,6 +31,32 @@ declare global {
 }
 
 const speeds = [0.5, 0.75, 1, 1.25, 1.5];
+
+// Chữ Hán (CJK Unified + Ext A). Dùng để căn từng chữ với âm pinyin tương ứng.
+const isHan = (c: string) => (c >= "一" && c <= "鿿") || (c >= "㐀" && c <= "䶿");
+
+// Hiển thị câu tiếng Trung dạng ruby: phiên âm (pinyin) nổi trên đầu MỖI chữ Hán.
+// `py` là chuỗi pinyin từng chữ Hán cách nhau bằng dấu cách, đúng thứ tự với `text`.
+// Ký tự không phải chữ Hán (dấu câu, khoảng trắng) in thẳng, không tiêu tốn âm.
+function RubyText({ text, py }: { text: string; py?: string }) {
+  if (!py) return <>{text}</>;
+  const syl = py.split(" ").filter(Boolean);
+  let si = 0;
+  return (
+    <>
+      {Array.from(text).map((ch, i) =>
+        isHan(ch) ? (
+          <ruby key={i}>
+            {ch}
+            <rt>{syl[si++] ?? ""}</rt>
+          </ruby>
+        ) : (
+          <span key={i}>{ch}</span>
+        )
+      )}
+    </>
+  );
+}
 const sizes = [
   { key: "sm", label: "Nhỏ" },
   { key: "md", label: "Vừa" },
@@ -90,7 +116,9 @@ function ShadowingPlayer({ video }: { video: Video }) {
   const [speed, setSpeed] = useState(1);
   const [size, setSize] = useState<SizeKey>("md");
   const [showExpl, setShowExpl] = useState(true);
+  const [showPinyin, setShowPinyin] = useState(true); // phiên âm ruby — mặc định hiện
   const [autoScroll, setAutoScroll] = useState(true);
+  const isZh = video.lang === "zh";
   const pendingSeek = useRef<number | null>(null); // mốc tua chờ khi player sẵn sàng
 
   // Chỉ khởi tạo trình phát YouTube SAU khi bé bấm phát (facade → tiết kiệm & chắc chắn).
@@ -256,6 +284,16 @@ function ShadowingPlayer({ video }: { video: Video }) {
           <div className="sh-script-head">
             <strong>Transcript ({video.segments.length} câu)</strong>
             <div className="sh-toggles">
+              {isZh && (
+                <label className="sh-check">
+                  <input
+                    type="checkbox"
+                    checked={showPinyin}
+                    onChange={(e) => setShowPinyin(e.target.checked)}
+                  />
+                  Hiện phiên âm
+                </label>
+              )}
               <label className="sh-check">
                 <input
                   type="checkbox"
@@ -295,7 +333,13 @@ function ShadowingPlayer({ video }: { video: Video }) {
               >
                 <div className="sh-seg-main">
                   <span className="sh-time">{fmtTime(seg.t)}</span>
-                  <span className="sh-text">{seg.text}</span>
+                  <span className={`sh-text ${isZh && showPinyin ? "has-ruby" : ""}`}>
+                    {isZh && showPinyin ? (
+                      <RubyText text={seg.text} py={seg.py} />
+                    ) : (
+                      seg.text
+                    )}
+                  </span>
                 </div>
                 {showExpl && (
                   <div className="sh-expl">

@@ -340,6 +340,20 @@ button { font-family: inherit; }
 .sh-time { flex: 0 0 auto; font-family: var(--font-head); font-weight: 800; font-size: 13px; color: var(--muted); min-width: 38px; }
 .sh-text { font-weight: 700; color: var(--ink); line-height: 1.4; }
 .sh-seg.on .sh-text { color: var(--brand-dark); }
+/* Ruby: phiên âm pinyin nổi trên đầu từng chữ Hán. Chữ Hán to hơn một nhịp, pinyin
+   nhỏ & màu nhạt để bé dễ đọc mà không rối. line-height rộng chừa chỗ cho hàng phiên âm. */
+.sh-text.has-ruby { font-size: 20px; line-height: 2; }
+.sh-text.has-ruby ruby { ruby-align: center; margin: 0 1px; }
+.sh-text.has-ruby rt {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.56em;
+  color: var(--brand);
+  letter-spacing: -0.2px;
+  user-select: none;
+}
+.sh-seg.on .sh-text.has-ruby rt { color: var(--brand-dark); }
+@media (max-width: 720px) { .sh-text.has-ruby { font-size: 18px; } }
 .sh-expl { margin: 8px 0 0 50px; }
 .sh-tr { margin: 0; font-size: 14px; color: var(--ink-soft); }
 .sh-tr b { color: var(--green); }
