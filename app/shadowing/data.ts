@@ -33,7 +33,7 @@ export const levelLabel: Record<Level, string> = {
   de: "Dễ",
   mid: "Trung bình",
   hard: "Khó",
-  l1: "Level 1",
+  l1: "Early Learning 1",
 };
 // Lớp CSS phủ màu badge độ khó. l1 dùng màu xanh dương (blue) cho khác thang de/mid/hard.
 export const levelCls: Record<Level, string> = { de: "", mid: "mid", hard: "hard", l1: "l1" };
