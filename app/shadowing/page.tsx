@@ -19,7 +19,7 @@ import {
 // (phòng khi i.ytimg chặn tạm 1 vài request); nếu ID không có ảnh hợp lệ
 // (YouTube trả ảnh xám 120px) thì rớt hẳn về emoji trên nền vàng.
 const YT_QUALITIES = ["hqdefault", "mqdefault"] as const;
-const PER_PAGE = 30; // số video mỗi trang
+const PER_PAGE = 32; // 4 cột × 8 hàng = 32, chia đều mỗi trang
 
 function VidThumb({ v }: { v: Video }) {
   const [imgOk, setImgOk] = useState(false);
