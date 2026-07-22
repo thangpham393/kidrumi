@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { siteUrl, siteName, siteDescription } from "@/lib/site";
 
 const cards = [
   {
@@ -36,9 +37,52 @@ const cards = [
   },
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: siteName,
+      description: siteDescription,
+      inLanguage: "vi-VN",
+      publisher: { "@id": `${siteUrl}/#organization` },
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": `${siteUrl}/#organization`,
+      name: siteName,
+      url: siteUrl,
+      description: siteDescription,
+      logo: `${siteUrl}/icon.svg`,
+      audience: {
+        "@type": "EducationalAudience",
+        educationalRole: "student",
+        audienceType: "Trẻ tuổi tiền tiểu học",
+      },
+    },
+    {
+      "@type": "ItemList",
+      name: "Các góc học của Kidrumi",
+      itemListElement: cards.map((c, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: `${c.title} — ${c.tag}`,
+        description: c.desc,
+        url: `${siteUrl}${c.href}`,
+      })),
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <main className="wrap">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <p className="page-eyebrow">KIDRUMI</p>
       <h1 className="page-title">Hôm nay con muốn học gì?</h1>
       <p className="page-sub">
