@@ -22,6 +22,9 @@ export default function TopNav() {
 
   const close = () => setOpen(false);
 
+  // Khu quản trị (/admin) có shell riêng — ẩn hoàn toàn nav của trang trẻ em.
+  if (pathname?.startsWith("/admin")) return null;
+
   // Tên hiển thị: ưu tiên tài khoản Google, sau đó tới hồ sơ bé, cuối cùng mặc định.
   const displayName = user?.name ?? child?.name ?? "Bé Yêu";
 

@@ -1,0 +1,32 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding: var(--sp-4) var(--sp-5);
+  border-top: 1px solid var(--c-border);
+}
+.range { font-size: 13px; color: var(--c-text-secondary); }
+.range b { color: var(--c-text); font-weight: 600; }
+.controls { display: flex; align-items: center; gap: var(--sp-2); }
+.pageNum { font-size: 13px; color: var(--c-text-secondary); }
+.pageNum b { color: var(--c-text); }
+.btn {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--c-border-strong);
+  background: var(--c-surface);
+  color: var(--c-text-secondary);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  transition: background .12s ease-out, color .12s ease-out, border-color .12s ease-out;
+}
+.btn:hover:not(:disabled) { border-color: var(--c-primary); color: var(--c-primary); background: var(--c-primary-light); }
+.btn:disabled { opacity: .45; cursor: not-allowed; }
+
+@media (max-width: 480px) {
+  .pagination { flex-direction: column; align-items: stretch; gap: var(--sp-3); }
+  .controls { justify-content: space-between; }
+}

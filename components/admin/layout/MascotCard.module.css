@@ -1,0 +1,35 @@
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--r-xl);
+  padding: var(--sp-4);
+  background: linear-gradient(150deg, var(--c-primary-light), color-mix(in srgb, var(--c-primary-light) 55%, var(--c-surface)));
+  border: 1px solid color-mix(in srgb, var(--c-primary) 22%, transparent);
+}
+.glow {
+  position: absolute;
+  top: -40px;
+  right: -30px;
+  width: 120px;
+  height: 120px;
+  border-radius: var(--r-full);
+  background: radial-gradient(circle, color-mix(in srgb, var(--c-primary) 30%, transparent), transparent 70%);
+  pointer-events: none;
+}
+.inner { position: relative; display: flex; flex-direction: column; gap: var(--sp-2); }
+.emoji { font-size: 28px; line-height: 1; }
+.text { font-size: 13px; font-weight: 600; line-height: 1.45; color: var(--c-text); }
+
+/* rail mode */
+.mini {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin: 0 auto;
+  border-radius: var(--r-md);
+  background: var(--c-primary-light);
+  border: 1px solid color-mix(in srgb, var(--c-primary) 22%, transparent);
+  cursor: default;
+}
+.miniEmoji { font-size: 22px; line-height: 1; }

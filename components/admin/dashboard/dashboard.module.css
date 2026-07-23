@@ -1,0 +1,60 @@
+.stack { display: flex; flex-direction: column; gap: var(--sp-5); }
+
+.headAction {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  height: 40px;
+  padding: 0 var(--sp-4);
+  border-radius: var(--r-md);
+  background: var(--c-primary-light);
+  color: var(--c-primary);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background .15s ease-out, transform .12s ease-out;
+}
+.headAction:hover { background: var(--c-primary); color: var(--c-on-primary); transform: translateY(-1px); }
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--sp-4);
+}
+.split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sp-5);
+}
+
+/* Bars */
+.bars { display: flex; flex-direction: column; gap: var(--sp-4); }
+.barRow { display: grid; grid-template-columns: 120px 1fr 44px; align-items: center; gap: var(--sp-3); }
+.barLabel { font-size: 13px; font-weight: 600; color: var(--c-text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.barTrack { height: 10px; border-radius: var(--r-full); background: var(--c-surface-sunken); overflow: hidden; }
+.barFill {
+  display: block;
+  height: 100%;
+  border-radius: var(--r-full);
+  background: linear-gradient(90deg, var(--c-primary), var(--c-secondary));
+}
+.barVal { font-size: 13px; font-weight: 700; color: var(--c-text-secondary); text-align: right; }
+
+/* Recent video cell */
+.vid { display: flex; align-items: center; gap: var(--sp-3); min-width: 0; }
+.vidEmoji {
+  display: grid; place-items: center;
+  width: 34px; height: 34px; flex: none;
+  border-radius: var(--r-sm);
+  background: var(--c-surface-sunken);
+  font-size: 18px;
+}
+.vidTitle { font-weight: 600; color: var(--c-text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+@media (max-width: 1100px) {
+  .statGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .split { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 520px) {
+  .statGrid { grid-template-columns: minmax(0, 1fr); }
+  .barRow { grid-template-columns: 90px 1fr 36px; }
+}

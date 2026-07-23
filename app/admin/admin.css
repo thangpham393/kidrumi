@@ -1,0 +1,177 @@
+/* ============================================================
+   Kidrumi Admin — design tokens + base
+   Scoped entirely under .admin-root so it never collides with
+   the kids design system in app/globals.css.
+   Spec: docs/admin/DESIGN_SYSTEM.md
+   ============================================================ */
+
+/* ---------------- Tokens: LIGHT (default) ---------------- */
+.admin-root {
+  /* core */
+  --c-primary:          #7C6CF6;
+  --c-primary-hover:    #6B5AEF;
+  --c-primary-active:   #5B49E6;
+  --c-primary-light:    #EEEAFE;
+  --c-secondary:        #9D8CFF;
+
+  --c-bg:               #F8F6FF;
+  --c-surface:          #FFFFFF;
+  --c-surface-elevated: #FFFFFF;
+  --c-surface-sunken:   #F4F1FD;
+
+  --c-border:           #ECE9F8;
+  --c-border-strong:    #DCD8F0;
+
+  --c-text:             #2B2B42;
+  --c-text-secondary:   #6B6B85;
+  --c-text-muted:       #9B9BB4;
+  --c-on-primary:       #FFFFFF;
+
+  /* semantic */
+  --c-success:          #84D27C;  --c-success-light: #EAF7E8;  --c-on-success: #2E6B2A;
+  --c-warning:          #FFC857;  --c-warning-light: #FFF6E2;  --c-on-warning: #8A5A00;
+  --c-danger:           #FF7AA2;  --c-danger-light:  #FFEBF1;  --c-on-danger:  #A61E4D;
+  --c-info:             #67B7FF;  --c-info-light:    #E6F3FF;  --c-on-info:    #0B5A9E;
+
+  /* data-viz categorical */
+  --viz-1: #7C6CF6;  --viz-2: #4FC5C0;  --viz-3: #FFC857;
+  --viz-4: #FF7AA2;  --viz-5: #67B7FF;  --viz-6: #B98CFF;
+
+  /* elevation */
+  --e-1: 0 1px 2px rgba(44,40,80,.04), 0 4px 16px -8px rgba(80,70,160,.14);
+  --e-2: 0 2px 4px rgba(44,40,80,.05), 0 12px 28px -10px rgba(80,70,160,.20);
+  --e-3: 0 8px 24px -6px rgba(44,40,80,.16);
+  --e-4: 0 24px 64px -16px rgba(44,40,80,.28);
+  --ring: 0 0 0 2px var(--c-bg), 0 0 0 4px var(--c-primary);
+
+  /* radius */
+  --r-xs: 8px;  --r-sm: 12px;  --r-md: 16px;  --r-lg: 18px;
+  --r-xl: 24px; --r-2xl: 32px; --r-full: 9999px;
+
+  /* spacing (8pt) */
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px; --sp-5: 24px;
+  --sp-6: 32px; --sp-7: 40px; --sp-8: 48px; --sp-9: 64px; --sp-10: 80px; --sp-11: 96px;
+
+  /* z-index scale */
+  --z-base: 1; --z-nav: 100; --z-dropdown: 200; --z-drawer: 300;
+  --z-modal: 400; --z-toast: 500;
+
+  /* layout constants */
+  --sidebar-w: 280px;
+  --sidebar-rail: 84px;
+  --topbar-h: 76px;
+  --content-max: 1600px;
+
+  --font-admin: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ---------------- Tokens: DARK (dedicated, not inverted) ---------------- */
+.admin-root[data-admin-theme="dark"],
+.admin-dark-vars {
+  --c-primary:          #8E7FF7;
+  --c-primary-hover:    #A395FF;
+  --c-primary-active:   #7A6BE6;
+  --c-primary-light:    #2A2440;
+  --c-secondary:        #A99BFF;
+
+  --c-bg:               #131019;
+  --c-surface:          #1B1826;
+  --c-surface-elevated: #232030;
+  --c-surface-sunken:   #17141F;
+
+  --c-border:           #2C2838;
+  --c-border-strong:    #3A3550;
+
+  --c-text:             #ECEAF6;
+  --c-text-secondary:   #ABA8BF;
+  --c-text-muted:       #736F86;
+  --c-on-primary:       #16121F;
+
+  --c-success:          #7FD182;  --c-success-light: #1E2A1E;  --c-on-success: #B7E9B4;
+  --c-warning:          #F5C462;  --c-warning-light: #2E2612;  --c-on-warning: #FADFA0;
+  --c-danger:           #FF89AC;  --c-danger-light:  #2E1720;  --c-on-danger:  #FFBBD0;
+  --c-info:             #74BDFF;  --c-info-light:    #142430;  --c-on-info:    #ADD8FF;
+
+  --e-1: 0 1px 2px rgba(0,0,0,.35), 0 4px 16px -8px rgba(0,0,0,.5);
+  --e-2: 0 2px 4px rgba(0,0,0,.4), 0 12px 28px -10px rgba(0,0,0,.6);
+  --e-3: 0 8px 24px -6px rgba(0,0,0,.55);
+  --e-4: 0 24px 64px -16px rgba(0,0,0,.7);
+  --ring: 0 0 0 2px var(--c-bg), 0 0 0 4px var(--c-primary);
+}
+
+/* Follow system when the user has not explicitly chosen light */
+@media (prefers-color-scheme: dark) {
+  .admin-root:not([data-admin-theme="light"]) {
+    --c-primary:          #8E7FF7;
+    --c-primary-hover:    #A395FF;
+    --c-primary-active:   #7A6BE6;
+    --c-primary-light:    #2A2440;
+    --c-secondary:        #A99BFF;
+
+    --c-bg:               #131019;
+    --c-surface:          #1B1826;
+    --c-surface-elevated: #232030;
+    --c-surface-sunken:   #17141F;
+
+    --c-border:           #2C2838;
+    --c-border-strong:    #3A3550;
+
+    --c-text:             #ECEAF6;
+    --c-text-secondary:   #ABA8BF;
+    --c-text-muted:       #736F86;
+    --c-on-primary:       #16121F;
+
+    --c-success: #7FD182; --c-success-light: #1E2A1E; --c-on-success: #B7E9B4;
+    --c-warning: #F5C462; --c-warning-light: #2E2612; --c-on-warning: #FADFA0;
+    --c-danger:  #FF89AC; --c-danger-light:  #2E1720; --c-on-danger:  #FFBBD0;
+    --c-info:    #74BDFF; --c-info-light:    #142430; --c-on-info:    #ADD8FF;
+
+    --e-1: 0 1px 2px rgba(0,0,0,.35), 0 4px 16px -8px rgba(0,0,0,.5);
+    --e-2: 0 2px 4px rgba(0,0,0,.4), 0 12px 28px -10px rgba(0,0,0,.6);
+    --e-3: 0 8px 24px -6px rgba(0,0,0,.55);
+    --e-4: 0 24px 64px -16px rgba(0,0,0,.7);
+  }
+}
+
+/* ---------------- Base — opaque cover over the kids scene ---------------- */
+.admin-root {
+  position: relative;
+  z-index: var(--z-nav);           /* sits above the fixed clay SceneBackground */
+  min-height: 100vh;
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-family: var(--font-admin);
+  font-size: 14px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+.admin-root *,
+.admin-root *::before,
+.admin-root *::after { box-sizing: border-box; }
+
+.admin-root h1, .admin-root h2, .admin-root h3,
+.admin-root h4, .admin-root h5, .admin-root h6,
+.admin-root p, .admin-root figure { margin: 0; }
+
+.admin-root a { color: inherit; text-decoration: none; }
+.admin-root button { font-family: inherit; }
+
+.admin-root :focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+  border-radius: var(--r-sm);
+}
+
+/* tabular numerals for data surfaces */
+.admin-num { font-variant-numeric: tabular-nums; }
+
+/* panel body that holds a full-bleed table (edges meet the panel) */
+.admin-root .admin-panel-flush { padding: 0; }
+.admin-root .admin-panel-flush :where(table) { border-radius: 0; }
+
+/* screen-reader only */
+.admin-sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}

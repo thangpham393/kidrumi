@@ -1,0 +1,38 @@
+.field { display: flex; flex-direction: column; gap: var(--sp-2); }
+
+.label { font-size: 14px; font-weight: 600; color: var(--c-text); }
+
+.input {
+  width: 100%;
+  border: 1.5px solid var(--c-border-strong);
+  border-radius: var(--r-lg);
+  background: var(--c-surface);
+  color: var(--c-text);
+  font-family: inherit;
+  transition: border-color .15s ease-out, box-shadow .15s ease-out;
+}
+.input[data-size="md"] { height: 44px; padding: 0 var(--sp-4); font-size: 14px; }
+.input[data-size="lg"] { height: 52px; padding: 0 var(--sp-4); font-size: 16px; }
+.input::placeholder { color: var(--c-text-muted); }
+
+.input:focus {
+  outline: none;
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 3px var(--c-primary-light);
+}
+.input:disabled {
+  background: var(--c-surface-sunken);
+  color: var(--c-text-muted);
+  cursor: not-allowed;
+}
+.input[data-invalid="true"] { border-color: var(--c-danger); }
+.input[data-invalid="true"]:focus {
+  box-shadow: 0 0 0 3px var(--c-danger-light);
+}
+
+.hint { font-size: 13px; color: var(--c-text-secondary); }
+.error { font-size: 13px; font-weight: 500; color: var(--c-danger); }
+
+@media (prefers-reduced-motion: reduce) {
+  .input { transition: none; }
+}

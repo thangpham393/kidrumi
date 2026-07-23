@@ -1,0 +1,94 @@
+.scroll { width: 100%; overflow-x: auto; }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.table th {
+  padding: var(--sp-3) var(--sp-4);
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--c-text-secondary);
+  background: var(--c-surface-sunken);
+  border-bottom: 1px solid var(--c-border);
+  white-space: nowrap;
+}
+.table th:first-child { border-top-left-radius: var(--r-md); }
+.table th:last-child { border-top-right-radius: var(--r-md); }
+
+.table td {
+  padding: var(--sp-4);
+  color: var(--c-text);
+  border-bottom: 1px solid var(--c-border);
+  vertical-align: middle;
+}
+.table tbody tr { transition: background .12s ease-out; }
+.table tbody tr:hover { background: var(--c-surface-sunken); }
+.table tbody tr:last-child td { border-bottom: none; }
+
+.table [data-align="right"] { text-align: right; font-variant-numeric: tabular-nums; }
+.table [data-align="center"] { text-align: center; }
+
+.table tbody tr[data-selected="true"] { background: var(--c-primary-light); }
+.table tbody tr[data-selected="true"]:hover { background: var(--c-primary-light); }
+
+.checkCell { width: 48px; padding-left: var(--sp-5) !important; }
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: var(--r-xs);
+  border: 1.5px solid var(--c-border-strong);
+  accent-color: var(--c-primary);
+  cursor: pointer;
+}
+
+/* ---------------- Empty state ---------------- */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-8) var(--sp-4);
+  color: var(--c-text-muted);
+  text-align: center;
+}
+.empty p { font-size: 14px; }
+
+/* ---------------- Mobile: stacked cards ---------------- */
+@media (max-width: 767px) {
+  .table thead { display: none; }
+  .table, .table tbody, .table tr, .table td { display: block; width: 100%; }
+  .table tr {
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-lg);
+    padding: var(--sp-2) var(--sp-4);
+    margin-bottom: var(--sp-3);
+    background: var(--c-surface);
+  }
+  .table td {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-4);
+    padding: var(--sp-2) 0;
+    border-bottom: 1px solid var(--c-border);
+  }
+  .table tr td:last-child { border-bottom: none; }
+  .table td::before {
+    content: attr(data-label);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: var(--c-text-muted);
+  }
+  .table [data-align="right"], .table [data-align="center"] { text-align: right; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .table tbody tr { transition: none; }
+}
