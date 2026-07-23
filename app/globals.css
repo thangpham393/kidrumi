@@ -250,6 +250,8 @@ button { font-family: inherit; }
 .vid .lvl.l1 { background: var(--blue); }
 .vid .lvl.l2 { background: var(--brand); }
 .vid .lvl.kelly { background: var(--pink); }
+/* Folktales 1 (Little Fox): xanh ngọc kể chuyện, khác các thang trên */
+.vid .lvl.ft1 { background: #3fb6a8; }
 .vid .dur { position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,.6); color: #fff; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 8px; }
 .vid .meta { padding: 12px 14px 16px; }
 .vid .meta h4 { font-size: 15px; margin: 0 0 8px; line-height: 1.35; color: var(--ink); font-weight: 800; }

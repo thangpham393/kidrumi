@@ -25,7 +25,7 @@ def main():
     ap.add_argument("--base", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--source", required=True)
-    ap.add_argument("--level", default="l1", choices=["de", "mid", "hard", "l1", "l2", "kelly"])
+    ap.add_argument("--level", default="l1", choices=["de", "mid", "hard", "l1", "l2", "kelly", "ft1"])
     ap.add_argument("--lang", default="zh", choices=["zh", "en"])
     ap.add_argument("--id-prefix", default="")
     a = ap.parse_args()
