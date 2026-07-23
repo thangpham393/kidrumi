@@ -41,9 +41,30 @@ export async function proxy(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
+  const { pathname } = request.nextUrl;
+
+  // Khu quản trị (/admin): chỉ email trong ADMIN_EMAILS mới vào được.
+  // Nick nào không phải admin (kể cả chưa đăng nhập) → đá về trang chủ.
+  // Chỉ áp dụng cho TRANG /admin (không đụng /api/admin — đã gate riêng).
+  if (pathname === "/admin" || pathname.startsWith("/admin/")) {
+    const admins = (process.env.ADMIN_EMAILS ?? "")
+      .split(",")
+      .map((s) => s.trim().toLowerCase())
+      .filter(Boolean);
+    // Chỉ chặn khi đã cấu hình admin; chưa cấu hình thì để layout hiện hướng dẫn.
+    if (admins.length > 0) {
+      const email = user?.email?.toLowerCase();
+      if (!email || !admins.includes(email)) {
+        const home = request.nextUrl.clone();
+        home.pathname = "/";
+        home.search = "";
+        return NextResponse.redirect(home);
+      }
+    }
+  }
+
   // Các đường dẫn bắt buộc đăng nhập. "Nhiệm vụ" (/tasks) yêu cầu đăng nhập.
   const protectedPaths = ["/tasks"];
-  const { pathname } = request.nextUrl;
   const needsAuth = protectedPaths.some(
     (p) => pathname === p || pathname.startsWith(`${p}/`),
   );
