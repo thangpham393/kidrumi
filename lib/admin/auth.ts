@@ -11,7 +11,7 @@ export function adminEmails(): string[] {
 
 export type Gate =
   | { ok: true; email: string }
-  | { ok: false; status: number; code: string; message: string };
+  | { ok: false; status: number; code: string; message: string; email?: string };
 
 // Xác thực người gọi là ADMIN trước khi cho dùng service role.
 // 1) phải cấu hình ADMIN_EMAILS  2) phải đăng nhập  3) email phải nằm trong allowlist.
@@ -34,7 +34,7 @@ export async function requireAdmin(): Promise<Gate> {
     return { ok: false, status: 401, code: "unauthenticated", message: "Bạn cần đăng nhập bằng tài khoản admin." };
   }
   if (!list.includes(email)) {
-    return { ok: false, status: 403, code: "forbidden", message: "Tài khoản này không có quyền quản trị." };
+    return { ok: false, status: 403, code: "forbidden", message: "Tài khoản này không có quyền quản trị.", email };
   }
   return { ok: true, email };
 }
