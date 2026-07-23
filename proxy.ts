@@ -51,15 +51,16 @@ export async function proxy(request: NextRequest) {
       .split(",")
       .map((s) => s.trim().toLowerCase())
       .filter(Boolean);
-    // Chỉ chặn khi đã cấu hình admin; chưa cấu hình thì để layout hiện hướng dẫn.
-    if (admins.length > 0) {
-      const email = user?.email?.toLowerCase();
-      if (!email || !admins.includes(email)) {
-        const home = request.nextUrl.clone();
-        home.pathname = "/";
-        home.search = "";
-        return NextResponse.redirect(home);
-      }
+    const email = user?.email?.toLowerCase();
+    const isAdmin = admins.length > 0 && !!email && admins.includes(email);
+    // Chỉ khi CHẠY DEV mà chưa cấu hình admin thì cho qua để layout hiện hướng
+    // dẫn setup. Trên production luôn chặn: không phải admin → về trang chủ.
+    const devSetup = admins.length === 0 && process.env.NODE_ENV !== "production";
+    if (!isAdmin && !devSetup) {
+      const home = request.nextUrl.clone();
+      home.pathname = "/";
+      home.search = "";
+      return NextResponse.redirect(home);
     }
   }
 
