@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import {
   type Lang,
@@ -55,6 +55,18 @@ function VidThumb({ v }: { v: Video }) {
   );
 }
 
+// Lưu "vị trí đang xem" (ngôn ngữ/tab/bộ lọc/trang) để khi bé mở 1 video rồi bấm
+// back về thư viện thì vẫn ở đúng tab & bộ lọc cũ — thay vì reset về English.
+const VIEW_KEY = "kidrumi:shadowing:view";
+type SavedView = {
+  lang: Lang;
+  tab: "library" | "learning";
+  source: string;
+  level: "all" | Level;
+  query: string;
+  page: number;
+};
+
 export default function ShadowingPage() {
   const [lang, setLang] = useState<Lang>(defaultLang);
   const [tab, setTab] = useState<"library" | "learning">("library");
@@ -62,6 +74,50 @@ export default function ShadowingPage() {
   const [level, setLevel] = useState<"all" | Level>("all");
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
+
+  // Cờ "đã khôi phục xong": chỉ ghi vào sessionStorage sau khi khôi phục —
+  // tránh ghi đè giá trị cũ bằng mặc định ngay lúc mount. (Component là "use client"
+  // nên vẫn render 1 lần trên server, không đọc sessionStorage ở đó để khỏi lệch hydrate.)
+  const restored = useRef(false);
+
+  // Khôi phục 1 lần khi vào lại trang. QUAN TRỌNG: chặn lần chạy thứ 2 của React
+  // StrictMode (dev) — nếu đọc lại thì effect ghi bên dưới đã kịp ghi đè giá trị cũ
+  // bằng mặc định, khiến lần khôi phục thứ 2 đọc nhầm và tab quay về English.
+  useEffect(() => {
+    if (restored.current) return;
+    try {
+      const raw = sessionStorage.getItem(VIEW_KEY);
+      if (raw) {
+        const s = JSON.parse(raw) as Partial<SavedView>;
+        const l: Lang = s.lang === "zh" ? "zh" : "en";
+        setLang(l);
+        setTab(s.tab === "learning" ? "learning" : "library");
+        // Nguồn/độ khó khác nhau giữa EN/ZH — chỉ nhận nếu còn hợp lệ, không thì "Tất cả".
+        setSource(s.source && sourcesByLang[l].includes(s.source) ? s.source : "Tất cả");
+        setLevel(
+          s.level && (s.level === "all" || levelsByLang[l].includes(s.level))
+            ? s.level
+            : "all"
+        );
+        setQuery(typeof s.query === "string" ? s.query : "");
+        setPage(typeof s.page === "number" && s.page >= 1 ? s.page : 1);
+      }
+    } catch {
+      /* sessionStorage không dùng được thì bỏ qua, chạy với mặc định */
+    }
+    restored.current = true;
+  }, []);
+
+  // Lưu lại mỗi khi trạng thái đổi.
+  useEffect(() => {
+    if (!restored.current) return;
+    try {
+      const view: SavedView = { lang, tab, source, level, query, page };
+      sessionStorage.setItem(VIEW_KEY, JSON.stringify(view));
+    } catch {
+      /* bỏ qua nếu sessionStorage bị chặn */
+    }
+  }, [lang, tab, source, level, query, page]);
 
   const sources = sourcesByLang[lang];
   const levels = levelsByLang[lang];
@@ -81,15 +137,25 @@ export default function ShadowingPage() {
   const current = Math.min(page, totalPages); // kẹp trang khi bộ lọc thu nhỏ danh sách
   const paged = list.slice((current - 1) * PER_PAGE, current * PER_PAGE);
 
-  // Đổi bộ lọc/tìm kiếm/ngôn ngữ thì về trang 1.
-  useEffect(() => {
-    setPage(1);
-  }, [lang, source, level, query]);
-
   // Chuyển trang: cuộn lên đầu cho bé thấy từ video đầu tiên.
   const goPage = (n: number) => {
     setPage(n);
     if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // Đổi bộ lọc/tìm kiếm thì về trang 1 (làm ngay trong handler để không đụng với
+  // việc khôi phục trang đã lưu).
+  const pickSource = (s: string) => {
+    setSource(s);
+    setPage(1);
+  };
+  const pickLevel = (lv: "all" | Level) => {
+    setLevel(lv);
+    setPage(1);
+  };
+  const pickQuery = (q: string) => {
+    setQuery(q);
+    setPage(1);
   };
 
   // Đổi ngôn ngữ thì reset bộ lọc nguồn (nguồn khác nhau giữa EN/ZH).
@@ -98,6 +164,7 @@ export default function ShadowingPage() {
     setSource("Tất cả");
     setLevel("all");
     setQuery("");
+    setPage(1);
   };
 
   return (
@@ -145,14 +212,14 @@ export default function ShadowingPage() {
               className="vid-search-input"
               placeholder="Tìm video theo tên..."
               value={query}
-              onChange={(e) => setQuery(e.target.value)}
+              onChange={(e) => pickQuery(e.target.value)}
               aria-label="Tìm video theo tên"
             />
             {query && (
               <button
                 type="button"
                 className="vid-search-clear"
-                onClick={() => setQuery("")}
+                onClick={() => pickQuery("")}
                 aria-label="Xoá tìm kiếm"
               >
                 ✕
@@ -164,7 +231,7 @@ export default function ShadowingPage() {
               <button
                 key={s}
                 className={`pill ${source === s ? "on" : ""}`}
-                onClick={() => setSource(s)}
+                onClick={() => pickSource(s)}
               >
                 {s}
               </button>
@@ -174,7 +241,7 @@ export default function ShadowingPage() {
             <span className="lbl">Độ khó:</span>
             <button
               className={`pill ${level === "all" ? "on" : ""}`}
-              onClick={() => setLevel("all")}
+              onClick={() => pickLevel("all")}
             >
               Tất cả
             </button>
@@ -182,7 +249,7 @@ export default function ShadowingPage() {
               <button
                 key={lv}
                 className={`pill ${level === lv ? "on" : ""}`}
-                onClick={() => setLevel(lv)}
+                onClick={() => pickLevel(lv)}
               >
                 {levelLabel[lv]}
               </button>
