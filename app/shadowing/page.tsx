@@ -9,7 +9,7 @@ import {
   langLabel,
   levelLabel,
   levelCls,
-  levelsByLang,
+  levelsFor,
   sourcesByLang,
   videosByLang,
   defaultLang,
@@ -93,9 +93,11 @@ export default function ShadowingPage() {
         setLang(l);
         setTab(s.tab === "learning" ? "learning" : "library");
         // Nguồn/độ khó khác nhau giữa EN/ZH — chỉ nhận nếu còn hợp lệ, không thì "Tất cả".
-        setSource(s.source && sourcesByLang[l].includes(s.source) ? s.source : "Tất cả");
+        const src = s.source && sourcesByLang[l].includes(s.source) ? s.source : "Tất cả";
+        setSource(src);
+        // Độ khó phải hợp lệ với đúng nguồn đã lưu (levelsFor), không thì về "Tất cả".
         setLevel(
-          s.level && (s.level === "all" || levelsByLang[l].includes(s.level))
+          s.level && (s.level === "all" || levelsFor(l, src).includes(s.level))
             ? s.level
             : "all"
         );
@@ -120,7 +122,8 @@ export default function ShadowingPage() {
   }, [lang, tab, source, level, query, page]);
 
   const sources = sourcesByLang[lang];
-  const levels = levelsByLang[lang];
+  // Độ khó phụ thuộc nguồn đang chọn (xem levelsFor).
+  const levels = useMemo(() => levelsFor(lang, source), [lang, source]);
 
   const list = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -147,6 +150,8 @@ export default function ShadowingPage() {
   // việc khôi phục trang đã lưu).
   const pickSource = (s: string) => {
     setSource(s);
+    // Nếu độ khó đang chọn không có trong nguồn mới thì về "Tất cả" để không ra danh sách rỗng.
+    if (level !== "all" && !levelsFor(lang, s).includes(level)) setLevel("all");
     setPage(1);
   };
   const pickLevel = (lv: "all" | Level) => {

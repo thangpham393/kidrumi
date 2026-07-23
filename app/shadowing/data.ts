@@ -84,6 +84,17 @@ function deriveLevels(lang: Lang): Level[] {
   return levelOrder.filter((lv) => present.has(lv));
 }
 
+// Độ khó theo NGUỒN đang chọn: chọn "Little Fox" chỉ hiện độ khó có trong Little Fox,
+// "Tất cả" hiện mọi độ khó của ngôn ngữ đó — tránh việc chọn nguồn + độ khó lệch nhau
+// ra danh sách rỗng.
+export function levelsFor(lang: Lang, source: string): Level[] {
+  const present = new Set<Level>();
+  for (const v of videos) {
+    if (v.lang === lang && (source === "Tất cả" || v.source === source)) present.add(v.level);
+  }
+  return levelOrder.filter((lv) => present.has(lv));
+}
+
 export function videosByLang(lang: Lang): Video[] {
   return videos.filter((v) => v.lang === lang);
 }
