@@ -9,7 +9,7 @@ import generatedVideos from "./videos.generated.json";
 
 export type Lang = "en" | "zh";
 // Độ khó: de/mid/hard (thang tự đánh giá) + l1… (thang riêng của bộ Little Fox: Level 1, 2…).
-export type Level = "de" | "mid" | "hard" | "l1" | "l2" | "kelly" | "ft1";
+export type Level = "de" | "mid" | "hard" | "l1" | "l2" | "kelly" | "ft1" | "ft2";
 
 // Một câu trong transcript. `t` = mốc bắt đầu (giây). `tr` = bản dịch tiếng Việt.
 // `words` = từ/cụm từ đáng chú ý; `ph` là phiên âm (IPA cho tiếng Anh, pinyin cho tiếng Trung).
@@ -39,12 +39,13 @@ export const levelLabel: Record<Level, string> = {
   l2: "Early Learning 2",
   kelly: "Kelly's Class",
   ft1: "Folktales 1",
+  ft2: "Folktales 2",
 };
 // Lớp CSS phủ màu badge độ khó. l1 xanh dương (blue), l2 tím (brand) cho khác thang de/mid/hard.
 // kelly (Little Fox Mrs. Kelly's Class) dùng hồng (pink) cho khác các thang khác.
-export const levelCls: Record<Level, string> = { de: "", mid: "mid", hard: "hard", l1: "l1", l2: "l2", kelly: "kelly", ft1: "ft1" };
+export const levelCls: Record<Level, string> = { de: "", mid: "mid", hard: "hard", l1: "l1", l2: "l2", kelly: "kelly", ft1: "ft1", ft2: "ft2" };
 // Thứ tự ưu tiên khi hiện pill lọc độ khó.
-const levelOrder: Level[] = ["de", "mid", "hard", "l1", "l2", "kelly", "ft1"];
+const levelOrder: Level[] = ["de", "mid", "hard", "l1", "l2", "kelly", "ft1", "ft2"];
 
 // Video soạn tay (scaffold ban đầu). Video nạp tự động nằm trong videos.generated.json.
 const seedVideos: Video[] = [];
