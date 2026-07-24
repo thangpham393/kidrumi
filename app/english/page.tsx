@@ -12,6 +12,7 @@ const items: PickItem[] = [
     grad: ["var(--blue-soft)", "#cfe7fb"],
   },
   {
+    href: "/english/listen",
     img: "/illustrations/en-listen.png",
     glyph: "🔊",
     title: "Nghe & chọn",
@@ -19,7 +20,6 @@ const items: PickItem[] = [
     desc: "Bé nghe một từ hoặc câu lệnh tiếng Anh ngắn rồi chạm vào đúng hình — không cần biết đọc.",
     tone: "var(--brand)",
     grad: ["var(--brand-soft)", "#e0dcff"],
-    soon: true,
   },
 ];
 
