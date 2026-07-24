@@ -14,15 +14,24 @@ export async function POST(req: Request) {
   }
 
   let text = "";
+  let lang = "en";
   try {
-    const body = (await req.json()) as { text?: string };
+    const body = (await req.json()) as { text?: string; lang?: string };
     text = (body.text ?? "").toString().slice(0, 200).trim();
+    lang = (body.lang ?? "en").toString();
   } catch {
     /* body rỗng/hỏng → xử lý bên dưới */
   }
   if (!text) {
     return NextResponse.json({ error: "empty-text" }, { status: 400 });
   }
+
+  // Giọng nữ đọc chậm rãi cho bé tiền tiểu học, theo từng ngôn ngữ.
+  const VOICES: Record<string, { languageCode: string; name: string }> = {
+    en: { languageCode: "en-US", name: "en-US-Neural2-F" },
+    zh: { languageCode: "cmn-CN", name: "cmn-CN-Wavenet-A" }, // Quan thoại
+  };
+  const voice = VOICES[lang] ?? VOICES.en;
 
   const res = await fetch(
     `https://texttospeech.googleapis.com/v1/text:synthesize?key=${key}`,
@@ -31,8 +40,7 @@ export async function POST(req: Request) {
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
         input: { text },
-        // Giọng nữ tiếng Anh–Mỹ, đọc chậm rãi rõ ràng cho bé tiền tiểu học.
-        voice: { languageCode: "en-US", name: "en-US-Neural2-F" },
+        voice,
         audioConfig: { audioEncoding: "MP3", speakingRate: 0.9, pitch: 1.5 },
       }),
     },

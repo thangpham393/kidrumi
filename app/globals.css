@@ -881,7 +881,10 @@ a.game-tile:hover .game-thumb img { transform: scale(1.05); }
 }
 .lt-prompt:hover { border-color: #d8d3f7; transform: translateY(-1px); }
 .lt-prompt-ic { font-size: 26px; flex: none; }
+.lt-prompt-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .lt-prompt-text { font-family: var(--font-head); font-weight: 800; color: var(--ink); font-size: clamp(20px, 3vw, 28px); }
+/* Chú thích (vd pinyin) dưới câu lệnh — nhỏ, nhạt */
+.lt-prompt-hint { font-family: var(--font-body); font-weight: 700; color: var(--muted); font-size: clamp(14px, 2vw, 17px); }
 
 /* Lưới hình chọn */
 .lt-grid { display: grid; gap: 22px; margin-top: clamp(28px, 8vh, 90px); }
