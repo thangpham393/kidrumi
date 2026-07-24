@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { Plus, Trash2, ExternalLink, RefreshCw } from "lucide-react";
+import { Plus, Trash2, ExternalLink, RefreshCw, Info } from "lucide-react";
 import {
   PageHeader,
   Panel,
@@ -46,7 +46,7 @@ export default function AdminShadowingPage() {
   const toast = useToast();
   const [list, setList] = useState<VideoRow[]>([]);
   const [loading, setLoading] = useState(true);
-  const [blockedMsg, setBlockedMsg] = useState<string | null>(null);
+  const [editable, setEditable] = useState(false); // nhập/xoá chỉ khi chạy máy cục bộ
 
   const [url, setUrl] = useState("");
   const [lang, setLang] = useState<"" | "en" | "zh">("");
@@ -57,16 +57,16 @@ export default function AdminShadowingPage() {
   const [target, setTarget] = useState<VideoRow | null>(null);
   const [deleting, setDeleting] = useState(false);
 
+  // Danh sách lấy từ /api/admin/library (chỉ đọc, chạy được cả trên production).
   const load = async () => {
     setLoading(true);
-    setBlockedMsg(null);
     try {
-      const r = await fetch("/api/admin/shadowing");
+      const r = await fetch("/api/admin/library");
       const d = await r.json();
-      if (!r.ok || d.error) setBlockedMsg(d.error || "Không tải được danh sách.");
-      else setList(d.videos ?? []);
+      setList(d.videos ?? []);
+      setEditable(!!d.editable);
     } catch {
-      setBlockedMsg("Không gọi được máy chủ. Kiểm tra server có đang chạy không.");
+      toast({ tone: "danger", title: "Không tải được thư viện" });
     } finally {
       setLoading(false);
     }
@@ -111,7 +111,8 @@ export default function AdminShadowingPage() {
       const r = await fetch(`/api/admin/shadowing?id=${encodeURIComponent(target.id)}`, { method: "DELETE" });
       const d = await r.json();
       if (d.videos) setList(d.videos);
-      toast({ tone: "success", title: "Đã xoá", description: target.title });
+      else if (d.error) toast({ tone: "danger", title: "Không xoá được", description: d.error });
+      if (d.videos) toast({ tone: "success", title: "Đã xoá", description: target.title });
     } catch {
       toast({ tone: "danger", title: "Không xoá được" });
     } finally {
@@ -156,29 +157,25 @@ export default function AdminShadowingPage() {
     { key: "level", header: "Cấp độ", render: (v) => <Badge tone="warning">{LEVEL_LABEL[v.level] ?? v.level}</Badge> },
     { key: "count", header: "Số câu", align: "right", render: (v) => <span className="admin-num">{v.count}</span> },
     { key: "dur", header: "Thời lượng", align: "right", render: (v) => <span className="admin-num">{v.dur}</span> },
-    {
-      key: "actions",
-      header: "",
-      align: "right",
-      render: (v) => (
-        <Button
-          size="sm"
-          variant="ghost"
-          leadingIcon={Trash2}
-          aria-label={`Xoá ${v.title}`}
-          onClick={() => setTarget(v)}
-        >
-          Xoá
-        </Button>
-      ),
-    },
+    ...(editable
+      ? [{
+          key: "actions",
+          header: "",
+          align: "right" as const,
+          render: (v: VideoRow) => (
+            <Button size="sm" variant="ghost" leadingIcon={Trash2} aria-label={`Xoá ${v.title}`} onClick={() => setTarget(v)}>
+              Xoá
+            </Button>
+          ),
+        }]
+      : []),
   ];
 
   return (
     <div className={styles.stack}>
       <PageHeader
         title="Nội dung Shadowing"
-        description="Thư viện video luyện nghe-nói. Nhập từ YouTube, xem và xoá — dữ liệu thật."
+        description="Thư viện video luyện nghe-nói — dữ liệu thật."
         actions={
           <Button variant="secondary" leadingIcon={RefreshCw} onClick={load} isLoading={loading}>
             Tải lại
@@ -186,84 +183,72 @@ export default function AdminShadowingPage() {
         }
       />
 
-      {blockedMsg ? (
-        <Panel title="Công cụ nội bộ">
-          <EmptyState
-            emoji="🛠️"
-            title="Chỉ dùng khi chạy máy cục bộ"
-            description={blockedMsg}
-          />
+      {editable ? (
+        <Panel title="Nhập video từ YouTube" subtitle="Dán link, chọn ngôn ngữ (hoặc để tự động)">
+          <div className={styles.importForm}>
+            <Input
+              label="Link YouTube"
+              placeholder="https://youtu.be/…"
+              value={url}
+              onChange={(e) => setUrl(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && submitImport()}
+              className={styles.urlField}
+            />
+            <div className={styles.langField}>
+              <span className={styles.langLabel}>Ngôn ngữ</span>
+              <div className={styles.langRow}>
+                {LANGS.map((l) => (
+                  <Button key={l.key} size="sm" variant={lang === l.key ? "primary" : "secondary"} onClick={() => setLang(l.key)}>
+                    {l.label}
+                  </Button>
+                ))}
+              </div>
+            </div>
+            <Button leadingIcon={Plus} onClick={submitImport} isLoading={importing} disabled={!url.trim()}>
+              Nhập
+            </Button>
+          </div>
         </Panel>
       ) : (
-        <>
-          {/* Import — chức năng THẬT (/api/admin/shadowing POST) */}
-          <Panel title="Nhập video từ YouTube" subtitle="Dán link, chọn ngôn ngữ (hoặc để tự động)">
-            <div className={styles.importForm}>
-              <Input
-                label="Link YouTube"
-                placeholder="https://youtu.be/…"
-                value={url}
-                onChange={(e) => setUrl(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && submitImport()}
-                className={styles.urlField}
-              />
-              <div className={styles.langField}>
-                <span className={styles.langLabel}>Ngôn ngữ</span>
-                <div className={styles.langRow}>
-                  {LANGS.map((l) => (
-                    <Button
-                      key={l.key}
-                      size="sm"
-                      variant={lang === l.key ? "primary" : "secondary"}
-                      onClick={() => setLang(l.key)}
-                    >
-                      {l.label}
-                    </Button>
-                  ))}
-                </div>
-              </div>
-              <Button leadingIcon={Plus} onClick={submitImport} isLoading={importing} disabled={!url.trim()}>
-                Nhập
-              </Button>
-            </div>
-          </Panel>
-
-          <Panel
-            title="Thư viện"
-            subtitle={`${filtered.length} video`}
-            bodyClassName="admin-panel-flush"
-          >
-            <TableToolbar
-              searchValue={query}
-              onSearchChange={(v) => {
-                setQuery(v);
-                setPage(1);
-              }}
-              searchPlaceholder="Tìm theo tên hoặc nguồn…"
-            >
-              <a className={styles.toolbarLink} href="/shadowing" target="_blank" rel="noreferrer">
-                <ExternalLink size={16} /> Xem trang học
-              </a>
-            </TableToolbar>
-            <DataTable
-              columns={cols}
-              rows={paged}
-              getRowId={(v) => v.id}
-              loading={loading}
-              emptyState={
-                <EmptyState
-                  emoji="🔍"
-                  title={query ? "Không tìm thấy" : "Thư viện trống"}
-                  description={query ? "Thử từ khoá khác." : "Nhập video đầu tiên từ YouTube ở trên."}
-                />
-              }
-            />
-            {filtered.length > PAGE_SIZE && (
-              <Pagination page={page} pageSize={PAGE_SIZE} total={filtered.length} onPageChange={setPage} />
-            )}
-          </Panel>
-        </>
+        <div className={styles.notice} role="note">
+          <Info size={18} className={styles.noticeIcon} aria-hidden="true" />
+          <span>
+            Chế độ <b>chỉ xem</b>. Nhập/xoá video cần công cụ nội bộ (mlx_whisper + ghi file), chỉ chạy khi mở{" "}
+            <code>npm run dev</code> trên máy. Trên production chỉ xem được thư viện.
+          </span>
+        </div>
       )}
+
+      <Panel title="Thư viện" subtitle={`${filtered.length} video`} bodyClassName="admin-panel-flush">
+        <TableToolbar
+          searchValue={query}
+          onSearchChange={(v) => {
+            setQuery(v);
+            setPage(1);
+          }}
+          searchPlaceholder="Tìm theo tên hoặc nguồn…"
+        >
+          <a className={styles.toolbarLink} href="/shadowing" target="_blank" rel="noreferrer">
+            <ExternalLink size={16} /> Xem trang học
+          </a>
+        </TableToolbar>
+        <DataTable
+          columns={cols}
+          rows={paged}
+          getRowId={(v) => v.id}
+          loading={loading}
+          emptyState={
+            <EmptyState
+              emoji="🔍"
+              title={query ? "Không tìm thấy" : "Thư viện trống"}
+              description={query ? "Thử từ khoá khác." : "Chưa có video nào."}
+            />
+          }
+        />
+        {filtered.length > PAGE_SIZE && (
+          <Pagination page={page} pageSize={PAGE_SIZE} total={filtered.length} onPageChange={setPage} />
+        )}
+      </Panel>
 
       <Modal
         open={!!target}

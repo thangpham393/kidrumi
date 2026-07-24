@@ -1,5 +1,26 @@
 .stack { display: flex; flex-direction: column; gap: var(--sp-5); }
 
+.notice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  padding: var(--sp-4) var(--sp-5);
+  background: var(--c-info-light);
+  border: 1px solid color-mix(in srgb, var(--c-info) 30%, transparent);
+  border-radius: var(--r-lg);
+  color: var(--c-on-info);
+  font-size: 14px;
+  line-height: 1.55;
+}
+.noticeIcon { flex: none; margin-top: 1px; }
+.notice code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 13px;
+  background: color-mix(in srgb, var(--c-info) 18%, transparent);
+  padding: 1px 6px;
+  border-radius: var(--r-xs);
+}
+
 .importForm {
   display: grid;
   grid-template-columns: 1fr auto auto;

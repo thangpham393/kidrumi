@@ -1,8 +1,21 @@
 import "server-only";
-import { readGenerated } from "@/lib/shadowing-import";
+import generatedVideos from "@/app/shadowing/videos.generated.json";
 
-// Dữ liệu THẬT: đọc thư viện Shadowing (app/shadowing/videos.generated.json).
-// Chỉ chạy phía server (fs). Client lấy qua /api/admin/library.
+// Dữ liệu THẬT: thư viện Shadowing (app/shadowing/videos.generated.json).
+// Dùng IMPORT TĨNH (giống app/shadowing/data.ts) để bundle được lên production —
+// KHÔNG dùng fs vì Vercel serverless không chắc đọc được file. Client lấy qua /api/admin/library.
+
+type RawVideo = {
+  id: string;
+  lang: "en" | "zh";
+  title: string;
+  source: string;
+  level: string;
+  dur: string;
+  emoji: string;
+  youtubeId: string;
+  segments?: unknown[];
+};
 
 export type SlimVideo = {
   id: string;
@@ -35,7 +48,7 @@ function tally(items: string[]): Count[] {
 }
 
 export function getLibrary(): Library {
-  const raw = readGenerated();
+  const raw = generatedVideos as unknown as RawVideo[];
   const videos: SlimVideo[] = raw.map((v) => ({
     id: v.id,
     title: v.title,

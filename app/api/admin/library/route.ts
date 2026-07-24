@@ -8,5 +8,7 @@ export const dynamic = "force-dynamic";
 
 export async function GET() {
   const { videos, stats } = getLibrary();
-  return NextResponse.json({ videos, stats });
+  // Nhập/xoá dùng fs + child_process (mlx_whisper) → chỉ chạy máy cục bộ.
+  const editable = process.env.NODE_ENV !== "production";
+  return NextResponse.json({ videos, stats, editable });
 }
