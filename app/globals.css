@@ -912,6 +912,8 @@ a.game-tile:hover .game-thumb img { transform: scale(1.05); }
 .lt-card:disabled { cursor: default; }
 .lt-card.wrong { border-color: var(--red); background: var(--red-soft); animation: q-shake .4s ease; }
 .lt-emoji { font-size: clamp(78px, 16vw, 150px); line-height: 1; user-select: none; }
+/* Bản ảnh Fluent 3D (có lề trong suốt) — to hơn chút so với emoji chữ */
+img.lt-emoji { width: clamp(96px, 18vw, 168px); height: clamp(96px, 18vw, 168px); object-fit: contain; }
 
 /* Modal kết quả */
 .lt-result { text-align: center; max-width: 420px; }
@@ -939,6 +941,7 @@ a.game-tile:hover .game-thumb img { transform: scale(1.05); }
 @media (max-width: 380px) {
   .lt-title { font-size: 17px; }
   .lt-emoji { font-size: 64px; }
+  img.lt-emoji { width: 84px; height: 84px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .lt-replay:hover, .lt-prompt:hover, .lt-card:hover { transform: none; }

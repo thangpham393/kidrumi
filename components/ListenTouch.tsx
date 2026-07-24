@@ -6,6 +6,7 @@ import { useChild } from "@/components/ChildContext";
 import { useToast } from "@/components/useToast";
 import { confettiBurst, playSuccess, playWrong } from "@/components/celebrate";
 import { speak, stopSpeaking } from "@/components/speak";
+import Emoji from "@/components/Emoji";
 
 // Một từ vựng chung cho trò "Nghe & chọn" (dùng được cho Anh, Trung…):
 //   term  = phần điền vào câu lệnh + đọc (English word / hanzi)
@@ -219,9 +220,7 @@ export default function ListenTouch({
                 disabled={lock}
                 aria-label={w.vi}
               >
-                <span className="lt-emoji" aria-hidden>
-                  {w.emoji}
-                </span>
+                <Emoji emoji={w.emoji} className="lt-emoji" />
               </button>
             ))}
           </div>
