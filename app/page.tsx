@@ -2,7 +2,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteUrl, siteName, siteDescription } from "@/lib/site";
 
-const cards = [
+type Card = {
+  href: string;
+  cls: string;
+  img?: string;
+  glyph?: string;
+  title: string;
+  tag: string;
+  desc: string;
+};
+
+const cards: Card[] = [
   {
     href: "/tasks",
     cls: "c-task",
@@ -12,20 +22,36 @@ const cards = [
     desc: "Danh sách việc hằng ngày của bé. Làm xong mỗi việc được một ngôi sao, đủ sao thì mở quà.",
   },
   {
-    href: "/shadowing",
-    cls: "c-shad",
+    href: "/english",
+    cls: "c-en",
     img: "/illustrations/shadowing.png",
-    title: "Shadowing",
-    tag: "Luyện nói tiếng Anh",
-    desc: "Bé xem video tiếng Anh rồi nghe và nói lại theo từng câu để luyện phát âm.",
+    title: "Tiếng Anh",
+    tag: "Nghe, nói và chơi",
+    desc: "Góc Tiếng Anh của bé: luyện nói theo video với Shadowing và chơi Nghe & chọn nghe từ chạm hình.",
+  },
+  {
+    href: "/chinese",
+    cls: "c-zh",
+    img: "/illustrations/chinese.png",
+    title: "Tiếng Trung",
+    tag: "Nghe, nói và chơi",
+    desc: "Góc Tiếng Trung của bé: xem video luyện nói theo câu và chơi Nghe & chọn với chữ Hán vui nhộn.",
+  },
+  {
+    href: "/vietnamese",
+    cls: "c-vi",
+    img: "/illustrations/vietnamese.png",
+    title: "Tiếng Việt",
+    tag: "Nghe và chơi",
+    desc: "Góc Tiếng Việt của bé: nghe câu chuyện ngắn rồi xếp tranh theo đúng thứ tự trước sau.",
   },
   {
     href: "/math",
     cls: "c-math",
     img: "/illustrations/math.png",
-    title: "Học toán",
-    tag: "Phiếu bài tập cộng trừ nhân chia",
-    desc: "Ba mẹ chọn phép tính và độ khó, bé điền kết quả rồi được chấm điểm ngay.",
+    title: "Học Toán",
+    tag: "Vườn Toán — chơi mà học",
+    desc: "Vườn Toán của bé: phân loại, so sánh, đếm, nhận biết hình và phiếu bài tập cộng trừ nhân chia.",
   },
   {
     href: "/typing",
@@ -93,14 +119,20 @@ export default function Home() {
         {cards.map((c) => (
           <Link key={c.href} href={c.href} className={`act-card ${c.cls}`}>
             <span className="tape" />
-            <div className="act-thumb">
-              <Image
-                src={c.img}
-                alt={c.title}
-                fill
-                sizes="(max-width: 720px) 45vw, (max-width: 900px) 150px, 190px"
-                className="thumb-img"
-              />
+            <div className={`act-thumb ${c.img ? "" : "emoji"}`}>
+              {c.img ? (
+                <Image
+                  src={c.img}
+                  alt={c.title}
+                  fill
+                  sizes="(max-width: 720px) 45vw, (max-width: 900px) 150px, 190px"
+                  className="thumb-img"
+                />
+              ) : (
+                <span className="thumb-glyph" aria-hidden>
+                  {c.glyph}
+                </span>
+              )}
             </div>
             <div className="act-body">
               <h3>{c.title}</h3>

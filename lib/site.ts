@@ -41,7 +41,11 @@ export const routes: {
 }[] = [
   { path: "/", changeFrequency: "weekly", priority: 1 },
   { path: "/tasks", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/english", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/chinese", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/vietnamese", changeFrequency: "weekly", priority: 0.8 },
   { path: "/shadowing", changeFrequency: "daily", priority: 0.9 },
   { path: "/math", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/math/worksheet", changeFrequency: "weekly", priority: 0.8 },
   { path: "/typing", changeFrequency: "weekly", priority: 0.8 },
 ];

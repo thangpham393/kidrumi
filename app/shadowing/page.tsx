@@ -85,6 +85,23 @@ export default function ShadowingPage() {
   // bằng mặc định, khiến lần khôi phục thứ 2 đọc nhầm và tab quay về English.
   useEffect(() => {
     if (restored.current) return;
+    // Vào từ trang góc học (/english → ?lang=en, /chinese → ?lang=zh): mở đúng
+    // ngôn ngữ đó với bộ lọc mặc định, bỏ qua vị trí đã lưu của lần trước.
+    try {
+      const p = new URLSearchParams(window.location.search).get("lang");
+      if (p === "en" || p === "zh") {
+        setLang(p);
+        setTab("library");
+        setSource("Tất cả");
+        setLevel("all");
+        setQuery("");
+        setPage(1);
+        restored.current = true;
+        return;
+      }
+    } catch {
+      /* bỏ qua nếu không đọc được URL */
+    }
     try {
       const raw = sessionStorage.getItem(VIEW_KEY);
       if (raw) {

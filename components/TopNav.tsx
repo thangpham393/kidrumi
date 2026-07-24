@@ -9,8 +9,10 @@ import Logo from "./Logo";
 
 const links = [
   { href: "/tasks", label: "Nhiệm vụ" },
-  { href: "/shadowing", label: "Shadowing" },
-  { href: "/math", label: "Học toán" },
+  { href: "/english", label: "Tiếng Anh" },
+  { href: "/chinese", label: "Tiếng Trung" },
+  { href: "/vietnamese", label: "Tiếng Việt" },
+  { href: "/math", label: "Học Toán" },
   { href: "/typing", label: "Tập gõ phím" },
 ];
 

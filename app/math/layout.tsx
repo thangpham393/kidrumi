@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 
-const title = "Học toán — Cộng trừ nhân chia";
+const title = "Vườn Toán — Chơi mà học cho bé";
 const description =
-  "Phiếu bài tập toán cho bé tiền tiểu học: ba mẹ chọn phép tính cộng, trừ, nhân, chia và độ khó, bé điền kết quả rồi được chấm điểm ngay.";
+  "Vườn Toán của Kidrumi: bé chơi phân loại, so sánh, đếm, nhận biết hình theo từng độ tuổi và làm phiếu bài tập cộng trừ nhân chia.";
 
 export const metadata: Metadata = {
   title,
   description,
   keywords: [
     "học toán cho bé",
-    "toán cộng trừ nhân chia",
-    "phiếu bài tập toán",
+    "toán mầm non",
+    "trò chơi toán trẻ em",
     "toán tiền tiểu học",
   ],
   alternates: { canonical: "/math" },

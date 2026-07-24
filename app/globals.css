@@ -171,6 +171,92 @@ button { font-family: inherit; }
 .c-shad h3 { color: var(--brand); } .c-shad .act-cta { color: var(--brand); }
 .c-math h3 { color: #4f8a3a; }       .c-math .act-cta { color: #4f8a3a; }
 .c-type h3 { color: var(--brand); }  .c-type .act-cta { color: var(--brand); }
+/* Thẻ ngôn ngữ mới trên trang chủ */
+.c-en { --tilt: 1.5deg; }
+.c-zh { --tilt: -1.3deg; }
+.c-vi { --tilt: 1.4deg; }
+.c-en .tape { background: rgba(90,169,230,.5); transform: rotate(4deg); }
+.c-zh .tape { background: rgba(242,121,95,.45); transform: rotate(-5deg); }
+.c-vi .tape { background: rgba(239,127,176,.45); transform: rotate(5deg); }
+.c-en h3 { color: var(--blue); }  .c-en .act-cta { color: var(--blue); }
+.c-zh h3 { color: var(--red); }   .c-zh .act-cta { color: var(--red); }
+.c-vi h3 { color: var(--pink); }  .c-vi .act-cta { color: var(--pink); }
+.c-zh .act-thumb.emoji { background: linear-gradient(160deg, var(--red-soft), #ffd9cf); }
+.c-vi .act-thumb.emoji { background: linear-gradient(160deg, var(--pink-soft), #fbd6e8); }
+/* Thumb emoji lớn (dùng khi chưa có ảnh clay riêng) — nền gradient theo card */
+.act-thumb.emoji { display: grid; place-items: center; }
+.act-thumb .thumb-glyph { font-size: 92px; line-height: 1; filter: drop-shadow(0 6px 10px rgba(80,70,160,.18)); }
+
+/* ---------------- Ô chọn hoạt động (trang góc học: Anh/Trung/Việt) ----------------
+   Thẻ lớn dọc: ảnh/emoji trên, chữ dưới. Tái dùng token bo góc/bóng/viền chung. */
+.pick-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; max-width: 940px; margin: 26px auto 0; }
+.pick-grid.one { grid-template-columns: 1fr; max-width: 460px; }
+.pick-card {
+  position: relative; background: var(--card); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow); padding: 16px; display: flex; flex-direction: column;
+  text-decoration: none; color: var(--ink);
+  transition: transform .35s cubic-bezier(.34,1.56,.64,1), box-shadow .3s ease;
+  will-change: transform;
+}
+a.pick-card:hover { transform: translateY(-6px); box-shadow: 0 30px 55px -18px rgba(80,70,160,.5); z-index: 2; }
+.pick-thumb {
+  position: relative; border-radius: 22px; aspect-ratio: 16 / 10; overflow: hidden;
+  display: grid; place-items: center; box-shadow: inset 0 0 0 1px rgba(124,108,240,.06);
+}
+.pick-thumb .pick-glyph { font-size: clamp(52px, 11vw, 88px); line-height: 1; filter: drop-shadow(0 8px 12px rgba(80,70,160,.18)); }
+.pick-thumb img { object-fit: cover; transition: transform .3s ease; }
+a.pick-card:hover .pick-thumb img { transform: scale(1.04); }
+.pick-tape { position: absolute; top: -9px; left: 50%; width: 78px; height: 22px; border-radius: 5px; background: rgba(255,255,255,.6); transform: translateX(-50%) rotate(-4deg); box-shadow: 0 2px 6px rgba(0,0,0,.07); z-index: 3; }
+.pick-body { padding: 16px 8px 6px; display: flex; flex-direction: column; flex: 1; }
+.pick-body h3 { font-size: 28px; margin: 0 0 2px; color: var(--tone, var(--brand)); }
+.pick-sub { font-weight: 800; color: var(--ink); margin: 0 0 10px; }
+.pick-body p { color: var(--ink-soft); line-height: 1.55; margin: 0; flex: 1; }
+.pick-cta { align-self: flex-end; margin-top: 14px; font-weight: 800; color: var(--tone, var(--brand)); }
+.pick-card.soon { cursor: default; }
+.soon-badge {
+  position: absolute; top: 12px; right: 12px; z-index: 3;
+  font-family: var(--font-head); font-weight: 800; font-size: 13px;
+  background: var(--amber-soft); color: #b8862f; border-radius: 999px; padding: 5px 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---------------- Vườn Toán (trang /math): nhóm theo độ tuổi + lưới ô trò chơi ---------------- */
+.math-groups { max-width: 1120px; margin: 8px auto 0; }
+.age-row { margin: 30px 0 16px; }
+.age-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-head); font-weight: 800; font-size: 18px; color: var(--brand);
+  background: var(--card); border: 2px solid var(--line); border-radius: 999px;
+  padding: 7px 18px; box-shadow: var(--shadow-sm);
+}
+.game-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.game-tile {
+  position: relative; background: var(--card); border-radius: 26px; box-shadow: var(--shadow);
+  padding: 14px; display: flex; flex-direction: column; align-items: center;
+  text-decoration: none; color: var(--ink);
+  transition: transform .35s cubic-bezier(.34,1.56,.64,1), box-shadow .3s ease;
+  will-change: transform;
+}
+a.game-tile:hover { transform: translateY(-6px); box-shadow: 0 26px 48px -18px rgba(80,70,160,.5); z-index: 2; }
+.game-thumb {
+  position: relative; overflow: hidden;
+  width: 100%; aspect-ratio: 4 / 3; border-radius: 20px; display: grid; place-items: center;
+  box-shadow: inset 0 0 0 1px rgba(124,108,240,.06);
+}
+.game-thumb img { object-fit: cover; transition: transform .3s ease; }
+a.game-tile:hover .game-thumb img { transform: scale(1.05); }
+.game-thumb .game-glyph { font-size: clamp(40px, 7vw, 60px); line-height: 1; filter: drop-shadow(0 6px 10px rgba(80,70,160,.16)); }
+.game-title { margin-top: 12px; margin-bottom: 4px; font-family: var(--font-head); font-weight: 800; font-size: 19px; color: var(--tone, var(--ink)); text-align: center; }
+.game-tile.soon { cursor: default; }
+.game-tile.soon .game-thumb { opacity: .78; }
+.math-foot { text-align: center; color: var(--ink-soft); font-weight: 700; margin-top: 36px; }
+.soon-bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  max-width: 1120px; margin: 14px auto 0; padding: 16px 24px;
+  background: var(--amber-soft); border: 2px solid rgba(242,178,60,.35); border-radius: var(--radius);
+  color: #b8862f; font-weight: 800; font-family: var(--font-head);
+}
+.soon-bar .plus { font-size: 26px; line-height: 1; }
 
 /* ---------------- Generic panel ---------------- */
 .panel { background: var(--card); border-radius: var(--radius-lg); box-shadow: var(--shadow); padding: 30px; }
@@ -436,6 +522,8 @@ button { font-family: inherit; }
 @media (max-width: 900px) {
   .task-cols { grid-template-columns: 1fr; }
   .vid-grid { grid-template-columns: repeat(2, 1fr); }
+  .game-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .act-thumb .thumb-glyph { font-size: 64px; }
   .wrap { padding: 32px 18px 320px; }
 
   /* Tablet (gồm iPad dọc 768px): thẻ hoạt động 2 cột DỌC — ảnh trên, chữ dưới.
@@ -552,6 +640,13 @@ button { font-family: inherit; }
 /* Phones: 2-column vertical activity cards (image on top, text below) */
 @media (max-width: 720px) {
   .grid-2 { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  /* Trang góc học: 1 cột cho dễ đọc mô tả + CTA trên điện thoại */
+  .pick-grid, .pick-grid.one { grid-template-columns: 1fr; gap: 16px; max-width: 460px; }
+  .pick-body h3 { font-size: 24px; }
+  .game-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .game-title { font-size: 16px; }
+  .age-label { font-size: 16px; padding: 6px 14px; }
+  .soon-bar { padding: 14px 18px; font-size: 14px; }
   .act-card {
     --tilt: 0deg;
     flex-direction: column;
