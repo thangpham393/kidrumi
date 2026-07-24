@@ -905,7 +905,14 @@ a.game-tile:hover .game-thumb img { transform: scale(1.05); }
 .lt-result-emoji { font-size: 64px; }
 .lt-result h2 { font-family: var(--font-head); color: var(--ink); margin: 6px 0 8px; }
 .lt-result p { color: var(--ink-soft); margin: 0 auto 20px; max-width: 320px; }
-.lt-result-actions { display: flex; flex-direction: column; gap: 10px; align-items: stretch; }
+.lt-result-actions { display: flex; flex-direction: column; gap: 8px; align-items: stretch; }
+/* Hành động phụ: link nhẹ canh giữa, không viền cứng — nhường nút "Chơi lại" */
+.lt-result-actions .btn-ghost {
+  align-self: center; box-shadow: none; background: transparent;
+  color: var(--muted); font-family: var(--font-body); font-weight: 700;
+  font-size: 15px; padding: 8px 18px; border-radius: 999px; transition: .15s;
+}
+.lt-result-actions .btn-ghost:hover { color: var(--brand); background: var(--brand-soft); }
 
 @media (max-width: 720px) {
   /* Cột phụ co theo nội dung để pill quay lại không bị bóp/xuống dòng */
