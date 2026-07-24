@@ -886,6 +886,16 @@ a.game-tile:hover .game-thumb img { transform: scale(1.05); }
 /* Chú thích (vd pinyin) dưới câu lệnh — nhỏ, nhạt */
 .lt-prompt-hint { font-family: var(--font-body); font-weight: 700; color: var(--muted); font-size: clamp(14px, 2vw, 17px); }
 
+/* Biến thể tiếng Trung: chữ Hán dùng KaiTi (楷体) — kiểu chữ khải nét chuẩn,
+   đúng font tập viết cho trẻ. Là font hệ thống (macOS: Kaiti SC / STKaiti,
+   Windows: KaiTi), rớt về serif nếu máy không có.
+   Pinyin (.lt-prompt-hint) vẫn giữ font body cho dễ đọc dấu thanh. */
+.lt-zh .lt-title,
+.lt-zh .lt-prompt-text {
+  font-family: "Kaiti SC", STKaiti, "Kaiti TC", KaiTi, "楷体", "楷体_GB2312", serif;
+}
+.lt-zh .lt-prompt-text { font-size: clamp(24px, 3.4vw, 34px); letter-spacing: 1px; }
+
 /* Lưới hình chọn */
 .lt-grid { display: grid; gap: 22px; margin-top: clamp(28px, 8vh, 90px); }
 .lt-grid.n2 { grid-template-columns: repeat(2, 1fr); }

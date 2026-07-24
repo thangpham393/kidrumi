@@ -27,6 +27,7 @@ type Props = {
   title: string; // tiêu đề hiển thị (vd "Listen & Touch")
   backHref: string; // link quay lại (vd "/english")
   backLabel: string; // nhãn nút quay lại (vd "Tiếng Anh")
+  variant?: string; // thêm class ".lt-<variant>" để đổi kiểu (vd "zh" → font chữ Hán)
 };
 
 const TOTAL = 5; // số câu mỗi lượt chơi (khớp hàng 5 ngôi sao)
@@ -52,6 +53,7 @@ export default function ListenTouch({
   title,
   backHref,
   backLabel,
+  variant,
 }: Props) {
   const { addStars } = useChild();
   const { showToast, toastEl } = useToast();
@@ -160,7 +162,7 @@ export default function ListenTouch({
   const filled = done ? TOTAL : step;
 
   return (
-    <main className="wrap lt-wrap">
+    <main className={`wrap lt-wrap ${variant ? `lt-${variant}` : ""}`}>
       <div className="lt-top">
         <Link href={backHref} className="pill">
           ← {backLabel}

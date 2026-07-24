@@ -20,6 +20,7 @@ export default function ChineseListenPage() {
       title="听一听 · 点一点"
       backHref="/chinese"
       backLabel="Tiếng Trung"
+      variant="zh"
     />
   );
 }
