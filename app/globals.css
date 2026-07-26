@@ -346,7 +346,18 @@ a.game-tile:hover .game-thumb img { transform: scale(1.05); }
 .vid .badges { display: flex; gap: 6px; flex-wrap: wrap; }
 .vid .badges span { background: var(--brand-soft); color: var(--brand); font-weight: 700; font-size: 12px; padding: 3px 9px; border-radius: 8px; }
 .vid .badges .cnt { background: var(--green-soft); color: var(--green); }
+.vid .badges .done { background: var(--green); color: #fff; }
 .vid { text-decoration: none; display: block; }
+
+/* Tiến độ shadowing hiện trên thẻ video: thanh + nhãn "đã nghe / tổng câu" */
+.vid-prog { margin-top: 10px; }
+.vid-prog-track { height: 8px; border-radius: 999px; background: var(--brand-soft); overflow: hidden; }
+.vid-prog-fill { display: block; height: 100%; border-radius: 999px; background: var(--brand); transition: width .3s ease; }
+.vid-prog-fill.done { background: var(--green); }
+.vid-prog-txt { display: block; margin-top: 5px; font-size: 12px; font-weight: 700; color: var(--ink-soft); }
+
+/* Số bài đang học trên tab "Đang học" */
+.lib-tab-count { display: inline-grid; place-items: center; min-width: 22px; height: 22px; margin-left: 8px; padding: 0 6px; border-radius: 999px; background: var(--green); color: #fff; font-family: var(--font-body); font-size: 13px; font-weight: 800; vertical-align: middle; }
 
 /* Phân trang thư viện video */
 .pager { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; margin-top: 34px; }

@@ -43,10 +43,29 @@ create table if not exists public.task_completions (
 create index if not exists task_completions_child_day_idx
   on public.task_completions (child_id, done_on);
 
--- 4) Row Level Security — mỗi ba mẹ chỉ thấy & sửa dữ liệu của chính mình.
-alter table public.children         enable row level security;
-alter table public.tasks            enable row level security;
-alter table public.task_completions enable row level security;
+-- 4) Tiến độ Shadowing — mỗi bé, mỗi video giữ danh sách câu ĐÃ nghe.
+--    heard = mảng chỉ số câu (0-based) trong transcript; total = tổng câu lúc lưu.
+--    updated_at để sắp xếp tab "Đang học" (mới học lên đầu). Chỉ lưu khi đăng nhập.
+create table if not exists public.shadowing_progress (
+  id         uuid primary key default gen_random_uuid(),
+  child_id   uuid not null references public.children (id) on delete cascade,
+  user_id    uuid not null references auth.users (id) on delete cascade,
+  video_id   text not null,
+  lang       text not null default 'en',
+  heard      integer[] not null default '{}',
+  total      integer not null default 0,
+  updated_at timestamptz not null default now(),
+  unique (child_id, video_id)
+);
+
+create index if not exists shadowing_progress_child_idx
+  on public.shadowing_progress (child_id, updated_at desc);
+
+-- 5) Row Level Security — mỗi ba mẹ chỉ thấy & sửa dữ liệu của chính mình.
+alter table public.children          enable row level security;
+alter table public.tasks             enable row level security;
+alter table public.task_completions  enable row level security;
+alter table public.shadowing_progress enable row level security;
 
 drop policy if exists children_own on public.children;
 create policy children_own on public.children
@@ -58,4 +77,8 @@ create policy tasks_own on public.tasks
 
 drop policy if exists task_completions_own on public.task_completions;
 create policy task_completions_own on public.task_completions
+  for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+drop policy if exists shadowing_progress_own on public.shadowing_progress;
+create policy shadowing_progress_own on public.shadowing_progress
   for all using (auth.uid() = user_id) with check (auth.uid() = user_id);

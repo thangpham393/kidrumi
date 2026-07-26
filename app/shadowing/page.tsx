@@ -14,6 +14,9 @@ import {
   videosByLang,
   defaultLang,
 } from "./data";
+import { useShadowingProgress, heardCount, type Entry } from "./progress";
+import { useChild } from "@/components/ChildContext";
+import { useAuth } from "@/components/AuthContext";
 
 // Thumbnail: ưu tiên ảnh video thật từ YouTube. Thử hqdefault → mqdefault
 // (phòng khi i.ytimg chặn tạm 1 vài request); nếu ID không có ảnh hợp lệ
@@ -55,6 +58,44 @@ function VidThumb({ v }: { v: Video }) {
   );
 }
 
+// Thẻ video dùng chung cho lưới Thư viện & tab Đang học. Có thanh tiến độ + nhãn
+// "đã nghe / tổng câu" khi bé đã bắt đầu học (entry có dữ liệu).
+function VidCard({ v, entry }: { v: Video; entry?: Entry }) {
+  const total = v.segments.length;
+  const heard = Math.min(heardCount(entry), total);
+  const done = heard > 0 && heard >= total;
+  const pct = total > 0 ? Math.min(100, Math.round((heard / total) * 100)) : 0;
+  return (
+    <Link href={`/shadowing/${v.id}`} className="vid">
+      <VidThumb v={v} />
+      <div className="meta">
+        <h4>{v.title}</h4>
+        <div className="badges">
+          <span>{v.source}</span>
+          <span className="cnt">{total} câu</span>
+          {done && <span className="done">✓ Xong</span>}
+        </div>
+        {heard > 0 && (
+          <div
+            className="vid-prog"
+            aria-label={`Đã nghe ${heard} trên ${total} câu`}
+          >
+            <div className="vid-prog-track">
+              <span
+                className={`vid-prog-fill ${done ? "done" : ""}`}
+                style={{ width: `${pct}%` }}
+              />
+            </div>
+            <span className="vid-prog-txt">
+              🎧 {heard}/{total} câu đã nghe
+            </span>
+          </div>
+        )}
+      </div>
+    </Link>
+  );
+}
+
 // Lưu "vị trí đang xem" (ngôn ngữ/tab/bộ lọc/trang) để khi bé mở 1 video rồi bấm
 // back về thư viện thì vẫn ở đúng tab & bộ lọc cũ — thay vì reset về English.
 const VIEW_KEY = "kidrumi:shadowing:view";
@@ -74,6 +115,27 @@ export default function ShadowingPage() {
   const [level, setLevel] = useState<"all" | Level>("all");
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
+
+  // Tiến độ shadowing lưu trên CSDL — CHỈ khi đã đăng nhập & có hồ sơ bé thật.
+  const { user, ready: authReady } = useAuth();
+  const { child } = useChild();
+  const loggedIn = !!user && !!child && child.id !== "local";
+  const { store: progress, ready: progressReady } = useShadowingProgress(
+    loggedIn ? child!.id : null
+  );
+
+  // Danh sách "Đang học": video của ngôn ngữ hiện tại đã có tiến độ, mới học lên đầu.
+  const learning = useMemo(
+    () =>
+      videosByLang(lang)
+        .map((v) => ({ v, entry: progress[v.id] }))
+        .filter((x) => heardCount(x.entry) > 0)
+        .sort((a, b) => (b.entry?.ts ?? 0) - (a.entry?.ts ?? 0)),
+    [lang, progress]
+  );
+
+  // Chưa đăng nhập thì không có tab "Đang học" → luôn ở Thư viện.
+  const activeTab = loggedIn ? tab : "library";
 
   // Cờ "đã khôi phục xong": chỉ ghi vào sessionStorage sau khi khôi phục —
   // tránh ghi đè giá trị cũ bằng mặc định ngay lúc mount. (Component là "use client"
@@ -209,23 +271,28 @@ export default function ShadowingPage() {
 
       <div className="lib-tabs">
         <button
-          className={`t ${tab === "library" ? "on" : ""}`}
+          className={`t ${activeTab === "library" ? "on" : ""}`}
           onClick={() => setTab("library")}
         >
           Thư viện
         </button>
-        <button
-          className={`t ${tab === "learning" ? "on" : ""}`}
-          onClick={() => setTab("learning")}
-        >
-          Đang học
-        </button>
+        {authReady && loggedIn && (
+          <button
+            className={`t ${activeTab === "learning" ? "on" : ""}`}
+            onClick={() => setTab("learning")}
+          >
+            Đang học
+            {learning.length > 0 && (
+              <span className="lib-tab-count">{learning.length}</span>
+            )}
+          </button>
+        )}
       </div>
       <p style={{ color: "var(--ink-soft)" }}>
         Chọn một video để bắt đầu luyện shadowing.
       </p>
 
-      {tab === "library" ? (
+      {activeTab === "library" ? (
         <>
           <div className="vid-search">
             <span className="vid-search-ico" aria-hidden>🔍</span>
@@ -280,16 +347,7 @@ export default function ShadowingPage() {
 
           <div className="vid-grid">
             {paged.map((v) => (
-              <Link key={v.id} href={`/shadowing/${v.id}`} className="vid">
-                <VidThumb v={v} />
-                <div className="meta">
-                  <h4>{v.title}</h4>
-                  <div className="badges">
-                    <span>{v.source}</span>
-                    <span className="cnt">{v.segments.length} câu</span>
-                  </div>
-                </div>
-              </Link>
+              <VidCard key={v.id} v={v} entry={progress[v.id]} />
             ))}
           </div>
           {list.length === 0 && (
@@ -327,6 +385,16 @@ export default function ShadowingPage() {
             </nav>
           )}
         </>
+      ) : !progressReady ? (
+        <p style={{ textAlign: "center", color: "var(--ink-soft)", marginTop: 40 }}>
+          Đang tải tiến độ của bé… ⏳
+        </p>
+      ) : learning.length > 0 ? (
+        <div className="vid-grid">
+          {learning.map(({ v, entry }) => (
+            <VidCard key={v.id} v={v} entry={entry} />
+          ))}
+        </div>
       ) : (
         <div className="panel" style={{ textAlign: "center", marginTop: 20 }}>
           <div style={{ fontSize: 48 }}>🎧</div>

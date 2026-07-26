@@ -4,6 +4,9 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { getVideo, fmtTime, type Video } from "../data";
+import { fetchVideoHeard, saveProgress } from "../progress";
+import { useChild } from "@/components/ChildContext";
+import { useAuth } from "@/components/AuthContext";
 
 // Kiểu tối thiểu cho YouTube IFrame API (tránh dùng any).
 type YTPlayer = {
@@ -105,6 +108,12 @@ export default function ShadowingDetailPage() {
 }
 
 function ShadowingPlayer({ video }: { video: Video }) {
+  const { child } = useChild();
+  const { user } = useAuth();
+  // Chỉ lưu tiến độ khi đã đăng nhập & có hồ sơ bé thật (không lưu cho khách "local").
+  const canSave = !!user && !!child && child.id !== "local";
+  const heardRef = useRef<Set<number>>(new Set());
+  const dirtyRef = useRef(false);
   const playerRef = useRef<YTPlayer | null>(null);
   const mountRef = useRef<HTMLDivElement | null>(null);
   const listRef = useRef<HTMLDivElement | null>(null);
@@ -193,6 +202,57 @@ function ShadowingPlayer({ video }: { video: Video }) {
       });
     }
   }, [active, autoScroll]);
+
+  // Nạp tiến độ đã lưu để cộng dồn (không mất câu đã nghe ở buổi/thiết bị trước).
+  useEffect(() => {
+    heardRef.current = new Set();
+    if (!canSave || !child) return;
+    let alive = true;
+    fetchVideoHeard(child.id, video.id).then((idx) => {
+      if (alive) idx.forEach((i) => heardRef.current.add(i));
+    });
+    return () => {
+      alive = false;
+    };
+  }, [canSave, child, video.id]);
+
+  // Ghi nhận câu đang phát vào tập "đã nghe" (đánh dấu cần lưu nếu là câu mới).
+  useEffect(() => {
+    if (active < 0 || !canSave) return;
+    if (!heardRef.current.has(active)) {
+      heardRef.current.add(active);
+      dirtyRef.current = true;
+    }
+  }, [active, canSave]);
+
+  // Gộp ghi tiến độ: định kỳ 4s + khi rời/ẩn trang, tránh ghi CSDL mỗi câu.
+  useEffect(() => {
+    if (!canSave || !child || !user) return;
+    const flush = () => {
+      if (!dirtyRef.current) return;
+      dirtyRef.current = false;
+      void saveProgress({
+        childId: child.id,
+        userId: user.id,
+        videoId: video.id,
+        lang: video.lang,
+        heard: [...heardRef.current].sort((a, b) => a - b),
+        total: video.segments.length,
+      });
+    };
+    const id = window.setInterval(flush, 4000);
+    const onVis = () => {
+      if (document.visibilityState === "hidden") flush();
+    };
+    document.addEventListener("visibilitychange", onVis);
+    window.addEventListener("pagehide", flush);
+    return () => {
+      window.clearInterval(id);
+      document.removeEventListener("visibilitychange", onVis);
+      window.removeEventListener("pagehide", flush);
+      flush();
+    };
+  }, [canSave, child, user, video.id, video.lang, video.segments.length]);
 
   const changeSpeed = (s: number) => {
     setSpeed(s);
