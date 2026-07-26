@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Tải ảnh Microsoft Fluent Emoji 3D (MIT) còn thiếu vào public/emoji/, đặt tên
+# theo codepoint (giống components/Emoji.tsx: hệ 16, nối "-", BỎ fe0f).
+# Component <Emoji> tự rớt về emoji hệ thống nếu thiếu ảnh — nhưng nên tải cho
+# đồng bộ 3D mọi máy.
+#
+# Cách dùng: sửa mảng `pairs` bên dưới rồi chạy từ gốc repo:  bash fetch-fluent-emoji.sh
+# Mỗi dòng:  "<codepoint-slug>|<Tên thư mục trong repo Fluent>|<tên_file_snake>"
+#   - Tên thư mục = nhãn CLDR viết hoa đầu, giữ dấu cách/gạch nối (vd "Leafy green", "Yo-yo").
+#   - tên_file    = viết thường, dấu cách/gạch nối -> "_", rồi + "_3d.png" (vd leafy_green).
+# Tra codepoint nhanh:
+#   node -e 'const e=process.argv[1];console.log([...e].map(c=>c.codePointAt(0).toString(16)).filter(h=>h!=="fe0f").join("-"))' "🧺"
+set -euo pipefail
+base="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets"
+pairs=(
+  "1f9fa|Basket|basket"
+  "1f966|Broccoli|broccoli"
+  "1f96c|Leafy green|leafy_green"
+  # thêm dòng mới tại đây...
+)
+for p in "${pairs[@]}"; do
+  IFS='|' read -r cp folder file <<< "$p"
+  [ -f "public/emoji/$cp.png" ] && { echo "· $cp đã có, bỏ qua"; continue; }
+  enc=$(printf '%s' "$folder" | sed 's/ /%20/g')
+  url="$base/$enc/3D/${file}_3d.png"
+  code=$(curl -s -o "/tmp/em_$cp.png" -w "%{http_code}" "$url")
+  if [ "$code" = "200" ] && file -b "/tmp/em_$cp.png" | grep -q "PNG image"; then
+    cp "/tmp/em_$cp.png" "public/emoji/$cp.png"; echo "✓ $cp  ($folder)"
+  else
+    echo "✗ $cp  HTTP $code — kiểm lại tên thư mục/file '$folder'"
+  fi
+done
