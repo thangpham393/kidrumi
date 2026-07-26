@@ -30,6 +30,7 @@ export async function POST(req: Request) {
   const VOICES: Record<string, { languageCode: string; name: string }> = {
     en: { languageCode: "en-US", name: "en-US-Neural2-F" },
     zh: { languageCode: "cmn-CN", name: "cmn-CN-Wavenet-A" }, // Quan thoại
+    vi: { languageCode: "vi-VN", name: "vi-VN-Wavenet-A" }, // giọng nữ tiếng Việt
   };
   const voice = VOICES[lang] ?? VOICES.en;
 

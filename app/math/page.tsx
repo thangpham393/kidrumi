@@ -21,7 +21,7 @@ const groups: Group[] = [
     age: "3 tuổi",
     icon: "🌱",
     games: [
-      { title: "Phân loại vào rổ", img: "/illustrations/math-sort-basket.png", glyph: "🧺", tone: "var(--green)", grad: ["var(--green-soft)", "#d3efdd"], soon: true },
+      { title: "Phân loại vào rổ", img: "/illustrations/math-sort-basket.png", glyph: "🧺", tone: "var(--green)", grad: ["var(--green-soft)", "#d3efdd"], href: "/math/sort" },
       { title: "Cái nào hơn?", img: "/illustrations/math-compare.png", glyph: "🐘", tone: "var(--amber)", grad: ["var(--amber-soft)", "#ffe6bf"], soon: true },
       { title: "Tiếp nối dãy", img: "/illustrations/math-pattern.png", glyph: "🍎", tone: "var(--pink)", grad: ["var(--pink-soft)", "#fbd6e8"], soon: true },
       { title: "Hình gì đây?", img: "/illustrations/math-shapes.png", glyph: "🔷", tone: "var(--blue)", grad: ["var(--blue-soft)", "#cfe7fb"], soon: true },

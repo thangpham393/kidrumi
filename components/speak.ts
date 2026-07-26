@@ -10,6 +10,7 @@ let serverTTS: boolean | null = null; // null = chưa dò, true/false = kết qu
 const BROWSER_LANG: Record<string, string> = {
   en: "en-US",
   zh: "zh-CN",
+  vi: "vi-VN",
 };
 
 /** Dừng mọi âm thanh đang phát (cả file lẫn Web Speech). */
@@ -76,9 +77,21 @@ function speakViaBrowser(text: string, lang: string) {
   else synth.onvoiceschanged = speakNow;
 }
 
-/** Đọc `text` bằng giọng tự nhiên nhất hiện có. `lang`: "en" | "zh"… */
-export async function speak(text: string, lang: string = "en") {
+/**
+ * Đọc `text` bằng giọng tự nhiên nhất hiện có. `lang`: "en" | "zh" | "vi"…
+ * `browserOnly`: bỏ qua Google TTS, dùng thẳng giọng trình duyệt — cần cho
+ * tiếng Việt vì server chỉ cấu hình giọng Anh/Trung (đọc "vi" sẽ sai âm).
+ */
+export async function speak(
+  text: string,
+  lang: string = "en",
+  opts?: { browserOnly?: boolean },
+) {
   stopSpeaking();
+  if (opts?.browserOnly) {
+    speakViaBrowser(text, lang);
+    return;
+  }
   const ok = await speakViaServer(text, lang);
   if (!ok) speakViaBrowser(text, lang);
 }
