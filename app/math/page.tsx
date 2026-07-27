@@ -25,7 +25,7 @@ const groups: Group[] = [
       { title: "Cái nào hơn?", img: "/illustrations/math-compare.png", glyph: "🐘", tone: "var(--amber)", grad: ["var(--amber-soft)", "#ffe6bf"], href: "/math/compare" },
       { title: "Tiếp nối dãy", img: "/illustrations/math-pattern.png", glyph: "🧩", tone: "var(--pink)", grad: ["var(--pink-soft)", "#fbd6e8"], href: "/math/pattern" },
       { title: "Hình gì đây?", img: "/illustrations/math-shapes.png", glyph: "🔷", tone: "var(--blue)", grad: ["var(--blue-soft)", "#cfe7fb"], href: "/math/shapes" },
-      { title: "Tìm hình trốn", img: "/illustrations/math-find.png", glyph: "🔍", tone: "var(--green)", grad: ["var(--green-soft)", "#d3efdd"], soon: true },
+      { title: "Tìm hình trốn", img: "/illustrations/math-find.png", glyph: "🔍", tone: "var(--green)", grad: ["var(--green-soft)", "#d3efdd"], href: "/math/find" },
     ],
   },
   {

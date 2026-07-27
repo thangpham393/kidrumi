@@ -1270,3 +1270,71 @@ img.pat-em {
 @media (max-width: 380px) {
   .shp-svg { width: 74px; height: 74px; }
 }
+
+/* ============ Tìm hình trốn (Vườn Toán · math/find) ============ */
+/* Dải tiến trình: hình cần tìm + chấm đếm số hình đã tìm được trong câu. */
+.find-count {
+  display: flex; align-items: center; gap: 12px; width: fit-content;
+  margin: 16px auto 0; padding: 8px 18px 8px 10px;
+  background: #fff; border: 2px solid var(--line); border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+}
+.find-count-ic { display: grid; place-items: center; width: 36px; height: 36px; }
+.find-count-ic .shp-svg { width: 30px; height: 30px; filter: none; }
+.find-dots { display: inline-flex; gap: 9px; }
+.find-dot {
+  width: 15px; height: 15px; border-radius: 999px; background: var(--line);
+  transition: transform .2s cubic-bezier(.34,1.56,.64,1), background .15s;
+}
+.find-dot.on { background: var(--green); transform: scale(1.14); }
+
+/* Bảng chơi: một panel trắng, các hình "trốn" nằm trực tiếp trên nền (không viền
+   thẻ riêng) — bé phải nhìn kỹ để tìm đúng loại. */
+.find-board {
+  margin-top: 22px; background: var(--card); border: 2px solid var(--line);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow);
+  padding: clamp(20px, 4vw, 40px);
+}
+.find-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 3.4vw, 36px); place-items: center;
+}
+.find-tile {
+  position: relative; width: 100%; border: none; background: none; padding: 6px;
+  cursor: pointer; display: grid; place-items: center;
+  min-height: 44px; -webkit-tap-highlight-color: transparent;
+  transition: transform .15s cubic-bezier(.34,1.56,.64,1);
+}
+.find-tile:hover { transform: translateY(-5px); }
+.find-tile:active { transform: scale(.94); }
+.find-tile:disabled { cursor: default; }
+.find-tile:disabled:hover { transform: none; }
+.find-tile .shp-svg { width: clamp(84px, 20vw, 150px); height: clamp(84px, 20vw, 150px); }
+.find-tile.wrong { animation: q-shake .4s ease; }
+/* Hình đã tìm đúng: đậm màu hơn chút + hiện dấu ✓ trắng ở giữa. */
+.find-tile.found .shp-svg { filter: drop-shadow(0 6px 12px rgba(59, 58, 90, .18)) saturate(1.06); }
+.find-check {
+  position: absolute; left: 50%; top: 50%; width: 46%; height: 46%;
+  transform: translate(-50%, -50%); pointer-events: none;
+  filter: drop-shadow(0 2px 3px rgba(59, 58, 90, .3));
+  animation: find-pop .3s cubic-bezier(.34, 1.56, .64, 1);
+}
+@keyframes find-pop {
+  from { transform: translate(-50%, -50%) scale(.3); opacity: 0; }
+  to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+@media (max-width: 720px) {
+  .find-grid { grid-template-columns: repeat(2, 1fr); }
+  .find-board { padding: 20px 14px; }
+  .find-count { margin-top: 14px; }
+}
+@media (max-width: 380px) {
+  .find-tile .shp-svg { width: 72px; height: 72px; }
+  .find-dot { width: 13px; height: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .find-tile:hover { transform: none; }
+  .find-tile.wrong { animation: none; }
+  .find-check { animation: none; }
+  .find-dot { transition: none; }
+}
