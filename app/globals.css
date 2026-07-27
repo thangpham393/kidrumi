@@ -1338,3 +1338,77 @@ img.pat-em {
   .find-check { animation: none; }
   .find-dot { transition: none; }
 }
+
+/* ============ Đếm cùng bé (Vườn Toán · math/count) ============ */
+/* Dùng chung khung .lt-* của "Nghe & chọn" (header · sao · ô câu lệnh · modal).
+   Thêm: khay vật để đếm (.count-stage) + hàng 4 chữ số để chọn (.count-pad). */
+.count-stage {
+  margin-top: clamp(24px, 6vh, 60px);
+  background: var(--card);
+  border: 2px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: clamp(20px, 4vw, 40px) clamp(16px, 3vw, 30px);
+  min-height: clamp(140px, 26vh, 220px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 3vw, 34px);
+}
+/* Mỗi vật nảy nhẹ khi hiện ra. */
+img.count-em {
+  width: clamp(44px, 9vw, 92px);
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+  animation: count-pop .34s cubic-bezier(.34,1.56,.64,1) both;
+}
+@keyframes count-pop {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+/* Bàn số: 4 chữ số vuông, luôn 1 hàng (khớp ảnh thiết kế). */
+.count-pad {
+  margin-top: clamp(16px, 3vh, 26px);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(10px, 2vw, 18px);
+}
+.count-key {
+  aspect-ratio: 1 / 1;
+  background: #fff;
+  border: 3px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  font-family: var(--font-head);
+  font-weight: 800;
+  color: var(--ink);
+  font-size: clamp(34px, 7vw, 60px);
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  transition: transform .15s cubic-bezier(.34,1.56,.64,1), border-color .15s,
+    box-shadow .15s, background .15s;
+}
+.count-key:hover { transform: translateY(-4px); border-color: #d8d3f7; box-shadow: var(--shadow); }
+.count-key:active { transform: scale(.95); }
+.count-key:disabled { cursor: default; }
+.count-key.wrong { border-color: var(--red); background: var(--red-soft); color: var(--red); animation: q-shake .4s ease; }
+.count-key.correct { border-color: var(--green); background: var(--green-soft); color: var(--green); }
+
+@media (max-width: 720px) {
+  .count-stage { margin-top: 22px; gap: 10px; padding: 20px 14px; min-height: 130px; }
+  .count-pad { gap: 8px; }
+}
+@media (max-width: 380px) {
+  .count-key { font-size: 30px; border-width: 2px; }
+  img.count-em { width: clamp(38px, 12vw, 60px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .count-key:hover { transform: none; }
+  .count-key.wrong { animation: none; }
+  img.count-em { animation: none; }
+}
