@@ -1253,3 +1253,20 @@ img.pat-em {
   .pat-q { animation: none; }
   .pat-q.filled { animation: none; }
 }
+
+/* ============ Hình gì đây? (Vườn Toán · math/shapes) ============ */
+/* Hình vẽ SVG lấp gần đầy thẻ .lt-card (thẻ đã có aspect 1/1 + place-items center). */
+.shp-svg {
+  width: clamp(96px, 22vw, 200px);
+  height: clamp(96px, 22vw, 200px);
+  display: block;
+  filter: drop-shadow(0 6px 10px rgba(59, 58, 90, .14));
+}
+/* Chọn đúng: thẻ sáng xanh trước khi qua câu mới (đối xứng với .lt-card.wrong đỏ). */
+.lt-card.correct {
+  border-color: var(--green);
+  background: var(--green-soft);
+}
+@media (max-width: 380px) {
+  .shp-svg { width: 74px; height: 74px; }
+}
