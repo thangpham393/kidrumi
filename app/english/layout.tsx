@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PlayGate from "@/components/LoginGate";
 
 const title = "Tiếng Anh cho bé — Shadowing & Nghe chọn";
 const description =
@@ -22,5 +23,8 @@ export default function EnglishLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  // /english và lộ trình /english/listen xem tự do; vào từng bài cần đăng nhập.
+  return (
+    <PlayGate openPaths={["/english", "/english/listen"]}>{children}</PlayGate>
+  );
 }

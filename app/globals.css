@@ -785,6 +785,12 @@ a.game-tile:hover .game-thumb img { transform: scale(1.05); }
 .google-btn:active { transform: translateY(0); }
 .login-skip { margin: 20px 0 0; font-size: 14px; color: var(--muted); }
 .login-skip-link { color: var(--brand); font-weight: 700; text-decoration: underline; }
+/* Cổng đăng nhập khi vào phần "chơi chi tiết" (components/LoginGate.tsx). */
+.play-gate-skip {
+  background: none; border: none; padding: 0; cursor: pointer;
+  font: inherit; font-weight: 700;
+}
+.play-gate-loading { min-height: 40vh; }
 
 /* ===== Trang Nhiệm vụ ===== */
 .task-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }

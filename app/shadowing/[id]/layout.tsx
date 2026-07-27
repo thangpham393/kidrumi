@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getVideo, langLabel, levelLabel } from "../data";
 import { siteUrl, siteName } from "@/lib/site";
+import PlayGate from "@/components/LoginGate";
 
 type Params = { params: Promise<{ id: string }> };
 
@@ -103,7 +104,8 @@ export default async function ShadowingDetailLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      {children}
+      {/* JSON-LD ở trên vẫn hiện cho SEO; trình phát chỉ mở khi đã đăng nhập. */}
+      <PlayGate backHref="/shadowing">{children}</PlayGate>
     </>
   );
 }

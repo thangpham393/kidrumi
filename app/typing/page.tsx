@@ -3,6 +3,8 @@
 import { useMemo, useRef, useState } from "react";
 import { useToast } from "@/components/useToast";
 import { useChild } from "@/components/ChildContext";
+import { useAuth } from "@/components/AuthContext";
+import { GateCard } from "@/components/LoginGate";
 
 type Lang = "vi" | "en";
 type LessonKey =
@@ -62,6 +64,8 @@ const lessonGroups: { g: string; items: { k: LessonKey; t: string; d: string }[]
 export default function TypingPage() {
   const { showToast, toastEl } = useToast();
   const { addStars } = useChild();
+  const { user } = useAuth();
+  const [showGate, setShowGate] = useState(false);
 
   const [phase, setPhase] = useState<"setup" | "play">("setup");
   const [lang, setLang] = useState<Lang>("vi");
@@ -100,6 +104,11 @@ export default function TypingPage() {
   };
 
   const start = () => {
+    // Màn chọn bài (setup) xem tự do; muốn tập gõ thì phải đăng nhập → hiện cổng.
+    if (!user) {
+      setShowGate(true);
+      return;
+    }
     buildQueue();
     setPhase("play");
     setTimeout(() => inputRef.current?.focus(), 30);
@@ -247,6 +256,14 @@ export default function TypingPage() {
             Bắt đầu! 🚀
           </button>
         </div>
+
+        {showGate && (
+          <div className="modal-back" onClick={() => setShowGate(false)}>
+            <div onClick={(e) => e.stopPropagation()}>
+              <GateCard onClose={() => setShowGate(false)} />
+            </div>
+          </div>
+        )}
         {toastEl}
       </main>
     );

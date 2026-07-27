@@ -64,7 +64,9 @@ export async function proxy(request: NextRequest) {
     }
   }
 
-  // Các đường dẫn bắt buộc đăng nhập. "Nhiệm vụ" (/tasks) yêu cầu đăng nhập.
+  // Các đường dẫn bắt buộc đăng nhập ngay từ server. "Nhiệm vụ" (/tasks) cần đăng nhập.
+  // Riêng phần "chơi chi tiết" (math/shadowing/nghe-chọn) được chặn mềm ở client bằng
+  // <PlayGate> (components/LoginGate.tsx) để hiện thẻ đăng nhập tại chỗ, không redirect.
   const protectedPaths = ["/tasks"];
   const needsAuth = protectedPaths.some(
     (p) => pathname === p || pathname.startsWith(`${p}/`),

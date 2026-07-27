@@ -63,7 +63,7 @@ function LoginInner() {
           </p>
         )}
 
-        <button className="google-btn" onClick={signInWithGoogle}>
+        <button className="google-btn" onClick={() => signInWithGoogle()}>
           <GoogleIcon />
           <span>Đăng nhập bằng Google</span>
         </button>
@@ -71,7 +71,7 @@ function LoginInner() {
         <p className="login-skip">
           Hoặc{" "}
           <a href="/" className="login-skip-link">
-            vào chơi luôn không cần đăng nhập
+            xem trước các mục không cần đăng nhập
           </a>
         </p>
       </div>

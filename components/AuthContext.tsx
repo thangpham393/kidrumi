@@ -21,7 +21,8 @@ export type AuthUser = {
 type Ctx = {
   user: AuthUser | null;
   ready: boolean; // đã kiểm tra session xong chưa
-  signInWithGoogle: () => Promise<void>;
+  // next: nơi quay lại sau khi đăng nhập. Bỏ trống thì lấy ?next trên URL, rồi mới về "/".
+  signInWithGoogle: (next?: string) => Promise<void>;
   signOut: () => Promise<void>;
 };
 
@@ -67,8 +68,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     };
   }, [supabase]);
 
-  const signInWithGoogle = async () => {
-    const next = new URLSearchParams(window.location.search).get("next") || "/";
+  const signInWithGoogle = async (nextArg?: string) => {
+    const next =
+      nextArg ||
+      new URLSearchParams(window.location.search).get("next") ||
+      "/";
     await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {

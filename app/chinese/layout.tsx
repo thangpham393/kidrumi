@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PlayGate from "@/components/LoginGate";
 
 const title = "Tiếng Trung cho bé — Shadowing & Nghe chọn";
 const description =
@@ -22,5 +23,8 @@ export default function ChineseLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  // /chinese và lộ trình /chinese/listen xem tự do; vào từng bài cần đăng nhập.
+  return (
+    <PlayGate openPaths={["/chinese", "/chinese/listen"]}>{children}</PlayGate>
+  );
 }

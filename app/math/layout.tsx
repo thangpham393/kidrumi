@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PlayGate from "@/components/LoginGate";
 
 const title = "Vườn Toán — Chơi mà học cho bé";
 const description =
@@ -22,5 +23,6 @@ export default function MathLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  // /math (chọn trò) xem tự do; vào từng trò thì cần đăng nhập.
+  return <PlayGate openPaths={["/math"]}>{children}</PlayGate>;
 }
