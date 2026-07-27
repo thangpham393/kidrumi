@@ -61,11 +61,27 @@ create table if not exists public.shadowing_progress (
 create index if not exists shadowing_progress_child_idx
   on public.shadowing_progress (child_id, updated_at desc);
 
+-- Tiến độ "Nghe & chọn" (lộ trình): mảng id các chặng ĐÃ hoàn thành, theo bé + ngôn ngữ.
+-- Một dòng cho mỗi (child_id, lang); dùng để mở khoá chặng đồng bộ giữa các thiết bị.
+create table if not exists public.listen_progress (
+  id         uuid primary key default gen_random_uuid(),
+  child_id   uuid not null references public.children (id) on delete cascade,
+  user_id    uuid not null references auth.users (id) on delete cascade,
+  lang       text not null,
+  done       text[] not null default '{}',
+  updated_at timestamptz not null default now(),
+  unique (child_id, lang)
+);
+
+create index if not exists listen_progress_child_idx
+  on public.listen_progress (child_id, updated_at desc);
+
 -- 5) Row Level Security — mỗi ba mẹ chỉ thấy & sửa dữ liệu của chính mình.
 alter table public.children          enable row level security;
 alter table public.tasks             enable row level security;
 alter table public.task_completions  enable row level security;
 alter table public.shadowing_progress enable row level security;
+alter table public.listen_progress    enable row level security;
 
 drop policy if exists children_own on public.children;
 create policy children_own on public.children
@@ -81,4 +97,8 @@ create policy task_completions_own on public.task_completions
 
 drop policy if exists shadowing_progress_own on public.shadowing_progress;
 create policy shadowing_progress_own on public.shadowing_progress
+  for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+drop policy if exists listen_progress_own on public.listen_progress;
+create policy listen_progress_own on public.listen_progress
   for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
