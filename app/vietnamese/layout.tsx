@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PlayGate from "@/components/LoginGate";
 
 const title = "Tiếng Việt cho bé — Nghe hiểu câu chuyện";
 const description =
@@ -22,5 +23,6 @@ export default function VietnameseLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  // /vietnamese (chọn trò) xem tự do; vào từng trò thì cần đăng nhập.
+  return <PlayGate openPaths={["/vietnamese"]}>{children}</PlayGate>;
 }

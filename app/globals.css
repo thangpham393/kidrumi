@@ -1928,3 +1928,96 @@ span.gone-opt-em { font-size: clamp(64px, 15vw, 120px); line-height: 1; }
   .gone-curtain { transition: none; }
   .gone-em { animation: none; }
 }
+
+/* ============ Nghe hiểu câu chuyện (Tiếng Việt · vietnamese/story) ============ */
+/* Dùng chung khung .lt-* (header · sao · ô "Nghe câu chuyện" · modal kết quả). Thêm 3 ô
+   xếp (.story-slot) đánh số 1·2·3 dẫn hướng trước–sau + khay 3 tranh (.story-card). Tranh
+   vuông 512×512 hiển thị qua next/image (fill + object-fit cover). */
+.story-wrap { max-width: 900px; }
+.story-prompt { justify-content: center; text-align: left; max-width: 520px; margin-inline: auto; }
+.story-instruction {
+  text-align: center; margin: 12px 0 0; font-family: var(--font-head); font-weight: 800;
+  color: var(--ink-soft); font-size: clamp(16px, 2.4vw, 22px);
+}
+
+/* Sân xếp + khay: cùng lưới 3 cột, cùng bề ngang, canh giữa. */
+.story-slots,
+.story-tray {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(10px, 2vw, 18px);
+  max-width: 780px; margin-inline: auto;
+}
+.story-slots { margin-top: clamp(20px, 5vh, 44px); }
+.story-tray { margin-top: clamp(14px, 3vh, 24px); }
+
+/* Ô trống bé thả tranh vào. */
+.story-slot {
+  position: relative; aspect-ratio: 1 / 1; padding: 5px;
+  background: rgba(255, 255, 255, .5); border: 3px dashed #c4bdf0;
+  border-radius: var(--radius-lg); cursor: default;
+  display: grid; place-items: center; overflow: hidden;
+  transition: border-color .15s, background .15s, transform .15s cubic-bezier(.34, 1.56, .64, 1);
+}
+.story-slot.armed { cursor: pointer; border-color: var(--brand); }
+.story-slot.armed:hover,
+.story-slot.over { background: var(--brand-soft); border-color: var(--brand); transform: translateY(-2px); }
+.story-slot.filled { border-style: solid; border-color: var(--green); background: var(--green-soft); padding: 5px; }
+.story-slot.wrong { border-color: var(--red); background: var(--red-soft); animation: q-shake .4s ease; }
+.story-slot:disabled { cursor: default; }
+
+/* Số thứ tự 1·2·3 ở góc ô — dẫn hướng "trước → sau". */
+.story-slot-num {
+  position: absolute; top: 8px; left: 8px; z-index: 2;
+  width: 28px; height: 28px; border-radius: 999px;
+  display: grid; place-items: center;
+  background: var(--brand-soft); color: var(--brand-dark);
+  font-family: var(--font-head); font-weight: 800; font-size: 16px;
+  box-shadow: var(--shadow-sm);
+}
+.story-slot.filled .story-slot-num { display: none; }
+
+/* Tranh trong khay — bé kéo/chạm để xếp. */
+.story-card {
+  aspect-ratio: 1 / 1; padding: 0; border: 3px solid var(--line);
+  border-radius: var(--radius-lg); background: #fff; box-shadow: var(--shadow-sm);
+  cursor: grab; overflow: hidden; touch-action: none;
+  transition: transform .15s cubic-bezier(.34, 1.56, .64, 1), border-color .15s, box-shadow .15s, opacity .15s;
+}
+.story-card:hover { transform: translateY(-3px); border-color: #d8d3f7; box-shadow: var(--shadow); }
+.story-card:active { cursor: grabbing; }
+.story-card.sel { border-color: var(--brand); box-shadow: 0 0 0 4px var(--brand-soft), var(--shadow); transform: translateY(-3px); }
+.story-card.dragging { opacity: .35; }
+
+/* Ảnh tranh: phủ kín ô (vuông), bo góc theo ô. */
+.story-pic {
+  position: relative; display: block; width: 100%; aspect-ratio: 1 / 1;
+  border-radius: calc(var(--radius-lg) - 8px); overflow: hidden;
+}
+.story-pic img { object-fit: cover; }
+
+.story-tray-empty {
+  grid-column: 1 / -1; text-align: center; color: var(--muted);
+  font-family: var(--font-head); font-weight: 800; font-size: 20px; padding: 24px 0;
+}
+
+/* Tranh đang bay theo ngón tay khi kéo. */
+.story-float {
+  position: fixed; z-index: 9998; pointer-events: none;
+  width: clamp(120px, 26vw, 220px); transform: translate(-50%, -50%) rotate(-4deg);
+  filter: drop-shadow(0 10px 18px rgba(90, 80, 180, .32));
+}
+.story-float .story-pic { border-radius: var(--radius-lg); border: 3px solid #fff; }
+
+@media (max-width: 720px) {
+  .story-instruction { font-size: 15px; margin-top: 8px; }
+  .story-slots { margin-top: 20px; }
+  .story-slot-num { width: 24px; height: 24px; font-size: 14px; top: 6px; left: 6px; }
+  .story-slot, .story-card { border-width: 2px; }
+}
+@media (max-width: 380px) {
+  .story-slots, .story-tray { gap: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .story-slot, .story-card { transition: border-color .15s, background .15s; }
+  .story-card:hover, .story-slot.armed:hover, .story-slot.over { transform: none; }
+  .story-slot.wrong { animation: none; }
+}

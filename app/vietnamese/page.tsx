@@ -2,6 +2,7 @@ import PickGrid, { type PickItem } from "@/components/PickGrid";
 
 const items: PickItem[] = [
   {
+    href: "/vietnamese/story",
     img: "/illustrations/vi-story.png",
     glyph: "🐰",
     title: "Nghe hiểu câu chuyện",
@@ -9,7 +10,6 @@ const items: PickItem[] = [
     desc: "Bé nghe một câu chuyện ngắn rồi xếp ba bức tranh theo đúng thứ tự trước sau.",
     tone: "#c76b2f",
     grad: ["var(--amber-soft)", "#ffe6c2"],
-    soon: true,
   },
 ];
 
