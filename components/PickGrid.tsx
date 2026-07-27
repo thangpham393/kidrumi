@@ -17,7 +17,7 @@ export type PickItem = {
   soon?: boolean;
 };
 
-function Card({ item }: { item: PickItem }) {
+function Card({ item, eager }: { item: PickItem; eager?: boolean }) {
   const { img, glyph, title, sub, desc, tone, grad, soon, href } = item;
   const style = { ["--tone" as string]: tone } as CSSProperties;
   const thumbStyle: CSSProperties = {
@@ -35,6 +35,10 @@ function Card({ item }: { item: PickItem }) {
             fill
             sizes="(max-width: 720px) 92vw, 460px"
             className="pick-photo"
+            // Ô đầu trang (thường là LCP): tải ngay cho hiện nhanh, khỏi cảnh báo.
+            // Next 16 đã bỏ `priority` → dùng loading/fetchPriority.
+            loading={eager ? "eager" : undefined}
+            fetchPriority={eager ? "high" : undefined}
           />
         ) : (
           <span className="pick-glyph" aria-hidden>
@@ -68,8 +72,9 @@ function Card({ item }: { item: PickItem }) {
 export default function PickGrid({ items }: { items: PickItem[] }) {
   return (
     <section className={`pick-grid ${items.length === 1 ? "one" : ""}`}>
-      {items.map((it) => (
-        <Card key={it.title} item={it} />
+      {items.map((it, i) => (
+        // Ưu tiên tải hàng đầu (trên màn hình đầu tiên).
+        <Card key={it.title} item={it} eager={i < 2} />
       ))}
     </section>
   );

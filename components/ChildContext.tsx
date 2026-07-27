@@ -46,13 +46,16 @@ export function ChildProvider({ children: kids }: { children: ReactNode }) {
   const loadedGuest = useRef(false);
 
   // ---- Nạp danh sách bé mỗi khi trạng thái đăng nhập đổi ----
+  // Chỉ phụ thuộc userId (không phụ thuộc cả object user): token làm mới lúc
+  // quay lại tab không được kích hoạt nạp lại, tránh mất theme vừa chọn.
+  const userId = user?.id ?? null;
   useEffect(() => {
     if (!authReady) return;
     let active = true;
 
     (async () => {
       setReady(false);
-      if (user) {
+      if (userId) {
         // Đã đăng nhập: lấy hồ sơ từ Supabase.
         const { data } = await supabase
           .from("children")
@@ -98,7 +101,7 @@ export function ChildProvider({ children: kids }: { children: ReactNode }) {
     return () => {
       active = false;
     };
-  }, [user, authReady, supabase]);
+  }, [userId, authReady, supabase]);
 
   const child = useMemo(
     () => list.find((c) => c.id === activeId) ?? null,
@@ -138,20 +141,22 @@ export function ChildProvider({ children: kids }: { children: ReactNode }) {
 
   const updateChild = async (id: string, name: string, world: string) => {
     const clean = name.trim() || "Bé Yêu";
-    setList((prev) =>
-      prev.map((c) => {
-        if (c.id !== id) return c;
-        const next = { ...c, name: clean, world };
-        if (user && id !== "local") {
-          void supabase.from("children").update({ name: clean, world }).eq("id", id);
-        } else {
-          try {
-            localStorage.setItem(KEY, JSON.stringify(next));
-          } catch {}
-        }
-        return next;
-      })
-    );
+    // Cập nhật ngay trên màn hình.
+    setList((prev) => prev.map((c) => (c.id === id ? { ...c, name: clean, world } : c)));
+    // Lưu xuống — PHẢI await, nếu không Supabase không gửi request.
+    if (user && id !== "local") {
+      const { error } = await supabase
+        .from("children")
+        .update({ name: clean, world })
+        .eq("id", id);
+      if (error) console.error("Lưu hồ sơ bé thất bại:", error.message);
+    } else {
+      try {
+        const raw = localStorage.getItem(KEY);
+        const cur = raw ? JSON.parse(raw) : {};
+        localStorage.setItem(KEY, JSON.stringify({ ...cur, id: "local", name: clean, world }));
+      } catch {}
+    }
   };
 
   const deleteChild = async (id: string) => {
@@ -170,24 +175,24 @@ export function ChildProvider({ children: kids }: { children: ReactNode }) {
   };
 
   const addStars = (n: number) => {
-    setList((prev) =>
-      prev.map((c) => {
-        if (c.id !== activeId) return c;
-        const next = { ...c, stars: Math.max(0, c.stars + n) };
-        if (user && c.id !== "local") {
-          // Ghi tiến độ sao vào CSDL (không chặn UI).
-          void supabase
-            .from("children")
-            .update({ stars: next.stars })
-            .eq("id", c.id);
-        } else {
-          try {
-            localStorage.setItem(KEY, JSON.stringify(next));
-          } catch {}
-        }
-        return next;
-      })
-    );
+    const cur = list.find((c) => c.id === activeId);
+    if (!cur) return;
+    const stars = Math.max(0, cur.stars + n);
+    setList((prev) => prev.map((c) => (c.id === activeId ? { ...c, stars } : c)));
+    if (user && cur.id !== "local") {
+      // Ghi tiến độ sao vào CSDL (không chặn UI) — .then() để request thực sự gửi.
+      supabase
+        .from("children")
+        .update({ stars })
+        .eq("id", cur.id)
+        .then(({ error }) => {
+          if (error) console.error("Lưu sao thất bại:", error.message);
+        });
+    } else {
+      try {
+        localStorage.setItem(KEY, JSON.stringify({ ...cur, stars }));
+      } catch {}
+    }
   };
 
   const reset = () => {

@@ -72,10 +72,10 @@ export function useListenProgress(lang: string, childId: string | null) {
       writeLocal(lang, childId, merged);
       setReady(true);
 
-      // Có phần local chưa lên mây → đẩy bản gộp lên (không chặn UI).
+      // Có phần local chưa lên mây → đẩy bản gộp lên (await để request thực sự gửi).
       const hasNew = [...local].some((id) => !cloudSet.has(id));
       if (hasNew) {
-        void supabase.from("listen_progress").upsert(
+        const { error } = await supabase.from("listen_progress").upsert(
           {
             child_id: childId,
             user_id: user!.id,
@@ -85,6 +85,7 @@ export function useListenProgress(lang: string, childId: string | null) {
           },
           { onConflict: "child_id,lang" },
         );
+        if (error) console.error("Đồng bộ tiến độ thất bại:", error.message);
       }
     })();
   }, [cloud, lang, childId, user, supabase]);
@@ -107,16 +108,22 @@ export function useListenProgress(lang: string, childId: string | null) {
         next.add(id);
         writeLocal(lang, childId, next); // cache cục bộ luôn
         if (cloud) {
-          void supabase.from("listen_progress").upsert(
-            {
-              child_id: childId,
-              user_id: user!.id,
-              lang,
-              done: [...next],
-              updated_at: new Date().toISOString(),
-            },
-            { onConflict: "child_id,lang" },
-          );
+          // .then() để Supabase thực sự gửi request (query chạy lười).
+          supabase
+            .from("listen_progress")
+            .upsert(
+              {
+                child_id: childId,
+                user_id: user!.id,
+                lang,
+                done: [...next],
+                updated_at: new Date().toISOString(),
+              },
+              { onConflict: "child_id,lang" },
+            )
+            .then(({ error }) => {
+              if (error) console.error("Lưu tiến độ thất bại:", error.message);
+            });
         }
         return next;
       });

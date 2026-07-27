@@ -41,6 +41,14 @@ function toAuthUser(u: User | null): AuthUser | null {
   };
 }
 
+// Cùng một người dùng? (dùng để giữ nguyên tham chiếu object, tránh nạp lại
+// vô cớ khi Supabase làm mới token lúc quay lại tab).
+function sameAuthUser(a: AuthUser | null, b: AuthUser | null): boolean {
+  if (a === b) return true;
+  if (!a || !b) return false;
+  return a.id === b.id && a.email === b.email && a.name === b.name && a.avatar === b.avatar;
+}
+
 export function AuthProvider({ children }: { children: ReactNode }) {
   const supabase = useMemo(() => createClient(), []);
   const [user, setUser] = useState<AuthUser | null>(null);
@@ -51,14 +59,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     supabase.auth.getUser().then(({ data }) => {
       if (!active) return;
-      setUser(toAuthUser(data.user));
+      const next = toAuthUser(data.user);
+      setUser((prev) => (sameAuthUser(prev, next) ? prev : next));
       setReady(true);
     });
 
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(toAuthUser(session?.user ?? null));
+      const next = toAuthUser(session?.user ?? null);
+      // Giữ nguyên tham chiếu nếu vẫn là người dùng đó → không kích hoạt
+      // nạp lại danh sách bé (mất theme vừa chọn) khi token làm mới.
+      setUser((prev) => (sameAuthUser(prev, next) ? prev : next));
       setReady(true);
     });
 

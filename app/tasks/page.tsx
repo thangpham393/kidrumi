@@ -6,6 +6,10 @@ import { useAuth } from "@/components/AuthContext";
 import { useToast } from "@/components/useToast";
 import { createClient } from "@/lib/supabase/client";
 import { confettiBurst, playSuccess } from "@/components/celebrate";
+import Ambient from "@/components/Ambient";
+import ThemeBuddy from "@/components/ThemeBuddy";
+import WorldPicker from "@/components/WorldPicker";
+import { getTheme, themeAsset, themeBgGradient } from "./worldThemes";
 
 const worlds: { key: string; label: string; emoji: string }[] = [
   { key: "ocean", label: "Đại dương", emoji: "🐙" },
@@ -73,7 +77,7 @@ export default function TasksPage() {
   const [taskModal, setTaskModal] = useState(false);
   const [editingTask, setEditingTask] = useState<Task | null>(null);
 
-  const worldMeta = worlds.find((w) => w.key === child?.world) ?? worlds[7];
+  const theme = getTheme(child?.world);
   // Chỉ theo dõi id của bé đang chọn — tránh reload khi số sao đổi (child là
   // object mới mỗi lần cộng sao, sẽ làm reset ô tick đang chờ ghi vào CSDL).
   const childId = child?.id ?? null;
@@ -278,25 +282,46 @@ export default function TasksPage() {
   // ---- Bảng nhiệm vụ ----
   return (
     <main className="wrap">
-      <div className="task-top">
+      {/* Nền theo thế giới: ảnh /themes/<key>/bg.webp, chưa có thì rớt về gradient */}
+      <div
+        className="theme-scene"
+        aria-hidden="true"
+        style={{
+          backgroundImage: `url(${themeAsset(theme.key, "bg")}), ${themeBgGradient(theme)}`,
+        }}
+      />
+      <Ambient kind={theme.ambient} color={theme.secondary} />
+      <ThemeBuddy world={theme.key} cheering={allDone} />
+
+      <div
+        className={`task-top ${theme.headerInk === "#ffffff" ? "on-dark" : ""}`}
+        style={{ color: theme.headerInk }}
+      >
         <div>
-          <p className="page-eyebrow" style={{ textAlign: "left" }}>
+          <p className="page-eyebrow" style={{ textAlign: "left", color: "inherit", opacity: 0.85 }}>
             {editMode ? "Ba mẹ đang chỉnh sửa" : "Nhiệm vụ mỗi ngày"}
           </p>
-          <h1 className="page-title" style={{ textAlign: "left", fontSize: 34, margin: 0 }}>
-            {worldMeta.label} Nhiệm Vụ
+          <h1 className="page-title" style={{ textAlign: "left", fontSize: 34, margin: 0, color: "inherit" }}>
+            {theme.label} Nhiệm Vụ
           </h1>
-          <p style={{ color: "var(--ink-soft)", fontWeight: 700, marginTop: 4 }}>
+          <p style={{ color: "inherit", opacity: 0.9, fontWeight: 700, marginTop: 4 }}>
             📅 {todayVi()}
           </p>
         </div>
-        <button
-          className={`edit-toggle ${editMode ? "on" : ""}`}
-          onClick={enterEdit}
-          title={editMode ? "Xong" : "Chế độ chỉnh sửa"}
-        >
-          {editMode ? "✓ Xong" : "✏️"}
-        </button>
+        <div className="task-top-actions">
+          <WorldPicker
+            worlds={worlds}
+            current={child.world}
+            onPick={(key) => updateChild(child.id, child.name, key)}
+          />
+          <button
+            className={`edit-toggle ${editMode ? "on" : ""}`}
+            onClick={enterEdit}
+            title={editMode ? "Xong" : "Chế độ chỉnh sửa"}
+          >
+            {editMode ? "✓ Xong" : "✏️"}
+          </button>
+        </div>
       </div>
 
       {/* Chọn bé + thêm bé */}
@@ -323,9 +348,12 @@ export default function TasksPage() {
         </button>
       </div>
 
-      <div className="task-hero">
+      <div
+        className="task-hero"
+        style={{ background: `linear-gradient(120deg, ${theme.primary}, ${theme.dark})` }}
+      >
         <div style={{ fontWeight: 800, fontSize: 18 }}>
-          {worldMeta.emoji} Đường đến kho báu
+          {theme.emoji} Đường đến kho báu
         </div>
         <div style={{ opacity: 0.9, fontSize: 14 }}>
           {totalTasks === 0
@@ -422,9 +450,9 @@ export default function TasksPage() {
 
         <div className="buddy">
           <p className="section-label">BẠN ĐỒNG HÀNH</p>
-          <div style={{ fontSize: 40, textAlign: "center" }}>{worldMeta.emoji}</div>
-          <div style={{ fontWeight: 800, textAlign: "center", fontSize: 18 }}>
-            Bạn {worldMeta.label}
+          <div style={{ fontSize: 40, textAlign: "center" }}>{theme.emoji}</div>
+          <div style={{ fontWeight: 800, textAlign: "center", fontSize: 18, color: theme.dark }}>
+            {theme.buddyName}
           </div>
           <div
             style={{
@@ -438,12 +466,12 @@ export default function TasksPage() {
             }}
           >
             {allDone
-              ? "Nhờ có bé mà tớ mạnh khỏe hẳn lên! 🥕"
-              : "Cùng nhau hoàn thành nhiệm vụ để tớ lớn nhanh nhé!"}
+              ? theme.praise[0]
+              : theme.greeting}
           </div>
           <div style={{ fontWeight: 700, fontSize: 14 }}>Năng lượng</div>
           <div className="energy">
-            <i style={{ width: `${Math.max(8, pct)}%` }} />
+            <i style={{ width: `${Math.max(8, pct)}%`, background: `linear-gradient(90deg, ${theme.secondary}, ${theme.primary})` }} />
           </div>
           <div
             style={{

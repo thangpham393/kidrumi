@@ -3,6 +3,7 @@ import { Baloo_2, Nunito } from "next/font/google";
 import "./globals.css";
 import TopNav from "@/components/TopNav";
 import SceneBackground from "@/components/SceneBackground";
+import ThemeScene from "@/components/ThemeScene";
 import { ChildProvider } from "@/components/ChildContext";
 import { AuthProvider } from "@/components/AuthContext";
 import {
@@ -89,6 +90,7 @@ export default function RootLayout({
         <SceneBackground />
         <AuthProvider>
           <ChildProvider>
+            <ThemeScene />
             <TopNav />
             {children}
           </ChildProvider>
