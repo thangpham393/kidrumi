@@ -34,7 +34,7 @@ const groups: Group[] = [
     games: [
       { title: "Đếm cùng bé", img: "/illustrations/math-count.png", glyph: "🐤", tone: "var(--amber)", grad: ["var(--amber-soft)", "#ffe6bf"], href: "/math/count" },
       { title: "Xếp theo thứ tự", img: "/illustrations/math-order.png", glyph: "📊", tone: "var(--green)", grad: ["var(--green-soft)", "#d3efdd"], href: "/math/order" },
-      { title: "Phân loại hình", img: "/illustrations/math-sort-shape.png", glyph: "🔺", tone: "var(--green)", grad: ["var(--green-soft)", "#d3efdd"], soon: true },
+      { title: "Phân loại hình", img: "/illustrations/math-sort-shape.png", glyph: "🔺", tone: "var(--green)", grad: ["var(--green-soft)", "#d3efdd"], href: "/math/sort-shape" },
     ],
   },
   {
