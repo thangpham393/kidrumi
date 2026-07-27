@@ -16,7 +16,17 @@ pairs=(
   "1f9fa|Basket|basket"
   "1f966|Broccoli|broccoli"
   "1f96c|Leafy green|leafy_green"
-  # thêm dòng mới tại đây...
+  # Cái nào hơn? (math/compare)
+  "1f56f|Candle|candle"
+  "1f384|Christmas tree|christmas_tree"
+  "1f332|Evergreen tree|evergreen_tree"
+  "1f3e2|Office building|office_building"
+  "1f956|Baguette bread|baguette_bread"
+  "1f425|Front-facing baby chick|front-facing_baby_chick"
+  "1f41e|Lady beetle|lady_beetle"
+  "1f31f|Glowing star|glowing_star"
+  "2764|Red heart|red_heart"
+  "1f380|Ribbon|ribbon"
 )
 for p in "${pairs[@]}"; do
   IFS='|' read -r cp folder file <<< "$p"

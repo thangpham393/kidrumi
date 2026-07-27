@@ -1140,3 +1140,40 @@ img.sort-chip-em {
   img.sort-placed-em { animation: none; }
   .sort-float { transform: translate(-50%, -50%); }
 }
+
+/* ============ Cái nào hơn? (Vườn Toán · math/compare) ============ */
+/* Dùng chung khung .lt-* của "Nghe & chọn"; chỉ thêm cách hiển thị hai ô so sánh:
+   .cmp-slot (một vật, phóng theo --k) và .cmp-count (cụm nhiều vật để đếm). */
+.cmp-card { padding: 9%; }
+
+/* Ô kích thước: một vật phóng to/nhỏ theo hệ số --k. base = canh đáy để so
+   chiều cao/độ dài từ cùng một mặt sàn; còn lại canh giữa cho vật tròn. */
+/* Slot lấp đầy ô vuông (.lt-card aspect 1/1) qua stretch — KHÔNG dùng min-height
+   để tránh ép ô cao hơn bề ngang, gây tràn ngang trên mobile. */
+.cmp-slot {
+  align-self: stretch; justify-self: stretch;
+  display: flex; align-items: center; justify-content: center; width: 100%;
+}
+.cmp-slot.base { align-items: flex-end; }
+img.cmp-em {
+  width: calc(clamp(52px, 13vw, 150px) * var(--k, 1));
+  height: auto; object-fit: contain; user-select: none;
+}
+
+/* Ô số lượng: cụm vật cùng loại xếp gọn, tự xuống dòng. */
+.cmp-count {
+  align-self: stretch; justify-self: stretch;
+  display: flex; flex-wrap: wrap; align-content: center;
+  align-items: center; justify-content: center;
+  gap: clamp(5px, 1.4vw, 12px); width: 100%;
+}
+img.cmp-count-em {
+  width: clamp(28px, 7vw, 60px); height: auto; object-fit: contain; user-select: none;
+}
+
+@media (max-width: 720px) {
+  .cmp-count { gap: 5px; }
+}
+@media (max-width: 380px) {
+  img.cmp-count-em { width: clamp(26px, 9vw, 40px); }
+}
