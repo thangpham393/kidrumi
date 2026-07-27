@@ -1622,3 +1622,105 @@ img.count-em {
 @media (prefers-reduced-motion: reduce) {
   .shsort-placed-svg { animation: none; }
 }
+
+/* ==== Vật gì biến mất (Vườn Toán · 4–5 tuổi) ====
+   Khay ấm màu kem (.gone-stage) hiện nhóm vật để bé ghi nhớ → che (🙈) → lộ ra khi
+   đã thiếu một món. Hàng lựa chọn (.gone-opts) để bé chạm vào vật đã biến mất. */
+
+/* Pill "Con nhớ nhé…" với vòng xoay khi bé đang ghi nhớ */
+.gone-timer {
+  display: flex; align-items: center; gap: 12px; align-self: center;
+  margin-top: clamp(16px, 3vh, 24px);
+  background: var(--card); border: 2px solid var(--line); border-radius: 999px;
+  box-shadow: var(--shadow-sm); padding: 10px 22px;
+  font-family: var(--font-head); font-weight: 800; color: var(--ink-soft);
+  font-size: clamp(16px, 2.4vw, 20px);
+}
+.gone-spin {
+  width: 24px; height: 24px; flex: none; border-radius: 999px;
+  border: 4px solid var(--brand-soft); border-top-color: var(--brand);
+  animation: gone-spin .8s linear infinite;
+}
+@keyframes gone-spin { to { transform: rotate(360deg); } }
+
+/* Khay/kệ ấm màu kem — nhóm vật nằm giữa. position/overflow để màn che trượt bên trong. */
+.gone-stage {
+  position: relative;
+  overflow: hidden;
+  margin-top: clamp(16px, 3vh, 26px);
+  background: linear-gradient(160deg, #efe9db, #e7e0cc);
+  border: 2px solid #e0d8c2;
+  border-radius: var(--radius-lg);
+  box-shadow: inset 0 2px 10px rgba(120, 100, 60, .08), var(--shadow-sm);
+  padding: clamp(24px, 5vw, 48px) clamp(16px, 4vw, 40px);
+  min-height: clamp(150px, 30vh, 260px);
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: clamp(16px, 5vw, 56px);
+}
+.gone-em {
+  user-select: none;
+  animation: count-pop .34s cubic-bezier(.34, 1.56, .64, 1) both;
+}
+img.gone-em { width: clamp(56px, 11vw, 112px); height: auto; object-fit: contain; }
+/* Thiếu ảnh → Emoji rớt về <span> emoji hệ thống: cấp cỡ chữ để KHÔNG bị teo nhỏ. */
+span.gone-em { font-size: clamp(56px, 11vw, 112px); line-height: 1; }
+
+/* Màn che trượt ngang phủ kín kệ. Mặc định (lúc ghi nhớ): nằm khuất bên trái.
+   .covering → trượt vào giữa che kín; .revealing → trượt tiếp sang phải rồi biến. */
+.gone-curtain {
+  position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  display: grid; place-items: center;
+  border-radius: inherit;
+  background: repeating-linear-gradient(
+    115deg, #b7abf3 0 26px, #a99bef 26px 52px);
+  box-shadow: inset 0 0 40px rgba(70, 55, 140, .22);
+  transform: translateX(-104%);
+  transition: transform .5s cubic-bezier(.55, 0, .45, 1);
+}
+.gone-curtain.covering { transform: translateX(0); }
+.gone-curtain.revealing { transform: translateX(104%); }
+.gone-curtain-face {
+  font-size: clamp(56px, 14vw, 104px); line-height: 1;
+  filter: drop-shadow(0 6px 10px rgba(70, 55, 140, .3));
+}
+
+/* Hàng lựa chọn — thẻ trắng, bé chạm vào vật đã biến mất */
+.gone-opts {
+  margin-top: clamp(16px, 3vh, 26px);
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: clamp(14px, 3vw, 26px);
+}
+.gone-opt {
+  background: #fff; border: 3px solid var(--line); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm); cursor: pointer;
+  width: clamp(120px, 26vw, 200px); aspect-ratio: 1 / 1;
+  display: grid; place-items: center; padding: clamp(12px, 3vw, 24px);
+  transition: transform .15s cubic-bezier(.34, 1.56, .64, 1), border-color .15s,
+    box-shadow .15s, background .15s;
+}
+.gone-opt:hover { transform: translateY(-4px); border-color: #d8d3f7; box-shadow: var(--shadow); }
+.gone-opt:active { transform: scale(.95); }
+.gone-opt:disabled { cursor: default; }
+.gone-opt.wrong { border-color: var(--red); background: var(--red-soft); animation: q-shake .4s ease; }
+.gone-opt.correct { border-color: var(--green); background: var(--green-soft); }
+img.gone-opt-em {
+  width: 100%; height: 100%; max-width: clamp(64px, 15vw, 120px);
+  object-fit: contain; user-select: none;
+}
+/* Thiếu ảnh → <span> emoji hệ thống trong ô lựa chọn cũng cần cỡ chữ đủ lớn. */
+span.gone-opt-em { font-size: clamp(64px, 15vw, 120px); line-height: 1; }
+
+@media (max-width: 720px) {
+  .gone-stage { margin-top: 18px; gap: 18px; padding: 22px 14px; min-height: 140px; }
+  .gone-opts { gap: 12px; }
+}
+@media (max-width: 380px) {
+  .gone-opt { border-width: 2px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gone-spin { animation: none; }
+  .gone-opt:hover { transform: none; }
+  .gone-opt.wrong { animation: none; }
+  .gone-curtain { transition: none; }
+  .gone-em { animation: none; }
+}

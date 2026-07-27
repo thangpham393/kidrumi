@@ -138,6 +138,7 @@ Nền **phẳng pastel nhạt** (hoặc trong suốt) để lọt vào ô có s�
 | Đếm cùng bé (4–5t) | `math-count.png` |
 | Xếp theo thứ tự (4–5t) | `math-order.png` |
 | Phân loại hình (4–5t) | `math-sort-shape.png` |
+| Vật gì biến mất? (4–5t) | `math-gone.png` |
 | Phiếu bài tập (6–7t) | `math-worksheet.png` |
 
 ```
@@ -157,6 +158,10 @@ math-order.png — Five clay sticks in ascending height order like a small bar
 chart, soft mint background. [STYLE] --ar 4:3
 math-sort-shape.png — Two woven baskets sorting soft clay shapes by type,
 circles in one and triangles in the other, soft mint background. [STYLE] --ar 4:3
+math-gone.png — A cute wooden clay cubby shelf with four square compartments,
+a red apple, a brown teddy bear and a little yellow toy bus each sitting in a
+compartment, one compartment left empty with a faint question mark glow, soft
+pink background. [STYLE] --ar 4:3
 math-worksheet.png — A clay math worksheet on a clipboard with colorful
 counting beads and a pencil, soft lavender background. [STYLE] --ar 4:3
 ```
