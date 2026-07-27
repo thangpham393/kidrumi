@@ -1412,3 +1412,177 @@ img.count-em {
   .count-key.wrong { animation: none; }
   img.count-em { animation: none; }
 }
+
+
+/* ============ Xếp theo thứ tự (Vườn Toán · math/order) ============ */
+/* Dùng chung khung .lt-* (header · sao · ô câu lệnh · modal). Thêm sân xếp (.ord-stage)
+   + khay hình (.ord-tray). Ba kiểu (kind-tall/long/big) đổi hướng & hình dạng; ô và hình
+   bám cùng mép để bé so cỡ. Hình là khối clay thuần CSS, cỡ theo --lv. */
+.ord-wrap {
+  max-width: 760px;
+  /* cỡ thanh cao/dài = base + (lv-1)*unit; --bar-w là bề dày viên nhộng */
+  --bar-base: 52px;
+  --bar-unit: clamp(26px, 5.6vw, 44px);
+  --bar-w: clamp(46px, 10vw, 60px);
+  /* cỡ hình tròn (nhỏ→to) */
+  --big-base: 46px;
+  --big-unit: clamp(16px, 3.4vw, 30px);
+}
+.ord-prompt { justify-content: center; text-align: left; }
+
+/* Sân xếp trên */
+.ord-stage {
+  margin-top: clamp(20px, 4vh, 40px);
+  background: rgba(255, 255, 255, 0.55);
+  border: 2px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: clamp(22px, 4vw, 40px) clamp(14px, 3vw, 30px) clamp(16px, 3vw, 26px);
+}
+.ord-slots {
+  display: flex;
+  justify-content: center;
+  gap: clamp(14px, 4vw, 40px);
+}
+.kind-tall .ord-slots { align-items: flex-end; }
+.kind-big .ord-slots { align-items: center; }
+.kind-long .ord-slots {
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+  margin: 0 auto;
+  gap: clamp(10px, 2.4vw, 18px);
+}
+
+/* Một ô thả — khung nét đứt, cỡ = hình lớn nhất của câu (--slot-lv) */
+.ord-slot {
+  flex: none;
+  padding: 0;
+  background: rgba(124, 108, 240, 0.05);
+  border: 2.5px dashed #cdc7ef;
+  display: flex;
+  cursor: default;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color .15s, background .15s, transform .15s cubic-bezier(.34,1.56,.64,1);
+}
+.kind-tall .ord-slot,
+.kind-long .ord-slot { --sz: calc(var(--bar-base) + (var(--slot-lv) - 1) * var(--bar-unit)); border-radius: 999px; }
+.kind-tall .ord-slot { width: var(--bar-w); height: var(--sz); align-items: flex-end; justify-content: center; }
+.kind-long .ord-slot { height: var(--bar-w); width: var(--sz); align-items: center; justify-content: flex-start; }
+.kind-big .ord-slot {
+  --dia: calc(var(--big-base) + (var(--slot-lv) - 1) * var(--big-unit));
+  width: var(--dia); height: var(--dia); border-radius: 50%;
+  align-items: center; justify-content: center;
+}
+.ord-slot.armed { cursor: pointer; }
+.ord-slot.armed:hover,
+.ord-slot.over {
+  border-color: var(--brand);
+  background: var(--brand-soft);
+  transform: translateY(-3px);
+}
+.ord-slot.wrong { border-color: var(--red); background: var(--red-soft); animation: q-shake .4s ease; }
+.ord-slot.filled { border-style: solid; border-color: transparent; background: transparent; }
+
+/* Nhãn hướng xếp */
+.ord-guide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+  font-family: var(--font-head);
+  font-weight: 800;
+  color: var(--muted);
+  font-size: clamp(13px, 2.2vw, 16px);
+  letter-spacing: .5px;
+}
+.ord-guide-arrow { color: var(--brand); font-size: 1.3em; line-height: 1; }
+
+/* Khay hình dưới */
+.ord-tray {
+  margin-top: clamp(16px, 3vh, 26px);
+  background: rgba(255, 255, 255, 0.55);
+  border: 2px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: clamp(18px, 3vw, 30px) clamp(14px, 3vw, 26px) clamp(16px, 3vw, 24px);
+  min-height: calc(var(--bar-base) + 40px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(14px, 4vw, 40px);
+}
+.ord-tray.kind-tall { align-items: flex-end; }
+.ord-tray.kind-long,
+.ord-tray.kind-big { align-items: center; }
+.ord-bar {
+  flex: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: grab;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform .15s cubic-bezier(.34,1.56,.64,1), filter .15s;
+}
+.ord-bar:hover { transform: translateY(-4px); }
+.ord-bar:active { cursor: grabbing; }
+.ord-bar.sel { transform: translateY(-6px); filter: drop-shadow(0 0 0 3px var(--brand)); }
+.ord-bar.dragging { opacity: .35; }
+.ord-tray-empty {
+  align-self: center;
+  font-family: var(--font-head);
+  font-weight: 800;
+  color: var(--green);
+  font-size: clamp(18px, 3vw, 24px);
+}
+
+/* Khối clay: gradient + bóng khối. Hình dạng theo kiểu (k-tall/long/big). */
+.ord-bar-shape {
+  display: block;
+  background: linear-gradient(180deg, var(--top), var(--bottom));
+  box-shadow:
+    inset 0 5px 8px rgba(255, 255, 255, .55),
+    inset 0 -7px 12px rgba(0, 0, 0, .14),
+    0 6px 14px rgba(59, 58, 90, .18);
+  user-select: none;
+}
+.ord-bar-shape.k-tall,
+.ord-bar-shape.k-long { --sz: calc(var(--bar-base) + (var(--lv) - 1) * var(--bar-unit)); border-radius: 999px; }
+.ord-bar-shape.k-tall { width: var(--bar-w); height: var(--sz); }
+.ord-bar-shape.k-long { height: var(--bar-w); width: var(--sz); }
+.ord-bar-shape.k-big {
+  --dia: calc(var(--big-base) + (var(--lv) - 1) * var(--big-unit));
+  width: var(--dia); height: var(--dia); border-radius: 50%;
+  /* hình cầu: sáng lệch góc trên–trái cho khối tròn */
+  background: radial-gradient(circle at 35% 30%, var(--top), var(--bottom));
+}
+.ord-bar-shape.in-slot { animation: ord-drop .3s cubic-bezier(.34,1.56,.64,1) both; }
+@keyframes ord-drop {
+  0% { transform: scale(.85); opacity: .4; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Hình bay theo ngón tay khi kéo */
+.ord-float {
+  position: fixed;
+  transform: translate(-50%, -55%);
+  pointer-events: none;
+  z-index: 60;
+  filter: drop-shadow(0 10px 16px rgba(59, 58, 90, .28));
+}
+
+@media (max-width: 720px) {
+  .ord-stage { margin-top: 20px; padding: 18px 12px 14px; }
+  .ord-tray { gap: 14px; padding: 16px 12px; }
+}
+@media (max-width: 380px) {
+  .ord-wrap { --bar-w: clamp(40px, 12vw, 52px); --big-unit: clamp(13px, 3vw, 22px); }
+  .ord-slots { gap: 10px; }
+  .ord-tray { gap: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ord-bar:hover, .ord-bar.sel,
+  .ord-slot.armed:hover, .ord-slot.over { transform: none; }
+  .ord-slot.wrong, .ord-bar-shape.in-slot { animation: none; }
+}
