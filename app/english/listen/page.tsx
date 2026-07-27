@@ -1,24 +1,26 @@
 "use client";
 
-import ListenTouch, { type LtWord } from "@/components/ListenTouch";
-import { ALL_WORDS, PROMPTS } from "./data";
-
-const words: LtWord[] = ALL_WORDS.map((w) => ({
-  key: w.en,
-  term: w.en,
-  vi: w.vi,
-  emoji: w.emoji,
-}));
+import ListenRoadmap from "@/components/listen/ListenRoadmap";
+import {
+  ROADMAP,
+  LANG,
+  BASE_PATH,
+  BACK_HREF,
+  BACK_LABEL,
+  EYEBROW,
+  TITLE,
+} from "./lessons";
 
 export default function EnglishListenPage() {
   return (
-    <ListenTouch
-      words={words}
-      prompts={PROMPTS}
-      lang="en"
-      title="Listen & Touch"
-      backHref="/english"
-      backLabel="Tiếng Anh"
+    <ListenRoadmap
+      lang={LANG}
+      roadmap={ROADMAP}
+      basePath={BASE_PATH}
+      backHref={BACK_HREF}
+      backLabel={BACK_LABEL}
+      eyebrow={EYEBROW}
+      title={TITLE}
     />
   );
 }
