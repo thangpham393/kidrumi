@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { speak, stopSpeaking } from "@/components/speak";
 import type { HanziCard } from "@/app/chinese/hanzi/data";
 
 // Bước 写 — tập viết theo nét bằng Hanzi Writer (dữ liệu nét cục bộ).
@@ -23,10 +24,16 @@ export default function StepWrite({
   card,
   done,
   onDone,
+  hasNext = false,
+  onNext,
+  onBackToList,
 }: {
   card: HanziCard;
   done: boolean;
   onDone: () => void;
+  hasNext?: boolean;
+  onNext?: () => void;
+  onBackToList?: () => void;
 }) {
   const boxRef = useRef<HTMLDivElement>(null);
   const onDoneRef = useRef(onDone);
@@ -36,6 +43,7 @@ export default function StepWrite({
   });
   const [pass, setPass] = useState(1);
   const [finished, setFinished] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     onDoneRef.current = onDone;
@@ -127,8 +135,20 @@ export default function StepWrite({
       runOnce();
     };
 
+    // Đọc lời nhắc bằng giọng Việt: lượt đầu hướng dẫn, các lượt sau bảo bé viết lại.
+    const sayGuide = () => {
+      speak(
+        passRef.n === 1
+          ? "Bé hãy viết theo hướng dẫn nhé"
+          : "Bé viết lại một lần nữa nhé",
+        "vi",
+      );
+    };
+
     const startQuiz = () => {
       setFinished(false);
+      setShowModal(false);
+      sayGuide();
       let cur = 0;
       hint(0);
       writer.quiz({
@@ -149,6 +169,8 @@ export default function StepWrite({
             );
           } else {
             setFinished(true);
+            setShowModal(true);
+            speak("Bé viết đẹp lắm", "vi");
             onDoneRef.current();
           }
         },
@@ -227,6 +249,7 @@ export default function StepWrite({
     return () => {
       cancelled = true;
       clearHint();
+      stopSpeaking();
       if (overlay) overlay.remove();
       if (box) box.innerHTML = "";
     };
@@ -252,6 +275,57 @@ export default function StepWrite({
       </div>
 
       {(finished || done) && <p className="hz-practice-ok">Viết đẹp lắm! ⭐</p>}
+
+      {showModal && (
+        <div className="modal-back" role="dialog" aria-modal="true">
+          <div className="modal result-modal lt-result">
+            <button
+              className="x"
+              aria-label="Đóng"
+              onClick={() => {
+                stopSpeaking();
+                setShowModal(false);
+              }}
+            >
+              ✕
+            </button>
+            <div className="lt-result-emoji" aria-hidden>
+              🎉
+            </div>
+            <h2>Bé viết đẹp lắm!</h2>
+            <p>
+              Bé đã viết xong chữ <b className="lt-zh-font">{card.char}</b> rồi. Bé
+              muốn học chữ tiếp theo hay chọn chữ khác nào?
+            </p>
+            <div className="lt-result-actions">
+              {hasNext && onNext && (
+                <button
+                  type="button"
+                  className="btn"
+                  onClick={() => {
+                    stopSpeaking();
+                    onNext();
+                  }}
+                >
+                  Học chữ tiếp theo →
+                </button>
+              )}
+              {onBackToList && (
+                <button
+                  type="button"
+                  className="btn-ghost"
+                  onClick={() => {
+                    stopSpeaking();
+                    onBackToList();
+                  }}
+                >
+                  Chọn chữ khác
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

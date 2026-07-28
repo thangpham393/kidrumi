@@ -137,7 +137,14 @@ function StudyCard({
           <StepPractice card={card} done={ready && isStepDone(card.char, "练")} onDone={() => handleStepDone("练")} />
         )}
         {tab === "写" && (
-          <StepWrite card={card} done={ready && isStepDone(card.char, "写")} onDone={() => handleStepDone("写")} />
+          <StepWrite
+            card={card}
+            done={ready && isStepDone(card.char, "写")}
+            onDone={() => handleStepDone("写")}
+            hasNext={idx < unit.cards.length - 1}
+            onNext={() => go(idx + 1)}
+            onBackToList={() => router.push(`/chinese/hanzi/${unit.id}`)}
+          />
         )}
       </section>
 
