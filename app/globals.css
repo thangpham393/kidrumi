@@ -2857,6 +2857,37 @@ span.gone-opt-em { font-size: clamp(64px, 15vw, 120px); line-height: 1; }
   .promo-stat strong { font-size: clamp(13px, 1.9vw, 21px); }
   .promo-stat span { font-size: clamp(8.5px, 1.2vw, 12.5px); }
 }
+/* Điện thoại: hero co ngắn lại, thẻ chức năng to & cao hơn */
+@media (max-width: 560px) {
+  /* Hero gọn hơn để đẩy khu thẻ lên */
+  .hero-inner { min-height: clamp(168px, 42vw, 230px); padding-top: 14px; }
+  .hero-copy { padding-bottom: 12px; }
+
+  /* Ẩn mascot trang trí — nhường trọn bề ngang cho thẻ */
+  .cardgrid-mascot { display: none; }
+  .cardgrid-portraits { grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 10px; }
+  .cardgrid-lands { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+
+  /* Cả 6 thẻ đồng bộ kiểu DỌC: chữ trên · hình minh hoạ dưới, to & cao hơn */
+  .pc,
+  .lc {
+    flex-direction: column; align-items: stretch; text-align: center;
+    gap: 0; min-height: 0; padding: 14px 10px 12px;
+  }
+  .pc-head h3,
+  .lc-text h3 { font-size: 15px; margin: 0 0 2px; }
+  .pc-head p,
+  .lc-text p { font-size: 10.5px; margin: 0 0 10px; }
+  .lc-text { flex: none; }
+  .pc-thumb,
+  .lc-thumb {
+    flex: none; width: 100%; max-width: none;
+    margin-top: auto; aspect-ratio: 1 / 1;
+  }
+
+  /* Ẩn mascot ở banner CTA — nhường trọn bề ngang cho nội dung */
+  .promo-mascot { display: none; }
+}
 /* Điện thoại: 4 số liệu về 2×2 để không tràn ngang (mascot vẫn cạnh) */
 @media (max-width: 640px) {
   .promo-stats { grid-template-columns: repeat(2, 1fr); }
