@@ -32,8 +32,6 @@ export default function ChineseLayout({
         "/chinese/hanzi",
         "/chinese/hanzi/u1",
         "/chinese/hanzi/u2",
-        "/chinese/hanzi/u1/2",
-        "/chinese/hanzi/u1/3",
       ]}
     >
       {children}

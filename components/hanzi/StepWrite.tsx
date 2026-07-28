@@ -4,15 +4,15 @@ import { useEffect, useRef, useState } from "react";
 import type { HanziCard } from "@/app/chinese/hanzi/data";
 
 // Bước 写 — tập viết theo nét bằng Hanzi Writer (dữ liệu nét cục bộ).
-// Mỗi chữ viết 2 lượt. Nét đang chờ được TÔ ĐẦY dần đúng hình nét (hồng, như xem
-// mẫu) kèm bàn tay 3D chỉ ngón trỏ ở đầu bút; nét đã viết xong tô đậm.
+// Mỗi chữ viết 2 lượt. Nét đang chờ được TÔ ĐẦY hồng (đúng hình nét, khớp khít chữ
+// mẫu) kèm bàn tay 3D chỉ ngón trỏ chạy dọc nét để chỉ hướng viết.
+// Overlay (nét hồng + tay) đặt trong một SVG RIÊNG phủ tuyệt đối lên trên → Hanzi
+// Writer render/append thế nào cũng không đè được, và dùng đúng transform nên khớp khít.
 
 const SIZE = 300;
 const PAD = 14;
 const SC = (SIZE - 2 * PAD) / 1024;
-// Transform Hanzi Writer dùng để render nét (makemeahanzi lệch đáy 124 đơn vị).
-// Trùng đúng nhóm nét → overlay khớp tuyệt đối, không lệch. (đã kiểm 目, 眉…)
-const OY = SIZE - PAD - 124 * SC; // 253.0625
+const OY = SIZE - PAD - 124 * SC; // gốc y của toạ độ nét (makemeahanzi lệch đáy 124)
 const CHAR_TF = `translate(${PAD}, ${OY}) scale(${SC}, ${-SC})`;
 const mapPt = (x: number, y: number): [number, number] => [PAD + x * SC, OY - y * SC];
 const PASSES = 2;
@@ -47,8 +47,9 @@ export default function StepWrite({
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let writer: any = null;
+    let overlay: SVGSVGElement | null = null; // SVG riêng phủ lên trên
     let hand: SVGImageElement | null = null;
-    let fillPath: SVGPathElement | null = null; // tô đầy hình nét đang chỉ (hồng)
+    let fillPath: SVGPathElement | null = null;
     let strokes: string[] = [];
     let medians: number[][][] = [];
     let raf = 0;
@@ -70,13 +71,8 @@ export default function StepWrite({
       if (hand) hand.style.display = "none";
       if (fillPath) fillPath.style.opacity = "0";
     };
-    const showHints = () => {
-      if (hand) hand.style.display = "";
-      if (fillPath) fillPath.style.opacity = "1";
-    };
 
-    // Gợi ý nét thứ i: tô ĐẦY nguyên hình nét (hồng, khớp khít chữ mẫu) + bàn tay
-    // chạy dọc median để chỉ hướng viết. Chuyển nét khi bé viết đúng.
+    // Gợi ý nét thứ i: tô đầy hình nét (hồng) + bàn tay chạy dọc median chỉ hướng.
     const hint = (i: number) => {
       clearHint();
       if (cancelled || !hand || !fillPath) return;
@@ -87,7 +83,9 @@ export default function StepWrite({
         return;
       }
       fillPath.setAttribute("d", shape);
-      showHints();
+      fillPath.style.opacity = "1";
+      hand.style.display = "";
+
       const seg: number[] = [];
       let total = 0;
       for (let k = 1; k < med.length; k++) {
@@ -109,20 +107,17 @@ export default function StepWrite({
         return med[med.length - 1] as [number, number];
       };
       const DUR = Math.max(1200, total * 1.6);
-
       const runOnce = () => {
         if (cancelled) return;
-        const p0 = at(0);
-        placeHand(...mapPt(p0[0], p0[1]));
+        placeHand(...mapPt(...at(0)));
         let start: number | null = null;
         const frame = (t: number) => {
           if (cancelled) return;
           if (start == null) start = t;
           const p = Math.min(1, (t - start) / DUR);
-          const pt = at(p);
-          placeHand(...mapPt(pt[0], pt[1]));
+          placeHand(...mapPt(...at(p)));
           if (p >= 1) {
-            timers.push(setTimeout(runOnce, 600));
+            timers.push(setTimeout(runOnce, 500));
             return;
           }
           raf = requestAnimationFrame(frame);
@@ -196,28 +191,35 @@ export default function StepWrite({
         showHintAfterMisses: 3,
         charDataLoader: () => data,
       });
-      const svg = box.querySelector("svg");
-      if (svg) {
-        // Overlay: dùng đúng transform của nét (CHAR_TF) → khớp tuyệt đối với chữ mẫu.
+
+      // SVG overlay riêng, phủ tuyệt đối lên khung (không bị Hanzi Writer đè).
+      const host = box.parentElement; // .hz-mi (position: relative)
+      if (host) {
+        overlay = document.createElementNS(NS, "svg");
+        overlay.setAttribute("viewBox", `0 0 ${SIZE} ${SIZE}`);
+        overlay.setAttribute(
+          "style",
+          "position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:2;",
+        );
         const g = document.createElementNS(NS, "g");
         g.setAttribute("transform", CHAR_TF);
         fillPath = document.createElementNS(NS, "path");
         fillPath.setAttribute("fill", GUIDE_COLOR);
         fillPath.setAttribute("stroke", "none");
-        fillPath.setAttribute("pointer-events", "none");
         fillPath.style.opacity = "0";
         g.appendChild(fillPath);
-        svg.appendChild(g);
+        overlay.appendChild(g);
 
         hand = document.createElementNS(NS, "image") as SVGImageElement;
         hand.setAttribute("width", String(HW));
         hand.setAttribute("height", String(HW));
-        hand.setAttribute("pointer-events", "none");
         hand.setAttribute("style", "filter:drop-shadow(0 3px 4px rgba(80,70,160,.4))");
         hand.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "/emoji/1f446.png");
         hand.setAttribute("href", "/emoji/1f446.png");
-        svg.appendChild(hand);
+        overlay.appendChild(hand);
+        host.appendChild(overlay);
       }
+
       apiRef.current = { restart, demo };
       startQuiz();
     })();
@@ -225,6 +227,7 @@ export default function StepWrite({
     return () => {
       cancelled = true;
       clearHint();
+      if (overlay) overlay.remove();
       if (box) box.innerHTML = "";
     };
   }, [card.char]);
