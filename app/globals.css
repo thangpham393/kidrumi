@@ -798,9 +798,15 @@ a.game-tile:hover .game-thumb img { transform: scale(1.05); }
 /* Phones: 2-column vertical activity cards (image on top, text below) */
 @media (max-width: 720px) {
   .grid-2 { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  /* Trang góc học: 1 cột cho dễ đọc mô tả + CTA trên điện thoại */
-  .pick-grid, .pick-grid.one { grid-template-columns: 1fr; gap: 16px; max-width: 460px; }
-  .pick-body h3 { font-size: 24px; }
+  /* Trang góc học trên điện thoại: 2 cột thẻ gọn (ảnh trên · tên dưới), ẩn mô tả dài
+     + CTA cho đỡ chật — đồng bộ với thẻ hoạt động (.act-card) mục 9 của design-system. */
+  .pick-grid, .pick-grid.one { grid-template-columns: repeat(2, 1fr); gap: 14px; max-width: 560px; }
+  .pick-card { padding: 10px; border-radius: 22px; }
+  .pick-thumb { border-radius: 16px; }
+  .pick-body { padding: 10px 4px 2px; text-align: center; align-items: center; }
+  .pick-body h3 { font-size: 18px; margin: 0 0 2px; }
+  .pick-sub { font-size: 12.5px; line-height: 1.35; margin: 0; }
+  .pick-body p, .pick-cta { display: none; }
   .game-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .game-title { font-size: 16px; }
   .age-label { font-size: 16px; padding: 6px 14px; }

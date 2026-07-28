@@ -2,6 +2,16 @@ import PickGrid, { type PickItem } from "@/components/PickGrid";
 
 const items: PickItem[] = [
   {
+    href: "/chinese/hanzi",
+    img: "/illustrations/zh-hanzi.png",
+    glyph: "🀄",
+    title: "Bé học chữ Hán",
+    sub: "Nhận mặt chữ và nghe pinyin",
+    desc: "Bé xem chữ Hán, nghe cách đọc (pinyin) và học nghĩa cùng từ ghép quen thuộc — bắt đầu từ số đếm và các chữ đầu tiên.",
+    tone: "var(--amber)",
+    grad: ["var(--amber-soft)", "#ffe6b8"],
+  },
+  {
     href: "/shadowing?lang=zh",
     img: "/illustrations/zh-shadowing.png",
     glyph: "🎧",
@@ -20,16 +30,6 @@ const items: PickItem[] = [
     desc: "Bé nghe một từ hoặc câu lệnh tiếng Trung ngắn rồi chạm vào đúng hình — không cần biết đọc.",
     tone: "var(--brand)",
     grad: ["var(--brand-soft)", "#e0dcff"],
-  },
-  {
-    href: "/chinese/hanzi",
-    img: "/illustrations/zh-hanzi.png",
-    glyph: "🀄",
-    title: "Bé học chữ Hán",
-    sub: "Nhận mặt chữ và nghe pinyin",
-    desc: "Bé xem chữ Hán, nghe cách đọc (pinyin) và học nghĩa cùng từ ghép quen thuộc — bắt đầu từ số đếm và các chữ đầu tiên.",
-    tone: "var(--amber)",
-    grad: ["var(--amber-soft)", "#ffe6b8"],
   },
 ];
 
