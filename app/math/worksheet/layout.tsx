@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "toán tiền tiểu học",
   ],
   alternates: { canonical: "/math/worksheet" },
-  openGraph: { title: `${title} — Kidrumi`, description, url: "/math/worksheet" },
+  openGraph: { title: `${title} — KATKID`, description, url: "/math/worksheet" },
 };
 
 export default function WorksheetLayout({

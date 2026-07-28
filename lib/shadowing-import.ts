@@ -283,7 +283,7 @@ async function annotate(
   const langName = lang === "zh" ? "tiếng Trung" : "tiếng Anh";
   const phKind = lang === "zh" ? "pinyin (có dấu thanh)" : "IPA";
   const prompt = [
-    `Bạn giúp soạn nội dung học ${langName} cho trẻ mầm non người Việt (app Kidrumi).`,
+    `Bạn giúp soạn nội dung học ${langName} cho trẻ mầm non người Việt (app KATKID).`,
     `Video: "${title}".`,
     ``,
     `Transcript đã tách câu (JSON, đúng thứ tự):`,

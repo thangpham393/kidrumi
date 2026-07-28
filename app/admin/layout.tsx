@@ -13,7 +13,7 @@ const beVietnam = Be_Vietnam_Pro({
 });
 
 export const metadata: Metadata = {
-  title: "Kidrumi Admin",
+  title: "KATKID Admin",
   // Toàn bộ khu quản trị không cho công cụ tìm kiếm lập chỉ mục.
   robots: { index: false, follow: false },
 };

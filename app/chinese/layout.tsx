@@ -3,7 +3,7 @@ import PlayGate from "@/components/LoginGate";
 
 const title = "Tiếng Trung cho bé — Shadowing & Nghe chọn";
 const description =
-  "Góc Tiếng Trung của Kidrumi: bé luyện nói theo video với Shadowing và chơi Nghe & chọn — nghe từ tiếng Trung rồi chạm vào đúng hình.";
+  "Góc Tiếng Trung của KATKID: bé luyện nói theo video với Shadowing và chơi Nghe & chọn — nghe từ tiếng Trung rồi chạm vào đúng hình.";
 
 export const metadata: Metadata = {
   title,
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "học tiếng Trung mầm non",
   ],
   alternates: { canonical: "/chinese" },
-  openGraph: { title: `${title} — Kidrumi`, description, url: "/chinese" },
+  openGraph: { title: `${title} — KATKID`, description, url: "/chinese" },
 };
 
 export default function ChineseLayout({

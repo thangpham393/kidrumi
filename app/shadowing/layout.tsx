@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "video học tiếng Anh cho trẻ",
   ],
   alternates: { canonical: "/shadowing" },
-  openGraph: { title: `${title} — Kidrumi`, description, url: "/shadowing" },
+  openGraph: { title: `${title} — KATKID`, description, url: "/shadowing" },
 };
 
 export default function ShadowingLayout({

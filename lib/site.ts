@@ -5,12 +5,12 @@ export const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://kidrumi.com"
 ).replace(/\/$/, "");
 
-export const siteName = "Kidrumi";
+export const siteName = "KATKID";
 
-export const siteTitle = "Kidrumi — Không gian học vui của bé";
+export const siteTitle = "KATKID — Không gian học vui của bé";
 
 export const siteDescription =
-  "Kidrumi là góc học online vui nhộn cho bé tuổi tiền tiểu học: nhiệm vụ mỗi ngày, " +
+  "KATKID là góc học online vui nhộn cho bé tuổi tiền tiểu học: nhiệm vụ mỗi ngày, " +
   "shadowing luyện nói tiếng Anh, học toán cộng trừ nhân chia và tập gõ phím 10 ngón.";
 
 export const siteKeywords = [
@@ -24,7 +24,7 @@ export const siteKeywords = [
   "cộng trừ nhân chia",
   "tập gõ phím 10 ngón",
   "nhiệm vụ hằng ngày cho bé",
-  "Kidrumi",
+  "KATKID",
 ];
 
 export const siteLocale = "vi_VN";

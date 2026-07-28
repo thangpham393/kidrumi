@@ -1,4 +1,4 @@
-/* Premium Kidrumi logo: a glossy clay badge with the teddy-bear mascot
+/* Premium KATKID logo: a glossy clay badge with the teddy-bear mascot
    next to a gradient wordmark. Pure SVG + CSS, no hooks. */
 
 export default function Logo({ size = 40 }: { size?: number }) {
@@ -11,7 +11,7 @@ export default function Logo({ size = 40 }: { size?: number }) {
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
         role="img"
-        aria-label="Kidrumi"
+        aria-label="KATKID"
       >
         <defs>
           <linearGradient id="lg-badge" x1="0" y1="0" x2="1" y2="1">
@@ -56,7 +56,7 @@ export default function Logo({ size = 40 }: { size?: number }) {
       </svg>
 
       <span className="logo-word">
-        <span className="logo-word-k">Kid</span>rumi
+        <span className="logo-word-k">KAT</span>KID
       </span>
     </span>
   );

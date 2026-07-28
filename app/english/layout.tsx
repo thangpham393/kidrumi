@@ -3,7 +3,7 @@ import PlayGate from "@/components/LoginGate";
 
 const title = "Tiếng Anh cho bé — Shadowing & Nghe chọn";
 const description =
-  "Góc Tiếng Anh của Kidrumi: bé luyện nói theo video với Shadowing và chơi Nghe & chọn — nghe từ tiếng Anh rồi chạm vào đúng hình.";
+  "Góc Tiếng Anh của KATKID: bé luyện nói theo video với Shadowing và chơi Nghe & chọn — nghe từ tiếng Anh rồi chạm vào đúng hình.";
 
 export const metadata: Metadata = {
   title,
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "học tiếng Anh mầm non",
   ],
   alternates: { canonical: "/english" },
-  openGraph: { title: `${title} — Kidrumi`, description, url: "/english" },
+  openGraph: { title: `${title} — KATKID`, description, url: "/english" },
 };
 
 export default function EnglishLayout({

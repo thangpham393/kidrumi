@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: siteTitle,
-    // Các trang con đặt title ngắn, tự động nối " — Kidrumi".
+    // Các trang con đặt title ngắn, tự động nối " — KATKID".
     template: `%s — ${siteName}`,
   },
   description: siteDescription,

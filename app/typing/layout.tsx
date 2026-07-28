@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "học đánh máy",
   ],
   alternates: { canonical: "/typing" },
-  openGraph: { title: `${title} — Kidrumi`, description, url: "/typing" },
+  openGraph: { title: `${title} — KATKID`, description, url: "/typing" },
 };
 
 export default function TypingLayout({

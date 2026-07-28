@@ -39,7 +39,7 @@ export default function TopNav() {
   return (
     <nav className="nav">
       <div className="nav-inner">
-        <Link href="/" className="logo" aria-label="Kidrumi — trang chủ" onClick={close}>
+        <Link href="/" className="logo" aria-label="KATKID — trang chủ" onClick={close}>
           <Logo />
         </Link>
 

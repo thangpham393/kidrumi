@@ -165,7 +165,7 @@ export default function CommandPalette({ open, onClose }: { open: boolean; onClo
             <div className={styles.footer}>
               <span><Kbd>↑</Kbd><Kbd>↓</Kbd> di chuyển</span>
               <span><Kbd>↵</Kbd> chọn</span>
-              <span className={styles.footerBrand}>Kidrumi Admin</span>
+              <span className={styles.footerBrand}>KATKID Admin</span>
             </div>
           </motion.div>
         </motion.div>

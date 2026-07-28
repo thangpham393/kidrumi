@@ -3,7 +3,7 @@ import PlayGate from "@/components/LoginGate";
 
 const title = "Tiếng Việt cho bé — Nghe hiểu câu chuyện";
 const description =
-  "Góc Tiếng Việt của Kidrumi: bé nghe một câu chuyện ngắn rồi xếp các bức tranh theo đúng thứ tự trước sau.";
+  "Góc Tiếng Việt của KATKID: bé nghe một câu chuyện ngắn rồi xếp các bức tranh theo đúng thứ tự trước sau.";
 
 export const metadata: Metadata = {
   title,
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "học tiếng Việt mầm non",
   ],
   alternates: { canonical: "/vietnamese" },
-  openGraph: { title: `${title} — Kidrumi`, description, url: "/vietnamese" },
+  openGraph: { title: `${title} — KATKID`, description, url: "/vietnamese" },
 };
 
 export default function VietnameseLayout({

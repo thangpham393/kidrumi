@@ -51,7 +51,7 @@ function LoginInner() {
     <main className="wrap login-wrap">
       <div className="login-card">
         <div className="login-emoji">🧸</div>
-        <h1 className="login-title">Đăng nhập Kidrumi</h1>
+        <h1 className="login-title">Đăng nhập KATKID</h1>
         <p className="login-sub">
           Đăng nhập để lưu lại tiến trình học và ngôi sao của con trên mọi thiết
           bị.

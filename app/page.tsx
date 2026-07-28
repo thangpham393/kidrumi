@@ -90,7 +90,7 @@ const jsonLd = {
     },
     {
       "@type": "ItemList",
-      name: "Các góc học của Kidrumi",
+      name: "Các góc học của KATKID",
       itemListElement: cards.map((c, i) => ({
         "@type": "ListItem",
         position: i + 1,

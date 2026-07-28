@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/tasks" },
-  openGraph: { title: `${title} — Kidrumi`, description, url: "/tasks" },
+  openGraph: { title: `${title} — KATKID`, description, url: "/tasks" },
 };
 
 export default function TasksLayout({

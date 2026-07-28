@@ -52,12 +52,12 @@ export default function Sidebar({
     >
       {/* Brand */}
       <div className={styles.brand}>
-        <Link href="/admin" className={styles.brandLink} aria-label="Kidrumi Admin">
+        <Link href="/admin" className={styles.brandLink} aria-label="KATKID Admin">
           <span className={styles.mark} aria-hidden="true">
             K
           </span>
           <span className={styles.wordmark}>
-            Kidrumi <span className={styles.tag}>Admin</span>
+            KATKID <span className={styles.tag}>Admin</span>
           </span>
         </Link>
         <button

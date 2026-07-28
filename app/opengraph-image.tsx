@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { siteName, brandColor } from "@/lib/site";
 
 // Ảnh chia sẻ mạng xã hội (OpenGraph + Twitter) — dùng chung toàn site.
-export const alt = "Kidrumi — Không gian học vui của bé";
+export const alt = "KATKID — Không gian học vui của bé";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -24,7 +24,7 @@ async function loadFont(text: string): Promise<ArrayBuffer | null> {
 }
 
 export default async function Image() {
-  const title = "Kidrumi";
+  const title = "KATKID";
   const tagline = "Không gian học vui của bé";
   const chips = ["Nhiệm vụ", "Shadowing", "Học toán", "Tập gõ phím"];
 
