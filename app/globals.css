@@ -2391,8 +2391,18 @@ span.gone-opt-em { font-size: clamp(64px, 15vw, 120px); line-height: 1; }
 .hz-nav-count { font-family: var(--font-head); font-weight: 800; color: var(--muted); min-width: 60px; text-align: center; }
 
 /* ---- Responsive ---- */
+/* Điện thoại: auto-fill (tracks bằng max 190px, không giãn vì justify-content:center)
+   chỉ nhét vừa 1 cột ⇒ 29 đơn vị dồn thành 1 cột dài. Ép 2 cột đều để đỡ cuộn và
+   dùng hết bề ngang. Tablet (≥~640px) auto-fill vẫn cho 3 cột nên giữ nguyên. */
+@media (max-width: 430px) {
+  .hz-units-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .hz-unit-body h3 { font-size: 16px; }
+  .hz-unit-chars { font-size: 18px; letter-spacing: 1px; }
+}
 @media (max-width: 480px) {
-  .hz-learn-top { flex-direction: column; }
+  /* Chữ + tranh vẫn đứng cạnh nhau (vừa khít tới 360px) và canh giữa — tránh dồn
+     lệch trái để khoảng trắng bên phải như khi xếp dọc. */
+  .hz-learn-top { align-items: center; }
   .hz-tab-vi { font-size: 10px; }
   .hz-step-cta, .hz-done { min-width: 0; width: 100%; }
 }
