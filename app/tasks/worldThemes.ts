@@ -7,9 +7,10 @@
      /themes/<key>/bg.webp        — ảnh nền toàn màn
      /themes/<key>/swim1..4.webp  — 4 khung hình đứng yên (bơi/lắc lư)
      /themes/<key>/cheer1..4.webp — 4 khung hình ăn mừng khi bé xong việc
-   Khi CHƯA có ảnh, component tự rớt về gradient nền + emoji nhún (xem
-   ThemeBuddy / theme-scene). Chỉ cần thả .webp vào public/themes/<key>/ là
-   nhân vật flipbook tự bật lên, không phải sửa code.
+   Khi CHƯA có ảnh, nền rớt về gradient (themeBgGradient) và bạn đồng hành
+   rớt về nhân vật SVG sinh động riêng của thế giới (components/BuddyArt.tsx).
+   Chỉ cần thả .webp vào public/themes/<key>/ là nhân vật flipbook ảnh thật tự
+   bật lên thay SVG, không phải sửa code.
 --------------------------------------------------------------------------- */
 
 export type AmbientKind = "bubbles" | "stars" | "clouds" | "leaves" | "speed" | "sparkles";
