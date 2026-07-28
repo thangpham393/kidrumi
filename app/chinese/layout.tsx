@@ -23,8 +23,20 @@ export default function ChineseLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // /chinese và lộ trình /chinese/listen xem tự do; vào từng bài cần đăng nhập.
+  // /chinese và các lộ trình (listen, hanzi) xem tự do; vào chơi/học chi tiết cần đăng nhập.
   return (
-    <PlayGate openPaths={["/chinese", "/chinese/listen"]}>{children}</PlayGate>
+    <PlayGate
+      openPaths={[
+        "/chinese",
+        "/chinese/listen",
+        "/chinese/hanzi",
+        "/chinese/hanzi/u1",
+        "/chinese/hanzi/u2",
+        "/chinese/hanzi/u1/2",
+        "/chinese/hanzi/u1/3",
+      ]}
+    >
+      {children}
+    </PlayGate>
   );
 }

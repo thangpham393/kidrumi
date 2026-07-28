@@ -97,6 +97,7 @@ cards standing in a row, gentle storytelling scene, warm cream background.
 | Tiếng Anh · Nghe & chọn | `en-listen.png` |
 | Tiếng Trung · Shadowing | `zh-shadowing.png` |
 | Tiếng Trung · Nghe & chọn | `zh-listen.png` |
+| Tiếng Trung · Học chữ Hán | `zh-hanzi.png` |
 | Tiếng Việt · Nghe hiểu câu chuyện | `vi-story.png` |
 
 ```
@@ -118,6 +119,12 @@ floating music notes. [STYLE] --ar 16:10
 zh-listen.png — A cute clay speaker emitting soft sound waves toward a panda, a
 red paper lantern and a small bamboo steamer of dumplings, soft pastel
 background. [STYLE] --ar 16:10
+```
+```
+zh-hanzi.png — A cute smiling panda cub holding up a rounded cream clay
+flashcard tile with one big bold red Chinese character 中, a speech bubble with
+pinyin, floating sound wave, soft pastel character blocks and a red lantern,
+warm cream-and-amber background. [STYLE] --ar 16:10
 ```
 ```
 vi-story.png — A cute pink rabbit peeking over three storybook picture cards in

@@ -27,6 +27,10 @@ pairs=(
   "1f31f|Glowing star|glowing_star"
   "2764|Red heart|red_heart"
   "1f380|Ribbon|ribbon"
+  # Bé học chữ Hán — linh vật đơn vị.
+  # LƯU Ý: 🧒 có biến thể tông da → file 3D nằm ở Child/Default/3D/child_3d_default.png
+  # (không theo mẫu $folder/3D/${file}_3d.png), đã tải tay. Giữ dòng này để khỏi tải lại.
+  "1f9d2|Child|child"
 )
 for p in "${pairs[@]}"; do
   IFS='|' read -r cp folder file <<< "$p"

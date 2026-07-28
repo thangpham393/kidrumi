@@ -21,6 +21,16 @@ const items: PickItem[] = [
     tone: "var(--brand)",
     grad: ["var(--brand-soft)", "#e0dcff"],
   },
+  {
+    href: "/chinese/hanzi",
+    img: "/illustrations/zh-hanzi.png",
+    glyph: "🀄",
+    title: "Bé học chữ Hán",
+    sub: "Nhận mặt chữ và nghe pinyin",
+    desc: "Bé xem chữ Hán, nghe cách đọc (pinyin) và học nghĩa cùng từ ghép quen thuộc — bắt đầu từ số đếm và các chữ đầu tiên.",
+    tone: "var(--amber)",
+    grad: ["var(--amber-soft)", "#ffe6b8"],
+  },
 ];
 
 export default function ChinesePage() {
