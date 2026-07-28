@@ -21,7 +21,7 @@ export type HanziCard = {
 
 export type HanziUnit = {
   id: string; // slug dùng trong URL: /chinese/hanzi/<id>
-  title: string; // "Đơn vị 1"
+  title: string; // "Chùm chữ 1"
   preview: string; // 5 chữ để xem trước
   emoji: string; // linh vật của đơn vị
   cards: HanziCard[];
@@ -30,7 +30,7 @@ export type HanziUnit = {
 export const UNITS: HanziUnit[] = [
   {
     id: "u1",
-    title: "Đơn vị 1",
+    title: "Chùm chữ 1",
     preview: "人头目眉鼻",
     emoji: "🧒",
     cards: [
@@ -43,7 +43,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u2",
-    title: "Đơn vị 2",
+    title: "Chùm chữ 2",
     preview: "耳口牙舌心",
     emoji: "👂",
     cards: [
@@ -56,7 +56,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u3",
-    title: "Đơn vị 3",
+    title: "Chùm chữ 3",
     preview: "手足身一二",
     emoji: "✋",
     cards: [
@@ -69,7 +69,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u4",
-    title: "Đơn vị 4",
+    title: "Chùm chữ 4",
     preview: "三四五六七",
     emoji: "3️⃣",
     cards: [
@@ -82,7 +82,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u5",
-    title: "Đơn vị 5",
+    title: "Chùm chữ 5",
     preview: "八九十马牛",
     emoji: "8️⃣",
     cards: [
@@ -95,7 +95,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u6",
-    title: "Đơn vị 6",
+    title: "Chùm chữ 6",
     preview: "羊鱼虫鸟天",
     emoji: "🐟",
     cards: [
@@ -108,7 +108,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u7",
-    title: "Đơn vị 7",
+    title: "Chùm chữ 7",
     preview: "日月云风雨",
     emoji: "☀️",
     cards: [
@@ -121,7 +121,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u8",
-    title: "Đơn vị 8",
+    title: "Chùm chữ 8",
     preview: "雪雷电田木",
     emoji: "❄️",
     cards: [
@@ -134,7 +134,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u9",
-    title: "Đơn vị 9",
+    title: "Chùm chữ 9",
     preview: "米果瓜禾苗",
     emoji: "🍎",
     cards: [
@@ -147,7 +147,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u10",
-    title: "Đơn vị 10",
+    title: "Chùm chữ 10",
     preview: "森林石亭花",
     emoji: "🌲",
     cards: [
@@ -160,7 +160,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u11",
-    title: "Đơn vị 11",
+    title: "Chùm chữ 11",
     preview: "草山叶竹水",
     emoji: "⛰️",
     cards: [
@@ -173,7 +173,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u12",
-    title: "Đơn vị 12",
+    title: "Chùm chữ 12",
     preview: "土方圆尖大",
     emoji: "🟤",
     cards: [
@@ -186,7 +186,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u13",
-    title: "Đơn vị 13",
+    title: "Chùm chữ 13",
     preview: "小高长弓刀",
     emoji: "🐭",
     cards: [
@@ -199,7 +199,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u14",
-    title: "Đơn vị 14",
+    title: "Chùm chữ 14",
     preview: "勺面豆气分",
     emoji: "🍜",
     cards: [
@@ -212,7 +212,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u15",
-    title: "Đơn vị 15",
+    title: "Chùm chữ 15",
     preview: "半点出入里",
     emoji: "🌗",
     cards: [
@@ -225,7 +225,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u16",
-    title: "Đơn vị 16",
+    title: "Chùm chữ 16",
     preview: "外开关多少",
     emoji: "🌳",
     cards: [
@@ -238,7 +238,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u17",
-    title: "Đơn vị 17",
+    title: "Chùm chữ 17",
     preview: "上下弯直来",
     emoji: "📏",
     cards: [
@@ -251,7 +251,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u18",
-    title: "Đơn vị 18",
+    title: "Chùm chữ 18",
     preview: "去吃喝吐立",
     emoji: "👅",
     cards: [
@@ -264,7 +264,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u19",
-    title: "Đơn vị 19",
+    title: "Chùm chữ 19",
     preview: "坐走飞看问",
     emoji: "🕊️",
     cards: [
@@ -277,7 +277,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u20",
-    title: "Đơn vị 20",
+    title: "Chùm chữ 20",
     preview: "哭笑车门井",
     emoji: "🚗",
     cards: [
@@ -290,7 +290,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u21",
-    title: "Đơn vị 21",
+    title: "Chùm chữ 21",
     preview: "伞包布皮书",
     emoji: "☂️",
     cards: [
@@ -303,7 +303,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u22",
-    title: "Đơn vị 22",
+    title: "Chùm chữ 22",
     preview: "画灯光衣裙",
     emoji: "🎨",
     cards: [
@@ -316,7 +316,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u23",
-    title: "Đơn vị 23",
+    title: "Chùm chữ 23",
     preview: "袜裤鞋帽毛",
     emoji: "🧦",
     cards: [
@@ -329,7 +329,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u24",
-    title: "Đơn vị 24",
+    title: "Chùm chữ 24",
     preview: "巾工厂灭火",
     emoji: "🧣",
     cards: [
@@ -342,7 +342,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u25",
-    title: "Đơn vị 25",
+    title: "Chùm chữ 25",
     preview: "灰尘家爷奶",
     emoji: "🌫️",
     cards: [
@@ -355,7 +355,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u26",
-    title: "Đơn vị 26",
+    title: "Chùm chữ 26",
     preview: "妈爸哥弟姐",
     emoji: "👩",
     cards: [
@@ -368,7 +368,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u27",
-    title: "Đơn vị 27",
+    title: "Chùm chữ 27",
     preview: "妹我你男女",
     emoji: "👧",
     cards: [
@@ -381,7 +381,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u28",
-    title: "Đơn vị 28",
+    title: "Chùm chữ 28",
     preview: "前后左右东",
     emoji: "🧭",
     cards: [
@@ -394,7 +394,7 @@ export const UNITS: HanziUnit[] = [
   },
   {
     id: "u29",
-    title: "Đơn vị 29",
+    title: "Chùm chữ 29",
     preview: "西南北中",
     emoji: "🎯",
     cards: [

@@ -22,7 +22,7 @@ Mục này (`app/chinese/hanzi`) đã dựng xong khung: 3 màn (danh sách đơ
 - Thứ tự đã biết:
   - **Bài 1-1 (trang 1–13, bộ phận cơ thể):** 人1 头2 目3 眉4 鼻5 耳6 口7 牙8 舌9 心10 手11 足12 身13
   - **Bài 1-2 (trang 14+, số đếm bằng kẹo):** 一14 二15 三16 四17 五18 六19 七20 …（八九十 kế tiếp)
-- **Đã dùng:** Đơn vị 1 = 人头目眉鼻 · Đơn vị 2 = 耳口牙舌心.
+- **Đã dùng:** Chùm chữ 1 = 人头目眉鼻 · Chùm chữ 2 = 耳口牙舌心.
   **Còn trong bài 1-1:** 手 足 身 (trang 11–13). Rồi tới số đếm.
 - Xác định trang↔chữ: dùng công cụ **Read trên PDF** (tham số `pages`, tối đa 20 trang/lần),
   nhìn mã `X-Y-Z` góc dưới. `pdfimages` đánh số **p-{trang−1}** (trang 1 → p-000).
@@ -57,7 +57,7 @@ File đặt theo **chữ Hán** (`public/hanzi-data/<char>.json`); StepWrite n�
 Sửa `app/chinese/hanzi/data.ts` — thêm phần tử vào `UNITS`:
 ```ts
 {
-  id: "u3", title: "Đơn vị 3", preview: "手足身…", emoji: "🖐️", // linh vật đơn vị
+  id: "u3", title: "Chùm chữ 3", preview: "手足身…", emoji: "🖐️", // linh vật của chùm
   cards: [
     { char: "手", pinyin: "shǒu", meaning: "bàn tay", img: "/illustrations/hanzi/shou3.png",
       emoji: "🖐️", word: "手指", wordPinyin: "shǒu zhǐ", wordMeaning: "ngón tay",
