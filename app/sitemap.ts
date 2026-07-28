@@ -2,6 +2,17 @@ import type { MetadataRoute } from "next";
 import { siteUrl, routes } from "@/lib/site";
 import { videos } from "@/app/shadowing/data";
 
+// Next escape phần <loc>/<lastmod> nhưng KHÔNG escape các trường video (title,
+// description) → một tiêu đề chứa "&" (vd "& kể chuyện") làm hỏng XML. Tự escape.
+function xml(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
@@ -20,9 +31,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
     videos: [
       {
-        title: v.title,
+        title: xml(v.title),
         thumbnail_loc: `https://i.ytimg.com/vi/${v.youtubeId}/hqdefault.jpg`,
-        description: `Shadowing: ${v.title} (nguồn ${v.source}).`,
+        description: xml(`Shadowing: ${v.title} (nguồn ${v.source}).`),
       },
     ],
   }));
