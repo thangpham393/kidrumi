@@ -1,8 +1,8 @@
-# 🧸 Kidrumi
+# 🧸 KATKID
 
 **Không gian học vui của bé** — webapp học tập cho các bé tuổi tiền tiểu học.
 
-Tên **Kidrumi** ghép từ *kid* + *amigurumi* (thú bông đáng yêu). Linh vật: chú gấu bông 🧸.
+Thương hiệu **KATKID** (katkid.com). Linh vật: chú gấu bông 🧸.
 
 ## Tính năng
 

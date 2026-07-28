@@ -109,7 +109,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <p className="page-eyebrow">KIDRUMI</p>
+      <p className="page-eyebrow">KATKID</p>
       <h1 className="page-title">Hôm nay con muốn học gì?</h1>
       <p className="page-sub">
         Chọn một góc học nhé — mỗi ngày một chút, vui là chính!

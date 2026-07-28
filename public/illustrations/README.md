@@ -1,4 +1,4 @@
-# Ảnh minh hoạ cho Kidrumi
+# Ảnh minh hoạ cho KATKID
 
 Đặt ảnh vào đúng thư mục này với **đúng tên file** bên dưới, rồi báo Claude ghép vào code.
 

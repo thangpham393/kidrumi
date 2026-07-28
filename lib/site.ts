@@ -2,7 +2,7 @@
 // Đổi domain ở đây (hoặc đặt NEXT_PUBLIC_SITE_URL trong .env) khi lên production.
 
 export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://kidrumi.com"
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://katkid.com"
 ).replace(/\/$/, "");
 
 export const siteName = "KATKID";

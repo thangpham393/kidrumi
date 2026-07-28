@@ -1,4 +1,4 @@
-# Kidrumi Admin — Product Design Specification
+# KATKID Admin — Product Design Specification
 
 > **Status:** Draft v1 — awaiting approval before Phase 2 (implementation).
 > **Scope:** The **Admin Panel** for parents, teachers, and school administrators.

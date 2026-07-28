@@ -1,7 +1,7 @@
 ---
 name: shadowing-import
 description: >-
-  Import YouTube video(s) — a single link OR a whole playlist — into the Kidrumi
+  Import YouTube video(s) — a single link OR a whole playlist — into the KATKID
   Shadowing library (app/shadowing/videos.generated.json). Fetches transcript
   (YouTube captions, or ASR via mlx_whisper when the video has no captions),
   annotates each line with Vietnamese translation + pinyin/IPA + key words, and
@@ -10,7 +10,7 @@ description: >-
   Shadowing / luyện nghe-nói, or nạp video vào thư viện Little Fox / Level 1.
 ---
 
-# Nạp video vào thư viện Shadowing (Kidrumi)
+# Nạp video vào thư viện Shadowing (KATKID)
 
 Quy trình đã kiểm chứng: **YouTube → transcript (caption hoặc ASR) → chú thích tiếng Việt → gộp vào `app/shadowing/videos.generated.json`** với nhãn nguồn + độ khó tuỳ chọn. Bộ lọc nguồn/độ khó trong UI **tự suy ra** từ dữ liệu nên không cần sửa tay khi thêm nguồn/level đã tồn tại.
 

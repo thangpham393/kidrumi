@@ -1,7 +1,7 @@
 ---
 name: hanzi-import
 description: >-
-  Thêm/mở rộng đơn vị chữ cho mục "Bé học chữ Hán" (app/chinese/hanzi) của Kidrumi
+  Thêm/mở rộng đơn vị chữ cho mục "Bé học chữ Hán" (app/chinese/hanzi) của KATKID
   từ sách 直映识字. Bao gồm: trích + cắt tranh minh hoạ từ PDF (pdfimages + Pillow),
   lấy dữ liệu nét cho Hanzi Writer (hanzi-writer-data), thêm HanziUnit vào data.ts
   (pinyin có dấu + nghĩa/từ ghép/câu ví dụ tiếng Việt), mở openPaths, và kiểm thử.

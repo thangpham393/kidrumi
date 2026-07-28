@@ -1,7 +1,7 @@
 ---
 name: vuon-toan-game
 description: >-
-  Dựng một trò chơi / màn học mới cho web Kidrumi (Vườn Toán, góc Tiếng
+  Dựng một trò chơi / màn học mới cho web KATKID (Vườn Toán, góc Tiếng
   Anh/Trung/Việt…) đúng design-system và stack có sẵn. Bao gồm: tái dùng token +
   class trong app/globals.css, component Emoji (Microsoft Fluent 3D), ChildContext
   (addStars), useToast, celebrate (confetti + âm thanh), speak (Google TTS + rớt
@@ -11,7 +11,7 @@ description: >-
   trong Vườn Toán.
 ---
 
-# Dựng trò chơi / màn học mới cho Kidrumi
+# Dựng trò chơi / màn học mới cho KATKID
 
 Quy trình đã kiểm chứng khi làm trò **"Phân loại vào rổ"** (`app/math/sort`). Mục tiêu:
 làm nhanh, **đồng bộ design-system** (đọc `DESIGN.md` trước), tái dùng tối đa, và

@@ -1,4 +1,4 @@
-# Kidrumi — Design System
+# KATKID — Design System
 
 Nguồn chuẩn phong cách để **mọi tính năng mới đồng bộ**. Khi thêm màn hình/thành phần
 mới: tái sử dụng token + class có sẵn trong [app/globals.css](app/globals.css) trước,
