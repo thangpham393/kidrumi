@@ -6,6 +6,7 @@ import { useChild } from "@/components/ChildContext";
 import { useAuth } from "@/components/AuthContext";
 import { GateCard } from "@/components/LoginGate";
 import { useRecordActivity } from "@/lib/missions";
+import TypingKeyboard from "@/components/TypingKeyboard";
 
 type Lang = "vi" | "en";
 type LessonKey =
@@ -70,6 +71,7 @@ export default function TypingPage() {
   const [showGate, setShowGate] = useState(false);
 
   const [phase, setPhase] = useState<"setup" | "play">("setup");
+  const [showKbd, setShowKbd] = useState(true);
   const [lang, setLang] = useState<Lang>("vi");
   const [lesson, setLesson] = useState<LessonKey>("words");
 
@@ -274,7 +276,7 @@ export default function TypingPage() {
 
   // ---------- PLAY ----------
   return (
-    <main className="wrap">
+    <main className="wrap type-play">
       <div className="play-bar">
         <button className="pill" onClick={() => setPhase("setup")}>
           ← Cài đặt
@@ -285,9 +287,20 @@ export default function TypingPage() {
         <button className="pill" onClick={nextLine}>
           Câu tiếp →
         </button>
+        <button
+          className={`pill ${showKbd ? "on" : ""}`}
+          onClick={() => setShowKbd((v) => !v)}
+        >
+          ⌨️ Bàn phím
+        </button>
+        <div className="play-stats">
+          <span className="pill stat">⚡ {wpm} <i>từ/phút</i></span>
+          <span className="pill stat">🎯 {acc}%</span>
+          <span className="pill stat">⭐ {stars}</span>
+        </div>
       </div>
 
-      <div className="panel" style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
+      <div className="panel type-panel" style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
         <div className="type-target">
           {chars.map((c) => (
             <span key={c.key} className={c.cls}>
@@ -305,21 +318,9 @@ export default function TypingPage() {
           spellCheck={false}
           placeholder="Bấm vào đây rồi gõ theo mẫu…"
         />
-        <div className="type-stats">
-          <div className="s">
-            <div className="n">{wpm}</div>
-            <div className="l">Tốc độ (từ/phút)</div>
-          </div>
-          <div className="s">
-            <div className="n">{acc}%</div>
-            <div className="l">Chính xác</div>
-          </div>
-          <div className="s">
-            <div className="n">{stars}</div>
-            <div className="l">⭐ Sao</div>
-          </div>
-        </div>
       </div>
+
+      {showKbd && <TypingKeyboard target={target} typed={typed} lang={lang} />}
       {toastEl}
     </main>
   );
