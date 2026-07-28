@@ -214,14 +214,19 @@ export default function StepWrite({
         charDataLoader: () => data,
       });
 
-      // SVG overlay riêng, phủ tuyệt đối lên khung (không bị Hanzi Writer đè).
-      const host = box.parentElement; // .hz-mi (position: relative)
+      // SVG overlay phủ lên chữ. Đặt trong CHÍNH .hz-mi-canvas (cùng cha với SVG của
+      // Hanzi Writer) và tạo GIỐNG HỆT: width/height cố định = SIZE, KHÔNG viewBox —
+      // để cùng chịu CSS `max-width:100%` co giãn y như nhau. Nếu overlay dùng viewBox
+      // thì hệ toạ độ co theo cỡ hiển thị (×0.906) trong khi SVG Hanzi Writer thì không,
+      // khiến nét gợi ý hồng lệch ~13px so với nét chữ.
+      const host = box; // .hz-mi-canvas (position: relative)
       if (host) {
         overlay = document.createElementNS(NS, "svg");
-        overlay.setAttribute("viewBox", `0 0 ${SIZE} ${SIZE}`);
+        overlay.setAttribute("width", String(SIZE));
+        overlay.setAttribute("height", String(SIZE));
         overlay.setAttribute(
           "style",
-          "position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:2;",
+          "position:absolute;left:0;top:0;pointer-events:none;z-index:2;",
         );
         const g = document.createElementNS(NS, "g");
         g.setAttribute("transform", CHAR_TF);
@@ -238,12 +243,17 @@ export default function StepWrite({
         hand.setAttribute("style", "filter:drop-shadow(0 3px 4px rgba(80,70,160,.4))");
         hand.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "/emoji/1f446.png");
         hand.setAttribute("href", "/emoji/1f446.png");
+        hand.style.display = "none"; // chỉ hiện khi đang gợi ý nét (hint)
         overlay.appendChild(hand);
         host.appendChild(overlay);
       }
 
       apiRef.current = { restart, demo };
-      startQuiz();
+      // Chữ đã hoàn thành từ trước → hiện sẵn chữ hoàn chỉnh (showCharacter), KHÔNG chạy
+      // quiz để tránh cảnh "nét hồng + bàn tay" mâu thuẫn với phù hiệu "Hoàn thành".
+      // Bé bấm "Viết lại" mới bắt đầu luyện. Chữ mới thì vào quiz luôn như cũ.
+      if (done) writer.showCharacter();
+      else startQuiz();
     })();
 
     return () => {
@@ -253,6 +263,9 @@ export default function StepWrite({
       if (overlay) overlay.remove();
       if (box) box.innerHTML = "";
     };
+    // `done` chỉ đọc lúc mount để quyết hiện sẵn chữ hay chạy quiz — không đưa vào
+    // deps để tránh dựng lại writer khi chữ vừa hoàn thành lần đầu.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [card.char]);
 
   return (

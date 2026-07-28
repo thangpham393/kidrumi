@@ -2411,6 +2411,11 @@ span.gone-opt-em { font-size: clamp(64px, 15vw, 120px); line-height: 1; }
   .hz-learn-top { align-items: center; }
   .hz-tab-vi { font-size: 10px; }
   .hz-step-cta, .hz-done { min-width: 0; width: 100%; }
+  /* Lưới chữ (màn 2): thu ô để 3 ô/hàng → 5 chữ thành 3-2 cân đối (flex canh giữa),
+     gọn và đỡ cuộn thay vì 2-2-1 lẻ một ô. */
+  .hz-char-grid { gap: 12px; }
+  .hz-gridcard { width: clamp(92px, 27vw, 130px); }
+  .hz-gridcard .hz-tian-char { font-size: clamp(46px, 14vw, 72px); }
 }
 @media (max-width: 380px) {
   .hz-tab-zh { font-size: 20px; }
