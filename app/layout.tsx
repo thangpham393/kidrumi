@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Baloo_2, Nunito } from "next/font/google";
 import "./globals.css";
 import TopNav from "@/components/TopNav";
+import UsageTracker from "@/components/UsageTracker";
 import SceneBackground from "@/components/SceneBackground";
 import ThemeScene from "@/components/ThemeScene";
 import { ChildProvider } from "@/components/ChildContext";
@@ -92,6 +93,7 @@ export default function RootLayout({
           <ChildProvider>
             <ThemeScene />
             <TopNav />
+            <UsageTracker />
             {children}
           </ChildProvider>
         </AuthProvider>

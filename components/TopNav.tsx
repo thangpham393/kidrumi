@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useChild } from "./ChildContext";
 import { useAuth } from "./AuthContext";
 import Logo from "./Logo";
@@ -21,8 +21,22 @@ export default function TopNav() {
   const { child, reset } = useChild();
   const { user, signOut } = useAuth();
   const [open, setOpen] = useState(false);
+  const [acctOpen, setAcctOpen] = useState(false);
+  const acctRef = useRef<HTMLDivElement>(null);
 
   const close = () => setOpen(false);
+
+  // Đóng menu tài khoản khi bấm ra ngoài (bấm mục nav cũng tính là ra ngoài).
+  useEffect(() => {
+    if (!acctOpen) return;
+    const onDown = (e: MouseEvent) => {
+      if (acctRef.current && !acctRef.current.contains(e.target as Node)) {
+        setAcctOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", onDown);
+    return () => document.removeEventListener("mousedown", onDown);
+  }, [acctOpen]);
 
   // Khu quản trị (/admin) có shell riêng — ẩn hoàn toàn nav của trang trẻ em.
   if (pathname?.startsWith("/admin")) return null;
@@ -34,6 +48,7 @@ export default function TopNav() {
     if (user) await signOut();
     reset();
     close();
+    setAcctOpen(false);
   };
 
   return (
@@ -62,27 +77,57 @@ export default function TopNav() {
               {l.label}
             </Link>
           ))}
-          {user && (
-            <button className="logout menu-only" onClick={handleLogout}>
-              Đăng xuất
-            </button>
-          )}
         </div>
 
         <div className="nav-user">
           {user ? (
-            <>
-              {user.avatar && (
+            <div className={`nav-acct ${acctOpen ? "open" : ""}`} ref={acctRef}>
+              <button
+                className="acct-btn"
+                aria-haspopup="menu"
+                aria-expanded={acctOpen}
+                onClick={() => setAcctOpen((o) => !o)}
+              >
                 <span className="avatar">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={user.avatar} alt="" className="avatar-img" />
+                  {user.avatar ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={user.avatar} alt="" className="avatar-img" />
+                  ) : (
+                    "🐰"
+                  )}
                 </span>
-              )}
-              <span className="nav-user-name">{displayName}</span>
-              <button className="logout inline-only" onClick={handleLogout}>
-                Đăng xuất
+                <span className="nav-user-name">{displayName}</span>
+                <span className="acct-caret" aria-hidden>
+                  ▾
+                </span>
               </button>
-            </>
+
+              {acctOpen && (
+                <div className="acct-menu" role="menu">
+                  <div className="acct-head">
+                    <div className="nm">{displayName}</div>
+                    {user.email && <div className="em">{user.email}</div>}
+                  </div>
+                  <div className="acct-sep" />
+                  <Link
+                    href="/parents"
+                    className="acct-item"
+                    role="menuitem"
+                    onClick={() => setAcctOpen(false)}
+                  >
+                    📊 <span>Góc cha mẹ</span>
+                  </Link>
+                  <div className="acct-sep" />
+                  <button
+                    className="acct-item danger"
+                    role="menuitem"
+                    onClick={handleLogout}
+                  >
+                    🚪 <span>Đăng xuất</span>
+                  </button>
+                </div>
+              )}
+            </div>
           ) : (
             <Link href="/login" className="nav-login">
               Đăng nhập

@@ -97,6 +97,46 @@ create table if not exists public.activity_log (
 create index if not exists activity_log_child_day_idx
   on public.activity_log (child_id, day);
 
+-- 4c) Thời gian sử dụng — "Góc ba mẹ" cần biết bé (cả nhà trên tài khoản) dùng
+--     mỗi trò bao lâu mỗi ngày. Ghi theo TÀI KHOẢN (user_id) vì thời gian tính
+--     chung cho cả nhà; child_id chỉ để tham khảo bé đang chọn lúc đó.
+--       game    : key trò (xem lib/usage.ts), vd 'math_compare', 'en_listen'
+--       seconds : tổng giây đã dùng trong ngày cho trò đó (cộng dồn)
+--       sessions: số "lượt" mở trò trong ngày (cộng dồn)
+--     `day` do client gửi theo GIỜ ĐỊA PHƯƠNG. Cộng dồn qua hàm bump_usage().
+create table if not exists public.usage_log (
+  id         uuid primary key default gen_random_uuid(),
+  user_id    uuid not null references auth.users (id) on delete cascade,
+  child_id   uuid references public.children (id) on delete set null,
+  day        date not null,
+  game       text not null,
+  seconds    integer not null default 0,
+  sessions   integer not null default 0,
+  updated_at timestamptz not null default now(),
+  unique (user_id, day, game)
+);
+
+create index if not exists usage_log_user_day_idx
+  on public.usage_log (user_id, day);
+
+-- Cộng dồn giây + lượt cho (tài khoản, ngày, trò). Chạy theo quyền người gọi
+-- (security invoker) nên RLS bên dưới vẫn áp: chỉ ghi được dòng của chính mình.
+create or replace function public.bump_usage(
+  p_game text, p_day date, p_seconds int, p_sessions int, p_child uuid
+) returns void
+language sql
+as $$
+  insert into public.usage_log (user_id, child_id, day, game, seconds, sessions)
+  values (auth.uid(), p_child, p_day, p_game, greatest(p_seconds, 0), greatest(p_sessions, 0))
+  on conflict (user_id, day, game) do update
+    set seconds    = public.usage_log.seconds + greatest(excluded.seconds, 0),
+        sessions   = public.usage_log.sessions + greatest(excluded.sessions, 0),
+        child_id   = coalesce(excluded.child_id, public.usage_log.child_id),
+        updated_at = now();
+$$;
+
+grant execute on function public.bump_usage(text, date, int, int, uuid) to authenticated;
+
 -- 5) Row Level Security — mỗi ba mẹ chỉ thấy & sửa dữ liệu của chính mình.
 alter table public.children          enable row level security;
 alter table public.tasks             enable row level security;
@@ -104,6 +144,7 @@ alter table public.task_completions  enable row level security;
 alter table public.shadowing_progress enable row level security;
 alter table public.listen_progress    enable row level security;
 alter table public.activity_log       enable row level security;
+alter table public.usage_log          enable row level security;
 
 drop policy if exists children_own on public.children;
 create policy children_own on public.children
@@ -127,4 +168,8 @@ create policy listen_progress_own on public.listen_progress
 
 drop policy if exists activity_log_own on public.activity_log;
 create policy activity_log_own on public.activity_log
+  for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+drop policy if exists usage_log_own on public.usage_log;
+create policy usage_log_own on public.usage_log
   for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
