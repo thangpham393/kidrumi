@@ -22,14 +22,13 @@ const GUIDE_COLOR = "#ee5aa0";
 
 export default function StepWrite({
   card,
-  done,
   onDone,
   hasNext = false,
   onNext,
   onBackToList,
 }: {
   card: HanziCard;
-  done: boolean;
+  done: boolean; // vào 写 luôn tập viết lại nên không dùng; giữ để đồng bộ interface Step
   onDone: () => void;
   hasNext?: boolean;
   onNext?: () => void;
@@ -249,11 +248,9 @@ export default function StepWrite({
       }
 
       apiRef.current = { restart, demo };
-      // Chữ đã hoàn thành từ trước → hiện sẵn chữ hoàn chỉnh (showCharacter), KHÔNG chạy
-      // quiz để tránh cảnh "nét hồng + bàn tay" mâu thuẫn với phù hiệu "Hoàn thành".
-      // Bé bấm "Viết lại" mới bắt đầu luyện. Chữ mới thì vào quiz luôn như cũ.
-      if (done) writer.showCharacter();
-      else startQuiz();
+      // Vào bước 写 là LUÔN chạy hướng dẫn viết (kể cả chữ đã học xong) — bé tập viết
+      // lại từ đầu. Nhãn "Hoàn thành/Viết đẹp lắm" chỉ hiện khi viết xong lượt này.
+      startQuiz();
     })();
 
     return () => {
@@ -263,15 +260,12 @@ export default function StepWrite({
       if (overlay) overlay.remove();
       if (box) box.innerHTML = "";
     };
-    // `done` chỉ đọc lúc mount để quyết hiện sẵn chữ hay chạy quiz — không đưa vào
-    // deps để tránh dựng lại writer khi chữ vừa hoàn thành lần đầu.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [card.char]);
 
   return (
     <div className="hz-step hz-step-write">
       <div className="hz-write-pass">
-        {finished || done ? "Hoàn thành ✓" : `Lượt ${pass} / ${PASSES}`}
+        {finished ? "Hoàn thành ✓" : `Lượt ${pass} / ${PASSES}`}
       </div>
 
       <div className="hz-mi">
@@ -287,7 +281,7 @@ export default function StepWrite({
         </button>
       </div>
 
-      {(finished || done) && <p className="hz-practice-ok">Viết đẹp lắm! ⭐</p>}
+      {finished && <p className="hz-practice-ok">Viết đẹp lắm! ⭐</p>}
 
       {showModal && (
         <div className="modal-back" role="dialog" aria-modal="true">
