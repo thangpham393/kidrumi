@@ -7,6 +7,7 @@ import { useChild } from "@/components/ChildContext";
 import { useToast } from "@/components/useToast";
 import { confettiBurst, playSuccess } from "@/components/celebrate";
 import { useHanziProgress } from "@/components/hanzi/progress";
+import { useRecordActivity } from "@/lib/missions";
 import StepRecognize from "@/components/hanzi/StepRecognize";
 import StepLearn from "@/components/hanzi/StepLearn";
 import StepPractice from "@/components/hanzi/StepPractice";
@@ -54,6 +55,7 @@ function StudyCard({
   const { addStars } = useChild();
   const { showToast, toastEl } = useToast();
   const { ready, isStepDone, stepsDone, markStep } = useHanziProgress();
+  const record = useRecordActivity();
   const [tab, setTab] = useState<Step>("认");
 
   const advance = useCallback((step: Step) => {
@@ -78,6 +80,7 @@ function StudyCard({
         confettiBurst();
       }
       if (completesChar) {
+        record("hanzi", card.char); // đủ 4 bước 1 chữ → ghi nhận nhiệm vụ
         showToast("Hoàn thành chữ này! Giỏi quá! 🎉");
         setTimeout(() => confettiBurst(), 220);
       } else {
@@ -85,7 +88,7 @@ function StudyCard({
         advance(step);
       }
     },
-    [advance, addStars, card.char, markStep, showToast, stepsDone],
+    [advance, addStars, card.char, markStep, showToast, stepsDone, record],
   );
 
   const go = (to: number) => router.push(`/chinese/hanzi/${unit.id}/${to}`);

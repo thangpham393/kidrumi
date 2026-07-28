@@ -6,6 +6,7 @@ import { useChild } from "@/components/ChildContext";
 import ListenLesson from "./ListenLesson";
 import type { Roadmap } from "./roadmap";
 import { useListenProgress } from "./progress";
+import { useRecordActivity } from "@/lib/missions";
 
 type Props = {
   lang: string;
@@ -28,6 +29,7 @@ export default function LessonRunner({
   const { child } = useChild();
   const childId = child?.id ?? null;
   const { done, ready, markDone } = useListenProgress(lang, childId);
+  const record = useRecordActivity();
 
   const idx = roadmap.lessons.findIndex((l) => l.id === id);
   const lesson = idx >= 0 ? roadmap.lessons[idx] : undefined;
@@ -88,7 +90,10 @@ export default function LessonRunner({
       icon={lesson.icon}
       backHref={basePath}
       nextHref={nextHref}
-      onDone={() => markDone(lesson.id)}
+      onDone={() => {
+        markDone(lesson.id);
+        record(lang === "zh" ? "listen_zh" : "listen_en", lesson.id);
+      }}
     />
   );
 }

@@ -479,6 +479,28 @@ a.game-tile:hover .game-thumb img { transform: scale(1.05); }
 .task-item .txt .sub { font-size: 13px; color: var(--muted); }
 .task-item .check { width: 44px; height: 44px; border-radius: 12px; background: #e6e5f2; color:#fff; display:grid; place-items:center; font-size: 22px; cursor: pointer; border: none; transition: .15s; flex: 0 0 auto; }
 .task-item.done .check { background: var(--green); }
+
+/* ---- 10 nhiệm vụ hoạt động tự động ---- */
+.mission-count { flex: 0 0 auto; background: var(--amber-soft); color: #9a6b12; font-family: var(--font-head); font-weight: 800; border-radius: 999px; padding: 8px 16px; white-space: nowrap; }
+.mission-list { margin-bottom: 4px; }
+a.task-item.mission { text-decoration: none; color: inherit; cursor: pointer; border: 2px solid transparent; }
+a.task-item.mission:hover { transform: translateY(-2px); border-color: var(--line); box-shadow: var(--shadow-sm); }
+.task-item.mission .sub { color: var(--brand); font-weight: 700; }
+.task-item.mission.done .txt .name { text-decoration: none; color: var(--ink); }
+.task-item.mission.done .sub { color: var(--green); }
+.mission-badge { flex: 0 0 auto; min-width: 44px; height: 44px; padding: 0 10px; border-radius: 12px; background: #e6e5f2; color: var(--ink-soft); display: grid; place-items: center; font-family: var(--font-head); font-weight: 800; font-size: 16px; }
+.mission-badge.on { background: var(--green); color: #fff; font-size: 22px; }
+
+/* ---- Lịch sử nhiệm vụ ---- */
+.history-list { display: flex; flex-direction: column; gap: 12px; max-height: 60vh; overflow-y: auto; margin-top: 6px; padding-right: 4px; }
+.history-day { background: #f6f5fc; border-radius: 16px; padding: 14px 16px; }
+.history-day-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.history-date { font-family: var(--font-head); font-weight: 800; color: var(--ink); font-size: 16px; }
+.history-score { font-size: 13px; font-weight: 700; color: var(--muted); }
+.history-icons { display: flex; flex-wrap: wrap; gap: 8px; }
+.history-ic { width: 38px; height: 38px; border-radius: 10px; background: #fff; display: grid; place-items: center; font-size: 18px; box-shadow: var(--shadow-sm); filter: grayscale(1); opacity: .4; }
+.history-ic.on { filter: none; opacity: 1; background: var(--green-soft); }
+
 .buddy { background:#fff; border-radius:20px; box-shadow: var(--shadow); padding: 20px; }
 .buddy .energy { height: 10px; background: var(--line); border-radius: 999px; overflow: hidden; margin-top: 6px; }
 .buddy .energy > i { display:block; height:100%; background: linear-gradient(90deg,var(--pink),var(--brand)); transition: width .4s; }
@@ -579,7 +601,7 @@ a.game-tile:hover .game-thumb img { transform: scale(1.05); }
 }
 
 /* ---- Nút avatar + popover chọn thế giới ---- */
-.task-top-actions { display: flex; align-items: center; gap: 10px; }
+.task-top-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
 .world-picker { position: relative; }
 .world-avatar {
   width: 52px; height: 52px; border-radius: 50%; padding: 0;

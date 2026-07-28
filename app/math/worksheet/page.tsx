@@ -5,6 +5,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { useToast } from "@/components/useToast";
 import { useChild } from "@/components/ChildContext";
 import { confettiBurst, playSuccess, playWrong } from "@/components/celebrate";
+import { useRecordActivity } from "@/lib/missions";
 
 type Op = "+" | "-" | "×" | "÷";
 type Mark = "instant" | "end";
@@ -57,6 +58,7 @@ function makeQ(ops: Op[], range: number): Q {
 export default function MathPage() {
   const { showToast, toastEl } = useToast();
   const { addStars } = useChild();
+  const record = useRecordActivity();
 
   const [phase, setPhase] = useState<"setup" | "play">("setup");
   const [ops, setOps] = useState<Op[]>(["+", "-"]);
@@ -179,6 +181,11 @@ export default function MathPage() {
     },
     [sel, mark, questions, showToast, addStars]
   );
+
+  // Làm xong phiếu (có kết quả) → ghi nhận nhiệm vụ "chơi trò Vườn Toán".
+  useEffect(() => {
+    if (result) record("math", "worksheet");
+  }, [result, record]);
 
   useEffect(() => {
     if (phase !== "play") return;

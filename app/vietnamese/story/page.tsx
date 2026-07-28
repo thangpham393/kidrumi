@@ -7,6 +7,7 @@ import { useChild } from "@/components/ChildContext";
 import { useToast } from "@/components/useToast";
 import { confettiBurst, playSuccess, playWrong } from "@/components/celebrate";
 import { speak, stopSpeaking } from "@/components/speak";
+import { useRecordActivity } from "@/lib/missions";
 import {
   INSTRUCTION,
   LISTEN_LABEL,
@@ -64,6 +65,7 @@ function Pic({ frame, className }: { frame: StoryFrame; className?: string }) {
 export default function StoryPage() {
   const { addStars } = useChild();
   const { showToast, toastEl } = useToast();
+  const record = useRecordActivity();
 
   // round = null ở render đầu (kể cả SSR) để tránh lệch hydration — makeRound() dùng
   // Math.random() nên chỉ chạy ở client (trong effect khởi tạo).
@@ -128,6 +130,7 @@ export default function StoryPage() {
     transitioning.current = true;
     setTimeout(() => {
       addStars(1);
+      record("vietnamese", roundRef.current?.story.id ?? ""); // xếp đúng 1 truyện
       confettiBurst();
       playSuccess();
       const ns = stepRef.current + 1;
@@ -156,7 +159,7 @@ export default function StoryPage() {
         void speak(next.story.narration, "vi");
       }, 1000);
     }, 450);
-  }, [addStars, showToast]);
+  }, [addStars, showToast, record]);
 
   // Đặt một tranh vào ô `slot`. (x, y) là điểm nổ pháo giấy.
   const drop = useCallback(

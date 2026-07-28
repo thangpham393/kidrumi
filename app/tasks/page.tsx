@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import { useChild } from "@/components/ChildContext";
 import { useAuth } from "@/components/AuthContext";
 import { useToast } from "@/components/useToast";
@@ -10,6 +11,13 @@ import Ambient from "@/components/Ambient";
 import ThemeBuddy from "@/components/ThemeBuddy";
 import WorldPicker from "@/components/WorldPicker";
 import { getTheme, themeAsset, themeBgGradient } from "./worldThemes";
+import {
+  evaluateMissions,
+  countByKind,
+  localDayISO,
+  type ActCounts,
+  type MissionState,
+} from "@/lib/missions";
 
 const worlds: { key: string; label: string; emoji: string }[] = [
   { key: "ocean", label: "Đại dương", emoji: "🐙" },
@@ -49,7 +57,15 @@ type Task = {
   sort: number;
 };
 
-const todayISO = () => new Date().toISOString().slice(0, 10); // ngày UTC, khớp mặc định CSDL
+const todayISO = () => localDayISO(); // ngày theo giờ địa phương (reset lúc nửa đêm)
+
+// Định dạng ngày ISO (YYYY-MM-DD) → "Thứ Ba, 28/07" cho phần lịch sử.
+const viDate = (iso: string) => {
+  const days = ["Chủ Nhật", "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy"];
+  const [y, m, d] = iso.split("-").map(Number);
+  const date = new Date(y, m - 1, d);
+  return `${days[date.getDay()]}, ${String(d).padStart(2, "0")}/${String(m).padStart(2, "0")}`;
+};
 
 const todayVi = () => {
   const days = ["Chủ Nhật", "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy"];
@@ -69,6 +85,9 @@ export default function TasksPage() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [done, setDone] = useState<Set<string>>(new Set());
   const [loadingTasks, setLoadingTasks] = useState(false);
+  const [counts, setCounts] = useState<ActCounts>({}); // đơn vị hoạt động đã làm hôm nay
+  const [historyOpen, setHistoryOpen] = useState(false);
+  const missions = useMemo(() => evaluateMissions(counts), [counts]);
 
   const [showProfile, setShowProfile] = useState(false);
   const [editingProfile, setEditingProfile] = useState(false); // true = sửa bé đang chọn
@@ -86,7 +105,7 @@ export default function TasksPage() {
   const loadTasks = useCallback(
     async (childId: string) => {
       setLoadingTasks(true);
-      const [{ data: t }, { data: c }] = await Promise.all([
+      const [{ data: t }, { data: c }, { data: a }] = await Promise.all([
         supabase
           .from("tasks")
           .select("id, name, icon, category, stars, sort")
@@ -98,9 +117,15 @@ export default function TasksPage() {
           .select("task_id")
           .eq("child_id", childId)
           .eq("done_on", todayISO()),
+        supabase
+          .from("activity_log")
+          .select("kind, unit")
+          .eq("child_id", childId)
+          .eq("day", todayISO()),
       ]);
       setTasks((t ?? []) as Task[]);
       setDone(new Set(((c ?? []) as { task_id: string }[]).map((r) => r.task_id)));
+      setCounts(countByKind((a ?? []) as { kind: string; unit: string }[]));
       setLoadingTasks(false);
     },
     [supabase]
@@ -114,14 +139,33 @@ export default function TasksPage() {
       } else {
         setTasks([]);
         setDone(new Set());
+        setCounts({});
       }
     })();
   }, [childId, loadTasks]);
 
-  const totalTasks = tasks.length;
+  // Bé làm hoạt động ở trang khác rồi quay lại → nạp lại để cập nhật nhiệm vụ.
+  useEffect(() => {
+    const refresh = () => {
+      if (document.visibilityState !== "hidden" && childId && childId !== "local") {
+        void loadTasks(childId);
+      }
+    };
+    window.addEventListener("focus", refresh);
+    document.addEventListener("visibilitychange", refresh);
+    return () => {
+      window.removeEventListener("focus", refresh);
+      document.removeEventListener("visibilitychange", refresh);
+    };
+  }, [childId, loadTasks]);
+
+  const missionsDone = missions.filter((m) => m.done).length;
+  const totalTasks = tasks.length; // riêng nhóm "việc nhà" của ba mẹ
   const doneCount = done.size;
-  const pct = totalTasks ? Math.round((doneCount / totalTasks) * 100) : 0;
-  const allDone = totalTasks > 0 && doneCount === totalTasks;
+  const totalAll = missions.length + totalTasks; // 10 nhiệm vụ + việc nhà
+  const doneAll = missionsDone + doneCount;
+  const pct = totalAll ? Math.round((doneAll / totalAll) * 100) : 0;
+  const allDone = totalAll > 0 && doneAll === totalAll;
 
   // ---- Tick / bỏ tick một nhiệm vụ (lưu tiến độ + sao vào CSDL) ----
   const toggle = async (t: Task, ev: React.MouseEvent) => {
@@ -315,6 +359,13 @@ export default function TasksPage() {
             onPick={(key) => updateChild(child.id, child.name, key)}
           />
           <button
+            className="edit-toggle"
+            onClick={() => setHistoryOpen(true)}
+            title="Lịch sử nhiệm vụ các ngày đã qua"
+          >
+            📅
+          </button>
+          <button
             className={`edit-toggle ${editMode ? "on" : ""}`}
             onClick={enterEdit}
             title={editMode ? "Xong" : "Chế độ chỉnh sửa"}
@@ -356,11 +407,9 @@ export default function TasksPage() {
           {theme.emoji} Đường đến kho báu
         </div>
         <div style={{ opacity: 0.9, fontSize: 14 }}>
-          {totalTasks === 0
-            ? "Thêm nhiệm vụ đầu tiên để bắt đầu hành trình!"
-            : allDone
+          {allDone
             ? "Bé đã hoàn thành mọi nhiệm vụ hôm nay! 🎊"
-            : `Còn ${totalTasks - doneCount} việc nữa là mở được rương quà!`}
+            : `Còn ${totalAll - doneAll} việc nữa là mở được rương quà!`}
         </div>
         <div className="bar">
           <i style={{ width: `${pct}%` }} />
@@ -369,14 +418,51 @@ export default function TasksPage() {
 
       <div className="task-cols">
         <div className="panel">
+          {/* ---- 10 nhiệm vụ hoạt động tự động ---- */}
           <div className="task-panel-head">
             <div>
-              <p className="section-label">
-                {editMode ? "BA MẸ ĐANG CHỈNH SỬA" : "CHUYẾN PHIÊU LƯU HÔM NAY"}
-              </p>
+              <p className="section-label">TỰ ĐỘNG GHI NHẬN KHI BÉ HỌC</p>
               <h3 style={{ margin: 0, fontSize: 24 }}>
-                Việc nhỏ của <span style={{ color: "var(--pink)" }}>{child.name}</span>
+                10 nhiệm vụ của <span style={{ color: "var(--pink)" }}>{child.name}</span>
               </h3>
+            </div>
+            <div className="mission-count">
+              {missionsDone}/{missions.length} ⭐
+            </div>
+          </div>
+
+          {loadingTasks ? (
+            <p style={{ color: "var(--muted)", padding: "20px 0" }}>Đang tải…</p>
+          ) : (
+            <div className="mission-list">
+              {missions.map((m) => (
+                <Link
+                  key={m.key}
+                  href={m.href}
+                  className={`task-item mission ${m.done ? "done" : ""}`}
+                >
+                  <span className="ic">{m.icon}</span>
+                  <div className="txt">
+                    <div className="name">{m.label}</div>
+                    <div className="sub">
+                      {m.done ? "Đã hoàn thành! 🎉" : "Bấm để làm ngay →"}
+                    </div>
+                  </div>
+                  <span className={`mission-badge ${m.done ? "on" : ""}`}>
+                    {m.done ? "✓" : `${m.have}/${m.need}`}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          )}
+
+          {/* ---- Việc nhà ba mẹ giao (tự tạo, tick tay) ---- */}
+          <div className="task-panel-head" style={{ marginTop: 22 }}>
+            <div>
+              <p className="section-label">
+                {editMode ? "BA MẸ ĐANG CHỈNH SỬA" : "VIỆC NHÀ BA MẸ GIAO"}
+              </p>
+              <h3 style={{ margin: 0, fontSize: 20 }}>Việc nhỏ mỗi ngày 🧸</h3>
             </div>
             {editMode && (
               <button className="btn" onClick={openAddTask}>
@@ -385,12 +471,10 @@ export default function TasksPage() {
             )}
           </div>
 
-          {loadingTasks ? (
-            <p style={{ color: "var(--muted)", padding: "20px 0" }}>Đang tải…</p>
-          ) : totalTasks === 0 ? (
+          {!loadingTasks && totalTasks === 0 ? (
             <div className="empty-tasks">
               <div style={{ fontSize: 40 }}>🌱</div>
-              <p>Chưa có nhiệm vụ nào. Bấm ✏️ rồi “Thêm nhiệm vụ” để gieo việc đầu tiên nhé!</p>
+              <p>Chưa có việc nhà nào. Bấm 📅✏️ rồi “Thêm nhiệm vụ” để gieo việc đầu tiên nhé!</p>
             </div>
           ) : (
             tasks.map((t) => (
@@ -515,8 +599,113 @@ export default function TasksPage() {
           onSubmit={saveTask}
         />
       )}
+
+      {historyOpen && childId && childId !== "local" && (
+        <HistoryModal childId={childId} onClose={() => setHistoryOpen(false)} />
+      )}
       {toastEl}
     </main>
+  );
+}
+
+/* ---------- Modal lịch sử nhiệm vụ các ngày đã qua ---------- */
+type HistoryDay = {
+  day: string;
+  missions: MissionState[];
+  doneCount: number;
+  chores: number; // số việc nhà tick trong ngày
+};
+
+function HistoryModal({ childId, onClose }: { childId: string; onClose: () => void }) {
+  const supabase = useMemo(() => createClient(), []);
+  const [days, setDays] = useState<HistoryDay[] | null>(null);
+
+  useEffect(() => {
+    void (async () => {
+      const today = localDayISO();
+      const [{ data: logs }, { data: comps }] = await Promise.all([
+        supabase
+          .from("activity_log")
+          .select("day, kind, unit")
+          .eq("child_id", childId)
+          .order("day", { ascending: false }),
+        supabase
+          .from("task_completions")
+          .select("done_on")
+          .eq("child_id", childId),
+      ]);
+
+      const byDay = new Map<string, { kind: string; unit: string }[]>();
+      for (const r of (logs ?? []) as { day: string; kind: string; unit: string }[]) {
+        const arr = byDay.get(r.day) ?? [];
+        arr.push({ kind: r.kind, unit: r.unit });
+        byDay.set(r.day, arr);
+      }
+      const choresByDay = new Map<string, number>();
+      for (const r of (comps ?? []) as { done_on: string }[]) {
+        choresByDay.set(r.done_on, (choresByDay.get(r.done_on) ?? 0) + 1);
+      }
+
+      const allDays = new Set<string>([...byDay.keys(), ...choresByDay.keys()]);
+      const rows: HistoryDay[] = [...allDays]
+        .filter((d) => d < today) // chỉ NGÀY ĐÃ QUA
+        .sort()
+        .reverse()
+        .map((d) => {
+          const ms = evaluateMissions(countByKind(byDay.get(d) ?? []));
+          return {
+            day: d,
+            missions: ms,
+            doneCount: ms.filter((m) => m.done).length,
+            chores: choresByDay.get(d) ?? 0,
+          };
+        });
+      setDays(rows);
+    })();
+  }, [childId, supabase]);
+
+  return (
+    <div className="modal-back" onClick={onClose}>
+      <div className="modal modal-wide" onClick={(e) => e.stopPropagation()}>
+        <button className="x" onClick={onClose}>✕</button>
+        <p className="section-label">LỊCH SỬ NHIỆM VỤ</p>
+        <h3>Những ngày đã qua 📅</h3>
+
+        {days === null ? (
+          <p style={{ color: "var(--muted)", padding: "16px 0" }}>Đang tải…</p>
+        ) : days.length === 0 ? (
+          <div className="empty-tasks">
+            <div style={{ fontSize: 40 }}>🗓️</div>
+            <p>Chưa có ngày nào trước đây. Cùng bé học hôm nay để tạo trang lịch sử đầu tiên nhé!</p>
+          </div>
+        ) : (
+          <div className="history-list">
+            {days.map((d) => (
+              <div key={d.day} className="history-day">
+                <div className="history-day-head">
+                  <span className="history-date">{viDate(d.day)}</span>
+                  <span className="history-score">
+                    {d.doneCount}/{d.missions.length} hoạt động
+                    {d.chores > 0 ? ` · ${d.chores} việc nhà` : ""}
+                  </span>
+                </div>
+                <div className="history-icons">
+                  {d.missions.map((m) => (
+                    <span
+                      key={m.key}
+                      className={`history-ic ${m.done ? "on" : ""}`}
+                      title={`${m.label}${m.done ? " — đã xong" : " — chưa xong"}`}
+                    >
+                      {m.icon}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
 

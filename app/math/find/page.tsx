@@ -5,6 +5,7 @@ import type { CSSProperties } from "react";
 import Link from "next/link";
 import { useChild } from "@/components/ChildContext";
 import { useToast } from "@/components/useToast";
+import { useRecordActivity } from "@/lib/missions";
 import { confettiBurst, playSuccess, playWrong } from "@/components/celebrate";
 import { speak, stopSpeaking } from "@/components/speak";
 import {
@@ -139,6 +140,7 @@ function CheckMark() {
 
 export default function FindShapePage() {
   const { addStars } = useChild();
+  const record = useRecordActivity();
   const { showToast, toastEl } = useToast();
 
   // round = null ở render đầu (kể cả SSR) để tránh lệch hydration — buildRound()
@@ -149,6 +151,10 @@ export default function FindShapePage() {
   const [wrong, setWrong] = useState<number | null>(null); // ô vừa chạm sai (rung)
   const [lock, setLock] = useState(false); // khoá khi đang chuyển câu
   const [done, setDone] = useState(false);
+  // Xong 1 lượt chơi (đủ số vòng) → ghi nhận nhiệm vụ Vườn Toán.
+  useEffect(() => {
+    if (done) record("math", "find");
+  }, [done, record]);
   const advancing = useRef(false);
 
   const say = useCallback((r: Round | null) => {

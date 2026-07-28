@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { CSSProperties } from "react";
 import { useChild } from "@/components/ChildContext";
 import { useToast } from "@/components/useToast";
+import { useRecordActivity } from "@/lib/missions";
 import { confettiBurst, playSuccess, playWrong } from "@/components/celebrate";
 import { speak, stopSpeaking } from "@/components/speak";
 import {
@@ -98,6 +99,7 @@ function BarShape({
 
 export default function OrderPage() {
   const { addStars } = useChild();
+  const record = useRecordActivity();
   const { showToast, toastEl } = useToast();
 
   // round = null ở render đầu (kể cả SSR) để tránh lệch hydration — buildRound() dùng
@@ -110,6 +112,10 @@ export default function OrderPage() {
   const [wrongSlot, setWrongSlot] = useState<number | null>(null); // ô vừa đặt sai (rung)
   const [drag, setDrag] = useState<Drag | null>(null); // thanh đang bay theo ngón tay
   const [done, setDone] = useState(false);
+  // Xong 1 lượt chơi (đủ số vòng) → ghi nhận nhiệm vụ Vườn Toán.
+  useEffect(() => {
+    if (done) record("math", "order");
+  }, [done, record]);
 
   const slotRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const press = useRef<{ bar: Bar; x0: number; y0: number; moved: boolean } | null>(null);

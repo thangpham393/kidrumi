@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useChild } from "@/components/ChildContext";
 import { useToast } from "@/components/useToast";
+import { useRecordActivity } from "@/lib/missions";
 import { confettiBurst, playSuccess, playWrong } from "@/components/celebrate";
 import { speak, stopSpeaking } from "@/components/speak";
 import Emoji from "@/components/Emoji";
@@ -93,6 +94,7 @@ const PROMPT = "Vật nào tiếp theo?";
 
 export default function PatternPage() {
   const { addStars } = useChild();
+  const record = useRecordActivity();
   const { showToast, toastEl } = useToast();
 
   // round = null ở render đầu (kể cả SSR) để tránh lệch hydration — buildRound()
@@ -103,6 +105,10 @@ export default function PatternPage() {
   const [reveal, setReveal] = useState<string | null>(null); // emoji hiện trong ô "?" khi đúng
   const [lock, setLock] = useState(false); // khoá khi đang chuyển câu
   const [done, setDone] = useState(false);
+  // Xong 1 lượt chơi (đủ số vòng) → ghi nhận nhiệm vụ Vườn Toán.
+  useEffect(() => {
+    if (done) record("math", "pattern");
+  }, [done, record]);
   const advancing = useRef(false);
 
   const say = useCallback(() => void speak(PROMPT, "vi"), []);

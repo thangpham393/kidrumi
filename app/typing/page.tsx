@@ -5,6 +5,7 @@ import { useToast } from "@/components/useToast";
 import { useChild } from "@/components/ChildContext";
 import { useAuth } from "@/components/AuthContext";
 import { GateCard } from "@/components/LoginGate";
+import { useRecordActivity } from "@/lib/missions";
 
 type Lang = "vi" | "en";
 type LessonKey =
@@ -65,6 +66,7 @@ export default function TypingPage() {
   const { showToast, toastEl } = useToast();
   const { addStars } = useChild();
   const { user } = useAuth();
+  const record = useRecordActivity();
   const [showGate, setShowGate] = useState(false);
 
   const [phase, setPhase] = useState<"setup" | "play">("setup");
@@ -135,6 +137,7 @@ export default function TypingPage() {
       const newStars = stars + gained;
       setStars(newStars);
       if (gained > 0) addStars(gained);
+      record("typing", lesson); // gõ xong 1 lượt → ghi nhận nhiệm vụ
 
       const mins = (Date.now() - startTs.current) / 60000;
       const words = totals.current.typed / 5;

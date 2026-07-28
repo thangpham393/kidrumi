@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { CSSProperties } from "react";
 import { useChild } from "@/components/ChildContext";
 import { useToast } from "@/components/useToast";
+import { useRecordActivity } from "@/lib/missions";
 import { confettiBurst, playSuccess, playWrong } from "@/components/celebrate";
 import { speak, stopSpeaking } from "@/components/speak";
 import Emoji from "@/components/Emoji";
@@ -72,6 +73,7 @@ type Drag = { x: number; y: number; emoji: string; id: string };
 
 export default function SortBasketPage() {
   const { addStars } = useChild();
+  const record = useRecordActivity();
   const { showToast, toastEl } = useToast();
 
   // round = null ở render đầu (kể cả SSR) để tránh lệch hydration — buildRound()
@@ -84,6 +86,10 @@ export default function SortBasketPage() {
   const [wrongCat, setWrongCat] = useState<string | null>(null); // rổ vừa bỏ sai (rung đỏ)
   const [drag, setDrag] = useState<Drag | null>(null); // vật đang bay theo ngón tay
   const [done, setDone] = useState(false);
+  // Xong 1 lượt chơi (đủ số vòng) → ghi nhận nhiệm vụ Vườn Toán.
+  useEffect(() => {
+    if (done) record("math", "sort");
+  }, [done, record]);
 
   const colRefs = useRef<Record<string, HTMLButtonElement | null>>({});
   const press = useRef<{ item: RoundThing; x0: number; y0: number; moved: boolean } | null>(null);

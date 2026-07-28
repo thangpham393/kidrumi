@@ -7,6 +7,7 @@ import { getVideo, fmtTime, type Video } from "../data";
 import { fetchVideoHeard, saveProgress } from "../progress";
 import { useChild } from "@/components/ChildContext";
 import { useAuth } from "@/components/AuthContext";
+import { useRecordActivity } from "@/lib/missions";
 
 // Kiểu tối thiểu cho YouTube IFrame API (tránh dùng any).
 type YTPlayer = {
@@ -112,6 +113,8 @@ function ShadowingPlayer({ video }: { video: Video }) {
   const { user } = useAuth();
   // Chỉ lưu tiến độ khi đã đăng nhập & có hồ sơ bé thật (không lưu cho khách "local").
   const canSave = !!user && !!child && child.id !== "local";
+  const record = useRecordActivity();
+  const missionDoneRef = useRef(false); // đã ghi nhận nhiệm vụ cho video này chưa
   const heardRef = useRef<Set<number>>(new Set());
   const dirtyRef = useRef(false);
   const playerRef = useRef<YTPlayer | null>(null);
@@ -206,6 +209,7 @@ function ShadowingPlayer({ video }: { video: Video }) {
   // Nạp tiến độ đã lưu để cộng dồn (không mất câu đã nghe ở buổi/thiết bị trước).
   useEffect(() => {
     heardRef.current = new Set();
+    missionDoneRef.current = false;
     if (!canSave || !child) return;
     let alive = true;
     fetchVideoHeard(child.id, video.id).then((idx) => {
@@ -239,6 +243,16 @@ function ShadowingPlayer({ video }: { video: Video }) {
         heard: [...heardRef.current].sort((a, b) => a - b),
         total: video.segments.length,
       });
+      // Nghe gần hết (≥80% số câu) → tính "hoàn thành xem 1 video" cho nhiệm vụ.
+      const total = video.segments.length;
+      if (
+        !missionDoneRef.current &&
+        total > 0 &&
+        heardRef.current.size >= Math.ceil(total * 0.8)
+      ) {
+        missionDoneRef.current = true;
+        record(video.lang === "zh" ? "shadow_zh" : "shadow_en", video.id);
+      }
     };
     const id = window.setInterval(flush, 4000);
     const onVis = () => {
@@ -252,7 +266,7 @@ function ShadowingPlayer({ video }: { video: Video }) {
       window.removeEventListener("pagehide", flush);
       flush();
     };
-  }, [canSave, child, user, video.id, video.lang, video.segments.length]);
+  }, [canSave, child, user, video.id, video.lang, video.segments.length, record]);
 
   const changeSpeed = (s: number) => {
     setSpeed(s);

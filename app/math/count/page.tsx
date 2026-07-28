@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useChild } from "@/components/ChildContext";
 import { useToast } from "@/components/useToast";
+import { useRecordActivity } from "@/lib/missions";
 import { confettiBurst, playSuccess, playWrong } from "@/components/celebrate";
 import { speak, stopSpeaking } from "@/components/speak";
 import Emoji from "@/components/Emoji";
@@ -70,6 +71,7 @@ function buildRound(avoidEmoji?: string): Round {
 
 export default function CountPage() {
   const { addStars } = useChild();
+  const record = useRecordActivity();
   const { showToast, toastEl } = useToast();
 
   // round = null ở render đầu (kể cả SSR) để tránh lệch hydration — buildRound()
@@ -80,6 +82,10 @@ export default function CountPage() {
   const [picked, setPicked] = useState<number | null>(null); // ô số đúng vừa chọn (sáng xanh)
   const [lock, setLock] = useState(false); // khoá khi đang chuyển câu
   const [done, setDone] = useState(false);
+  // Xong 1 lượt chơi (đủ số vòng) → ghi nhận nhiệm vụ Vườn Toán.
+  useEffect(() => {
+    if (done) record("math", "count");
+  }, [done, record]);
   const advancing = useRef(false);
 
   const say = useCallback((r: Round | null) => {
