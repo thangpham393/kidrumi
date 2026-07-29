@@ -898,20 +898,26 @@ a.task-item.mission:hover { transform: translateY(-2px); border-color: var(--lin
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 5px;
     width: 42px;
     height: 42px;
-    padding: 0 10px;
+    padding: 0;
     border: none;
     border-radius: 12px;
     background: var(--brand-soft);
     cursor: pointer;
+    flex: none;
   }
+  /* Cột 3 vạch: đặt CHIỀU RỘNG tường minh — vài trình duyệt Android (Samsung
+     Internet/WebView) không "stretch" <span> rỗng nên vạch bị mất chiều rộng. */
   .nav-burger span {
     display: block;
+    width: 22px;
     height: 3px;
     border-radius: 3px;
     background: var(--brand);
+    flex: none;
     transition: transform 0.22s ease, opacity 0.22s ease;
   }
   .nav-burger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
