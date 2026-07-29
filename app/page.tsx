@@ -106,13 +106,13 @@ export default function Home() {
             <Link href="/tasks" className="btn hero-cta">
               Bắt đầu ngay 🚀
             </Link>
-          </div>
-
-          <div className="hero-art">
             <div className="hero-bubble">
               <strong>Chào mừng <ChildName />!</strong>
               <span>Học vui mỗi ngày, tiến bộ mỗi ngày!</span>
             </div>
+          </div>
+
+          <div className="hero-art">
             <div className="hero-mascot">
               <HomeMascot
                 src="/illustrations/home-hero.png"
