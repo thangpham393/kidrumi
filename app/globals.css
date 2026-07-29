@@ -645,7 +645,13 @@ a.task-item.mission:hover { transform: translateY(-2px); border-color: var(--lin
 }
 .world-card-label { font-family: var(--font-head); font-weight: 800; font-size: 14px; color: var(--ink); }
 @media (max-width: 520px) {
-  .world-menu { width: min(94vw, 380px); gap: 10px; padding: 12px; }
+  /* Neo popover vào MÉP PHẢI của cụm nút (sát mép phải màn), không phải vào
+     avatar (nằm giữa header) — nếu không lưới sẽ tràn ra ngoài mép trái. */
+  .task-top-actions { position: relative; }
+  .world-picker { position: static; }
+  .world-menu {
+    right: 0; left: auto; width: min(92vw, 380px); gap: 10px; padding: 12px;
+  }
   .world-thumb-emoji { font-size: 26px; }
   .world-card-label { font-size: 12px; }
   .world-avatar { width: 46px; height: 46px; }
