@@ -76,6 +76,19 @@ create table if not exists public.listen_progress (
 create index if not exists listen_progress_child_idx
   on public.listen_progress (child_id, updated_at desc);
 
+-- Tiến độ "Bé học chữ Hán": mỗi bé giữ MỘT dòng, `steps` là JSON map chữ → mảng
+-- các bước đã hoàn thành (vd {"上":["认","学"]}). Bước ∈ 认/学/练/写; đủ 4 bước = xong chữ.
+-- Một dòng cho mỗi bé; dùng để đồng bộ tiến độ chữ Hán giữa các thiết bị.
+create table if not exists public.hanzi_progress (
+  child_id   uuid primary key references public.children (id) on delete cascade,
+  user_id    uuid not null references auth.users (id) on delete cascade,
+  steps      jsonb not null default '{}'::jsonb,
+  updated_at timestamptz not null default now()
+);
+
+create index if not exists hanzi_progress_user_idx
+  on public.hanzi_progress (user_id);
+
 -- 4b) Nhật ký hoạt động theo ngày — "10 nhiệm vụ mỗi ngày" tự ghi nhận khi bé
 --     làm hoạt động trên web (xem video, nghe & chọn, học chữ Hán, toán, gõ phím…).
 --     Mỗi (bé, ngày, loại, đơn vị) chỉ ghi 1 lần → đếm số ĐƠN VỊ khác nhau để tính
@@ -143,6 +156,7 @@ alter table public.tasks             enable row level security;
 alter table public.task_completions  enable row level security;
 alter table public.shadowing_progress enable row level security;
 alter table public.listen_progress    enable row level security;
+alter table public.hanzi_progress     enable row level security;
 alter table public.activity_log       enable row level security;
 alter table public.usage_log          enable row level security;
 
@@ -164,6 +178,10 @@ create policy shadowing_progress_own on public.shadowing_progress
 
 drop policy if exists listen_progress_own on public.listen_progress;
 create policy listen_progress_own on public.listen_progress
+  for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+drop policy if exists hanzi_progress_own on public.hanzi_progress;
+create policy hanzi_progress_own on public.hanzi_progress
   for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
 
 drop policy if exists activity_log_own on public.activity_log;

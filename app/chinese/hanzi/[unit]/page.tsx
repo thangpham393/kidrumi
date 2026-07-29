@@ -4,11 +4,13 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { findUnit } from "../data";
 import { useHanziProgress } from "@/components/hanzi/progress";
+import { useChild } from "@/components/ChildContext";
 
 export default function UnitGrid() {
   const params = useParams<{ unit: string }>();
   const unit = findUnit(params.unit);
-  const { ready, charDone, starsOf } = useHanziProgress();
+  const { child } = useChild();
+  const { ready, charDone, starsOf } = useHanziProgress(child?.id ?? null);
 
   if (!unit) {
     return (

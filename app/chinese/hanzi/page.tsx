@@ -4,9 +4,11 @@ import Link from "next/link";
 import Emoji from "@/components/Emoji";
 import { UNITS } from "./data";
 import { useHanziProgress } from "@/components/hanzi/progress";
+import { useChild } from "@/components/ChildContext";
 
 export default function HanziHome() {
-  const { ready, charDone, starsOf } = useHanziProgress();
+  const { child } = useChild();
+  const { ready, charDone, starsOf } = useHanziProgress(child?.id ?? null);
 
   return (
     <main className="wrap">

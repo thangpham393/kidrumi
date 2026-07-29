@@ -52,9 +52,9 @@ function StudyCard({
   card: HanziCard;
 }) {
   const router = useRouter();
-  const { addStars } = useChild();
+  const { child, addStars } = useChild();
   const { showToast, toastEl } = useToast();
-  const { ready, isStepDone, stepsDone, markStep } = useHanziProgress();
+  const { ready, isStepDone, stepsDone, markStep } = useHanziProgress(child?.id ?? null);
   const record = useRecordActivity();
   const [tab, setTab] = useState<Step>("认");
 
