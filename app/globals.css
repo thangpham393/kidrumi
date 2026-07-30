@@ -2974,7 +2974,7 @@ button.h10-bear { cursor: pointer; -webkit-tap-highlight-color: transparent; bor
 button.h10-bear.h10-added { box-shadow: 0 0 0 2px var(--green-soft); background: rgba(107,191,138,.16); }
 button.h10-bear.h10-added:hover { box-shadow: 0 0 0 2px var(--green); }
 img.h10-bear-em {
-  width: clamp(28px, 5vh, 48px); height: clamp(28px, 5vh, 48px);
+  width: var(--bw, clamp(28px, 5vh, 48px)); height: var(--bw, clamp(28px, 5vh, 48px));
   object-fit: contain; user-select: none; pointer-events: none;
   filter: drop-shadow(0 2px 3px rgba(60,50,120,.18));
   animation: result-pop .3s cubic-bezier(.2,.9,.3,1.3);

@@ -47,6 +47,15 @@ function buildRound(avoidEmoji?: string): Round {
 const promptFor = (r: Round) =>
   `Có ${r.have} bạn ở trên. Hãy thêm để có tất cả ${TARGET}.`;
 
+// Cỡ bạn theo số lượng trên một kệ: đông thì nhỏ lại để xếp gọn ~2 hàng, không đè
+// mái dốc của kệ trên. Trả về chuỗi cho biến CSS `--bw`.
+const bearSize = (n: number) =>
+  n <= 4
+    ? "clamp(30px, 5.2vh, 48px)"
+    : n <= 6
+      ? "clamp(26px, 4.4vh, 40px)"
+      : "clamp(21px, 3.5vh, 33px)";
+
 type Drag = { x: number; y: number; emoji: string };
 
 export default function House10Page() {
@@ -285,8 +294,14 @@ export default function House10Page() {
               className="h10-house-img"
               priority
             />
-            {/* Kệ TRÊN: các bạn có sẵn (không bỏ ra được) */}
-            <div className="h10-shelf h10-shelf-top">
+            {/* Kệ TRÊN: các bạn có sẵn (không bỏ ra được). Cỡ bạn tính theo kệ đông
+                hơn để cả hai kệ đồng cỡ + luôn xếp vừa. */}
+            <div
+              className="h10-shelf h10-shelf-top"
+              style={{
+                ["--bw" as string]: bearSize(Math.max(round.have, TARGET - round.have)),
+              }}
+            >
               {Array.from({ length: round.have }, (_, j) => (
                 <span key={`have-${j}`} className="h10-bear" aria-hidden>
                   <Emoji emoji={friend.emoji} className="h10-bear-em" />
@@ -294,7 +309,12 @@ export default function House10Page() {
               ))}
             </div>
             {/* Kệ DƯỚI: các bạn bé vừa thêm — chạm để bỏ ra */}
-            <div className="h10-shelf h10-shelf-bot">
+            <div
+              className="h10-shelf h10-shelf-bot"
+              style={{
+                ["--bw" as string]: bearSize(Math.max(round.have, TARGET - round.have)),
+              }}
+            >
               {Array.from({ length: added }, (_, j) => (
                 <button
                   key={`add-${j}`}

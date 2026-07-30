@@ -7,9 +7,9 @@
 export const TARGET = 10; // ngôi nhà số 10 — tổng cần đạt
 export const ROUNDS = 8; // số câu mỗi ván (khớp hàng 8 ngôi sao)
 // have = số bạn CÓ SẴN trên kệ trên; need = 10 - have = số bạn thêm vào kệ dưới.
-// Giới hạn 3..6 để kệ trên (dưới mái dốc) không bị chật/đè mái.
-export const HAVE_MIN = 3;
-export const HAVE_MAX = 6;
+// Trải đều 1..9 (phủ đủ các cặp làm-bạn-với-10: 1+9, 2+8, … 9+1).
+export const HAVE_MIN = 1;
+export const HAVE_MAX = 9;
 
 // Các "bạn" ở trong nhà — xoay vòng theo từng câu cho vui mắt. Mỗi câu chỉ dùng MỘT
 // loại để bé dễ đếm; tất cả đều có ảnh Fluent 3D nên nhìn đồng bộ, không lệch tông.
