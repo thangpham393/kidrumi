@@ -151,20 +151,28 @@ export default function House10Page() {
       const add = addedRef.current;
       // Hiện phép tính "have + added = 10" và đọc kết quả bằng Google TTS.
       setSolved({ have: r.have, added: add });
-      void speak(`${r.have} cộng ${add} bằng ${TARGET}`, "vi");
       const nc = completedRef.current + 1;
       completedRef.current = nc;
       setCompleted(nc);
       showToast(`${pick(PRAISES)} 🎉`);
-      if (nc >= ROUNDS) {
-        setTimeout(() => {
+      const last = nc >= ROUNDS;
+      const finish = () => {
+        if (last) {
           setDone(true);
           confettiBurst();
           playSuccess();
-        }, 1900);
-        return;
-      }
-      setTimeout(() => nextRound(), 2200);
+        } else {
+          nextRound();
+        }
+      };
+      // Chỉ chuyển câu SAU KHI đọc xong phép tính (awaitEnd) — kèm thời gian tối
+      // thiểu để bé kịp nhìn, và trần an toàn phòng khi âm thanh không kết thúc.
+      const spoken = speak(`${r.have} cộng ${add} bằng ${TARGET}`, "vi", {
+        awaitEnd: true,
+      });
+      const minView = new Promise<void>((res) => setTimeout(res, 1300));
+      const cap = new Promise<void>((res) => setTimeout(res, 4500));
+      void Promise.all([minView, Promise.race([spoken, cap])]).then(finish);
     } else {
       // Thiếu hoặc thừa: rung nhẹ, nghe nhắc, không trừ điểm.
       playWrong();

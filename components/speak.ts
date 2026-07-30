@@ -24,7 +24,11 @@ export function stopSpeaking() {
   }
 }
 
-async function speakViaServer(text: string, lang: string): Promise<boolean> {
+async function speakViaServer(
+  text: string,
+  lang: string,
+  awaitEnd = false,
+): Promise<boolean> {
   if (serverTTS === false) return false; // đã biết server không có TTS → khỏi gọi
   try {
     const res = await fetch("/api/tts", {
@@ -43,38 +47,61 @@ async function speakViaServer(text: string, lang: string): Promise<boolean> {
     stopSpeaking();
     const audio = new Audio(url);
     currentAudio = audio;
-    audio.onended = audio.onerror = () => URL.revokeObjectURL(url);
+    const cleanup = () => URL.revokeObjectURL(url);
     await audio.play();
+    // awaitEnd: chỉ resolve khi phát XONG (hoặc bị cắt ngang) — để nơi gọi chờ
+    // đọc hết rồi mới làm bước sau (vd chuyển câu).
+    if (awaitEnd) {
+      await new Promise<void>((resolve) => {
+        const done = () => {
+          cleanup();
+          resolve();
+        };
+        audio.onended = done;
+        audio.onerror = done;
+        audio.onpause = () => resolve(); // stopSpeaking() cắt ngang → thôi chờ
+      });
+    } else {
+      audio.onended = audio.onerror = cleanup;
+    }
     return true;
   } catch {
     return false;
   }
 }
 
-function speakViaBrowser(text: string, lang: string) {
-  if (typeof window === "undefined" || !window.speechSynthesis) return;
-  const synth = window.speechSynthesis;
-  synth.cancel();
+function speakViaBrowser(text: string, lang: string, awaitEnd = false): Promise<void> {
+  return new Promise<void>((resolve) => {
+    if (typeof window === "undefined" || !window.speechSynthesis) {
+      resolve();
+      return;
+    }
+    const synth = window.speechSynthesis;
+    synth.cancel();
 
-  const bcp = BROWSER_LANG[lang] ?? lang;
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = bcp;
-  u.rate = 0.85; // chậm rãi cho bé dễ nghe theo
-  u.pitch = 1.1;
+    const bcp = BROWSER_LANG[lang] ?? lang;
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = bcp;
+    u.rate = 0.85; // chậm rãi cho bé dễ nghe theo
+    u.pitch = 1.1;
+    if (awaitEnd) u.onend = u.onerror = () => resolve();
 
-  const speakNow = () => {
-    const voices = synth.getVoices();
-    const base = bcp.slice(0, 2).toLowerCase();
-    const voice =
-      voices.find((v) => v.lang.toLowerCase().startsWith(bcp.toLowerCase())) ||
-      voices.find((v) => v.lang.toLowerCase().startsWith(base));
-    if (voice) u.voice = voice;
-    synth.speak(u);
-  };
+    const speakNow = () => {
+      const voices = synth.getVoices();
+      const base = bcp.slice(0, 2).toLowerCase();
+      const voice =
+        voices.find((v) => v.lang.toLowerCase().startsWith(bcp.toLowerCase())) ||
+        voices.find((v) => v.lang.toLowerCase().startsWith(base));
+      if (voice) u.voice = voice;
+      synth.speak(u);
+    };
 
-  // Trên một số máy danh sách giọng nạp không đồng bộ.
-  if (synth.getVoices().length) speakNow();
-  else synth.onvoiceschanged = speakNow;
+    // Trên một số máy danh sách giọng nạp không đồng bộ.
+    if (synth.getVoices().length) speakNow();
+    else synth.onvoiceschanged = speakNow;
+
+    if (!awaitEnd) resolve(); // không chờ → trả về ngay
+  });
 }
 
 /**
@@ -85,13 +112,14 @@ function speakViaBrowser(text: string, lang: string) {
 export async function speak(
   text: string,
   lang: string = "en",
-  opts?: { browserOnly?: boolean },
+  opts?: { browserOnly?: boolean; awaitEnd?: boolean },
 ) {
   stopSpeaking();
+  const awaitEnd = opts?.awaitEnd ?? false;
   if (opts?.browserOnly) {
-    speakViaBrowser(text, lang);
+    await speakViaBrowser(text, lang, awaitEnd);
     return;
   }
-  const ok = await speakViaServer(text, lang);
-  if (!ok) speakViaBrowser(text, lang);
+  const ok = await speakViaServer(text, lang, awaitEnd);
+  if (!ok) await speakViaBrowser(text, lang, awaitEnd);
 }
