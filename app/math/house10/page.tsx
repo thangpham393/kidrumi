@@ -58,6 +58,7 @@ export default function House10Page() {
   const [round, setRound] = useState<Round | null>(null);
   const [added, setAdded] = useState(0); // số bạn bé đã thêm vào nhà
   const [completed, setCompleted] = useState(0); // số câu đúng = số sao
+  const [solved, setSolved] = useState<{ have: number; added: number } | null>(null); // phép tính khi đúng
   const [drag, setDrag] = useState<Drag | null>(null); // bạn đang bay theo ngón tay
   const [overHouse, setOverHouse] = useState(false); // đang rê bạn tới cửa nhà
   const [wrong, setWrong] = useState(false); // vừa bấm Xong nhưng chưa đủ/thừa (rung)
@@ -84,6 +85,7 @@ export default function House10Page() {
     setRound(r);
     setAdded(0);
     setCompleted(0);
+    setSolved(null);
     setDrag(null);
     setOverHouse(false);
     setWrong(false);
@@ -128,6 +130,7 @@ export default function House10Page() {
     addedRef.current = 0;
     setRound(next);
     setAdded(0);
+    setSolved(null);
     setDrag(null);
     setOverHouse(false);
     setWrong(false);
@@ -145,19 +148,23 @@ export default function House10Page() {
       playSuccess();
       confettiBurst();
       addStars(1);
+      const add = addedRef.current;
+      // Hiện phép tính "have + added = 10" và đọc kết quả bằng Google TTS.
+      setSolved({ have: r.have, added: add });
+      void speak(`${r.have} cộng ${add} bằng ${TARGET}`, "vi");
       const nc = completedRef.current + 1;
       completedRef.current = nc;
       setCompleted(nc);
-      showToast(`${pick(PRAISES)} ${r.have} thêm ${addedRef.current} là ${TARGET} 🎉`);
+      showToast(`${pick(PRAISES)} 🎉`);
       if (nc >= ROUNDS) {
         setTimeout(() => {
           setDone(true);
           confettiBurst();
           playSuccess();
-        }, 700);
+        }, 1900);
         return;
       }
-      setTimeout(() => nextRound(), 1150);
+      setTimeout(() => nextRound(), 2200);
     } else {
       // Thiếu hoặc thừa: rung nhẹ, nghe nhắc, không trừ điểm.
       playWrong();
@@ -283,6 +290,21 @@ export default function House10Page() {
                   </button>
                 ))}
               </div>
+              {solved && (
+                <div
+                  className="h10-eq"
+                  role="status"
+                  aria-label={`${solved.have} cộng ${solved.added} bằng ${TARGET}`}
+                >
+                  <div className="h10-eq-card" aria-hidden>
+                    <span className="h10-eq-n">{solved.have}</span>
+                    <span className="h10-eq-op">+</span>
+                    <span className="h10-eq-n">{solved.added}</span>
+                    <span className="h10-eq-op">=</span>
+                    <span className="h10-eq-r">{TARGET}</span>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
