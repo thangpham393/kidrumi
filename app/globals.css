@@ -2929,3 +2929,115 @@ span.gone-opt-em { font-size: clamp(64px, 15vw, 120px); line-height: 1; }
 @media (max-width: 640px) {
   .promo-stats { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ============ Ngôi nhà số 10 (Vườn Toán · math/house10) ============ */
+/* Bài "làm bạn với số 10": ngôi nhà đã có sẵn vài bạn, bé kéo/chạm thêm bạn cho đủ
+   10 rồi bấm "Xong!". Ngôi nhà dựng bằng CSS (mái tam giác + thân kem) đúng vibe
+   đất-nặn; cả nhà là vùng thả. */
+.h10-wrap { max-width: 720px; }
+.h10-prompt { justify-content: center; text-align: left; }
+
+.h10-house {
+  --roof: #cf7b62; --wall: #f4ecd8; --wall-in: #efe3c6; --wall-line: #e3d4af;
+  position: relative;
+  width: min(100%, 420px);
+  margin: clamp(18px, 4vh, 34px) auto 0;
+  transition: transform .15s cubic-bezier(.34,1.56,.64,1);
+}
+.h10-house.over { transform: translateY(-3px) scale(1.02); }
+.h10-house.over .h10-body { box-shadow: 0 0 0 4px var(--green), var(--shadow); }
+.h10-house.wrong { animation: q-shake .45s ease; }
+.h10-house.wrong .h10-body { box-shadow: 0 0 0 4px var(--red), var(--shadow); }
+
+/* Mái nhà = tam giác dựng bằng border, nhô ra hai bên như mái hiên. */
+.h10-roof {
+  width: 0; height: 0; margin: 0 auto -2px;
+  border-left: clamp(150px, 46vw, 220px) solid transparent;
+  border-right: clamp(150px, 46vw, 220px) solid transparent;
+  border-bottom: clamp(88px, 24vw, 124px) solid var(--roof);
+  filter: drop-shadow(0 6px 8px rgba(60,50,120,.12));
+}
+.h10-body {
+  position: relative;
+  background: var(--wall);
+  border: 3px solid var(--wall-line);
+  border-radius: 16px 16px 22px 22px;
+  box-shadow: var(--shadow);
+  padding: clamp(12px, 3vw, 20px);
+  transition: box-shadow .15s;
+}
+/* Khoang trong (kệ) — nơi các bạn ngồi; tự xuống dòng cho gọn. */
+.h10-shelf {
+  background: var(--wall-in);
+  border: 2px solid var(--wall-line);
+  border-radius: 14px;
+  min-height: clamp(150px, 30vh, 220px);
+  padding: clamp(12px, 3vw, 18px);
+  display: flex; flex-wrap: wrap; align-content: flex-start;
+  justify-content: center; gap: clamp(4px, 1.4vw, 10px);
+  box-shadow: inset 0 2px 6px rgba(90,70,30,.10);
+}
+.h10-bear { display: grid; place-items: center; background: none; border: none; padding: 3px; margin: 0; }
+button.h10-bear { cursor: pointer; -webkit-tap-highlight-color: transparent; border-radius: 12px; transition: box-shadow .15s, background .15s; }
+/* Bạn bé vừa thêm: quầng xanh nhẹ để phân biệt + gợi ý "chạm để bỏ ra". */
+button.h10-bear.h10-added { box-shadow: 0 0 0 2px var(--green-soft); background: rgba(107,191,138,.12); }
+button.h10-bear.h10-added:hover { box-shadow: 0 0 0 2px var(--green); }
+img.h10-bear-em {
+  width: clamp(34px, 8vw, 52px); height: clamp(34px, 8vw, 52px);
+  object-fit: contain; user-select: none; pointer-events: none;
+  animation: result-pop .3s cubic-bezier(.2,.9,.3,1.3);
+}
+
+/* Thanh thao tác: khay bạn để thêm + nút "Xong!" */
+.h10-bar {
+  display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
+  gap: clamp(12px, 3vw, 22px);
+  margin-top: clamp(20px, 4vh, 40px);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.h10-tray {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  gap: clamp(8px, 2vw, 14px); min-height: 72px;
+}
+.h10-chip {
+  width: clamp(56px, 12vw, 76px); height: clamp(56px, 12vw, 76px);
+  display: grid; place-items: center;
+  background: var(--card); border: 2px solid var(--line); border-radius: 18px;
+  box-shadow: var(--shadow-sm); cursor: grab; touch-action: none;
+  transition: transform .15s cubic-bezier(.34,1.56,.64,1), border-color .15s, box-shadow .15s;
+}
+.h10-chip:hover { transform: translateY(-3px); border-color: #d8d3f7; box-shadow: var(--shadow); }
+.h10-chip:active { cursor: grabbing; }
+.h10-chip.dragging { opacity: .3; }
+img.h10-chip-em {
+  width: clamp(40px, 8vw, 54px); height: clamp(40px, 8vw, 54px);
+  object-fit: contain; user-select: none; pointer-events: none;
+}
+.h10-tray-empty { color: var(--muted); font-family: var(--font-head); font-weight: 800; font-size: 15px; }
+.h10-done { white-space: nowrap; padding-inline: clamp(20px, 4vw, 32px); }
+
+/* Bạn đang bay theo ngón tay khi kéo. */
+.h10-float {
+  position: fixed; z-index: 9998; pointer-events: none;
+  transform: translate(-50%, -50%) scale(1.15);
+  filter: drop-shadow(0 10px 16px rgba(60,50,120,.3));
+}
+.h10-float img.h10-chip-em { width: clamp(52px, 10vw, 68px); height: clamp(52px, 10vw, 68px); }
+
+@media (max-width: 720px) {
+  .h10-house { margin-top: 18px; }
+  .h10-shelf { min-height: clamp(130px, 26vh, 180px); }
+  .h10-bar { margin-top: 20px; gap: 12px; }
+  .h10-tray { min-height: 60px; }
+}
+@media (max-width: 380px) {
+  img.h10-bear-em { width: clamp(30px, 9vw, 40px); height: clamp(30px, 9vw, 40px); }
+  .h10-chip { border-radius: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .h10-house, .h10-chip, button.h10-bear { transition: none; }
+  .h10-house.over, .h10-chip:hover { transform: none; }
+  .h10-house.wrong { animation: none; }
+  img.h10-bear-em { animation: none; }
+  .h10-float { transform: translate(-50%, -50%); }
+}
