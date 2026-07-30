@@ -285,14 +285,16 @@ export default function House10Page() {
               className="h10-house-img"
               priority
             />
-            <div className="h10-shelf">
-              {/* Các bạn có sẵn (không bỏ ra được) */}
+            {/* Kệ TRÊN: các bạn có sẵn (không bỏ ra được) */}
+            <div className="h10-shelf h10-shelf-top">
               {Array.from({ length: round.have }, (_, j) => (
                 <span key={`have-${j}`} className="h10-bear" aria-hidden>
                   <Emoji emoji={friend.emoji} className="h10-bear-em" />
                 </span>
               ))}
-              {/* Các bạn bé vừa thêm — chạm để bỏ ra */}
+            </div>
+            {/* Kệ DƯỚI: các bạn bé vừa thêm — chạm để bỏ ra */}
+            <div className="h10-shelf h10-shelf-bot">
               {Array.from({ length: added }, (_, j) => (
                 <button
                   key={`add-${j}`}

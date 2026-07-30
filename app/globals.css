@@ -2941,38 +2941,40 @@ span.gone-opt-em { font-size: clamp(64px, 15vw, 120px); line-height: 1; }
    chồng lên trong khoang dưới. Kích thước neo theo CHIỀU CAO để không tràn màn. */
 .h10-house {
   position: relative;
-  height: clamp(320px, 48vh, 500px);
+  height: clamp(400px, 64vh, 620px);
   aspect-ratio: 1024 / 1536;
   max-width: 100%;
-  margin: clamp(6px, 2vh, 18px) auto 0;
+  margin: clamp(6px, 2vh, 16px) auto 0;
   transition: transform .15s cubic-bezier(.34,1.56,.64,1), filter .15s;
 }
 .h10-house-img { object-fit: contain; pointer-events: none; user-select: none; }
 .h10-house.over { transform: translateY(-3px) scale(1.02); filter: drop-shadow(0 8px 14px rgba(60,50,120,.22)); }
-.h10-house.over .h10-shelf {
+.h10-house.over .h10-shelf-bot {
   border-radius: 12px;
   box-shadow: 0 0 0 3px var(--green);
   background: rgba(107,191,138,.10);
 }
 .h10-house.wrong { animation: q-shake .45s ease; }
 
-/* Khoang dưới của ngôi nhà — vùng đặt các bạn (canh theo % ảnh). Các bạn đứng trên
-   sàn (align-end) và tự xuống dòng khi đông. */
+/* Hai kệ trong nhà — vùng đặt các bạn, canh theo % của ẢNH khung nhà. Các bạn
+   "đứng" trên mặt kệ (align-end) và tự xuống dòng khi đông.
+   Kệ TRÊN: bạn có sẵn (ngồi trên thanh kệ ~49%). Kệ DƯỚI: bạn bé thêm (trên sàn ~72%). */
 .h10-shelf {
   position: absolute;
-  left: 17%; right: 17%; top: 47%; bottom: 30%;
-  display: flex; flex-wrap: wrap;
-  align-content: flex-end; align-items: flex-end; justify-content: center;
-  gap: clamp(1px, 0.5vw, 4px);
+  display: flex; flex-wrap: wrap-reverse;
+  align-content: flex-start; align-items: flex-end; justify-content: center;
+  gap: clamp(1px, 0.5vw, 5px);
   transition: box-shadow .15s, background .15s;
 }
+.h10-shelf-top { left: 16%; right: 16%; top: 29%; bottom: 51%; }
+.h10-shelf-bot { left: 16%; right: 16%; top: 55%; bottom: 28%; }
 .h10-bear { display: grid; place-items: center; background: none; border: none; padding: 0; margin: 0; }
 button.h10-bear { cursor: pointer; -webkit-tap-highlight-color: transparent; border-radius: 10px; transition: box-shadow .15s, background .15s; }
 /* Bạn bé vừa thêm: quầng xanh nhẹ để phân biệt + gợi ý "chạm để bỏ ra". */
 button.h10-bear.h10-added { box-shadow: 0 0 0 2px var(--green-soft); background: rgba(107,191,138,.16); }
 button.h10-bear.h10-added:hover { box-shadow: 0 0 0 2px var(--green); }
 img.h10-bear-em {
-  width: clamp(20px, 3.7vh, 33px); height: clamp(20px, 3.7vh, 33px);
+  width: clamp(28px, 5vh, 48px); height: clamp(28px, 5vh, 48px);
   object-fit: contain; user-select: none; pointer-events: none;
   filter: drop-shadow(0 2px 3px rgba(60,50,120,.18));
   animation: result-pop .3s cubic-bezier(.2,.9,.3,1.3);
@@ -3037,8 +3039,8 @@ img.h10-chip-em {
 }
 
 @media (max-width: 720px) {
-  .h10-house { height: clamp(300px, 44vh, 420px); margin-top: 8px; }
-  .h10-bar { margin-top: 16px; gap: 12px; }
+  .h10-house { height: clamp(360px, 52vh, 480px); margin-top: 6px; }
+  .h10-bar { margin-top: 14px; gap: 12px; }
   .h10-tray { min-height: 60px; }
 }
 @media (max-width: 380px) {
