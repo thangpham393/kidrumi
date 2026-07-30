@@ -23,6 +23,7 @@ export default function VietnameseLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // /vietnamese (chọn trò) xem tự do; vào từng trò thì cần đăng nhập.
-  return <PlayGate openPaths={["/vietnamese"]}>{children}</PlayGate>;
+  // /vietnamese (chọn trò) + /vietnamese/story (bản đồ chọn truyện) xem tự do; vào chơi
+  // từng truyện thì cần đăng nhập.
+  return <PlayGate openPaths={["/vietnamese", "/vietnamese/story"]}>{children}</PlayGate>;
 }
