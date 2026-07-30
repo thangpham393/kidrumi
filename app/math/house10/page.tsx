@@ -281,6 +281,7 @@ export default function House10Page() {
             </span>
           </button>
 
+          <div className="h10-stage">
           <div
             ref={houseRef}
             className={"h10-house" + (overHouse ? " over" : "") + (wrong ? " wrong" : "")}
@@ -342,6 +343,7 @@ export default function House10Page() {
                 </div>
               </div>
             )}
+          </div>
           </div>
 
           <div className="h10-bar">
