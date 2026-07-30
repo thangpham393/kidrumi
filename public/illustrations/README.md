@@ -171,4 +171,29 @@ compartment, one compartment left empty with a faint question mark glow, soft
 pink background. [STYLE] --ar 4:3
 math-worksheet.png — A clay math worksheet on a clipboard with colorful
 counting beads and a pencil, soft lavender background. [STYLE] --ar 4:3
+math-house10.png — A cute cutaway clay dollhouse with a warm terracotta-red
+triangular roof, cream walls and a tiny heart on the gable, several happy
+little teddy bears sitting together inside on wooden shelves, cozy and
+inviting, soft pink background. [STYLE] --ar 4:3
 ```
+
+### D. Ảnh ngôi nhà TRONG màn chơi "Ngôi nhà số 10" (4–5t)
+Ảnh khung nhà rỗng để web **xếp các bạn (emoji) chồng lên trong khoang** — nên phải
+**rỗng ruột, nền trong suốt (PNG cutout)**, chừa nhiều chỗ trống. Dùng **cùng seed** với
+`math-house10.png` để hai ảnh cùng một ngôi nhà. Đặt tên `math-house10-house.png`.
+
+| Ảnh | Tên file | Tỉ lệ |
+|---|---|---|
+| Khung nhà rỗng (màn chơi) | `math-house10-house.png` | 4:5 (dọc) |
+
+```
+math-house10-house.png — A cute front-view cutaway clay dollhouse with a warm
+terracotta-red triangular roof, cream walls and a tiny heart on the gable, ONE
+big open room inside with a plain light-cream back wall and a single wooden
+shelf, the room is completely EMPTY — no furniture, no toys, no characters,
+lots of clear empty space to place items later, front wall removed so the whole
+room is visible, isolated object on a fully transparent background (PNG cutout).
+[STYLE] --ar 4:5
+```
+> Nếu tool không xuất được nền trong suốt: để **nền phẳng kem/hồng nhạt đều màu**
+> (dễ tách nền sau). Ruột nhà **để trống hoàn toàn** — các bạn gấu do web tự chèn.

@@ -33,7 +33,7 @@ const groups: Group[] = [
     icon: "🌿",
     games: [
       { title: "Đếm cùng bé", img: "/illustrations/math-count.png", glyph: "🐤", tone: "var(--amber)", grad: ["var(--amber-soft)", "#ffe6bf"], href: "/math/count" },
-      { title: "Ngôi nhà số 10", glyph: "🏡", tone: "var(--red)", grad: ["var(--red-soft)", "#ffd9cf"], href: "/math/house10" },
+      { title: "Ngôi nhà số 10", img: "/illustrations/math-house10.png", glyph: "🏡", tone: "var(--red)", grad: ["var(--red-soft)", "#ffd9cf"], href: "/math/house10" },
       { title: "Xếp theo thứ tự", img: "/illustrations/math-order.png", glyph: "📊", tone: "var(--green)", grad: ["var(--green-soft)", "#d3efdd"], href: "/math/order" },
       { title: "Phân loại hình", img: "/illustrations/math-sort-shape.png", glyph: "🔺", tone: "var(--green)", grad: ["var(--green-soft)", "#d3efdd"], href: "/math/sort-shape" },
       { title: "Vật gì biến mất?", img: "/illustrations/math-gone.png", glyph: "🙈", tone: "var(--pink)", grad: ["var(--pink-soft)", "#fbd6e8"], href: "/math/gone" },

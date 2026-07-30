@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useChild } from "@/components/ChildContext";
 import { useToast } from "@/components/useToast";
 import { useRecordActivity } from "@/lib/missions";
@@ -276,44 +277,49 @@ export default function House10Page() {
             className={"h10-house" + (overHouse ? " over" : "") + (wrong ? " wrong" : "")}
             aria-label={`Ngôi nhà đang có ${round.have + added} bạn`}
           >
-            <div className="h10-roof" aria-hidden />
-            <div className="h10-body">
-              <div className="h10-shelf">
-                {/* Các bạn có sẵn (không bỏ ra được) */}
-                {Array.from({ length: round.have }, (_, j) => (
-                  <span key={`have-${j}`} className="h10-bear" aria-hidden>
-                    <Emoji emoji={friend.emoji} className="h10-bear-em" />
-                  </span>
-                ))}
-                {/* Các bạn bé vừa thêm — chạm để bỏ ra */}
-                {Array.from({ length: added }, (_, j) => (
-                  <button
-                    key={`add-${j}`}
-                    type="button"
-                    className="h10-bear h10-added"
-                    onClick={removeOne}
-                    aria-label="Bỏ bớt một bạn"
-                  >
-                    <Emoji emoji={friend.emoji} className="h10-bear-em" />
-                  </button>
-                ))}
-              </div>
-              {solved && (
-                <div
-                  className="h10-eq"
-                  role="status"
-                  aria-label={`${solved.have} cộng ${solved.added} bằng ${TARGET}`}
+            <Image
+              src="/illustrations/math-house10-house.png"
+              alt=""
+              fill
+              sizes="(max-width: 720px) 74vw, 340px"
+              className="h10-house-img"
+              priority
+            />
+            <div className="h10-shelf">
+              {/* Các bạn có sẵn (không bỏ ra được) */}
+              {Array.from({ length: round.have }, (_, j) => (
+                <span key={`have-${j}`} className="h10-bear" aria-hidden>
+                  <Emoji emoji={friend.emoji} className="h10-bear-em" />
+                </span>
+              ))}
+              {/* Các bạn bé vừa thêm — chạm để bỏ ra */}
+              {Array.from({ length: added }, (_, j) => (
+                <button
+                  key={`add-${j}`}
+                  type="button"
+                  className="h10-bear h10-added"
+                  onClick={removeOne}
+                  aria-label="Bỏ bớt một bạn"
                 >
-                  <div className="h10-eq-card" aria-hidden>
-                    <span className="h10-eq-n">{solved.have}</span>
-                    <span className="h10-eq-op">+</span>
-                    <span className="h10-eq-n">{solved.added}</span>
-                    <span className="h10-eq-op">=</span>
-                    <span className="h10-eq-r">{TARGET}</span>
-                  </div>
-                </div>
-              )}
+                  <Emoji emoji={friend.emoji} className="h10-bear-em" />
+                </button>
+              ))}
             </div>
+            {solved && (
+              <div
+                className="h10-eq"
+                role="status"
+                aria-label={`${solved.have} cộng ${solved.added} bằng ${TARGET}`}
+              >
+                <div className="h10-eq-card" aria-hidden>
+                  <span className="h10-eq-n">{solved.have}</span>
+                  <span className="h10-eq-op">+</span>
+                  <span className="h10-eq-n">{solved.added}</span>
+                  <span className="h10-eq-op">=</span>
+                  <span className="h10-eq-r">{TARGET}</span>
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="h10-bar">

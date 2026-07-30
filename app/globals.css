@@ -2937,54 +2937,44 @@ span.gone-opt-em { font-size: clamp(64px, 15vw, 120px); line-height: 1; }
 .h10-wrap { max-width: 720px; }
 .h10-prompt { justify-content: center; text-align: left; }
 
+/* Ngôi nhà = ảnh clay đất-nặn (khung rỗng, nền trong suốt); web xếp các bạn (emoji)
+   chồng lên trong khoang dưới. Kích thước neo theo CHIỀU CAO để không tràn màn. */
 .h10-house {
-  --roof: #cf7b62; --wall: #f4ecd8; --wall-in: #efe3c6; --wall-line: #e3d4af;
   position: relative;
-  width: min(100%, 420px);
-  margin: clamp(18px, 4vh, 34px) auto 0;
-  transition: transform .15s cubic-bezier(.34,1.56,.64,1);
+  height: clamp(320px, 48vh, 500px);
+  aspect-ratio: 1024 / 1536;
+  max-width: 100%;
+  margin: clamp(6px, 2vh, 18px) auto 0;
+  transition: transform .15s cubic-bezier(.34,1.56,.64,1), filter .15s;
 }
-.h10-house.over { transform: translateY(-3px) scale(1.02); }
-.h10-house.over .h10-body { box-shadow: 0 0 0 4px var(--green), var(--shadow); }
+.h10-house-img { object-fit: contain; pointer-events: none; user-select: none; }
+.h10-house.over { transform: translateY(-3px) scale(1.02); filter: drop-shadow(0 8px 14px rgba(60,50,120,.22)); }
+.h10-house.over .h10-shelf {
+  border-radius: 12px;
+  box-shadow: 0 0 0 3px var(--green);
+  background: rgba(107,191,138,.10);
+}
 .h10-house.wrong { animation: q-shake .45s ease; }
-.h10-house.wrong .h10-body { box-shadow: 0 0 0 4px var(--red), var(--shadow); }
 
-/* Mái nhà = tam giác dựng bằng border, nhô ra hai bên như mái hiên. */
-.h10-roof {
-  width: 0; height: 0; margin: 0 auto -2px;
-  border-left: clamp(150px, 46vw, 220px) solid transparent;
-  border-right: clamp(150px, 46vw, 220px) solid transparent;
-  border-bottom: clamp(88px, 24vw, 124px) solid var(--roof);
-  filter: drop-shadow(0 6px 8px rgba(60,50,120,.12));
-}
-.h10-body {
-  position: relative;
-  background: var(--wall);
-  border: 3px solid var(--wall-line);
-  border-radius: 16px 16px 22px 22px;
-  box-shadow: var(--shadow);
-  padding: clamp(12px, 3vw, 20px);
-  transition: box-shadow .15s;
-}
-/* Khoang trong (kệ) — nơi các bạn ngồi; tự xuống dòng cho gọn. */
+/* Khoang dưới của ngôi nhà — vùng đặt các bạn (canh theo % ảnh). Các bạn đứng trên
+   sàn (align-end) và tự xuống dòng khi đông. */
 .h10-shelf {
-  background: var(--wall-in);
-  border: 2px solid var(--wall-line);
-  border-radius: 14px;
-  min-height: clamp(150px, 30vh, 220px);
-  padding: clamp(12px, 3vw, 18px);
-  display: flex; flex-wrap: wrap; align-content: flex-start;
-  justify-content: center; gap: clamp(4px, 1.4vw, 10px);
-  box-shadow: inset 0 2px 6px rgba(90,70,30,.10);
+  position: absolute;
+  left: 17%; right: 17%; top: 47%; bottom: 30%;
+  display: flex; flex-wrap: wrap;
+  align-content: flex-end; align-items: flex-end; justify-content: center;
+  gap: clamp(1px, 0.5vw, 4px);
+  transition: box-shadow .15s, background .15s;
 }
-.h10-bear { display: grid; place-items: center; background: none; border: none; padding: 3px; margin: 0; }
-button.h10-bear { cursor: pointer; -webkit-tap-highlight-color: transparent; border-radius: 12px; transition: box-shadow .15s, background .15s; }
+.h10-bear { display: grid; place-items: center; background: none; border: none; padding: 0; margin: 0; }
+button.h10-bear { cursor: pointer; -webkit-tap-highlight-color: transparent; border-radius: 10px; transition: box-shadow .15s, background .15s; }
 /* Bạn bé vừa thêm: quầng xanh nhẹ để phân biệt + gợi ý "chạm để bỏ ra". */
-button.h10-bear.h10-added { box-shadow: 0 0 0 2px var(--green-soft); background: rgba(107,191,138,.12); }
+button.h10-bear.h10-added { box-shadow: 0 0 0 2px var(--green-soft); background: rgba(107,191,138,.16); }
 button.h10-bear.h10-added:hover { box-shadow: 0 0 0 2px var(--green); }
 img.h10-bear-em {
-  width: clamp(34px, 8vw, 52px); height: clamp(34px, 8vw, 52px);
+  width: clamp(20px, 3.7vh, 33px); height: clamp(20px, 3.7vh, 33px);
   object-fit: contain; user-select: none; pointer-events: none;
+  filter: drop-shadow(0 2px 3px rgba(60,50,120,.18));
   animation: result-pop .3s cubic-bezier(.2,.9,.3,1.3);
 }
 
@@ -3029,8 +3019,6 @@ img.h10-chip-em {
   position: absolute; inset: 0; z-index: 3;
   display: grid; place-items: center;
   padding: clamp(10px, 3vw, 18px);
-  background: rgba(255,255,255,.6);
-  border-radius: 14px;
   animation: h10-eq-in .35s cubic-bezier(.2,.9,.3,1.3);
 }
 .h10-eq-card {
@@ -3049,13 +3037,11 @@ img.h10-chip-em {
 }
 
 @media (max-width: 720px) {
-  .h10-house { margin-top: 18px; }
-  .h10-shelf { min-height: clamp(130px, 26vh, 180px); }
-  .h10-bar { margin-top: 20px; gap: 12px; }
+  .h10-house { height: clamp(300px, 44vh, 420px); margin-top: 8px; }
+  .h10-bar { margin-top: 16px; gap: 12px; }
   .h10-tray { min-height: 60px; }
 }
 @media (max-width: 380px) {
-  img.h10-bear-em { width: clamp(30px, 9vw, 40px); height: clamp(30px, 9vw, 40px); }
   .h10-chip { border-radius: 14px; }
 }
 @media (prefers-reduced-motion: reduce) {
