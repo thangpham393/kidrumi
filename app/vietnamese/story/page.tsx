@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useChild } from "@/components/ChildContext";
+import { useAuth } from "@/components/AuthContext";
 import { CHAPTERS, STORY_ORDER, storyById } from "./data";
-import { getDoneStories, nextIndex } from "./progress";
+import { nextIndex, useStoryDone } from "./progress";
 
 // "Nghe hiểu câu chuyện" — BẢN ĐỒ HỌC theo chương. 20 truyện chia 6 chương, nối tiếp nhau
 // bằng đường chấm. Truyện đã xong có dấu ✓ (viền xanh); truyện kế tiếp được tô nổi (viền
@@ -16,14 +16,12 @@ type NodeState = "done" | "current" | "locked";
 
 export default function StoryMapPage() {
   const { child } = useChild();
+  const { user } = useAuth();
+  // Đăng nhập + hồ sơ bé thật → đồng bộ Supabase (chung nguồn với Nhiệm vụ); khách → local.
+  const canSync = !!user && !!child && child.id !== "local";
   // done = null ở render đầu (SSR + client-first) → coi như [] để KHỚP, tránh lệch
-  // hydration; effect nạp tiến độ thật rồi vẽ lại.
-  const [done, setDone] = useState<string[] | null>(null);
-
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setDone(getDoneStories(child?.id));
-  }, [child?.id]);
+  // hydration; hook nạp tiến độ thật (Supabase ∪ local) rồi vẽ lại.
+  const { done } = useStoryDone(child?.id ?? null, canSync);
 
   const doneList = done ?? [];
   const doneSet = new Set(doneList);

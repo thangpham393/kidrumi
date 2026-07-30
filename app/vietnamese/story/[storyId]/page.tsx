@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useChild } from "@/components/ChildContext";
+import { useAuth } from "@/components/AuthContext";
 import { useToast } from "@/components/useToast";
 import { confettiBurst, playSuccess, playWrong } from "@/components/celebrate";
 import { speak, stopSpeaking } from "@/components/speak";
@@ -19,7 +20,7 @@ import {
   type Story,
   type StoryFrame,
 } from "../data";
-import { getDoneStories, markStoryDone, nextIndex } from "../progress";
+import { fetchDoneStories, getDoneStories, markStoryDone, nextIndex } from "../progress";
 
 // Chơi MỘT truyện trên bản đồ: Google TTS đọc lời kể, khay tranh (đã xáo) ở dưới + các ô
 // trống đánh số ở trên. Bé kéo/chạm để xếp tranh theo đúng thứ tự trước–sau. Đặt đúng →
@@ -87,8 +88,10 @@ export default function StoryPlayPage() {
 
 function StoryPlay({ story }: { story: Story }) {
   const { child, addStars } = useChild();
+  const { user } = useAuth();
   const { showToast, toastEl } = useToast();
   const record = useRecordActivity();
+  const canSync = !!user && !!child && child.id !== "local";
 
   const n = story.frames.length;
   const emptySlots = useMemo(() => Array<string | null>(n).fill(null), [n]);
@@ -248,14 +251,27 @@ function StoryPlay({ story }: { story: Story }) {
   const chapter = chapterOfStory(story.id);
   const ordinal = STORY_ORDER.indexOf(story.id) + 1;
 
-  // "Truyện tiếp theo" sau khi xong (dựa vào tiến độ đã lưu, gồm cả truyện vừa xong).
+  // "Truyện tiếp theo" sau khi xong — hợp nhất tiến độ local + Supabase (chéo thiết bị).
   const [nextId, setNextId] = useState<string | null>(null);
   useEffect(() => {
     if (!done) return;
-    const idx = nextIndex(getDoneStories(child?.id));
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setNextId(idx < STORY_ORDER.length ? STORY_ORDER[idx] : null);
-  }, [done, child?.id]);
+    let alive = true;
+    const local = getDoneStories(child?.id);
+    const compute = (all: string[]) => {
+      const idx = nextIndex(all);
+      if (alive) setNextId(idx < STORY_ORDER.length ? STORY_ORDER[idx] : null);
+    };
+    if (canSync && child) {
+      fetchDoneStories(child.id)
+        .then((remote) => compute([...new Set([...local, ...remote])]))
+        .catch(() => compute(local));
+    } else {
+      compute(local);
+    }
+    return () => {
+      alive = false;
+    };
+  }, [done, child, canSync]);
   const nextStory = nextId ? storyById(nextId) : null;
 
   const cols = { gridTemplateColumns: `repeat(${n}, 1fr)` };
