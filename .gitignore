@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ảnh chụp/nháp khi test (không đưa vào repo)
+scratchpad/
