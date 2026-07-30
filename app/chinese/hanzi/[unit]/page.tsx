@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { findUnit } from "../data";
 import { useHanziProgress } from "@/components/hanzi/progress";
+import { useQuizProgress } from "@/components/hanzi/quizProgress";
 import { useChild } from "@/components/ChildContext";
 
 export default function UnitGrid() {
@@ -11,6 +12,7 @@ export default function UnitGrid() {
   const unit = findUnit(params.unit);
   const { child } = useChild();
   const { ready, charDone, starsOf } = useHanziProgress(child?.id ?? null);
+  const { ready: quizReady, recOf } = useQuizProgress(child?.id ?? null);
 
   if (!unit) {
     return (
@@ -32,6 +34,41 @@ export default function UnitGrid() {
         <h1 className="lt-title">{unit.title}</h1>
         <span aria-hidden />
       </header>
+
+      {(() => {
+        const learned = ready ? unit.cards.filter((c) => charDone(c.char)).length : 0;
+        const doneAll = ready && learned === unit.cards.length;
+        const rec = quizReady ? recOf(unit.id) : undefined;
+        return (
+          <section className="hz-quiz-banner">
+            {doneAll ? (
+              <Link href={`/chinese/hanzi/${unit.id}/luyen-tap`} className="hz-quiz-card on">
+                <span className="hz-quiz-ic" aria-hidden>🎯</span>
+                <span className="hz-quiz-body">
+                  <b>Luyện tập tổng hợp</b>
+                  <em>Thử thách nhớ mặt chữ của 5 chữ vừa học!</em>
+                </span>
+                {rec ? (
+                  <span className="hz-quiz-best" aria-label={`Điểm cao nhất ${rec.best} trên ${rec.total}`}>
+                    🏆 {rec.best}/{rec.total}
+                  </span>
+                ) : (
+                  <span className="hz-quiz-go" aria-hidden>Bắt đầu ›</span>
+                )}
+              </Link>
+            ) : (
+              <div className="hz-quiz-card locked" aria-label="Chưa mở khoá luyện tập">
+                <span className="hz-quiz-ic" aria-hidden>🔒</span>
+                <span className="hz-quiz-body">
+                  <b>Luyện tập tổng hợp</b>
+                  <em>Học xong cả {unit.cards.length} chữ để mở khoá thử thách nhé!</em>
+                </span>
+                <span className="hz-quiz-best" aria-hidden>{learned}/{unit.cards.length}</span>
+              </div>
+            )}
+          </section>
+        );
+      })()}
 
       <section className="hz-char-grid">
         {unit.cards.map((c, i) => {
