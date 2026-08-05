@@ -25,6 +25,7 @@ export type ActKind =
   | "listen_zh"
   | "hanzi"
   | "vietnamese"
+  | "en_story"
   | "math"
   | "typing";
 

@@ -21,6 +21,16 @@ const items: PickItem[] = [
     tone: "var(--brand)",
     grad: ["var(--brand-soft)", "#e0dcff"],
   },
+  {
+    href: "/english/story",
+    img: "/illustrations/vi-story.png",
+    glyph: "📖",
+    title: "Story in Order",
+    sub: "Nghe chuyện tiếng Anh rồi xếp tranh",
+    desc: "Bé nghe một câu chuyện tiếng Anh thật ngắn rồi xếp các bức tranh theo đúng thứ tự trước sau.",
+    tone: "#c76b2f",
+    grad: ["var(--amber-soft)", "#ffe6c2"],
+  },
 ];
 
 export default function EnglishPage() {
